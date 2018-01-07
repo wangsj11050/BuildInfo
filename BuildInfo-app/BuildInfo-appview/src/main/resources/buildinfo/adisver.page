@@ -1,0 +1,129 @@
+#set(starsList = getDictItem("BUILD_STARS")?["list"])
+#set(serviceList = getDictItem("BUILD_SERVICE")?["list"])
+#@gridSysRow({"style":"margin-right:0"})
+  	#@gridSysCol(12 {"class":"col-sm-12 col-md-2"})
+  		#@tForm("plannForm" "/pubdemand/pubdemand")
+		   <div class="infoContent" style="margin: 30px -18px 10px 5px;">
+           	<p class="titleName" style="font-size: 14px;margin: -15px 0 8px 0;color: cornflowerblue;">发布需求</p>
+           	<div class="form-infos clearfix">
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#tInput("name" "" {"class":"input-sm","placeholder":"您的姓名","datatype":"*1-32","nullmsg":"请填写您的姓名!"})
+           	  			</div>
+           	  		</div>
+           	   </div>
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#tInput("phone" "" {"class":"input-sm","placeholder":"您的电话","datatype":"*1-20","nullmsg":"请填写您的电话!",
+                   	  				"onkeyup":"this.value=this.value.replace(/\D/g,'')","onafterpaste":"this.value=this.value.replace(/\D/g,'')"})
+           	  			</div>
+           	  		</div>
+           	   </div>
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#@tSelect("demand" "" {"class":"pubDemand input-sm","style":"width:100%"})
+           	  					<option value="" style="font-size: 14px;">您的需求</option>
+					            #for(service:serviceList)
+					            <option value="${service?.value}" style="font-size: 14px;">${service?.text}</option>
+					        	#end
+					        #end
+           	  			</div>
+           	  		</div>
+           	   </div>
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#commontTextarea("demandDesc" {"class":"pubDemandDesc"} {"placeholder":"需求描述","row":"10","style":"height: 175px;font-size:12px;"})
+           	  			</div>
+           	  		</div>
+           	   </div>
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#tSubmitInput("plannmit" "提交需求" {"class":"btn-info-outline btn-sm"})
+               	  			</div>
+               	  		</div>
+               	   </div>
+           	   </div>
+            </div>
+		#end
+  	#end
+  	#@gridSysCol(12 {"class":"col-sm-12 col-md-10"})
+  		<div class="part-title part-title-mar">
+  			#@tForm("thisform" "/adisver/findAdisver" "get" {"class":""})
+				<div class="form-infos clearfix">
+				    <div class="clearfix">
+				        <div class="col-xs-12 col-sm-6 col-md-3">
+				            #@elementItemAjax("服务类型：","sm",[4,8])
+				                #@tSelect("serviceType" "" {"class":"select2","style":"width:100%"})
+					                <option value="">全部</option>
+					                #for(buildServicecenter:buildServicecenterList)
+					                    <option value="${buildServicecenter?.servicecenterCode}">${buildServicecenter?.servicecenterName}</option>
+					                #end
+					            #end
+				            #end
+				        </div>
+				        <div class="col-xs-12 col-sm-6 col-md-3">
+				            #@elementItemAjax("顾问星级：","sm",[4,8])
+				                #@tSelect("stars" "" {"class":"select2","style":"width:100%"})
+						            <option value="">全部</option>
+						            #for(stars:starsList)
+						            <option value="${stars?.value}">${stars?.text}
+						            </option>
+						        	#end
+						        #end
+				            #end
+				        </div>
+				        <div class="col-xs-12 col-sm-6 col-md-3">
+				            #@elementItemAjax("工作年限：","sm",[4,8])
+				                #tInput("workYears" "" {"placeholder":"请输入工作年限","datatype":"*1-16","nullmsg":"工作年限不能为空！","id":"workYears"})
+				            #end
+				        </div>
+				        <div class="col-xs-12 col-sm-6 col-md-3">
+				            #@tButton("btn-primary btn-sm")#faIcon("search")&nbsp;搜索#end
+        					<input type="reset" class="btn btn-default btn-sm" value="重置" />
+				        </div>
+				    </div>
+				</div>
+				#end
+  		</div>
+  		#@commonwidgetItem()
+  			#@widgetItemHead()
+				#@span({"style":"color: gray;font-size: 14px;"})
+					找到以下相关顾问
+				#end
+				<form name="findAdisver" action="#link('/adisver/findAdisverByName')" method="get" id="msb-box" style="float: right;">
+				    <div class="input-groups" style="margin-top: 3px;margin-right: 5px;">
+				        <input type="text" name="key" id="msb-box-input" value="" style="font-size:12px;height: 35px;width: 100%;" placeholder="请输入顾问姓名进行搜索" nullmsg="请输入内容">
+				        <div id="objectSwitcher" class="input-group-btns ">
+				            <button class="searchBtn"><i class="fa fa-search"></i></button>
+				        </div>
+				    </div>
+				</form>
+  			#end
+  			#@widgetItemBody()
+  				#@div({"class":"widget-support-tickets panel-body"})
+  				#for(buildAdisver:buildAdisverList)
+  					#buildticketDiv(buildAdisver)
+  				#end
+				#end
+  			#end
+  		#end
+  	#end
+#end
+<script type="text/javascript">
+$(function(){
+	$("form[name=findAdisver]").submit(function(){
+         var inputName = $("#msb-box-input");
+         if(inputName.val() == '') {  
+         	layer.msg("请输入相关内容进行查询!", {time:3000,icon: 2});
+            inputName.focus();  
+            return false;  
+         }
+	});
+    
+});
+</script>

@@ -1,0 +1,59 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.BuildInfoServiceService" bean="buildInfoServiceServiceImpl">
+    <service-method local-name="addServicetype" service-id="addServicetype" method-name="addServicetype" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServicetypeDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicetypeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addServicetypeResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicetypeDto"/>
+    </service-method>
+    <service-method local-name="getServicetypeList" service-id="getServicetypeList" method-name="getServicetypeList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServicetypeDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicetypeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServicetypeListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicetypeDto"/>
+    </service-method>
+    <service-method local-name="deleteServicetype" service-id="deleteServicetype" method-name="deleteServicetype" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="serviceCode" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteServicetypeResult" required="false" is-array="true" type="int"/>
+    </service-method>
+    <service-method local-name="checkServicetypeExists" service-id="checkServicetypeExists" method-name="checkServicetypeExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServicetypeDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicetypeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkServicetypeExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="updateServicetype" service-id="updateServicetype" method-name="updateServicetype" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServicetypeDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicetypeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateServicetypeResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getServicetypePager" service-id="getServicetypePager" method-name="getServicetypePager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="buildServicetypeDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicetypeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServicetypePagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="getServicetypeTreeData" service-id="getServicetypeTreeData" method-name="getServicetypeTreeData" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="treeDto" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServicetypeTreeDataResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto"/>
+    </service-method>
+    <service-method local-name="getServicetypeByCode" service-id="getServicetypeByCode" method-name="getServicetypeByCode" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="serviceCode" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServicetypeByCodeResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicetypeDto"/>
+    </service-method>
+    <service-method local-name="getServiceTypeLikeName" service-id="getServiceTypeLikeName" method-name="getServiceTypeLikeName" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="serviceName" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServiceTypeLikeNameResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicetypeDto"/>
+    </service-method>
+  </service-component>
+</service-components>

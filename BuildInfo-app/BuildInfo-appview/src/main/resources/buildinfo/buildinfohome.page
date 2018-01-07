@@ -1,0 +1,795 @@
+#set(serviceList = getDictItem("BUILD_SERVICE")?["list"])
+
+<div class="buss-service-box">
+    <div class="buss-content">
+    	<div class="part-title" style="margin-top: 15px;">
+			<a href="#link('/service/index')">
+				<i class="am-icon-lightbulb-o part-title-i"></i>
+	        	<span class="part-title-span">立即咨询</span>
+	        	<p>Advice</p>
+			</a>
+		</div>
+        <div class="i_service">
+            <ul class="tab_t">
+                <li><a class="on" href="javascript:;"><span></span>工商服务</a></li>
+                <li><a href="javascript:;" class=""><span></span>建筑资质</a></li>
+                <li><a href="javascript:;" class=""><span></span>人力资源</a></li>
+                <li><a href="javascript:;" class=""><span></span>帮跑跑</a></li>
+                <li><a href="javascript:;" class=""><span></span>会计服务</a></li>
+                <li><a href="javascript:;" class=""><span></span>贷款服务</a></li>
+                <li><a href="javascript:;" class=""><span></span>法律服务</a></li>
+                <li><a href="javascript:;" class=""><span></span>网站建设</a></li>
+                <li><a href="javascript:;" class=""><span></span>综合服务</a></li>
+                <div class="clear"></div>
+            </ul>
+            <!--liBox-->
+            <!--工商服务-->
+            <div class="liBox liBox1" style="display: block;">
+                <div class="i_left icon0">
+                    <div class="info">
+                        <div class="info-div1">
+                                <p class="info-div1-p1">BUSINESS SERVICES</p>
+                                <p class="info-div1-p">工商服务</p>
+                    </div>
+                    <div class="info-list-div">
+                        <p>2017注册公司，开启快速注册公司时代</p>
+                        <p>会计服务，高级会计一对一专业服务</p>
+                        <p>思诚会计事务所，您身边的得力助手</p>
+                    </div>
+                    </div>
+                </div>
+                <ul class="i_right">
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">公司注册</p>
+                            <p class="txt2">数十万企业，通过聚企网完成公司注册</p>
+                            <div class="imgbx img-1"></div>
+                            <p class="txt3">
+                                全程网上办理&nbsp; &nbsp; &nbsp; &nbsp;进度随时查询<br>快速注册公司&nbsp; &nbsp; &nbsp; &nbsp;拒绝隐形收费
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003869726&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">股权转让</p>
+                            <p class="txt2">轻松获取你要的资讯</p>
+                            <div class="imgbx img-2"></div>
+                            <p class="txt3">
+                               一对一专业服务&nbsp;,&nbsp;效率保障<br>流程透明&nbsp;,&nbsp;全程可视化
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003869726&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">公司名称变更</p>
+                            <p class="txt2">一站式变更，更快更省心</p>
+                            <div class="imgbx img-3"></div>
+                            <p class="txt3">
+                                提供变更方案&nbsp;,&nbsp;让您无需烦恼<br>网上申请&nbsp;,&nbsp;立即响应
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003869726&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--建筑资质-->
+            <div class="liBox liBox2" style="display: none;">
+                <div class="i_left icon3">
+                    <div class="info">
+                    <div class="info-div1 info-div2">
+                                <p class="info-div1-p1">BUILDING APTITUDES</p>
+                                <p class="info-div1-p long-info">总承包资质、专业承包资资、建筑设计资质</p>
+                    </div>
+                    <div class="info-list-div">
+                        <p>快捷申请</p>
+            <p>极速响应</p>
+            <p>资深顾问一对一服务</p>
+                    </div>
+                    </div>
+                </div>
+                <ul class="i_right">
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">总承包资质</p>
+                            <p class="txt2">可申办12个施工总承包中1项或多项资质<br>新办、增项、升级</p>
+                            <div class="imgbx img-10"></div>
+                            <p class="txt3">
+                                手续简单&nbsp;，&nbsp;快速申报<br>方便快捷&nbsp;，&nbsp;安全可信
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003869726&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">专业承包资质</p>
+                            <p class="txt2">耐心等待4-6个月，资质证书拿到手</p>
+                            <div class="imgbx img-11"></div>
+                            <p class="txt3">
+                                专业团队&nbsp;，&nbsp;严格把关<br>杜绝纰漏&nbsp;、&nbsp;风险
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003869726&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">建筑设计资质</p>
+                            <p class="txt2">系统管理，办理时间更快</p>
+                            <div class="imgbx img-12"></div>
+                            <p class="txt3">
+                                齐全手续&nbsp;，&nbsp;正规资质<br>30万企业用户的选择
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003869726&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--人力资源-->
+            <div class="liBox liBox3" style="display: none;">
+                <div class="i_left icon1">
+                    <div class="info">
+                        <div class="info-div1 info-div3">
+                                <p class="info-div1-p1">HUMAN RESOURCES</p>
+                                <p class="info-div1-p">人力资源</p>
+                    </div>
+                    <div class="info-list-div">
+                        <p>源于1996年</p>
+            			<p>成立21年，服务了15个国家</p>
+            			<p>超过500种企业服务项目</p>
+            			<p>逾1000000家企业成功案例</p>
+            			<p>2015年客户满意度调查高达97.85%</p>
+                    </div>
+                    </div>
+                </div>
+                <ul class="i_right">
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">全职招聘</p>
+                            <p class="txt2"><span class="org">20%</span>的客户选择，3-4个月下发受理通知书</p>
+                            <div class="imgbx img-4"></div>
+                            <p class="txt3">
+                                全程网上办理&nbsp; &nbsp; &nbsp; &nbsp;进度随时查询<br>通过率全国领先&nbsp; &nbsp; &nbsp; &nbsp;拒绝隐形收费
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003869726&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">兼职挂靠</p>
+                            <p class="txt2"><span class="org">10%</span>的客户选择，材料确认后，<br>3个工作日内可拿申请号</p>
+                            <div class="imgbx img-5"></div>
+                            <p class="txt3">
+                                金牌服务&nbsp;,&nbsp;效率保障<br>流程透明&nbsp;,&nbsp;全程可视化
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003869726&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">猎头服务</p>
+                            <p class="txt2">注册不成功退全款。3个工作日拿申请号</p>
+                            <div class="imgbx img-6"></div>
+                            <p class="txt3">
+                                <span class="org">70%</span>的客户选择&nbsp;,&nbsp;不成功退全款<br>3个工作日可拿申请号
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003869726&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--帮跑跑-->
+            <div class="liBox liBox4" style="display: none;">
+                <div class="i_left icon1">
+                    <div class="info">
+                        <div class="info-div1 info-div4">
+                                <p class="info-div1-p1">HELP RUN</p>
+                                <p class="info-div1-p">帮跑跑</p>
+                    </div>
+                    <div class="info-list-div">
+                        <p>源于1996年</p>
+            			<p>成立21年，服务了15个国家</p>
+            			<p>超过500种企业服务项目</p>
+            			<p>逾1000000家企业成功案例</p>
+            			<p>2015年客户满意度调查高达97.85%</p>
+                    </div>
+                    </div>
+                </div>
+                <ul class="i_right">
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">建造师代办手续</p>
+                            <p class="txt2"><span class="org">20%</span>的客户选择，3-4个月下发受理通知书</p>
+                            <div class="imgbx img-4"></div>
+                            <p class="txt3">
+                                全程网上办理&nbsp; &nbsp; &nbsp; &nbsp;进度随时查询<br>通过率全国领先&nbsp; &nbsp; &nbsp; &nbsp;拒绝隐形收费
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003861830&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">工商材料递交</p>
+                            <p class="txt2"><span class="org">10%</span>的客户选择，材料确认后，<br>3个工作日内可拿申请号</p>
+                            <div class="imgbx img-5"></div>
+                            <p class="txt3">
+                                金牌服务&nbsp;,&nbsp;效率保障<br>流程透明&nbsp;,&nbsp;全程可视化
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003861830&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">资质证书领取</p>
+                            <p class="txt2">注册不成功退全款。3个工作日拿申请号</p>
+                            <div class="imgbx img-6"></div>
+                            <p class="txt3">
+                                <span class="org">70%</span>的客户选择&nbsp;,&nbsp;不成功退全款<br>3个工作日可拿申请号
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003861830&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--会计服务-->
+            <div class="liBox liBox5" style="display: none;">
+                <div class="i_left icon5">
+                    <div class="info">
+                    <div class="info-div1 info-div5">
+                                <p class="info-div1-p1">ACCOUNTING SERVICES</p>
+                                <p class="info-div1-p">会计服务</p>
+                    </div>
+                    <div class="info-list-div">
+                        <p>中国领先的会计服务平台</p>
+            <p>专属顾问一对一服务</p>
+            <p>价格透明，无隐藏收费</p>
+                    </div>
+                    </div>
+                </div>
+                <ul class="i_right">
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">小规模纳税人代理记账</p>
+                            <p class="txt2">专业又贴心的会计服务</p>
+                            <div class="imgbx img-16"></div>
+                            <p class="txt3">
+                                全程网上办理&nbsp; &nbsp; &nbsp; &nbsp;进度随时查询<br>价格公开透明&nbsp; &nbsp; &nbsp; &nbsp;拒绝隐形收费
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003861830&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">一般纳税人代理记账</p>
+                            <p class="txt2">团队服务标准化专人专事无错误</p>
+                            <div class="imgbx img-17"></div>
+                            <p class="txt3">
+                                金牌服务，效率保障<br>流程透明，全程可视化
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003861830&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">高新企业小规模纳税人代理记账</p>
+                            <p class="txt2">专业财税人员合理避税</p>
+                            <div class="imgbx img-18"></div>
+                            <p class="txt3">
+                                网上全程追踪&nbsp; &nbsp; &nbsp; &nbsp;账目清清楚楚<br>价格公开透明&nbsp; &nbsp; &nbsp; &nbsp;拒绝隐形收费
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003861830&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--贷款服务-->
+            <div class="liBox liBox6" style="display: none;">
+                <div class="i_left icon2">
+                    <div class="info">
+                    <div class="info-div1 info-div6">
+                                <p class="info-div1-p1">LOAN SERVICES</p>
+                                <p class="info-div1-p long-info">有房就能贷、有车就能贷、 月入2000即可贷</p>
+                    </div>
+                    <div class="info-list-div">
+                        <p>贷款额度可达8000万</p>
+            <p>最快当天放款</p>
+            <p>月利息低至0.3%</p>
+                    </div>
+                    </div>
+                </div>
+                <ul class="i_right">
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">房贷</p>
+                            <p class="txt2">贷款额度高达评估价值的九成</p>
+                            <div class="imgbx img-7"></div>
+                            <p class="txt3">
+                                利率低&nbsp;&nbsp;&nbsp;&nbsp;最低月利息低至0.3%
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003861830&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">车贷</p>
+                            <p class="txt2">门槛低，按揭车也可办理贷款</p>
+                            <div class="imgbx img-8"></div>
+                            <p class="txt3">
+                                放款快&nbsp;&nbsp;&nbsp;&nbsp;当天可放款
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003861830&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">过桥贷</p>
+                            <p class="txt2">贷款额度可达工资金额的20倍</p>
+                            <div class="imgbx img-9"></div>
+                            <p class="txt3">
+                                资料简单&nbsp;&nbsp;&nbsp;&nbsp;办理便
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003861830&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--法律服务-->
+            <div class="liBox liBox7" style="display: none;">
+                <div class="i_left icon3">
+                    <div class="info">
+                    <div class="info-div1 info-div2">
+                                <p class="info-div1-p1">LAW SERVICES</p>
+                                <p class="info-div1-p">法律服务</p>
+                    </div>
+                    <div class="info-list-div">
+                        <p> “先进律师事务所”、“省级文明律师事务所”等荣誉</p>
+            <p>“严谨、高效”的法律服务原则</p>
+            <p> 标准、透明、更节省</p>
+                    </div>
+                    </div>
+                </div>
+                <ul class="i_right">
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">合同纠纷</p>
+                            <p class="txt2">优选精英律师，快速解答合同问题</p>
+                            <div class="imgbx img-19"></div>
+                            <p class="txt3">
+                                网上申请&nbsp; &nbsp; &nbsp; &nbsp;立即响应<br>优选精英律师&nbsp; &nbsp; &nbsp; &nbsp;更严谨更专业
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003842631&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">刑事辩护</p>
+                            <p class="txt2">胜诉率高才是王道</p>
+                            <div class="imgbx img-20"></div>
+                            <p class="txt3">
+                                具备公检法人脉&nbsp; &nbsp; &nbsp; &nbsp;胜诉率高<br>专业律师团队&nbsp; &nbsp; &nbsp; &nbsp;服务更加有保障
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003842631&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">股权协议</p>
+                            <p class="txt2">专门团队办理，合伙开公司不再烦恼</p>
+                            <div class="imgbx img-21"></div>
+                            <p class="txt3">
+                                办理迅速&nbsp; &nbsp; &nbsp; &nbsp;严谨高效<br>有效规避股权分配陷阱
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003842631&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--网站建设-->
+            <div class="liBox liBox8" style="display: none;">
+                <div class="i_left icon1">
+                    <div class="info">
+                    <div class="info-div1 info-div3">
+                                <p class="info-div1-p1">THE INTERNET QUALIFICATION</p>
+                                <p class="info-div1-p long-info">ICP许可证、文网文经营许可证、呼叫中心</p>
+                    </div>
+                    <div class="info-list-div">
+                        <p>高性价比，急速办理</p>
+            <p>节约客户时间</p>
+            <p>给企业一个合法经营的身份</p>
+            <p>全程跟进，随时可查</p>
+            <p>快速审批专业团队为您保驾护航</p>
+                    </div>
+                    </div>
+                </div>
+                <ul class="i_right">
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">门户网站建设</p>
+                            <p class="txt2"><span class="org">30%</span>的客户选择，1-3个月下发证书</p>
+                            <div class="imgbx img-13"></div>
+                            <p class="txt3">
+                                全程网上办理&nbsp; &nbsp; &nbsp; &nbsp;进度随时查询<br>通过率全国领先&nbsp; &nbsp; &nbsp; &nbsp;拒绝隐形收费
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003842631&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">办公软件开发</p>
+                            <p class="txt2"><span class="org">10%</span>的客户选择，1-2个月下发证书</p>
+                            <div class="imgbx img-14"></div>
+                            <p class="txt3">
+                                政府渠道专家&nbsp; &nbsp; &nbsp; &nbsp;精准解读要点<br>绿色审批通道&nbsp; &nbsp; &nbsp; &nbsp;通过率行业遥遥领先
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003842631&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">移动互联网开发</p>
+                            <p class="txt2">申请、备案、续期、年检…<br>全程跟进，急速办理</p>
+                            <div class="imgbx img-15"></div>
+                            <p class="txt3">
+                                金牌顾问服务&nbsp; &nbsp; &nbsp; &nbsp;专家鼎力支撑<br>21年紧密合作&nbsp; &nbsp; &nbsp; &nbsp;品牌有保障
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003842631&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <!--综合服务-->
+            <div class="liBox liBox9" style="display: none;">
+                <div class="i_left icon2">
+                    <div class="info">
+                    <div class="info-div1 info-div6">
+                                <p class="info-div1-p1">INTEGRATED SERVICES</p>
+                                <p class="info-div1-p">综合服务</p>
+                    </div>
+                    <div class="info-list-div">
+                        <p> 快捷申请，极速响应</p>
+            <p> 客户之所急，求客户之所需</p>
+            <p> 顶呱呱，您身边的得力助手</p>
+                    </div>
+                    </div>
+                </div>
+                <ul class="i_right">
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">高企认定</p>
+                            <p class="txt2">数万企业，通过莱米完成认证体系</p>
+                            <div class="imgbx img-22"></div>
+                            <p class="txt3">
+                                21年认证经验&nbsp; &nbsp; &nbsp; &nbsp;政策全掌握<br>代理认证上市企业&nbsp; &nbsp; &nbsp; &nbsp;实力保障
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003842631&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">企业网站</p>
+                            <p class="txt2">注销、年审、更名、一对一专业服务</p>
+                            <div class="imgbx img-23"></div>
+                            <p class="txt3">
+                                绕开外汇管理&nbsp; &nbsp; &nbsp; &nbsp;方便引资<br>方便国际贸易&nbsp; &nbsp; &nbsp; &nbsp;管理简便灵活
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003842631&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="li_box">
+                            <p class="txt1">办公装修设计</p>
+                            <p class="txt2">莱米专业办理条码申请</p>
+                            <div class="imgbx img-24"></div>
+                            <p class="txt3">
+                                条码行业领导者&nbsp; &nbsp; &nbsp; &nbsp;专注质量<br>21年行业经验&nbsp; &nbsp; &nbsp; &nbsp;品质保障
+                            </p>
+                            <span class="price">&nbsp;</span>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=3003842631&site=qq&menu=yes" class="radius_2">立即申请</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--liBox end-->
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var v11;
+        $('.tab_t a').mouseenter(function(){
+            clearTimeout(v11);
+            var _this=$(this);
+            v11=setTimeout(function(){
+                var _eq = _this.parents('li').index();
+                _this.parents('ul').find('a').removeClass('on');
+                _this.addClass('on');
+                _this.parents('ul').siblings('.liBox').hide().eq(_eq).show().find('.i_right')
+                 .siblings('.i_left').find('.info')
+            },200);
+        })
+    });
+</script>
+<div class="backcolor" style="margin-top: 10px;">
+	<div class="am-container-1">
+		<div class="solutions part-all">
+			<div class="part-title">
+				<a href="javascript:void(0);">
+				<i class="am-icon-lightbulb-o part-title-i"></i>
+				<span class="part-title-span">服务流程</span>
+				<p>Service Flow</p>
+				</a>
+			</div>
+			<ul class="am-g part-content solutions-content">
+		  		<li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
+				  	<img src="#link('/common/img/1.png')"/>
+				  	<span class="solutions-title">电话沟通企业需求</span>
+			  	</li>
+			  	<li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
+				  	<img src="#link('/common/img/2.png')"/>
+				  	<span class="solutions-title">签订委托协议</span>
+				  	
+			  	</li>
+			  	<li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
+				  	<img src="#link('/common/img/3.png')"/>
+				  	<span class="solutions-title">办理相关手续</span>
+			  	</li>
+			  	<li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
+				  	<img src="#link('/common/img/4.png')"/>
+				  	<span class="solutions-title">完成交易</span>
+				  	
+			  	</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="backcolor" style="background-color: #f7f7f7;padding-bottom: 20px;">
+	<div class="am-container-1">
+		<div class="display part-all">
+			<div class="part-title">
+				<i class="am-icon-newspaper-o part-title-i"></i>
+				<span class="part-title-span">莱米集团形象展示</span>
+				<p>LAI MI Group image display</p>
+			</div>
+			#@superbox()
+				#superboxList("/common/img/superbox/superbox-full-1.jpg" "/common/img/superbox/superbox-full-1.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-full-2.jpg" "/common/img/superbox/superbox-full-2.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-3.jpg" "/common/img/superbox/superbox-full-3.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-4.jpg" "/common/img/superbox/superbox-full-4.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-5.jpg" "/common/img/superbox/superbox-full-5.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-6.jpg" "/common/img/superbox/superbox-full-6.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-7.jpg" "/common/img/superbox/superbox-full-7.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-8.jpg" "/common/img/superbox/superbox-full-8.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-9.jpg" "/common/img/superbox/superbox-full-9.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-10.jpg" "/common/img/superbox/superbox-full-10.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-11.jpg" "/common/img/superbox/superbox-full-11.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-12.jpg" "/common/img/superbox/superbox-full-12.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-13.jpg" "/common/img/superbox/superbox-full-13.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-14.jpg" "/common/img/superbox/superbox-full-14.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-15.jpg" "/common/img/superbox/superbox-full-15.jpg" "集团形象")
+				#superboxList("/common/img/superbox/superbox-thumb-16.jpg" "/common/img/superbox/superbox-full-16.jpg" "集团形象")
+			#end
+		</div>
+	</div>
+</div>
+<div class="part-all gray-li">
+	<div class="customer  am-container-1">
+		<div class="part-title">
+			<a href="#link('/adisver/index')">
+				<i class="am-icon-users part-title-i"></i>
+				<span class="part-title-span">专属私人顾问一对一贴心服务</span>
+			</a>
+		</div>
+		#@softFunction()
+			#@softConIconMenus()
+				#@softConMenu("yxch_icon","/img/icontab/yxch.png",60,60)
+					#@softConMenuTxt("font-size: 15px;")
+						工商服务
+					#end
+				#end
+				#@softConMenu("zxzs_icon","/img/icontab/zxzs.png",60,60)
+					#@softConMenuTxt("font-size: 15px;")
+						建筑资质
+					#end
+				#end
+				#@softConMenu("ppsj_icon","/img/icontab/ppsj.png",60,60)
+					#@softConMenuTxt("font-size: 15px;")
+						帮跑跑
+					#end
+				#end
+				#@softConMenu("dkrz_icon","/img/icontab/dkrz.png",60,60)
+					#@softConMenuTxt("font-size: 15px;")
+						贷款服务
+					#end
+				#end
+				#@softConMenu("wzjs_icon","/img/icontab/wzjs.png",60,60)
+					#@softConMenuTxt("font-size: 15px;")
+						网站建设
+					#end
+				#end
+			#end
+			#softConSubMenuCursor("/img/icontab/line_select_001.gif")
+			#@softConSubMenus()
+				#@subMenulist("sub_yxch","display: block;")
+					#set(adisversnum = 0)
+				    #for(buildAdisver:buildAdisverList)
+					    #if((buildAdisver.serviceType).indexOf("gsfw")!=-1)
+					  		#set(adisversnum = adisversnum+1)
+					  		#@commonSubMenuItem(buildAdisver?.adisverImg,"function1")
+								<p class="p1">${buildAdisver?.name}</p>
+								<p class="p2">${buildAdisver?.adisverResume}</p>
+								<div class="input-group" style="padding-left: 20px;padding-right: 20px;">
+									<input type="hidden" name="adisverid" value="${buildAdisver?.id}">
+									<input type="hidden" name="adisvername" value="${buildAdisver?.name}">
+									<input type="hidden" name="demand" value="gsfw">
+		                            <input class="form-control" placeholder="预留预约电话" type="text">
+		                            <span class="input-group-addon"><i class="fa fa-tty"></i></span>
+		                        </div>
+							#end
+							#if(adisversnum == 3)
+					  			#break
+						  	#end
+						#end
+				  	#end
+				#end
+				#@subMenulist("sub_zxzs","display: none;")
+					#set(adisversnum = 0)
+				    #for(buildAdisver:buildAdisverList)
+					    #if((buildAdisver.serviceType).indexOf("jzzz")!=-1)
+					  		#set(adisversnum = adisversnum+1)
+					  		#@commonSubMenuItem(buildAdisver?.adisverImg,"function1")
+								<p class="p1">${buildAdisver?.name}</p>
+								<p class="p2">${buildAdisver?.adisverResume}</p>
+								<div class="input-group" style="padding-left: 20px;padding-right: 20px;">
+									<input type="hidden" name="adisverid" value="${buildAdisver?.id}">
+									<input type="hidden" name="adisvername" value="${buildAdisver?.name}">
+									<input type="hidden" name="demand" value="jzzz">
+		                            <input class="form-control" placeholder="预留预约电话" type="text">
+		                            <span class="input-group-addon"><i class="fa fa-tty"></i></span>
+		                        </div>
+							#end
+							#if(adisversnum == 3)
+					  			#break
+						  	#end
+						#end
+				  	#end
+				#end
+				#@subMenulist("sub_ppsj","display: none;")
+					#set(adisversnum = 0)
+				    #for(buildAdisver:buildAdisverList)
+					    #if((buildAdisver.serviceType).indexOf("bpp")!=-1)
+					  		#set(adisversnum = adisversnum+1)
+					  		#@commonSubMenuItem(buildAdisver?.adisverImg,"function1")
+								<p class="p1">${buildAdisver?.name}</p>
+								<p class="p2">${buildAdisver?.adisverResume}</p>
+								<div class="input-group" style="padding-left: 20px;padding-right: 20px;">
+									<input type="hidden" name="adisverid" value="${buildAdisver?.id}">
+									<input type="hidden" name="adisvername" value="${buildAdisver?.name}">
+									<input type="hidden" name="demand" value="bpp">
+		                            <input class="form-control" placeholder="预留预约电话" type="text">
+		                            <span class="input-group-addon"><i class="fa fa-tty"></i></span>
+		                        </div>
+							#end
+							#if(adisversnum == 3)
+					  			#break
+						  	#end
+						#end
+				  	#end
+				#end
+				#@subMenulist("sub_dkrz","display: none;")
+					#set(adisversnum = 0)
+				    #for(buildAdisver:buildAdisverList)
+					    #if((buildAdisver.serviceType).indexOf("dkfw")!=-1)
+					  		#set(adisversnum = adisversnum+1)
+					  		#@commonSubMenuItem(buildAdisver?.adisverImg,"function1")
+								<p class="p1">${buildAdisver?.name}</p>
+								<p class="p2">${buildAdisver?.adisverResume}</p>
+								<div class="input-group" style="padding-left: 20px;padding-right: 20px;">
+									<input type="hidden" name="adisverid" value="${buildAdisver?.id}">
+									<input type="hidden" name="adisvername" value="${buildAdisver?.name}">
+									<input type="hidden" name="demand" value="dkfw">
+		                            <input class="form-control" placeholder="预留预约电话" type="text">
+		                            <span class="input-group-addon"><i class="fa fa-tty"></i></span>
+		                        </div>
+							#end
+							#if(adisversnum == 3)
+					  			#break
+						  	#end
+						#end
+				  	#end
+				#end
+				#@subMenulist("sub_wzjs","display: none;")
+					#set(adisversnum = 0)
+				    #for(buildAdisver:buildAdisverList)
+					    #if((buildAdisver.serviceType).indexOf("wzjs")!=-1)
+					  		#set(adisversnum = adisversnum+1)
+					  		#@commonSubMenuItem(buildAdisver?.adisverImg,"function1")
+								<p class="p1">${buildAdisver?.name}</p>
+								<p class="p2">${buildAdisver?.adisverResume}</p>
+								<div class="input-group" style="padding-left: 20px;padding-right: 20px;">
+									<input type="hidden" name="adisverid" value="${buildAdisver?.id}">
+									<input type="hidden" name="adisvername" value="${buildAdisver?.name}">
+									<input type="hidden" name="demand" value="wzjs">
+		                            <input class="form-control" placeholder="预留预约电话" type="text">
+		                            <span class="input-group-addon"><i class="fa fa-tty"></i></span>
+		                        </div>
+							#end
+							#if(adisversnum == 3)
+					  			#break
+						  	#end
+						#end
+				  	#end
+				#end
+				
+			#end
+		#end
+		#iconTabInit()
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$(".function1 div span").click(function(){
+			var _this = $(this);
+			var adisverid = _this.siblings("input[name=adisverid]").val();
+			var adisvername = _this.siblings("input[name=adisvername]").val();
+			var demand = _this.siblings("input[name=demand]").val();
+			var phone = _this.siblings(".form-control");
+			
+			if(phone.val() == ''){
+				layer.msg("请输入预留电话!", {time:3000,icon: 2});
+	            phone.focus();  
+	            return false;
+			}
+			$.ajax({
+				url:"#link('/pubdemand/pubdemand')",
+				type:'POST',
+				data:{
+					name:'无_客户未预留姓名',
+					demand:demand,
+					adisverId:adisverid,
+					adisverName:adisvername,
+					phone:phone.val()
+				},
+				dataType:'json',
+				success:function(data){
+					if (data.status == "y") {
+                        layer.msg(data.info,{time:4000});
+                    } else {
+                        layer.msg(data.info, {time:4000,icon: 2});
+                    }
+				},
+				error: function () {
+                    layer.msg(data.info, {time:4000,icon: 2});
+                }
+			})
+			
+			phone.val("");
+		});
+	});
+</script>

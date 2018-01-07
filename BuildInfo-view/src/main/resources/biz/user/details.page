@@ -1,0 +1,68 @@
+#set(userCateMap = getDictItem("BIZ_USER_CATE")?["map"])
+#set(userStatusMap = getDictItem("BIZ_USER_STATUS")?["map"])
+#set(userLockMap = getDictItem("BIZ_LOCK_STATUS")?["map"])
+#set(userGroupMap = getDictItem("BIZ_USER_GROUP")?["map"])
+#@tForm("thisform")
+<div class="form-infos clearfix">
+    <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("用户号：","sm",[4,8])
+                    <span class="show-infos">${sysUserDto?.userId}</span>
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("用户昵称：","sm",[4,8])
+                    <span class="show-infos">${sysUserDto?.userName}</span>
+                #end
+            </div
+
+        </div>
+        <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("直属机构：","sm",[4,8])
+                    <span class="show-infos">${sysUserDto.branchCode}</span>
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("直属部门：","sm",[4,8])
+                    <span class="show-infos">${sysUserDto.depCode}</span>
+                #end
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("创建时间：","sm",[4,8])
+                    <span class="show-infos">${formatDate(sysUserDto.createDate)}</span>
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("修改时间：","sm",[4,8])
+                    <span class="show-infos">${formatDate(sysUserDto.passModifyDate)}</span>
+                #end
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("密码修改时间：","sm",[4,8])
+                    <span class="show-infos">${formatDate(sysUserDto.passModifyDate)}</span>
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("用户类别：","sm",[4,8])
+                    <span class="show-infos">${userGroupMap[sysUserDto?.userType]}</span>
+                #end
+            </div>
+        </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("用户组别：","sm",[4,8])
+                <span class="show-infos">${userCateMap[sysUserDto.userLevel]}</span>
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("锁定状态：","sm",[4,8])
+                <span class="show-infos">${userLockMap[sysUserDto.lockStatus]}</span>
+            #end
+        </div>
+    </div>
+#end

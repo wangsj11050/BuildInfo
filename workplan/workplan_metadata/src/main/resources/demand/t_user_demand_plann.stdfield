@@ -1,0 +1,14 @@
+<standard-fields>
+  <standard-field id="d6fef33c8ee74e3f826bccb0b23e6027" name="development_user" title="具体开发人员" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="437c0b8bddc84662a051f89b1ff1dfc4" name="development_process" title="开发过程描述" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="31d07513d80d49948a34d1f1a3210319" name="sub_plann_problem" title="子需求问题描述" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

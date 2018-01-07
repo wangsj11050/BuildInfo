@@ -1,0 +1,28 @@
+#macro dictTrans(dictItemList,jsDictFunctionName)
+#if(jsDictFunctionName)
+<script>
+    var dictMap_${jsDictFunctionName} = {};
+    #for(dictItem:dictItemList)
+         dictMap_${jsDictFunctionName}['${dictItem?.value}'] = '${dictItem?.text}';
+    #end
+    ##定义数据字典format函数
+    function ${jsDictFunctionName}(value){
+        return dictMap_${jsDictFunctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro radioformat(radioListKey,radioListValue,formatFunctionName)
+#if(formatFunctionName)
+<script>
+    var dictMap_${formatFunctionName} = {};
+    #for(radio:radioListKey)
+         dictMap_${formatFunctionName}['${radio}'] = '${radioListValue?[radioFor.index-1]}';
+    #end
+
+    function ${formatFunctionName}(value){
+        return dictMap_${formatFunctionName}[value];
+    }
+ </script>
+#end
+#end

@@ -1,0 +1,14 @@
+<standard-fields>
+  <standard-field id="f1199e92d05e4b14afd7fa767515159d" name="branch_name" title="机构名称" business-type-id="58c95a5b843d4800a70ba947fdfa086a">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="c27db8618358489cbb488e4acd1ba4a5" name="branch_type" title="机构类别" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="6c1b74a3c31d4d27a5f6b5c168134d62" name="branch_path" title="机构内码" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

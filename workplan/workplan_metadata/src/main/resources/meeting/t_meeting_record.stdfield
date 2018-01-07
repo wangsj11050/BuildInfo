@@ -1,0 +1,14 @@
+<standard-fields>
+  <standard-field id="0994f7c1f95442478204aba316d770b1" name="meeting_presenter" title="主持人" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="bfbc28129a394c29af7d810d6f18baf5" name="meeting_content" title="会议内容" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="d75bf57f59be419cbbe9ace6b141e686" name="meeting_result" title="会议决议" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

@@ -1,0 +1,99 @@
+#set(serviceList = getDictItem("BUILD_SERVICE")?["list"])
+#@gridSysRow({"style":"margin-right:0"})
+	#@gridSysCol(12 {"class":"col-sm-12 col-md-2"})
+		#@tForm("plannForm" "/pubdemand/pubdemand")
+		<div class="infoContent" style="margin: 10px -18px 10px 5px;">
+	       <p class="titleName" style="font-size: 14px;margin: -15px 0 8px 0;color: cornflowerblue;">发布需求</p>
+	       <div class="form-infos clearfix">
+	       	   <div class="clearfix">
+	       	  		<div class="col-xs-12 col-sm-12 col-md-12">
+	       	  			<div class="form-group normal-form">
+	       	  				#tInput("name" "" {"class":"input-sm","placeholder":"您的姓名","datatype":"*1-32","nullmsg":"请填写您的姓名!"})
+	       	  			</div>
+	       	  		</div>
+	       	   </div>
+	       	   <div class="clearfix">
+	       	  		<div class="col-xs-12 col-sm-12 col-md-12">
+	       	  			<div class="form-group normal-form">
+	       	  				#tInput("phone" "" {"class":"input-sm","placeholder":"您的电话","datatype":"*1-20","nullmsg":"请填写您的电话!",
+	               	  				"onkeyup":"this.value=this.value.replace(/\D/g,'')","onafterpaste":"this.value=this.value.replace(/\D/g,'')"})
+	       	  			</div>
+	       	  		</div>
+	       	   </div>
+	       	   <div class="clearfix">
+	       	  		<div class="col-xs-12 col-sm-12 col-md-12">
+	       	  			<div class="form-group normal-form">
+	       	  				#@tSelect("demand" "" {"class":"pubDemand input-sm","style":"width:100%"})
+	       	  					<option value="" style="font-size: 14px;">您的需求</option>
+					            #for(service:serviceList)
+					            <option value="${service?.value}" style="font-size: 14px;">${service?.text}</option>
+					        	#end
+					        #end
+	       	  			</div>
+	       	  		</div>
+	       	   </div>
+	       	   <div class="clearfix">
+	       	  		<div class="col-xs-12 col-sm-12 col-md-12">
+	       	  			<div class="form-group normal-form">
+	       	  				#commontTextarea("demandDesc" {"class":"pubDemandDesc"} {"placeholder":"需求描述","row":"10","style":"height: 175px;font-size:12px;"})
+	       	  			</div>
+	       	  		</div>
+	       	   </div>
+	       	   <div class="clearfix">
+	       	  		<div class="col-xs-12 col-sm-12 col-md-12">
+	       	  			<div class="form-group normal-form">
+	       	  				#tSubmitInput("plannmit" "提交需求" {"class":"btn-info-outline btn-sm"})
+	           	  			</div>
+	           	  		</div>
+	           	   </div>
+	       	   </div>
+	        </div>
+		#end
+	#end
+	#@gridSysCol(12 {"class":"col-sm-12 col-md-10"})
+		<div class="am-container-1">
+			<div class="part-title part-title-mar">
+				<i class=" am-icon-paper-plane part-title-i"></i>
+				<span class="part-title-span">
+				#for(buildService:buildServiceList)
+					#if(buildService?.serviceCode == buildServicecontentDto?.serviceCode)
+						${buildService?.serviceName}
+					#end
+				#end
+				</span>
+			</div>
+		</div>
+		#if(buildServicecontentDto?.serviceDes != null && !"".equals(buildServicecontentDto?.serviceDes))
+			<div class="infoContent" style="margin-top: 20px;font-size: 14px;padding-left: 25px;border-bottom: #d1cdcd 1px solid;">
+				<span class="label label-info" style="font-size: 16px;margin-left: -20px;background-color: #dbdee0;color: #8c8c8f;">业务简介</span>
+				</br>
+				</br>
+				${buildServicecontentDto?.serviceDes}
+			</div>
+		#end
+		#if(buildServicecontentDto?.serviceFlow != null && !"".equals(buildServicecontentDto?.serviceFlow))
+			<div class="infoContent" style="margin-top: 20px;font-size: 14px;padding-left: 25px;border-bottom: #d1cdcd 1px solid;">
+				<span class="label label-info" style="font-size: 16px;margin-left: -20px;background-color: #dbdee0;color: #8c8c8f;">业务流程</span>
+				</br>
+				</br>
+				${buildServicecontentDto?.serviceFlow}
+			</div>
+		#end
+		#if(buildServicecontentDto?.serviceData != null && !"".equals(buildServicecontentDto?.serviceData))
+			<div class="infoContent" style="margin-top: 20px;font-size: 14px;padding-left: 25px;border-bottom: #d1cdcd 1px solid;">
+			<span class="label label-info" style="font-size: 16px;margin-left: -20px;background-color: #dbdee0;color: #8c8c8f;">所需资料</span>
+			</br>
+			</br>
+			${buildServicecontentDto?.serviceData}
+		</div>
+		#end
+		#if(buildServicecontentDto?.serviceTerm != null && !"".equals(buildServicecontentDto?.serviceTerm))
+			<div class="infoContent" style="margin-top: 20px;font-size: 14px;padding-left: 25px;border-bottom: #d1cdcd 1px solid;">
+			<span class="label label-info" style="font-size: 16px;margin-left: -20px;background-color: #dbdee0;color: #8c8c8f;">申请条件</span>
+			</br>
+			</br>
+			${buildServicecontentDto?.serviceTerm}
+		</div>
+		#end
+	#end
+#end

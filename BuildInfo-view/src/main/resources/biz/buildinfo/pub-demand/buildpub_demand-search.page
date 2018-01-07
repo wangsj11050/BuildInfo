@@ -1,0 +1,47 @@
+#set(demandStateList = getDictItem("DEMAND_STAT")?["list"])
+#set(demandList = getDictItem("BUILD_SERVICE")?["list"])
+#@btForm()
+<div class="well well-sm form-inline search-form clearfix">
+	<div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">客户姓名:</label>
+        <div  class="col-md-9 pl-0">#tInput("name" "" {"size":"10","class":"input-sm w-percent","ignore":"ignore"})</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">客户电话:</label>
+        <div  class="col-md-9 pl-0">#tInput("phone" "" {"size":"10","class":"input-sm w-percent","ignore":"ignore"})</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">客户需求:</label>
+        <div  class="col-md-9 pl-0">
+        	#@tSelect("demand" "" {"class":"select2","style":"width:100%"})
+	            <option value=""></option>
+	            #for(demand:demandList)
+	            <option value="${demand?.value}">${demand?.text}
+	            </option>
+	        	#end
+	        #end
+        </div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">需求状态:</label>
+        <div  class="col-md-9 pl-0">
+        	#@tSelect("demandState" "" {"class":"select2","style":"width:100%"})
+	            <option value=""></option>
+	            #for(demandState:demandStateList)
+	            <option value="${demandState?.value}">${demandState?.text}
+	            </option>
+	        	#end
+	        #end
+        </div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">顾问姓名:</label>
+        <div  class="col-md-9 pl-0">#tInput("adisverName" "" {"size":"10","class":"input-sm w-percent","ignore":"ignore"})</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        #@tButton("btn-primary btn-sm")#faIcon("search")&nbsp;搜索#end
+        <input type="reset" class="btn btn-default btn-sm" value="重置" />
+    </div>
+</div>
+#end
+#sReset()

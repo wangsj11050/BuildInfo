@@ -1,0 +1,57 @@
+#kindformat(kindList,"kindFormat")
+#set(modelCodeList = getDictItem("BIZ_MODEL")?["list"])
+#dictTrans(modelCodeList,"modelCodeFormat")
+#@btTable("roleTableone")
+    #include("/biz/user/jur-search.page")
+	#@btToolBar()
+    <button type="button" class="btn btn-default mul-allot">分配</button>
+#end
+#@btTableContents("/sysuser/rights/manage/assignData?isAssigned=false&userCode="+userId,{"data-pagination":"false","data-id-field":"menuId","data-show-export":"false","data-cache":"false"})
+<th data-field="state" data-checkbox="true"></th>
+<th data-field="menuName" data-sortable="true">菜单名称</th>
+<th data-field="kindCode" data-sortable="true" data-formatter="kindFormat">子系统名</th>
+<th data-field="modelCode" data-formatter="modelCodeFormat">模块名称</th>
+#end
+
+<script>
+    $(function () {
+        var _table = $("#${tableId}");
+        var _bttable=$("#${tableId}-table");
+        _table.off("click.allot").on("click.allot",".mul-allot",function(){
+            var sels=_bttable.bootstrapTable('getSelections');
+            if(sels.length===0){
+                layer.msg("请选择",{icon:2})
+                return false;
+            }
+            layer.confirm("确定要批量分配权限信息吗?", {title: "批量分配权限"},function() {
+                var menuIds = [];
+                for (var i = 0, l = sels.length; i < l; i++) {
+                    menuIds.push(sels[i].menuId);
+                }
+                $.ajax({
+                    url: "#link("/sysuser/rights/grant")",   ##分配权限url
+                    type: "post",
+                    data: {
+                        menuIds:menuIds.join(","),
+						userCode:"${userId}"
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        var info = "系统错误";
+                        if (typeof(data.info) != 'undefined') {
+                            info = data.info;
+                        }
+                        if (data && data.status && data.status == "y") {
+                            layer.msg(info);
+                        } else {
+                            layer.msg(info, {icon: 2})
+                        }
+                        _bttable.bootstrapTable('refresh');
+                    }
+                })
+            });
+            return false;
+        })
+    })
+</script>
+#end

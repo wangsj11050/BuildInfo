@@ -1,0 +1,19 @@
+<tables>
+  <table id="d44fc0ad74e64a5ab14ca9173e718ea7" name="t_stikyno" title="记事便签" schema="">
+    <extend-properties/>
+    <description>ext_field_1为便签处理状态</description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="aefdda6546eb4b45a820c0d8d8b6934c" primary="false" unique="false" not-null="true" id="create_user" auto-increase="false"/>
+    <table-field standard-field-id="e66e787ecc154e439fe1e47c27d5dd6b" primary="false" unique="false" not-null="true" id="create_time" auto-increase="false"/>
+    <table-field standard-field-id="f7ffe1e022b44cac8ce6fec323820366" primary="false" unique="false" not-null="true" id="tilte" auto-increase="false"/>
+    <table-field standard-field-id="45130ee5e26e4f4b9fc6c0e13de62070" primary="false" unique="false" not-null="false" id="content" auto-increase="false"/>
+    <table-field standard-field-id="80e8d268f75049d6b78fb67268464394" primary="false" unique="false" not-null="false" id="type" auto-increase="false"/>
+    <table-field standard-field-id="a5a2f5dca9fb4d39bf9ebd22decc59cc" primary="false" unique="false" not-null="false" id="handle_time" auto-increase="false"/>
+    <table-field standard-field-id="18c595c3007647e19f898b028a08a95c" primary="false" unique="false" not-null="false" id="solve_time" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+</tables>

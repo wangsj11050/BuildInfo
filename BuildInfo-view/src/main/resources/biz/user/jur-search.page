@@ -1,0 +1,34 @@
+#kindformat(kindList,"kindFormat")
+#set(modelCodeList = getDictItem("BIZ_MODEL")?["list"])
+#@btForm()
+<div class="well well-sm form-inline search-form clearfix">
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-4 pl-0 pr-0">子系统:</label>
+        <div  class="col-md-8">
+            #@tSelect("kindCode" "" {"class":"select2","style":"width:100%"})
+                <option value="">全部</option>
+                #for(kind:kindList)
+                    <option value="${kind?.kindCode}">${kind?.kindName}</option>
+                #end
+            #end
+
+        </div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-4 pl-0 pr-0">模块:</label>
+        <div  class="col-md-8">
+            #@tSelect("modelCode" "" {"class":"select2","style":"width:100%"})
+                <option value="">全部</option>
+                #for(modelCode:modelCodeList)
+                    <option value="${modelCode?.value}">${modelCode?.text}</option>
+                #end
+            #end
+
+        </div>
+    </div>
+    <div class="search-boxitems btn-boxs col-md-4">
+        #@tButton("btn-primary btn-sm")#faIcon("search")&nbsp;搜索#end
+        <input type="reset" class="btn btn-default btn-sm" value="重置" />
+    </div>
+</div>
+#end

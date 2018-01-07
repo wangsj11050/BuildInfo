@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean id="dictDao" class="org.tinygroup.buildinfo.dao.impl.DictDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tbhisuerpwdDao" class="org.tinygroup.buildinfo.dao.impl.TbhisuerpwdDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysUserRightDao" class="org.tinygroup.buildinfo.ext.dao.impl.TsysUserRightDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysRoleRightDao" class="org.tinygroup.buildinfo.ext.dao.impl.TsysRoleRightDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysUserDao" class="org.tinygroup.buildinfo.dao.impl.TsysUserDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysRoleDao" class="org.tinygroup.buildinfo.dao.impl.TsysRoleDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysOfficeDao" class="org.tinygroup.buildinfo.dao.impl.TsysOfficeDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysBranchDao" class="org.tinygroup.buildinfo.dao.impl.TsysBranchDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysDepDao" class="org.tinygroup.buildinfo.dao.impl.TsysDepDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysOfficeUserDao" class="org.tinygroup.buildinfo.dao.impl.TsysOfficeUserDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysBranchUserDao" class="org.tinygroup.buildinfo.dao.impl.TsysBranchUserDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysUserLoginDao" class="org.tinygroup.buildinfo.dao.impl.TsysUserLoginDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysRoleUserDao" class="org.tinygroup.buildinfo.dao.impl.TsysRoleUserDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysMenuDao" class="org.tinygroup.buildinfo.dao.impl.TsysMenuDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysKindDao" class="org.tinygroup.buildinfo.dao.impl.TsysKindDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysDictEntryDao" class="org.tinygroup.buildinfo.dao.impl.TsysDictEntryDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tsysDictItemDao" class="org.tinygroup.buildinfo.dao.impl.TsysDictItemDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="transDao" class="org.tinygroup.buildinfo.dao.impl.TbtransDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	
+	<bean id="paramDao" class="org.tinygroup.buildinfo.dao.impl.TbparamDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	
+	<bean id="errormsgDao" class="org.tinygroup.buildinfo.dao.impl.TberrormsgDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tRoleRightRefDealDao" class="org.tinygroup.buildinfo.ext.dao.impl.TRoleRightRefDealDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+
+	<bean id="tUserRightRefDealDao" class="org.tinygroup.buildinfo.ext.dao.impl.TUserRightRefDealDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	
+	<bean id="buildServicetypeDao" class="org.tinygroup.buildinfo.dao.impl.BuildServicetypeDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	<bean id="buildServicecontentDao" class="org.tinygroup.buildinfo.dao.impl.BuildServicecontentDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	<bean id="buildServicecenterDao" class="org.tinygroup.buildinfo.dao.impl.BuildServicecenterDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	
+	<bean id="buildAdisverDao" class="org.tinygroup.buildinfo.dao.impl.BuildAdisverDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	
+	<bean id="buildCustomercaseDao" class="org.tinygroup.buildinfo.dao.impl.BuildCustomercaseDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	
+	<bean id="buildNewsDao" class="org.tinygroup.buildinfo.dao.impl.BuildNewsDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	
+	<bean id="buildPubdemandDao" class="org.tinygroup.buildinfo.dao.impl.BuildPubdemandDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	
+	<bean id="buildAboutasDao" class="org.tinygroup.buildinfo.dao.impl.BuildAboutasDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+	
+	<bean id="buildRecruitDao" class="org.tinygroup.buildinfo.dao.impl.BuildRecruitDaoImpl">
+		<property name="dslTemplate" ref="dslTemplate"></property>
+	</bean>
+</beans>

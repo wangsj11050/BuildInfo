@@ -1,0 +1,14 @@
+<ui-components>
+    <ui-component name="project.base" dependencies="tiny.ui.bootstraptable,tiny.ui.plumb,tiny.ui.contextmenu,tiny.ui.form">
+		<css-resource>
+			/static/css/bootstrap-multiselect.css,
+			/static/css/base.css
+		</css-resource>
+		<js-resource>
+			/static/js/flowprocess.js,
+			/static/js/bootstrap-multiselect.js,
+			/js/requestData.js
+		</js-resource>
+		<description>base</description>
+    </ui-component>
+</ui-components>

@@ -1,0 +1,205 @@
+#@navTabs({"id":"myTab"})
+	#@tabsInfo("s1","active")
+		#faIcon("calendar-plus-o")
+		#@span({"class":"hidden-mobile hidden-tablet"})工作日志#end
+	#end
+	#@tabsInfo("s2")
+		#faIcon("desktop")
+		#@span({"class":"hidden-mobile hidden-tablet"})任务计划#end
+	#end
+#end
+#@tabPanes({"id":"myTabContent"})
+	#@tabContent("s1","active")
+		#@calendar("workLog","/workstikyno/stikynomodal.pagelet")
+			//设置头部信息，如果不想显示，可以设置header为false
+            header: {
+                //日历头部左边：初始化切换按钮
+                left: 'prev today',
+                //日历头部中间：显示当前日期信息
+                center: 'title',
+                //日历头部右边：初始化视图
+                right: 'month,agendaWeek,agendaDay'
+            },
+            //设置是否显示周六和周日，设为false则不显示  
+            weekends: true,
+            //日历初始化时显示的日期，月视图显示该月，周视图显示该周，日视图显示该天，和当前日期没有关系
+            defaultDate: new Date(),
+            height:800,
+            
+            //日程数据 
+            events: [
+                {
+                    title: '会签',
+                    start: '2016-12-08'
+                }
+            ],
+            dayClick: function(date, allDay, jsEvent, view) {
+				$modalLink.attr({"href":dolink+"date="+date.format("YYYY-MM-DD")+"&action=add","modal-title":"增加事件"});
+				$modalLink.trigger("click");
+			}
+		#end
+		
+	#end
+	#@tabContent("s2")
+		#@widgetGrid()
+			#@widgetLayout(12,{"style":"padding-top:10px"})
+				#@widgetItem()
+					#@widgetItemHead()
+						#@span({"class":"widget-icon"})
+							#faIcon("bar-chart")
+						#end
+						#@h2()
+							任务请求
+						#end
+					#end
+					#@widgetItemBody()
+					<div class="row no-space">
+						<div class="col-sm-8">
+							<div style="height:220px">
+								<div id="barColumn" style="height:260px"></div>
+							</div>
+						</div>
+						<script type="text/javascript">
+                        $(function () {
+                            var colors = Highcharts.getOptions().colors,
+                                    categories = ['未开始', '进行中', '已完成', '退回'],
+                                    name = '任务信息',
+                                    data = [{
+                                        y: 23,
+                                        color: colors[3],
+                                        drilldown: {
+                                            color: colors[3]
+                                        }
+                                    }, {
+                                        y: 8,
+                                        color: colors[4],
+                                        drilldown: {
+                                            color: colors[3]
+                                        }
+                                    }, {
+                                        y: 12,
+                                        color: colors[8],
+                                        drilldown: {
+                                            color: colors[3]
+                                        }
+                                    },
+                                        , {
+                                            y: 15,
+                                            color: colors[9],
+                                            drilldown: {
+                                                color: colors[3]
+                                            }
+                                        },];
+
+	                                var chart = $('#barColumn').highcharts({
+	                                            chart: {
+	                                                type: 'column'
+	                                            },
+	                                            title: {
+	                                                text: '我的任务'
+	                                            },
+	                                            xAxis: {
+	                                                categories: categories
+	                                            },
+	
+	                                            tooltip: {
+	                                                formatter: function () {
+	                                                    var point = this.point,
+	                                                            s = this.x + '<br/>任务<b>' + this.y + '</b>个<br/>';
+	                                                    return s;
+	                                                }
+	                                            },
+	                                            series: [{
+	                                                name: name,
+	                                                data: data,
+	                                                color: 'white'
+	                                            }],
+	
+	                                        })
+	                                        .highcharts(); // return chart
+	                            });
+	                        </script>
+	                        <div class="col-sm-4 show-stats">
+								<div class="row">
+									<div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+										<span class="text">我的任务
+											<span class="pull-right">130/200</span>
+										</span>
+										#processBar(65,"bg-color-blueDark")
+									</div>
+									<div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+										<span class="text">任务回退
+											<span class="pull-right">1/20</span>
+										</span>
+										#processBar(40,"bg-color-blue")
+									</div>
+									<div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+										<span class="text">流程审批
+											<span class="pull-right">10/20</span>
+										</span>
+										#processBar(70,"bg-color-blue")
+									</div>
+									<div class="col-xs-6 col-sm-6 col-md-12 col-lg-12">
+										<span class="text">我的请求
+											<span class="pull-right">30/50</span>
+										</span>
+										#processBar(80,"bg-color-greenLight")
+									</div>
+								</div>
+							</div>
+						</div>
+					#end
+				#end
+			#end
+			#@widgetLayout(6)
+				#@widgetItem()
+					#@widgetItemHead()
+						#@span({"class":"widget-icon"})
+							#faIcon("tasks")
+						#end
+						#@h2()
+							我的请求
+						#end
+						#@toolbarA("toolbarMore",TINY_CONTEXT_PATH+"/project/task/index","location-arrow")更多#end
+					#end
+					#@widgetItemBody()
+						#@div({"class":"widget-support-tickets panel-body"})
+							#ticketDiv("审批中","label-warning","差旅费","20161205","Charger : wangsj")
+							#ticketDiv("完成","label-success","出差","20161205","Charger : wangsj")
+							#ticketDiv("提交","label-info","体检","20161209","Charger : wangsj")
+							#ticketDiv("退回","label-danger","项目活动","20161209","Charger : wangsj")
+						#end
+					#end
+				#end
+			#end
+			#@widgetLayout(6)
+				#@widgetItem()
+					#@widgetItemHead()
+						#@span({"class":"widget-icon"})
+							#faIcon("paperclip")
+						#end
+						#@h2()
+							待我审批
+						#end
+						#@toolbarA("toolbarMore",TINY_CONTEXT_PATH+"/project/task/index","location-arrow")更多#end
+					#end
+					#@widgetItemBody()
+						#@div({"class":"widget-support-tickets panel-body"})
+							#ticketDiv("待审批","label-info","体检","20161205","Author : wangsj")
+							#ticketDiv("审批中","label-warning","差旅费","20161205","Author : wangsj")
+							#ticketDiv("已审批","label-success","出差","20161205","Author : wangsj")
+							#ticketDiv("退回","label-danger","项目活动","20161205","Author : wangsj")
+						#end
+					#end
+				#end
+			#end
+			<script>
+				$(function(){
+		            $("#widget-grid .jarviswidget").each(function(e){
+		                $(this).removeClass("hide");
+		            })
+		        })
+			</script>
+		#end
+	#end
+#end

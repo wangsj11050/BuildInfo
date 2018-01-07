@@ -1,0 +1,18 @@
+<standard-fields>
+  <standard-field id="f7ffe1e022b44cac8ce6fec323820366" name="tilte" title="标题" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="45130ee5e26e4f4b9fc6c0e13de62070" name="content" title="内容" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="a5a2f5dca9fb4d39bf9ebd22decc59cc" name="handle_time" title="拟处理时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="18c595c3007647e19f898b028a08a95c" name="solve_time" title="拟解决时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

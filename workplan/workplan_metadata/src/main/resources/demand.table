@@ -1,0 +1,68 @@
+<tables>
+  <table id="8721f8e92a6347eaa63b9188a9a450ba" name="t_demand_plann" title="日常需求跟踪计划表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="4f21ee4f84bb41beb3a4de0bbf7083fa" primary="false" unique="false" not-null="true" id="platform_type" auto-increase="false"/>
+    <table-field standard-field-id="c18ba3111bb5463ea98dcb4f58f50eff" primary="false" unique="false" not-null="true" id="plann_number" auto-increase="false"/>
+    <table-field standard-field-id="8d810d0ed63747f38f85a2b19114d805" primary="false" unique="false" not-null="true" id="plann_name" auto-increase="false"/>
+    <table-field standard-field-id="3010aa9d98bf4f41a450b9bb9bd6fd08" primary="false" unique="false" not-null="false" id="relevance_system" auto-increase="false"/>
+    <table-field standard-field-id="1da2e1f7ae70471dab0f865c239cdcdf" primary="false" unique="false" not-null="false" id="implement_model" auto-increase="false"/>
+    <table-field standard-field-id="8e985e0f168546039cd6abc07c5d2e24" primary="false" unique="false" not-null="false" id="technical_manager" auto-increase="false"/>
+    <table-field standard-field-id="aeb1d0e5db3949b1a365c17209c8d49e" primary="false" unique="false" not-null="false" id="developers" auto-increase="false"/>
+    <table-field standard-field-id="0d3a08e2c08e4d0a938982ca8da3d839" primary="false" unique="false" not-null="false" id="plann_point" auto-increase="false"/>
+    <table-field standard-field-id="e3995341352b42a6bbc588b3af1bc61a" primary="false" unique="false" not-null="false" id="plann_date" auto-increase="false"/>
+    <table-field standard-field-id="84fcb1f464164e19bbc4e1c4797bd562" primary="false" unique="false" not-null="false" id="actual_date" auto-increase="false"/>
+    <table-field standard-field-id="03992fabf15a4d5f9e30f9daa72b6ea7" primary="false" unique="false" not-null="false" id="cq_state" auto-increase="false"/>
+    <table-field standard-field-id="aefdda6546eb4b45a820c0d8d8b6934c" primary="false" unique="false" not-null="false" id="create_user" auto-increase="false"/>
+    <table-field standard-field-id="e66e787ecc154e439fe1e47c27d5dd6b" primary="false" unique="false" not-null="false" id="create_time" auto-increase="false"/>
+    <table-field standard-field-id="dfc9c7f613bc4df4b72dabffe6866d0a" primary="false" unique="false" not-null="false" id="last_update_user" auto-increase="false"/>
+    <table-field standard-field-id="d398e82f9f21431891fd89126b833662" primary="false" unique="false" not-null="false" id="last_update_time" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="617d8bf3b3014824baf4c19e2445aa7a" name="t_user_demand_plann" title="人员需求计划表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="2ea51c12d0a449219153a13db98672d8" primary="false" unique="false" not-null="true" id="sub_plann_id" auto-increase="false"/>
+    <table-field standard-field-id="83b19b92de3f448a90c09e8ec73ff2e6" primary="false" unique="false" not-null="true" id="sub_plann_name" auto-increase="false"/>
+    <table-field standard-field-id="4f21ee4f84bb41beb3a4de0bbf7083fa" primary="false" unique="false" not-null="true" id="platform_type" auto-increase="false"/>
+    <table-field standard-field-id="c18ba3111bb5463ea98dcb4f58f50eff" primary="false" unique="false" not-null="true" id="plann_number" auto-increase="false"/>
+    <table-field standard-field-id="d6fef33c8ee74e3f826bccb0b23e6027" primary="false" unique="false" not-null="true" id="development_user" auto-increase="false"/>
+    <table-field standard-field-id="e3995341352b42a6bbc588b3af1bc61a" primary="false" unique="false" not-null="false" id="plann_date" auto-increase="false"/>
+    <table-field standard-field-id="84fcb1f464164e19bbc4e1c4797bd562" primary="false" unique="false" not-null="false" id="actual_date" auto-increase="false"/>
+    <table-field standard-field-id="437c0b8bddc84662a051f89b1ff1dfc4" primary="false" unique="false" not-null="false" id="development_process" auto-increase="false"/>
+    <table-field standard-field-id="31d07513d80d49948a34d1f1a3210319" primary="false" unique="false" not-null="false" id="sub_plann_problem" auto-increase="false"/>
+    <table-field standard-field-id="1b9e951f20c5437b878e85460a06dbe7" primary="false" unique="false" not-null="false" id="plann_state" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="7b4a973d382d4fbe9e14968e01eb3616" name="t_demand_defect" title="需求缺陷跟踪表" schema="">
+    <extend-properties/>
+    <description>ext_field_1为缺陷责任人&#xd;
+ext_field_2为缺陷状态</description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="2ea51c12d0a449219153a13db98672d8" primary="false" unique="false" not-null="true" id="sub_plann_id" auto-increase="false"/>
+    <table-field standard-field-id="83b19b92de3f448a90c09e8ec73ff2e6" primary="false" unique="false" not-null="true" id="sub_plann_name" auto-increase="false"/>
+    <table-field standard-field-id="c94a1efded494350bef0816e1dfd51fc" primary="false" unique="false" not-null="false" id="happen_date" auto-increase="false"/>
+    <table-field standard-field-id="58395e1411ac4a0ab2c69ca3e42af136" primary="false" unique="false" not-null="false" id="problem_phenomenon" auto-increase="false"/>
+    <table-field standard-field-id="abdf417841224459abebb054fd95095a" primary="false" unique="false" not-null="false" id="problem_describe" auto-increase="false"/>
+    <table-field standard-field-id="efaed7147f334685b4dab8494e7ae546" primary="false" unique="false" not-null="false" id="problem_solution" auto-increase="false"/>
+    <table-field standard-field-id="fdf280b37ccd481492dbcfc2db962919" primary="false" unique="false" not-null="false" id="workplan_create_date" auto-increase="false"/>
+    <table-field standard-field-id="aefdda6546eb4b45a820c0d8d8b6934c" primary="false" unique="false" not-null="false" id="create_user" auto-increase="false"/>
+    <table-field standard-field-id="03540f65af5c46cfbc4affbbdbbc9ed2" primary="false" unique="false" not-null="false" id="update_date" auto-increase="false"/>
+    <table-field standard-field-id="d8a5bed809964b42a4308ff3f0e88a12" primary="false" unique="false" not-null="false" id="update_user" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+</tables>

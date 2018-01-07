@@ -1,0 +1,77 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysMenuService" bean="sysMenuServiceImpl">
+    <service-method local-name="getSysMenuList" service-id="getSysMenuList" method-name="getSysMenuList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysMenuDto" type="org.tinygroup.buildinfo.service.inter.dto.SysMenuDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysMenuListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="updateSysMenu" service-id="updateSysMenu" method-name="updateSysMenu" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysMenuDto" type="org.tinygroup.buildinfo.service.inter.dto.SysMenuDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateSysMenuResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getUserSubTrans" service-id="getUserSubTrans" method-name="getUserSubTrans" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userId" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getUserSubTransResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="getSysMenu" service-id="getSysMenu" method-name="getSysMenu" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysMenuResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysMenuDto"/>
+    </service-method>
+    <service-method local-name="findMenuIdsByUser" service-id="findMenuIdsByUser" method-name="findMenuIdsByUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="findMenuIdsByUserResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Integer"/>
+    </service-method>
+    <service-method local-name="deleteSysMenu" service-id="deleteSysMenu" method-name="deleteSysMenu" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteSysMenuResult" required="false" is-array="false" type="void"/>
+    </service-method>
+    <service-method local-name="getMenuInfos" service-id="getMenuInfos" method-name="getMenuInfos" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysMenuDto" type="org.tinygroup.buildinfo.service.inter.dto.SysMenuDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getMenuInfosResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="checkSysMenuExists" service-id="checkSysMenuExists" method-name="checkSysMenuExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysMenuDto" type="org.tinygroup.buildinfo.service.inter.dto.SysMenuDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkSysMenuExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="getMenuTree" service-id="getMenuTree" method-name="getMenuTree" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="treeDto" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getMenuTreeResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="getSysMenuPager" service-id="getSysMenuPager" method-name="getSysMenuPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysMenuDto" type="org.tinygroup.buildinfo.service.inter.dto.SysMenuDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysMenuPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="addSysMenu" service-id="addSysMenu" method-name="addSysMenu" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysMenuDto" type="org.tinygroup.buildinfo.service.inter.dto.SysMenuDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addSysMenuResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysMenuDto"/>
+    </service-method>
+    <service-method local-name="findAppMenuIds" service-id="findAppMenuIds" method-name="findAppMenuIds" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysMenuDto" type="org.tinygroup.buildinfo.service.inter.dto.SysMenuDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="findAppMenuIdsResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+  </service-component>
+</service-components>

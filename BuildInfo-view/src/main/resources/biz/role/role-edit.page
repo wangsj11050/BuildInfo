@@ -1,0 +1,47 @@
+#@tForm("thisform" sysRoleDto?"/sysrole/update?roleId="+sysRoleDto?.roleId:"/sysrole/save" "post" {"class":""})
+    <div class="form-infos clearfix">
+                #@elementItemAjax("角色编号：")
+                	#if(sysRoleDto)
+                    	#tInput("roleCode" sysRoleDto?.roleCode {"placeholder":"请输入角色编号","datatype":"*1-16","nullmsg":"角色编号不能为空！","id":"roleCode","disabled":"disabled"})
+					#else
+                    	#tInput("roleCode" sysRoleDto?.roleCode {"placeholder":"请输入角色编号","datatype":"*1-16","nullmsg":"角色编号不能为空！","id":"roleCode"})
+            		#end
+                    
+                #end
+                #@elementItemAjax("角色名称：")
+                    #tInput("roleName" sysRoleDto?.roleName {"placeholder":"请输入角色名称","datatype":"*1-32","nullmsg":"角色名称不能为空！","id":"roleName"})
+                #end
+
+                #@elementItemAjax("备注：")
+                   #@tTextarea("remark" {"placeholder":"请输入备注信息","row":"10","datatype":"*1-256","ignore":"ignore"})${sysRoleDto?.remark}#end
+                #end
+    </div>
+#end
+<script type="text/javascript">
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info,{icon:2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#role-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info,{icon:2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

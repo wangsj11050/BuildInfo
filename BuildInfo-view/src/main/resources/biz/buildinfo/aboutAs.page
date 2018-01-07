@@ -1,0 +1,71 @@
+#@gridSysRow({"style":"margin-right:0"})
+	#@gridSysCol(12 {"class":"col-sm-12 col-md-12"})
+		#@tForm("aboutAs" aboutAs?"/aboutas/update?id="+aboutAs?.id:"/aboutas/save")
+			<div class="infoContent" style="margin: 10px -18px 10px 5px;">
+           		<p class="titleName" style="font-size: 14px;margin: -15px 0 8px 0;color: cornflowerblue;">企业简介</p>
+           		<div class="form-infos clearfix">
+	           	   <div class="clearfix">
+	           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+	           	  			<div class="form-group normal-form">
+	           	  				#@tabContent("aboutasContent")
+							        #@tTbditor("aboutasContent" {"row":"360","datatype":"*1-10000","nullmsg":"请输入企业简介！","placeholder":"说点什么..","ignore":"ignore","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${aboutAs?.aboutasContent} #end
+								#end
+	           	  			</div>
+	           	  		</div>
+	           	   </div>
+	           	   <p class="titleName" style="font-size: 14px;margin: -15px 0 8px 0;color: cornflowerblue;">福利待遇</p>
+	           	   <div class="clearfix">
+	           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+	           	  			<div class="form-group normal-form">
+	           	  				#@tabContent("extField_1")
+							        #@tTbditor("extField_1" {"row":"360","datatype":"*1-10000","nullmsg":"请输入福利待遇！","placeholder":"说点什么..","ignore":"ignore","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${aboutAs?.extField_1} #end
+								#end
+	           	  			</div>
+	           	  		</div>
+	           	   </div>
+	           	   <div class="clearfix">
+	           	   		<div class="col-xs-12 col-sm-6 col-md-2">
+	           	   		</div>
+	           	   		<div class="col-xs-12 col-sm-6 col-md-2">
+	           	   		</div>
+	           	   		<div class="col-xs-12 col-sm-6 col-md-2">
+	           	   		</div>
+	           	   		<div class="col-xs-12 col-sm-6 col-md-2">
+	           	   		</div>
+	           	   		<div class="col-xs-12 col-sm-6 col-md-2">
+	           	   		</div>
+	           	   		<div class="col-xs-12 col-sm-6 col-md-2">
+	           	   			<div class="form-group normal-form">
+	           	   				#tSubmitInput("plannmit" "提交" {"class":"btn-info-outline btn-sm"})
+	           	   			</div
+	           	   		</div>
+	           	   </div>
+	           	 </div>
+           	</div>
+		#end 
+	#end
+#end
+<script type="text/javascript">
+$(function(){
+	$("form[name=aboutAs]").Validform({
+        tiptype: 1,
+        beforeSubmit: function (curform) {
+            $(curform).ajaxSubmit({
+                dataType: "json",
+                success: function (data) {
+                    if (data.status == "y") {
+                        layer.msg(data.info);
+                    } else {
+                        layer.msg(data.info, {icon: 2});
+                    }
+                },
+                error: function () {
+                    layer.msg(data.info, {icon: 2});
+                }
+            });
+            return false;
+        }
+    });
+
+});
+</script>

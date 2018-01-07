@@ -1,0 +1,47 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.ErrormsgService" bean="errormsgServiceImpl">
+    <service-method local-name="getErrormsg" service-id="getErrormsg" method-name="getErrormsg" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getErrormsgResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.ErrormsgDto"/>
+    </service-method>
+    <service-method local-name="getErrormsgPager" service-id="getErrormsgPager" method-name="getErrormsgPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="errormsgDto" type="org.tinygroup.buildinfo.service.inter.dto.ErrormsgDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getErrormsgPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="checkErrormsgExists" service-id="checkErrormsgExists" method-name="checkErrormsgExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="errormsgDto" type="org.tinygroup.buildinfo.service.inter.dto.ErrormsgDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkErrormsgExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="deleteErrormsg" service-id="deleteErrormsg" method-name="deleteErrormsg" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteErrormsgResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getErrormsgList" service-id="getErrormsgList" method-name="getErrormsgList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="errormsgDto" type="org.tinygroup.buildinfo.service.inter.dto.ErrormsgDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getErrormsgListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="addErrormsg" service-id="addErrormsg" method-name="addErrormsg" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="errormsgDto" type="org.tinygroup.buildinfo.service.inter.dto.ErrormsgDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addErrormsgResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.ErrormsgDto"/>
+    </service-method>
+    <service-method local-name="updateErrormsg" service-id="updateErrormsg" method-name="updateErrormsg" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="errormsgDto" type="org.tinygroup.buildinfo.service.inter.dto.ErrormsgDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateErrormsgResult" required="false" is-array="false" type="int"/>
+    </service-method>
+  </service-component>
+</service-components>

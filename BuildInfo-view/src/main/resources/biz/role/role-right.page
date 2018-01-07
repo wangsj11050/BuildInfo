@@ -1,0 +1,39 @@
+<div class="tabs-container">
+    #@navTabs()
+        #@tabNav({"data-target":"#info-allot","data-url":
+            call("link","/sysrole/manage/assign.pagelet?isAssigned=false&roleId=")+roleId,"state-class":
+            "active"})
+            未分配#end
+        #@tabNav({"data-target":"#info-alloted","data-url":
+            call("link","/sysrole/manage/assign.pagelet?isAssigned=true&roleId=")+roleId})
+            已分配#end
+    #end
+    #@tabPanes()
+        #@tabContent("info-allot" "active")#end
+        #@tabContent("info-alloted")#end
+    #end
+</div>
+<script>
+    $(function () {
+        $("li.active>[data-toggle='tab'][data-url]").each(function () {
+            var _this = $(this);
+            $.ajax({
+                url: _this.attr("data-url"),
+                cache: false,
+                success: function (html) {
+                    $(_this.attr("href")).html(html);
+                }
+            })
+        });
+        $("[data-toggle='tab'][data-url]").on("click", function () {
+            var _this = $(this);
+            $.ajax({
+                url: _this.attr("data-url"),
+                cache: false,
+                success: function (html) {
+                    $(_this.attr("href")).html(html);
+                }
+            })
+        })
+    })
+</script>

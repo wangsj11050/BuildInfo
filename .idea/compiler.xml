@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="BuildInfo-appcontroller" />
+        <module name="BuildInfo-appview" />
+        <module name="BuildInfo-appweb" />
+        <module name="BuildInfo-base-dao" />
+        <module name="BuildInfo-business-impl" />
+        <module name="BuildInfo-business-inter" />
+        <module name="BuildInfo-common" />
+        <module name="BuildInfo-controller" />
+        <module name="BuildInfo-dao-impl" />
+        <module name="BuildInfo-dao-inter" />
+        <module name="BuildInfo-metadata" />
+        <module name="BuildInfo-service-impl" />
+        <module name="BuildInfo-service-inter" />
+        <module name="BuildInfo-template-function" />
+        <module name="BuildInfo-view" />
+        <module name="BuildInfo-view-uicomponent" />
+        <module name="BuildInfo-web" />
+        <module name="workplan_business-impl" />
+        <module name="workplan_business-inter" />
+        <module name="workplan_controller" />
+        <module name="workplan_dao-impl" />
+        <module name="workplan_dao-inter" />
+        <module name="workplan_dto" />
+        <module name="workplan_metadata" />
+        <module name="workplan_service-impl" />
+        <module name="workplan_service-inter" />
+        <module name="workplan_view" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="1.7">
+      <module name="BuildInfo" target="1.7" />
+      <module name="BuildInfo-app" target="1.7" />
+      <module name="BuildInfo-appcontroller" target="1.7" />
+      <module name="BuildInfo-appview" target="1.7" />
+      <module name="BuildInfo-appweb" target="1.7" />
+      <module name="BuildInfo-base-dao" target="1.7" />
+      <module name="BuildInfo-business-impl" target="1.7" />
+      <module name="BuildInfo-business-inter" target="1.7" />
+      <module name="BuildInfo-common" target="1.7" />
+      <module name="BuildInfo-controller" target="1.7" />
+      <module name="BuildInfo-dao-impl" target="1.7" />
+      <module name="BuildInfo-dao-inter" target="1.7" />
+      <module name="BuildInfo-metadata" target="1.7" />
+      <module name="BuildInfo-service-impl" target="1.7" />
+      <module name="BuildInfo-service-inter" target="1.7" />
+      <module name="BuildInfo-template-function" target="1.7" />
+      <module name="BuildInfo-view" target="1.7" />
+      <module name="BuildInfo-view-uicomponent" target="1.7" />
+      <module name="BuildInfo-web" target="1.7" />
+      <module name="workplan" target="1.7" />
+      <module name="workplan_business-impl" target="1.7" />
+      <module name="workplan_business-inter" target="1.7" />
+      <module name="workplan_controller" target="1.7" />
+      <module name="workplan_dao-impl" target="1.7" />
+      <module name="workplan_dao-inter" target="1.7" />
+      <module name="workplan_dto" target="1.7" />
+      <module name="workplan_metadata" target="1.7" />
+      <module name="workplan_service-impl" target="1.7" />
+      <module name="workplan_service-inter" target="1.7" />
+      <module name="workplan_view" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

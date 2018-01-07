@@ -1,0 +1,10 @@
+<standard-fields>
+  <standard-field id="da2b79aa446b4df19b7de134aaaa51cb" name="line_id" title="关联编号" business-type-id="a60be11b684b456e925ea623df639928">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="a402c43cd63a41c5b35d80190b7ab922" name="task_type" title="任务类别" business-type-id="54f823ca921b40c7b6fdb07b09360e81">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

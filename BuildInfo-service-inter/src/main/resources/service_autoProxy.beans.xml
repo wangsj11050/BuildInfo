@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 服务的约定类,定义服务接口包名模式,类名以Service结尾的类 -->
+    <bean id="conventionFactoryBeanDefinitionRegistryPostProcessor" scope="singleton"
+          class="org.tinygroup.custombeandefine.convention.ConventionCustomBeanDefinitionRegistryPostProcessor">
+        <property name="beanDefineCreate" ref="proxyFactoryBeanDefineCreate"></property>
+        <property name="beanNameGenerator" ref="proxyFactoryBeanNameGenerator"></property>
+    </bean>
+
+    <!-- 生成代理bean -->
+    <bean id="proxyFactoryBeanDefineCreate" scope="singleton"
+          class="org.tinygroup.custombeandefine.impl.ProxyFactoryBeanDefineCreate">
+        <property name="interceptorNames">
+            <list>
+                <value>serviceWrapperInterceptor</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 设定代理生成的服务接口类的bean名称 -->
+    <bean id="proxyFactoryBeanNameGenerator" scope="singleton"
+          class="org.tinygroup.custombeandefine.namegenerator.ProxyFactoryBeanNameGenerator">
+    </bean>
+    <!-- 服务的约定类,定义服务接口包名模式,类名以Service结尾的类 -->
+    <bean id="conventionServiceIdentifier" scope="singleton"
+          class="org.tinygroup.custombeandefine.identifier.impl.ConventionServiceIdentifier">
+        <property name="pkgPatterns" value="**.service.inter"/>
+    </bean>
+</beans>

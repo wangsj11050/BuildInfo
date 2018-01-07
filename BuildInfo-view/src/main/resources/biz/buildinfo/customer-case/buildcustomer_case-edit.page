@@ -1,0 +1,59 @@
+#@tForm("thisform"   buildCustomercaseDto?"/workbuildcustomer_case/update?id="+buildCustomercaseDto?.id:"/workbuildcustomer_case/save" "post" {"class":""})
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("案例名称：")
+        	#tInput("caseName" buildCustomercaseDto?.caseName {"placeholder":"请输入案例名称","datatype":"*1-16","nullmsg":"案例名称不能为空！","id":"caseName"})
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("发布日期：")
+        	#dateInput("pubDate" buildCustomercaseDto?.pubDate "yyyy-MM-dd")
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("案例详情：")
+            #@tTbditor("caseInformation" {"row":"500","placeholder":"说点什么..","ignore":"ignore","nullmsg":"请填写案例详情！","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${buildCustomercaseDto?.caseInformation} #end
+        #end
+    </div>
+
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("案例图片：")
+            #tUploadInputMini("caseImg", buildCustomercaseDto?.caseImg)
+        #end
+    </div>
+
+</div>
+#end
+<script type="text/javascript">
+
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info, {icon: 2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#customer_case-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info, {icon: 2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

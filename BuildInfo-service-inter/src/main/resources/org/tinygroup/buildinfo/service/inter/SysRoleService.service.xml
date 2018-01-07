@@ -1,0 +1,71 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysRoleService" bean="sysRoleServiceImpl">
+    <service-method local-name="revokeRoleRights" service-id="revokeRoleRights" method-name="revokeRoleRights" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="roleId" type="java.lang.Integer" required="false" is-array="false"/>
+        <service-parameter name="roleRightIds" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="revokeRoleRightsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="updateRole" service-id="updateRole" method-name="updateRole" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysRoleDto" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateRoleResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="grantRoleRights" service-id="grantRoleRights" method-name="grantRoleRights" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="roleId" type="java.lang.Integer" required="false" is-array="false"/>
+        <service-parameter name="menuIds" type="java.lang.Integer" required="false" is-array="true"/>
+        <service-parameter name="createBy" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="grantRoleRightsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="checkRoleExists" service-id="checkRoleExists" method-name="checkRoleExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysRoleDto" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkRoleExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="getRoleList" service-id="getRoleList" method-name="getRoleList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysRoleDto" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getRoleListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="getRolePager" service-id="getRolePager" method-name="getRolePager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysRoleDto" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getRolePagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="getRole" service-id="getRole" method-name="getRole" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="roleId" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getRoleResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleDto"/>
+    </service-method>
+    <service-method local-name="queryRightsInRole" service-id="queryRightsInRole" method-name="queryRightsInRole" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="roleId" type="java.lang.Integer" required="false" is-array="false"/>
+        <service-parameter name="tRightRefDto" type="org.tinygroup.buildinfo.service.inter.dto.complex.TRightRefDto" required="false" is-array="false"/>
+        <service-parameter name="isAssigned" type="java.lang.Boolean" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="queryRightsInRoleResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="addRole" service-id="addRole" method-name="addRole" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="SysRoleDto" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addRoleResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleDto"/>
+    </service-method>
+    <service-method local-name="deleteRoles" service-id="deleteRoles" method-name="deleteRoles" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteRolesResult" required="false" is-array="false" type="void"/>
+    </service-method>
+  </service-component>
+</service-components>

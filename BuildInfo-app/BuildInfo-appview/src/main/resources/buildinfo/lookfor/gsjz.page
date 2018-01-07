@@ -1,0 +1,111 @@
+#set(serviceList = getDictItem("BUILD_SERVICE")?["list"])
+#@gridSysRow({"style":"margin-right:0"})
+	#@gridSysCol(12 {"class":"col-sm-12 col-md-2","style":"background-color: #f0efef;"})
+		<div class="member-con-l fl" style="margin-top: 10px;"> 
+			<div class="menu"> 
+				<a class="convenience-services-btnbox">
+					<span class="convenience-services-btn url_click1 " url="/zzbz/index/site"> 
+					<span class="convenience-services-mark"></span> 各省市建委官网</span> 
+				</a> 
+				<ul class="accordion"> 
+					<li> 
+						<a class="link1 link1-check"> 
+							<span class="link1-mark link1-mark-f1 "></span>资质标准查询 
+							<span class="link1-arrow fr" style="margin-top: -20px;margin-left: 120px;"></span> 
+						</a> 
+						<ul class="submenu" style="margin-top: -1px;"> 
+							#set(num = 0)
+							 #for(buildService:buildServiceList)
+							 	#set(num = num+1)
+							 	#if("jzzz".equals(buildService?.parentService))
+									#if(num == 1)
+										<li>
+											<a class="link2 url_click link-check" href="#link('/look-for/gsjzInformation?serviceCode='+buildService?.serviceCode+'&serviceName='+buildService?.serviceName)">
+												${buildService?.serviceName}
+											</a>
+										</li>
+									#else
+										<li>
+											<a class="link2 url_click" href="#link('/look-for/gsjzInformation?serviceCode='+buildService?.serviceCode+'&serviceName='+buildService?.serviceName)">
+												${buildService?.serviceName}
+											</a>
+										</li>
+									#end
+								#end
+							 #end
+						</ul> 
+					</li> 
+				</ul> 
+			</div> 
+		</div>
+	#end
+	#@gridSysCol(12 {"class":"col-sm-12 col-md-10"})
+		<div class="member-con-r fr get_right_content">   <div class="member-con-r-s"> 
+		<div class="article-titlebox article-title-top"> <p class="article-title com-title">各省市建委官网</p> </div> <ul class="common-websitebox"> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.bjjs.gov.cn/publish/portal0/">北京市</a> </li> 
+		<li class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.shjjw.gov.cn/gb/node2/">上海市</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.tjcac.gov.cn/">天津市</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.ccc.gov.cn/">重庆市</a> </li> <li class="common-website-li"> <a class="common-website-a" target="_blank" rel="nofollow" 
+		href="http://www.hebjs.gov.cn/">河北省</a> </li> <li class="common-website-li"> 
+		<a class="common-website-a" target="_blank" rel="nofollow" 
+		href="http://www.sxjs.gov.cn/Main/main.action">山西省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.ahjst.gov.cn/ahzjt_Front/">安徽省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.fjjs.gov.cn/">福建省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://jst.jl.gov.cn/">吉林省</a> </li> <li class="common-website-li"> <a class="common-website-a" target="_blank" rel="nofollow" 
+		href="http://www.zjjs.gov.cn/">浙江省</a> </li> <li class="common-website-li"> 
+		<a class="common-website-a" target="_blank" rel="nofollow" 
+		href="http://www.jxjst.gov.cn/">江西省</a> </li> <li class="common-website-li"> 
+		<a class="common-website-a" target="_blank" rel="nofollow" 
+		href="http://www.hnjs.gov.cn/">河南省</a> </li> <li class="common-website-li"> 
+		<a class="common-website-a" target="_blank" rel="nofollow" 
+		href="http://www.lnjst.gov.cn/website/main/index.aspx">辽宁省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.sdjs.gov.cn/">山东省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.jscin.gov.cn/web/default.aspx">江苏省</a> </li> 
+		<li class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" 
+		href="http://www.hbzfhcxjst.gov.cn/ConfigWeb/Index.aspx">湖北省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.hunanjs.gov.cn/zjtmh/index.htm">湖南省</a> </li> 
+		<li class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.gdcic.gov.cn/">广东省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.hnjst.gov.cn/">海南省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.ynjst.gov.cn/">云南省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.gzjs.gov.cn/webSite/main/index.aspx">贵州省</a> 
+		</li> <li class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.scjst.gov.cn/">四川省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.shaanxijs.gov.cn/">陕西省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.gsjs.com.cn/">甘肃省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.qhcin.gov.cn/">青海省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.hljjs.gov.cn/">黑龙江省</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.xzcs.gov.cn/">西藏自治区</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.nxjst.gov.cn/">宁夏回族自治区</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" 
+		href="http://www.nmgjsw.gov.cn/website/main/index.aspx">内蒙古自治区</a> </li> 
+		<li class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.gxcic.net/">广西壮族自治区</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.xjjs.gov.cn/">新疆维吾尔自治区</a> </li> <li 
+		class="common-website-li"> <a class="common-website-a" target="_blank" 
+		rel="nofollow" href="http://www.xjbt.gov.cn/">新疆生产建设兵团</a> </li> </ul> 
+		</div></div>
+	#end
+#end

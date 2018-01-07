@@ -1,0 +1,26 @@
+<standard-fields>
+  <standard-field id="4fbad197f9cf43ef87b2d81156ed313f" name="news_name" title="新闻标题" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="988b21e7ee5e4691b312a35343892f32" name="news_type" title="新闻类别" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="077301585b8d4e7592a388584afc1a28" name="news_content" title="新闻内容" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="bf03e54f7fff4e88898fa0379e15b5d4" name="is_hot" title="是否热点新闻" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="78523b7719b2434ca978f9ff21e67918" name="news_img" title="新闻图片" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="76f75fb861c34ccc8acddc1a3d34c6e0" name="news_desc" title="新闻简介" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

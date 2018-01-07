@@ -1,0 +1,34 @@
+<service-components>
+  <service-component type="org.tinygroup.workplan.service.inter.TrainUserProblemService" bean="trainUserProblemServiceImpl">
+    <service-method local-name="updateTrainUserProblem" service-id="updateTrainUserProblem" method-name="updateTrainUserProblem" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="trainUserProblemDto" type="org.tinygroup.workplan.dto.TrainUserProblemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateTrainUserProblemResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="addTrainUserProblem" service-id="addTrainUserProblem" method-name="addTrainUserProblem" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="trainUserProblemDto" type="org.tinygroup.workplan.dto.TrainUserProblemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addTrainUserProblemResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.TrainUserProblemDto"/>
+    </service-method>
+    <service-method local-name="getFinishUserTrainUserProblemCount" service-id="getFinishUserTrainUserProblemCount" method-name="getFinishUserTrainUserProblemCount" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="trainUserProblemDto" type="org.tinygroup.workplan.dto.TrainUserProblemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getFinishUserTrainUserProblemCountResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getUserTrainUserProblemCount" service-id="getUserTrainUserProblemCount" method-name="getUserTrainUserProblemCount" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="trainUserProblemDto" type="org.tinygroup.workplan.dto.TrainUserProblemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getUserTrainUserProblemCountResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getTrainUserProblemByKey" service-id="getTrainUserProblemByKey" method-name="getTrainUserProblemByKey" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getTrainUserProblemByKeyResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.TrainUserProblemDto"/>
+    </service-method>
+  </service-component>
+</service-components>

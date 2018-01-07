@@ -1,0 +1,70 @@
+<standard-fields>
+  <standard-field id="89226af97f6344429fab94e5ed1f958b" name="user_id" title="用户代码" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="a8b2581a61714258b5a7ef569341a3b1" name="user_name" title="用户名称" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="ebdca348d33745d6b92acd35c96b569a" name="user_pwd" title="用户密码" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="090bbf61bf2e46f8a54dba99509ad2bf" name="user_type" title="用户分类" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="ec9ae406581343aa89939f63bf93d815" name="user_level" title="用户组别" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="dbbed5f9635b4d99a96496fee853e4ba" name="user_status" title="用户状态" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="0a0639c7b8da4ebbad478e121100063c" name="lock_status" title="锁定状态" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="3281a34a2b744ed28a1be7deed06cc83" name="create_date" title="创建时间" business-type-id="f974cf2343f9455e961ac7939611ea13">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="8ec5c53b1c714ecda7eb875cdd890ca2" name="modify_date" title="最后修改时间" business-type-id="f974cf2343f9455e961ac7939611ea13">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="c5e378eaa58f46ae8d2cee8c207aa95c" name="pass_modify_date" title="密码修改时间" business-type-id="f974cf2343f9455e961ac7939611ea13">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="f5867fb044184733ae32abc7c1afe5dd" name="auth_level" title="授权级别" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="3da639c8fbc5483da3c3c3223805d488" name="home_page" title="个性化主页" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="1b620d124d234697bcedc95bb38ef1fd" name="last_login_date" title="上次成功登录日" business-type-id="f974cf2343f9455e961ac7939611ea13">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="32feb718ff824256ad5dc0e001fc38e0" name="last_login_time" title="上次成功登录时" business-type-id="f974cf2343f9455e961ac7939611ea13">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="1874e4ac5f914353b638863f361bda72" name="last_login_ip" title="最近登录操作IP" business-type-id="1edc75df187a4ff0809d9b0cc628ea17">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="8ad83386e63c4aceb1c2bb977b574d1b" name="login_fail_times" title="登录累计失败次数" business-type-id="a60be11b684b456e925ea623df639928">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="56c261eeb9354953a4a3b8ea01c8c185" name="last_fail_date" title="最后登录失败日" business-type-id="f974cf2343f9455e961ac7939611ea13">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

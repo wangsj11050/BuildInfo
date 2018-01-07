@@ -1,0 +1,18 @@
+<standard-fields>
+  <standard-field id="fd68a8e674f148008697d10d8a82c845" name="case_name" title="案例名称" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="64162d4b4b954c0dbbf1aaf723accb2b" name="pub_date" title="发布时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="67830c7750ff41ea858fe63c909b19d6" name="case_information" title="案例详情" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="27717a0627494305ae3087448b9ae9d9" name="case_img" title="案例图片" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

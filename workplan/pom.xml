@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.tinygroup</groupId>
+    <artifactId>BuildInfo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>workplan</artifactId>
+  <packaging>pom</packaging>
+  <modules>
+    <module>workplan_business-impl</module>
+    <module>workplan_business-inter</module>
+    <module>workplan_controller</module>
+    <module>workplan_dao-impl</module>
+    <module>workplan_dao-inter</module>
+    <module>workplan_dto</module>
+    <module>workplan_metadata</module>
+    <module>workplan_service-impl</module>
+    <module>workplan_service-inter</module>
+    <module>workplan_view</module>
+  </modules>
+</project>

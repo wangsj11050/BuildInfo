@@ -1,0 +1,30 @@
+<standard-fields>
+  <standard-field id="27987fbdf6c04061b92c8a3268317e14" name="ta_code" title="分类标识代码" business-type-id="83da4e8a96b44fa5bebdecf3bee132ec">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="ed5873a4ae1c46478215d71d149e1293" name="param_id" title="PARAM_ID" business-type-id="58c95a5b843d4800a70ba947fdfa086a">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="ce34e976c9be42c1a4cefad403eb9a59" name="param_name" title="参数标识名称" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="9ff248eb183348caa1c4ce3cc074bde9" name="param_value" title="参数值" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="b2ae535feda74416810fdd14c75f4012" name="value_name" title="参数名称" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="b411e19ef7934184ac4da8c8ad90593d" name="belong_type" title="归属系统" business-type-id="83fe5c30c4fe4764a1aab3e8d0a42e3e">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="36811c66bcbd46a1a535f0781b84ecb9" name="modi_flag" title="允许修改标志" business-type-id="83fe5c30c4fe4764a1aab3e8d0a42e3e">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

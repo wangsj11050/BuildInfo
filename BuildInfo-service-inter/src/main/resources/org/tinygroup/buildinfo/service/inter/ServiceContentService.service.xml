@@ -1,0 +1,40 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.ServiceContentService" bean="serviceContentServiceImpl">
+    <service-method local-name="updateServiceContent" service-id="updateServiceContent" method-name="updateServiceContent" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServiceContentDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecontentDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateServiceContentResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="addServiceContent" service-id="addServiceContent" method-name="addServiceContent" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServiceContentDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecontentDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addServiceContentResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecontentDto"/>
+    </service-method>
+    <service-method local-name="deleteServiceContent" service-id="deleteServiceContent" method-name="deleteServiceContent" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="serviceCode" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteServiceContentResult" required="false" is-array="true" type="int"/>
+    </service-method>
+    <service-method local-name="getServiceContentLikeName" service-id="getServiceContentLikeName" method-name="getServiceContentLikeName" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="serviceName" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServiceContentLikeNameResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecontentDto"/>
+    </service-method>
+    <service-method local-name="getServicecontentList" service-id="getServicecontentList" method-name="getServicecontentList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServicecontentDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecontentDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServicecontentListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecontentDto"/>
+    </service-method>
+    <service-method local-name="getServiceContentByCode" service-id="getServiceContentByCode" method-name="getServiceContentByCode" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="serviceCode" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServiceContentByCodeResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecontentDto"/>
+    </service-method>
+  </service-component>
+</service-components>

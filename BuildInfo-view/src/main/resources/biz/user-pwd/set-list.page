@@ -1,0 +1,62 @@
+#macro elementItemuq(labeTitle colSize sizeList)#set(colSize=colSize?:"sm",sizeList=sizeList?:[3,6,3])
+<div class="form-group normal-form">
+    <label class="col-${colSize}-${sizeList.get(0)} control-label">${labeTitle}</label>
+    <div class="col-${colSize}-${sizeList.get(1)} pl-0">#bodyContent</div>
+    <div class="col-${colSize}-${sizeList.get(2)} valid-msg"></div>
+</div>
+#end
+<div class="padding-set">
+    <h4 class="title-name">首次登陆需设置密码</h4>
+    <div class="card-content password-change">
+        #@tForm("userResetForm" "/sysuser/pwd/change" "post")
+            #@elementItemuq("原密码 ")
+                #tPassInput(
+                    "oldPassword" ""{"placeholder":"请输入原密码","nullmsg":"请输入原密码！","datatype":"*","autocomplete":"off","id":
+                    "oldpassword"})
+            #end
+            #@elementItemuq("新密码 ")
+                #tPassInput(
+                    "password" ""{"placeholder":"请输入新密码","datatype":"*6-18","nullmsg":"请输入密码！","autocomplete":"off","id":
+                    "password"})
+            #end
+            #@elementItemuq("再次输入新密码 ")
+                #tPassInput("password2" ""{"placeholder":"请再次输入新密码","datatype":"*6-18","nullmsg":"请再输入新密码！","autocomplete":"off",
+                    "recheck":"password","errormsg":"您两次输入的密码不一致！","id":"password2"})
+            #end
+            #@elementItemuq()
+                <div class="text-center">
+                    #@tButton("btn-primary btn-submit")&nbsp;&nbsp;保存&nbsp;&nbsp;#end&nbsp;
+                    #@aButton("btn-default" {"href":"javascript:history.go(-1);"})&nbsp;&nbsp;返回&nbsp;&nbsp;#end
+                </div>
+            #end
+        #end
+        <script type="text/javascript">
+            $(function () {
+                $("form[name=userResetForm").Validform({
+                    tiptype: 1,
+                    beforeSubmit: function (curform) {
+                        $(curform).ajaxSubmit({
+                            dataType: "json",
+                            success: function (data) {
+                                if (data.status == "y") {
+                                    layer.msg(data.info, {icon: 1});
+                                    window.location.href="#link("/sys/index")";
+//                                    $(curform).closest(".modal").trigger("close");
+                                } else {
+                                    layer.msg(data.info, {icon: 2});
+                                }
+                                //try {
+//                                $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                            },
+                            error: function () {
+                                layer.msg("error", {icon: 2});
+                            }
+                        });
+                        return false;
+                    }
+
+                });
+            });
+        </script>
+    </div>
+</div>

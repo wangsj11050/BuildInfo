@@ -1,0 +1,41 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysDictItemService" bean="sysDictItemServiceImpl">
+    <service-method local-name="addDictItem" service-id="addDictItem" method-name="addDictItem" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysDictItemDto" type="org.tinygroup.buildinfo.service.inter.dto.SysDictItemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addDictItemResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysDictItemDto"/>
+    </service-method>
+    <service-method local-name="getDictItemPager" service-id="getDictItemPager" method-name="getDictItemPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysDictItemDto" type="org.tinygroup.buildinfo.service.inter.dto.SysDictItemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getDictItemPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="checkDictItemExists" service-id="checkDictItemExists" method-name="checkDictItemExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysDictItemDto" type="org.tinygroup.buildinfo.service.inter.dto.SysDictItemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkDictItemExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="updateDictItem" service-id="updateDictItem" method-name="updateDictItem" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysDictItemDto" type="org.tinygroup.buildinfo.service.inter.dto.SysDictItemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateDictItemResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getDictItem" service-id="getDictItem" method-name="getDictItem" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="dictItemId" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getDictItemResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysDictItemDto"/>
+    </service-method>
+    <service-method local-name="deleteDictItems" service-id="deleteDictItems" method-name="deleteDictItems" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteDictItemsResult" required="false" is-array="false" type="void"/>
+    </service-method>
+  </service-component>
+</service-components>

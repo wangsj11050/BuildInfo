@@ -1,0 +1,22 @@
+<standard-fields>
+  <standard-field id="afca29516e94436a98b6a550fb9b9edc" name="meeting_subject" title="会议主题" business-type-id="7b06102433fd4db79df39b45a94f5261">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="a58433b29610423cb930c7a45965a177" name="meeting_time" title="会议时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="1cd6d5e617314459bc34fda70040745f" name="meeting_address" title="地点" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="dcfcd33d447c42078f8ec28a11913d86" name="meeting_recorder" title="记录人" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="6a045bcaf11f41e3b96881c47e67ab93" name="join_meeting_user" title="参会人员" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

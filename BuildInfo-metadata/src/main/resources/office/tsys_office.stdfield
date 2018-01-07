@@ -1,0 +1,26 @@
+<standard-fields>
+  <standard-field id="279e7361fa2b42deb511e51539c145cb" name="office_name" title="岗位名称" business-type-id="58c95a5b843d4800a70ba947fdfa086a">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="5fb6004eb4384a2faef2c03d583de3b5" name="short_name" title="简称" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="71b8168214ba450e9f28aca2b910a548" name="office_path" title="岗位内码" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="42e3eab52afb4b44a8a1850458f24720" name="parent_code" title="上级" business-type-id="1edc75df187a4ff0809d9b0cc628ea17">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="6e1f4b7564ca44b2b673e44c6e27feef" name="office_code" title="岗位编号" business-type-id="1edc75df187a4ff0809d9b0cc628ea17">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="d4a1c1428faf4512a3e7e55dec771378" name="branch_level" title="机构级别" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

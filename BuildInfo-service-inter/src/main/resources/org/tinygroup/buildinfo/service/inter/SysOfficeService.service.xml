@@ -1,0 +1,59 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysOfficeService" bean="sysOfficeServiceImpl">
+    <service-method local-name="getOfficeList" service-id="getOfficeList" method-name="getOfficeList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysOfficeDto" type="org.tinygroup.buildinfo.service.inter.dto.SysOfficeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getOfficeListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="deleteSysOffices" service-id="deleteSysOffices" method-name="deleteSysOffices" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteSysOfficesResult" required="false" is-array="false" type="void"/>
+    </service-method>
+    <service-method local-name="checkSysOfficeExists" service-id="checkSysOfficeExists" method-name="checkSysOfficeExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysOfficeDto" type="org.tinygroup.buildinfo.service.inter.dto.SysOfficeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkSysOfficeExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="getOfficeTreeByDep" service-id="getOfficeTreeByDep" method-name="getOfficeTreeByDep" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="tree" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getOfficeTreeByDepResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="getSysOfficePager" service-id="getSysOfficePager" method-name="getSysOfficePager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysOfficeDto" type="org.tinygroup.buildinfo.service.inter.dto.SysOfficeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysOfficePagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="getSysOffice" service-id="getSysOffice" method-name="getSysOffice" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="officeCode" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysOfficeResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysOfficeDto"/>
+    </service-method>
+    <service-method local-name="updateSysOffice" service-id="updateSysOffice" method-name="updateSysOffice" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysOfficeDto" type="org.tinygroup.buildinfo.service.inter.dto.SysOfficeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateSysOfficeResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getOfficeTree" service-id="getOfficeTree" method-name="getOfficeTree" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="tree" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getOfficeTreeResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="addSysOffice" service-id="addSysOffice" method-name="addSysOffice" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysOfficeDto" type="org.tinygroup.buildinfo.service.inter.dto.SysOfficeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addSysOfficeResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysOfficeDto"/>
+    </service-method>
+  </service-component>
+</service-components>

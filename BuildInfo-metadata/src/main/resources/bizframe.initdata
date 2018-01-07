@@ -1,0 +1,1847 @@
+<init-datas id="9ee1eef0fe0648588a0cd1ddcd82e37d">
+  <init-data id="8a456faee7ed42cc9e878572e537d91b" table-id="f7793d8caf034299b6fcf3818aca1da2">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="2"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_RIGHT_FLAG&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;授权标志&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="3"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_SUB_SYSTEM&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;子系统&apos;"/>
+          <value-pair table-field-id="ctrl_flag" value=""/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="4"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_MODEL&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;模块&apos;"/>
+          <value-pair table-field-id="ctrl_flag" value=""/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="5"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_LOGIN_FLAG&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;登录标志&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="6"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_SYN_AUTH&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;同步授权&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="7"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_DICT_TYPE&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;数据字典类型&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark" value=""/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="8"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;SYS_BRANCH_LEVEL&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;机构级别&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark" value="&apos;机构级别&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="9"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_WINDOW_CATE&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;窗口类型&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="10"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_RIGHT_CATE&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;权限分类&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="11"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_SERV_CATE&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;服务分类&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="12"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_ORG_DIMEN&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;组织维度&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="13"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_ORG_CATE&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;组织分类&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="14"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_ORG_LEVEL&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;组织级别&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="15"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_USER_CATE&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;用户分类&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="16"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_USER_STATUS&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;用户状态&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="18"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_YES_OR_NO&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;是否标志&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="19"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_TIME_CATE&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;时间单位&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="21"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_DB_TYPE&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;数据库分类&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="22"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;FIN_DICT_FLAG&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;条目标志&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="23"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_USER_GROUP&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;用户组别&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="24"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_KIND_DIMEN&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;分类维度&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="25"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_LOCK_STATUS&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;锁定状态&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="27"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_CONTROL_FLAG&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;控制标志&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="28"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_READ_OR_WRITE&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;读写属性&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="29"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;BIZ_EXPAND_FLAG&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;展开标志&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="31"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;K_YSCLBZ&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;延时处理&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="32"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;K_ZYGSMK&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;模块类型&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="33"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;K_ZYGSYM&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;归属页面页码&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="34"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;K_PCLZT&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;批处理状态&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="35"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;K_JYQD&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;允许渠道组&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="36"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;K_RZJB&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;日志级别&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="37"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;K_JYLB&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;交易类别&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="38"/>
+          <value-pair table-field-id="dict_entry_code" value="&apos;K_GSXT&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="dict_entry_name" value="&apos;归属系统&apos;"/>
+          <value-pair table-field-id="ctrl_flag"/>
+          <value-pair table-field-id="remark" value="&apos;归属系统&apos;"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="9541361488ed47178779a10b3bbbbb25" table-id="065570a0619d42e496a6f4575e045e64">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="1"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;操作&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="2"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="2"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;授权&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="2"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="4"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;系统模块&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="5"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;用户模块&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="6"/>
+          <value-pair table-field-id="dict_item_code" value="3"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;系统管理&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="7"/>
+          <value-pair table-field-id="dict_item_code" value="4"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;日常运维&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="8"/>
+          <value-pair table-field-id="dict_item_code" value="5"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;产品管理&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="9"/>
+          <value-pair table-field-id="dict_item_code" value="6"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;辅助管理&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="10"/>
+          <value-pair table-field-id="dict_item_code" value="7"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;查询管理&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="11"/>
+          <value-pair table-field-id="dict_item_code" value="8"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;打印管理&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="12"/>
+          <value-pair table-field-id="dict_item_code" value="9"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;公共交易&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="13"/>
+          <value-pair table-field-id="dict_item_code" value="&apos;a&apos;"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;基金业务&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="14"/>
+          <value-pair table-field-id="dict_item_code" value="&apos;b&apos;"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;行内理财&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="15"/>
+          <value-pair table-field-id="dict_item_code" value="&apos;c&apos;"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;基金业务1.2&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="4"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="16"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;登录&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="5"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="17"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;无&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="5"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="18"/>
+          <value-pair table-field-id="dict_item_code" value="-1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;集团&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="8"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="19"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;总公司&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="8"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="20"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;子公司&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="8"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="21"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;子窗口&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="9"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="22"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;弹出窗口&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="9"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="23"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;总部&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="14"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="24"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;事业部&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="14"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="25"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;产品部&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="14"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="26"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;员工&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="15"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="27"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;用户&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="15"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="28"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;注销&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="16"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="29"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;禁用&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="16"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="30"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;签退&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="16"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="31"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;登录&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="16"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="32"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;操作组&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="23"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="33"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;普通组&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="23"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="34"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;授权组&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="23"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="35"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;数据字典&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="24"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="36"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;系统参数&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="24"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="37"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;标准字段&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="24"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="38"/>
+          <value-pair table-field-id="dict_item_code" value="3"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;系统资源&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="24"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="39"/>
+          <value-pair table-field-id="dict_item_code" value="4"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;系统菜单&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="24"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="40"/>
+          <value-pair table-field-id="dict_item_code" value="5"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;子系统&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="24"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="41"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;签退&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="25"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="42"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;登录&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="25"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="43"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;非正常签退&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="25"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="44"/>
+          <value-pair table-field-id="dict_item_code" value="3"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;锁定&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="25"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="45"/>
+          <value-pair table-field-id="dict_item_code" value="4"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;密码锁定&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="25"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="46"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;不控制&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="27"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="47"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;控制&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="27"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="48"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;读&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="28"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="49"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;写&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="28"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="50"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;展开&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="29"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="51"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;不展开&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="29"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="52"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;无&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="31"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="53"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;延时&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="31"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="54"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;定时&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="31"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="55"/>
+          <value-pair table-field-id="dict_item_code" value="3"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;中断&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="31"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="56"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;未激活&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="34"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="57"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;已激活&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="34"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="58"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;作业暂停&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="34"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="59"/>
+          <value-pair table-field-id="dict_item_code" value="3"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;作业完成&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="34"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="60"/>
+          <value-pair table-field-id="dict_item_code" value="4"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;作业失败&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="34"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="61"/>
+          <value-pair table-field-id="dict_item_code" value="5"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;作业中断&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="34"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="62"/>
+          <value-pair table-field-id="dict_item_code" value="&apos;Z&apos;"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;正在处理&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="34"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="63"/>
+          <value-pair table-field-id="dict_item_code" value="9"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;批量发起&apos;"/>
+          <value-pair table-field-id="dict_item_order" value=""/>
+          <value-pair table-field-id="dict_entry_id" value="35"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="64"/>
+          <value-pair table-field-id="dict_item_code" value="&apos;G&apos;"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;WEB管理台&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="35"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="65"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;TRACE&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="36"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="66"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;DEBUG&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="36"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="67"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;INFO&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="36"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="68"/>
+          <value-pair table-field-id="dict_item_code" value="3"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;WARN&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="36"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="69"/>
+          <value-pair table-field-id="dict_item_code" value="4"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;ERROR&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="36"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="70"/>
+          <value-pair table-field-id="dict_item_code" value="5"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;FATAL&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="36"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="71"/>
+          <value-pair table-field-id="dict_item_code" value="6"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;NOLOG&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="36"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="72"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;账户类&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="37"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="73"/>
+          <value-pair table-field-id="dict_item_code" value="1"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;交易类&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="37"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="74"/>
+          <value-pair table-field-id="dict_item_code" value="2"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;撤销&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="37"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="76"/>
+          <value-pair table-field-id="dict_item_code" value="3"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;管理台&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="37"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="77"/>
+          <value-pair table-field-id="dict_item_code" value="4"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;查询类&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="37"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="78"/>
+          <value-pair table-field-id="dict_item_code" value="0"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;销售&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="38"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="79"/>
+          <value-pair table-field-id="dict_item_code" value="&apos;Z&apos;"/>
+          <value-pair table-field-id="dict_item_name" value="&apos;公共&apos;"/>
+          <value-pair table-field-id="dict_item_order"/>
+          <value-pair table-field-id="dict_entry_id" value="38"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="8bfed3a8cedd4ee099cccc47abe73711" table-id="87744626d528433e878ffa8be128c3a8">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="kind_type" value="0"/>
+          <value-pair table-field-id="kind_name" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="parent_code"/>
+          <value-pair table-field-id="mnemonic" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark" value="&apos;BIZFRAME&apos;"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="8d1279f1b18444a6adb3d4bf09cf34d6" table-id="a592c069796e457498f7e1cc71cf542e">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="role_code" value="&apos;r000&apos;"/>
+          <value-pair table-field-id="role_name" value="&apos;系统管理&apos;"/>
+          <value-pair table-field-id="creator" value=""/>
+          <value-pair table-field-id="remark" value="&apos;系统管理&apos;"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="4b63a7ab841042b5b3c89971e066eb67" table-id="9b7d6a3df0b242a09d55e46dadbdb78c">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="dep_code" value="&apos;090001&apos;"/>
+          <value-pair table-field-id="dep_name" value="&apos;java组&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;java组&apos;"/>
+          <value-pair table-field-id="parent_code"/>
+          <value-pair table-field-id="branch_code" value="&apos;09092&apos;"/>
+          <value-pair table-field-id="dep_path" value=""/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="dep_code" value="&apos;090002&apos;"/>
+          <value-pair table-field-id="dep_name" value="&apos;tinyui组&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;tinyui组&apos;"/>
+          <value-pair table-field-id="parent_code"/>
+          <value-pair table-field-id="branch_code" value="&apos;09092&apos;"/>
+          <value-pair table-field-id="dep_path" value=""/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="dep_code" value="&apos;db&apos;"/>
+          <value-pair table-field-id="dep_name" value="&apos;db&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;db&apos;"/>
+          <value-pair table-field-id="parent_code" value="&apos;090001&apos;"/>
+          <value-pair table-field-id="branch_code" value="&apos;09092&apos;"/>
+          <value-pair table-field-id="dep_path" value=""/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="dep_code" value="&apos;ext&apos;"/>
+          <value-pair table-field-id="dep_name" value="&apos;ext&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;ext&apos;"/>
+          <value-pair table-field-id="parent_code" value="&apos;090001&apos;"/>
+          <value-pair table-field-id="branch_code" value="&apos;09092&apos;"/>
+          <value-pair table-field-id="dep_path" value=""/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="dep_code" value="&apos;flow&apos;"/>
+          <value-pair table-field-id="dep_name" value="&apos;flow&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;flow&apos;"/>
+          <value-pair table-field-id="parent_code" value="&apos;090001&apos;"/>
+          <value-pair table-field-id="branch_code" value="&apos;09092&apos;"/>
+          <value-pair table-field-id="dep_path" value=""/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="dep_code" value="&apos;framework&apos;"/>
+          <value-pair table-field-id="dep_name" value="&apos;framework&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;framework&apos;"/>
+          <value-pair table-field-id="parent_code" value="&apos;090001&apos;"/>
+          <value-pair table-field-id="branch_code" value="&apos;09092&apos;"/>
+          <value-pair table-field-id="dep_path" value=""/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="d0b852d11ffc4d16ba35af9649dd7d36" table-id="b1cdacb7c7164e9aa0db80e43ce81eff">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="branch_code" value="&apos;09001&apos;"/>
+          <value-pair table-field-id="branch_level" value="-1"/>
+          <value-pair table-field-id="branch_name" value="&apos;tiny&apos;"/>
+          <value-pair table-field-id="branch_type"/>
+          <value-pair table-field-id="short_name" value="&apos;tiny&apos;"/>
+          <value-pair table-field-id="parent_code" value=""/>
+          <value-pair table-field-id="branch_path"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="branch_code" value="&apos;09090&apos;"/>
+          <value-pair table-field-id="branch_level" value="0"/>
+          <value-pair table-field-id="branch_name" value="&apos;tiny测试&apos;"/>
+          <value-pair table-field-id="branch_type"/>
+          <value-pair table-field-id="short_name" value="&apos;tiny测试&apos;"/>
+          <value-pair table-field-id="parent_code" value="&apos;09001&apos;"/>
+          <value-pair table-field-id="branch_path"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="branch_code" value="&apos;09092&apos;"/>
+          <value-pair table-field-id="branch_level" value="1"/>
+          <value-pair table-field-id="branch_name" value="&apos;tiny开发&apos;"/>
+          <value-pair table-field-id="branch_type"/>
+          <value-pair table-field-id="short_name" value="&apos;tiny开发&apos;"/>
+          <value-pair table-field-id="parent_code" value="&apos;09092&apos;"/>
+          <value-pair table-field-id="branch_path"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="60df4acb103b49a69d3e8a67f23edd02" table-id="abc7e022ffe242b9a61d84cbe5ae36ef">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="office_code" value="&apos;909&apos;"/>
+          <value-pair table-field-id="office_name" value="&apos;技术专家&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;技术专家&apos;"/>
+          <value-pair table-field-id="parent_code" value="null"/>
+          <value-pair table-field-id="branch_code" value="&apos;09090&apos;"/>
+          <value-pair table-field-id="dep_code" value="&apos;090001&apos;"/>
+          <value-pair table-field-id="office_path"/>
+          <value-pair table-field-id="branch_level"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="office_code" value="&apos;j001&apos;"/>
+          <value-pair table-field-id="office_name" value="&apos;UI专家&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;UI专家&apos;"/>
+          <value-pair table-field-id="parent_code" value="null"/>
+          <value-pair table-field-id="branch_code" value="&apos;b002&apos;"/>
+          <value-pair table-field-id="dep_code" value="&apos;090002&apos;"/>
+          <value-pair table-field-id="office_path"/>
+          <value-pair table-field-id="branch_level"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="office_code" value="&apos;091&apos;"/>
+          <value-pair table-field-id="office_name" value="&apos;高级工程师&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;高级工程师&apos;"/>
+          <value-pair table-field-id="parent_code" value="&apos;909&apos;"/>
+          <value-pair table-field-id="branch_code" value="&apos;09090&apos;"/>
+          <value-pair table-field-id="dep_code" value="&apos;090002&apos;"/>
+          <value-pair table-field-id="office_path"/>
+          <value-pair table-field-id="branch_level"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="office_code" value="&apos;j002&apos;"/>
+          <value-pair table-field-id="office_name" value="&apos;UI工程师&apos;"/>
+          <value-pair table-field-id="short_name" value="&apos;UI2&apos;"/>
+          <value-pair table-field-id="parent_code" value="&apos;j001&apos;"/>
+          <value-pair table-field-id="branch_code" value="&apos;b002&apos;"/>
+          <value-pair table-field-id="dep_code" value="&apos;090002&apos;"/>
+          <value-pair table-field-id="office_path"/>
+          <value-pair table-field-id="branch_level"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="d2317b22ac854a618a25b8850cd94839" table-id="7e896e6d8fbb428492e88ca5bf3f2f24">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="1"/>
+          <value-pair table-field-id="menu_code" value="&apos;m001&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;系统管理&apos;"/>
+          <value-pair table-field-id="menu_arg" value="&apos;cs&apos;"/>
+          <value-pair table-field-id="menu_icon" value="&apos;cogs&apos;"/>
+          <value-pair table-field-id="window_type" value="&apos;!&apos;"/>
+          <value-pair table-field-id="tip" value="&apos;xx&apos;"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysdictentry/manage&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="20"/>
+          <value-pair table-field-id="menu_code" value="&apos;m002&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;基础参数管理&apos;"/>
+          <value-pair table-field-id="menu_arg" value=""/>
+          <value-pair table-field-id="menu_icon" value="&apos;fa-sitemap&apos;"/>
+          <value-pair table-field-id="window_type" value="&apos;!&apos;"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="1"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysdictentry/manage.page&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="21"/>
+          <value-pair table-field-id="menu_code" value="&apos;m003&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;用户管理&apos;"/>
+          <value-pair table-field-id="menu_arg" value=""/>
+          <value-pair table-field-id="menu_icon" value="&apos;fa-user&apos;"/>
+          <value-pair table-field-id="window_type" value="&apos;!&apos;"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="1"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;sysuser/manage&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="24"/>
+          <value-pair table-field-id="menu_code" value="&apos;m004&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;数据字典设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon" value=""/>
+          <value-pair table-field-id="window_type" value="0"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="20"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysdictentry/manage.page&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="25"/>
+          <value-pair table-field-id="menu_code" value="&apos;m005&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;系统菜单设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="20"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysmenu/manage.page&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="27"/>
+          <value-pair table-field-id="menu_code" value="&apos;m006&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;岗位设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type" value="&apos;!&apos;"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="21"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysoffice/manage&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="28"/>
+          <value-pair table-field-id="menu_code" value="&apos;m007&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;角色设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type" value="&apos;!&apos;"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="21"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysrole/manage&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="29"/>
+          <value-pair table-field-id="menu_code" value="&apos;m008&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;用户设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type" value="&apos;!&apos;"/>
+          <value-pair table-field-id="tip" value=""/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="21"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysuser/manage&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="30"/>
+          <value-pair table-field-id="menu_code" value="&apos;m009&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;部门设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type" value=""/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="21"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysdep/manage.page&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="33"/>
+          <value-pair table-field-id="menu_code" value="&apos;m010&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;机构设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="21"/>
+          <value-pair table-field-id="order_no" value=""/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysbranch/manage.page&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="37"/>
+          <value-pair table-field-id="menu_code" value="&apos;m011&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;系统类别设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="21"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/syskind/manage.page&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="41"/>
+          <value-pair table-field-id="menu_code" value="&apos;m012&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;交易设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="21"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark" value=""/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysbiztrans/manage&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="42"/>
+          <value-pair table-field-id="menu_code" value="&apos;m013&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;错误代码设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="20"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/syserrorcode/manage&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="46"/>
+          <value-pair table-field-id="menu_code" value="&apos;m014&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;主页设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="21"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysuser/home/manage&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="48"/>
+          <value-pair table-field-id="menu_code" value="&apos;m015&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;参数设置&apos;"/>
+          <value-pair table-field-id="menu_arg"/>
+          <value-pair table-field-id="menu_icon"/>
+          <value-pair table-field-id="window_type"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="20"/>
+          <value-pair table-field-id="order_no"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model"/>
+          <value-pair table-field-id="menu_url" value="&apos;/sysparam/manage&apos;"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="menu_id" value="10"/>
+          <value-pair table-field-id="menu_code" value="&apos;m017&apos;"/>
+          <value-pair table-field-id="kind_code" value="&apos;BIZFRAME&apos;"/>
+          <value-pair table-field-id="menu_name" value="&apos;首页&apos;"/>
+          <value-pair table-field-id="menu_arg" value=""/>
+          <value-pair table-field-id="menu_icon" value="&apos;fa-user&apos;"/>
+          <value-pair table-field-id="window_type" value="&apos;!&apos;"/>
+          <value-pair table-field-id="tip"/>
+          <value-pair table-field-id="hot_key"/>
+          <value-pair table-field-id="parent_id" value="1"/>
+          <value-pair table-field-id="order_no" value="1"/>
+          <value-pair table-field-id="open_flag"/>
+          <value-pair table-field-id="tree_idx"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="window_model" value=""/>
+          <value-pair table-field-id="menu_url" value="&apos;/sys/index&apos;"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="bbf0fd9f9617455abb17925188efdccd" table-id="6975f3662c5f4f72a691ed14e1905f2d">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="1"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="1"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="2"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="20"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="3"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="21"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="4"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="24"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="5"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="25"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="6"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="29"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="7"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="30"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="8"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="33"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="9"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="37"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="10"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="41"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="11"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="42"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="12"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="46"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="13"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="48"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="14"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="menu_id" value="27"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="bc6154e97b0c4cf782eae41fede67e93" table-id="3803b3f2f4b04322ab82eed460f10130">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="1"/>
+          <value-pair table-field-id="user_code" value="&apos;admin&apos;"/>
+          <value-pair table-field-id="role_id" value="1"/>
+          <value-pair table-field-id="right_flag" value="1"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="c7b5af8b50b7406aabbdf5b7f647b3ab" table-id="be35e68d661d454e9b2eebd064298122">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="1"/>
+          <value-pair table-field-id="user_id" value="&apos;admin&apos;"/>
+          <value-pair table-field-id="menu_id" value="41"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="id" value="2"/>
+          <value-pair table-field-id="user_id" value="&apos;admin&apos;"/>
+          <value-pair table-field-id="menu_id" value="28"/>
+          <value-pair table-field-id="create_by"/>
+          <value-pair table-field-id="create_date"/>
+          <value-pair table-field-id="begin_date"/>
+          <value-pair table-field-id="end_date"/>
+          <value-pair table-field-id="right_flag"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="62c8767dd2834b2d868ac3324b71cb28" table-id="cb2028c116be46a987e7e5c2a8103670">
+    <description></description>
+    <records>
+      <record>
+        <value-pairs>
+          <value-pair table-field-id="user_id" value="&apos;admin&apos;"/>
+          <value-pair table-field-id="branch_code" value="&apos;09090&apos;"/>
+          <value-pair table-field-id="dep_code" value="&apos;090001&apos;"/>
+          <value-pair table-field-id="parent_code" value="&apos;超级管理员&apos;"/>
+          <value-pair table-field-id="user_pwd" value="&apos;e80b5017098950fc58aad83c8c14978e&apos;"/>
+          <value-pair table-field-id="user_type" value="0"/>
+          <value-pair table-field-id="user_level" value="0"/>
+          <value-pair table-field-id="user_status" value="0"/>
+          <value-pair table-field-id="lock_status" value="1"/>
+          <value-pair table-field-id="creator" value=""/>
+          <value-pair table-field-id="create_date" value=""/>
+          <value-pair table-field-id="modify_date" value=""/>
+          <value-pair table-field-id="pass_modify_date"/>
+          <value-pair table-field-id="auth_level"/>
+          <value-pair table-field-id="home_page"/>
+          <value-pair table-field-id="remark"/>
+          <value-pair table-field-id="ext_field_1"/>
+          <value-pair table-field-id="ext_field_2"/>
+          <value-pair table-field-id="ext_field_4"/>
+          <value-pair table-field-id="ext_field_5"/>
+          <value-pair table-field-id="ext_field_3"/>
+        </value-pairs>
+      </record>
+    </records>
+  </init-data>
+  <init-data id="00e5dc0c79374b16b17cf117689e2b8e" table-id="7bd362e547954def8efdd9c138d74003">
+    <description></description>
+    <records/>
+  </init-data>
+</init-datas>

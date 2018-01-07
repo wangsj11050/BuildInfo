@@ -1,0 +1,41 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.BuildRecruitService" bean="buildRecruitServiceImpl">
+    <service-method local-name="getRecruitList" service-id="getRecruitList" method-name="getRecruitList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildRecruitDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildRecruitDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getRecruitListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildRecruitDto"/>
+    </service-method>
+    <service-method local-name="getRecruitPager" service-id="getRecruitPager" method-name="getRecruitPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="buildRecruitDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildRecruitDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getRecruitPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="updateRecruit" service-id="updateRecruit" method-name="updateRecruit" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildRecruitDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildRecruitDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateRecruitResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="addRecruit" service-id="addRecruit" method-name="addRecruit" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildRecruitDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildRecruitDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addRecruitResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildRecruitDto"/>
+    </service-method>
+    <service-method local-name="getRecruitById" service-id="getRecruitById" method-name="getRecruitById" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getRecruitByIdResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildRecruitDto"/>
+    </service-method>
+    <service-method local-name="deleteRecruit" service-id="deleteRecruit" method-name="deleteRecruit" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteRecruitResult" required="false" is-array="false" type="int"/>
+    </service-method>
+  </service-component>
+</service-components>

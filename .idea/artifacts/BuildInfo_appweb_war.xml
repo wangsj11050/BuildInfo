@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BuildInfo-appweb:war">
+    <output-path>$PROJECT_DIR$/BuildInfo-app/BuildInfo-appweb/target</output-path>
+    <root id="archive" name="BuildInfoapp-web.war">
+      <element id="artifact" artifact-name="BuildInfo-appweb:war exploded" />
+    </root>
+  </artifact>
+</component>

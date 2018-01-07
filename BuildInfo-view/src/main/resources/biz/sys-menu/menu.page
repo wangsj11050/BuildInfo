@@ -1,0 +1,95 @@
+#set(menuWinCateList = getDictItem("BIZ_WINDOW_CATE")?["list"])
+#dictTrans(menuWinCateList,"menuCateFormat")
+#transformat(transLists,"transFormat")
+#subTransformat(subTransList,"subTransFormat")
+#kindformat(kindList,"kindFormat") 
+#menuformat(menuList,"menuFormat")
+${renderLayer(viewLayer?:0)}
+#@btTable("menu")
+    #include("/biz/sys-menu/menu-search.page")
+	#@btToolBar()
+    <a href="#link("/sysmenu/edit.pagelet?selectedMenu="+menuCode)" data-toggle="modal" modal-title="新增" data-width="800" data-height="480" data-target="#myModalModal" class="btn btn-default" role="button">#faIcon("plus")</a>
+    <button type="button" class="btn btn-default mul-remove">#faIcon("trash")</button>
+#end
+
+#@btTableContent("/sysmenu/getPageData?parentId="+menuId,{"data-page-list":"[15, 20, 50, 100, 200,all]","data-page-size":"15","data-id-field":"menuId","data-show-export":"true","data-cache":"false"})
+<th data-field="state" data-checkbox="true"></th>
+<th data-field="menuName" data-sortable="true">菜单名称</th>
+<th data-field="kindCode" data-sortable="true" data-formatter="kindFormat">系统分类</th>
+<th data-field="windowType" data-sortable="true" data-formatter="menuCateFormat">窗口类型</th>
+<th data-field="parentId" data-sortable="true" data-formatter="menuFormat">上级菜单名称</th>
+#end
+#@btTableOperate()
+<a title="编辑" modal-title="编辑"  data-target="#myModalModal" data-toggle="modal" data-height="480" data-width="800" href="#link("/sysmenu/edit.pagelet?menuId={id}")" >#faIcon("edit")</a>
+<a href="#"  data-opera-type="remove">#faIcon("remove")</a>
+#end
+
+<script>
+    $(function () {
+
+        var _table = $("#${tableId}");
+        var _bttable=$("#${tableId}-table");
+        _table.on("click.remove", "[data-opera-type=remove]", function () {
+            var id = $(this).closest("tr").find("input[type=checkbox]:first").val();
+			var ids = [];
+            ids.push(id);
+            layer.confirm("确定要删除该信息吗?", {title: "删除信息"}, function () {
+                $.ajax({
+                    url: "#link("/sysmenu/delete")",
+                     type: "post",
+                    dataType: "json",
+                    data: {menuIds: ids},
+                    success: function (data) {
+                        var info = "系统错误";
+                        if (typeof(data.info) != "undefined") {
+                            info = data.info;
+                        }
+                        if (data.status == "y") {
+                            layer.msg(info);
+                        } else {
+                            layer.msg(info, {icon: 2})
+                        }
+                        _bttable.bootstrapTable('refresh');
+                        $("#menu_sub_main_menu").trigger("refresh");
+                    }
+                })
+            });
+            return false;
+        }).off("click.mulremove").on("click.mulremove",".mul-remove",function(){
+            var sels=_bttable.bootstrapTable('getSelections');
+            if(sels.length===0){
+                layer.msg("请选择",{icon:2})
+                return false;
+            }
+            layer.confirm("确定要批量删除所选信息吗?", {title: "批量删除信息"},function() {
+                var ids = [];
+                for (var i = 0, l = sels.length; i < l; i++) {
+
+                    ids.push(sels[i].menuId);
+                }
+                $.ajax({
+                    url: "#link("/sysmenu/delete")",
+                    type: "post",
+                    data: {menuIds:ids},
+                    dataType: "json",
+                    success: function (data) {
+                        var info = "系统错误";
+                        if (typeof(data.info) != 'undefined') {
+                            info = data.info;
+                        }
+                        if (data && data.status && data.status == "y") {
+                            layer.msg(info);
+                        } else {
+                            layer.msg(info, {icon: 2})
+                        }
+                        _bttable.bootstrapTable('refresh');
+                        $("#menu_sub_main_menu").trigger("refresh");
+                    }
+                })
+            });
+            return false;
+        })
+    })
+</script>
+#end
+

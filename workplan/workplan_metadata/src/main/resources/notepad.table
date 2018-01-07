@@ -1,0 +1,19 @@
+<tables>
+  <table id="c67eeeb0f145411ea8339fb997b780f5" name="t_user_notepad" title="员工记事本" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="b711aece264744b0b46aad296d3838ba" primary="false" unique="false" not-null="true" id="notepad_name" auto-increase="false"/>
+    <table-field standard-field-id="bdef279e9e434afc9032d8852e281ded" primary="false" unique="false" not-null="false" id="knowledge_type" auto-increase="false"/>
+    <table-field standard-field-id="aefdda6546eb4b45a820c0d8d8b6934c" primary="false" unique="false" not-null="true" id="create_user" auto-increase="false"/>
+    <table-field standard-field-id="e66e787ecc154e439fe1e47c27d5dd6b" primary="false" unique="false" not-null="true" id="create_time" auto-increase="false"/>
+    <table-field standard-field-id="4c2db536130045da90a3d3503e79b8e4" primary="false" unique="false" not-null="false" id="notepad_content" auto-increase="false"/>
+    <table-field standard-field-id="93bb255acefd4bf4b892efc3433cdd2b" primary="false" unique="false" not-null="false" id="transfer_user" auto-increase="false"/>
+    <table-field standard-field-id="68c62d0e481e46c29a8dcd47c66bc443" primary="false" unique="false" not-null="false" id="transfer_time" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+</tables>

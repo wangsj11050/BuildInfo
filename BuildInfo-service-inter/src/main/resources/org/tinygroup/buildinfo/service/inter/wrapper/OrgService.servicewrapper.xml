@@ -1,0 +1,21 @@
+<method-configs>
+  <method-config service-id="addOrg" type="org.tinygroup.buildinfo.service.inter.OrgService" method-name="addOrg">
+    <parameter-type type="org.tinygroup.buildinfo.service.inter.dto.OrgDto"/>
+  </method-config>
+  <method-config service-id="updateOrg" type="org.tinygroup.buildinfo.service.inter.OrgService" method-name="updateOrg">
+    <parameter-type type="org.tinygroup.buildinfo.service.inter.dto.OrgDto"/>
+  </method-config>
+  <method-config service-id="deleteOrg" type="org.tinygroup.buildinfo.service.inter.OrgService" method-name="deleteOrg">
+    <parameter-type type="java.lang.Integer"/>
+  </method-config>
+  <method-config service-id="getOrgs" type="org.tinygroup.buildinfo.service.inter.OrgService" method-name="getOrgs">
+    <parameter-type type="org.tinygroup.buildinfo.service.inter.dto.OrgDto"/>
+  </method-config>
+  <method-config service-id="getOrg" type="org.tinygroup.buildinfo.service.inter.OrgService" method-name="getOrg">
+    <parameter-type type="java.lang.Integer"/>
+  </method-config>
+  <method-config service-id="getOrgPager" type="org.tinygroup.buildinfo.service.inter.OrgService" method-name="getOrgPager">
+    <parameter-type type="org.tinygroup.buildinfo.common.dto.PageRequest"/>
+    <parameter-type type="org.tinygroup.buildinfo.service.inter.dto.OrgDto"/>
+  </method-config>
+</method-configs>

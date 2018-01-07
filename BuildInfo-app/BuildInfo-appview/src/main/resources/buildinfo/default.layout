@@ -1,0 +1,566 @@
+#set(navTilte="首页",navsUSName="Index",navIcon="am-icon-home",upLink="/buildapp/home",upTitle="首页")
+#set(serviceList = getDictItem("BUILD_SERVICE")?["list"])
+#setCommonTitle(tinyRequestRequestURI)
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie8">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-cmn-Hans-CN"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+  	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <title>#if(activeTitle)${activeTitle} #{end} ${TINY_WEB_TITLE}</title>
+    <meta name="keywords" content="${TINY_WEB_TITLE}">
+    <meta name="description" content="${TINY_WEB_TITLE}">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="shortcut icon" href="#link('/common/img/favicon.ico')" type="image/x-icon" />
+    <script type="text/javascript">
+        var contextPath = "${TINY_CONTEXT_PATH}";
+        var UPLOAD_ACTION_URL = '${TINY_CONTEXT_PATH}/ajaxUploadImage';
+        }
+    </script>
+    <!--[if IE 8 ]>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/js/html5shiv.min.js"></script>
+    <![endif]-->
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/jquery/js/jquery.1.11.3.min.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/jquery/js/jquery.brower.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/superBox/css/superBox.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/superBox/js/superbox.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/layer/skin/layer.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/layer/layer.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/layer/layer.ajax.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/moment/js/moment.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/transition.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/affix.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/alert.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/button.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/carousel.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/collapse.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/dropdown.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/scrollspy.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/tab.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/tooltip.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrap/js/popover.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/jqueryUi/css/jquery.ui.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/jqueryUi/js/jquery-ui.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/fontIco/css/font-awesome.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/animation/css/animate.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/animation/js/animate.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/typography/css/typography.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/css/base.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/js/pixel-slimscroll.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/js/fastclick-0.6.11.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/js/jquery.cookie.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/js/resize.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/js/tinyui.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/js/canvas-to-blob.min.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/js/time.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/iconTab/css/iconTab.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrapDate/css/daterangepicker-bs3.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrapDate/js/daterangepicker.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrapDate/js/WdatePicker.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/select2/css/css.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/select2/js/select2.min.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/select2/js/select2_locale_zh-CN.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/table/css/table.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/zTree/css/awesomeStyle/awesome.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/zTree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/zTree/js/jquery.ztree.core-3.5.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/zTree/js/jquery.ztree.exhide-3.5.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/zTree/js/jquery.ztree.excheck-3.5.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/zTree/js/jquery.ztree.exedit-3.5.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/zTree/js/ztree.selected.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrapvalidator/css/bootstrapValidator.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstrapvalidator/js/bootstrapValidator.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/example/css/example.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/form/css/form.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/form/js/Validform_v5.3.2.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/form/js/jquery.form.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/form/js/jquery.icheck.min.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/form/js/ajaxfileupload.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/form/js/jquery.queryFor.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/tableexport/js/tableExport.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/common/css/amazeui.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/common/css/style.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/common/css/comm.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/common/css/immersive-slider.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/common/css/cityPicker.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/common/css/insmain.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/js/amazeui.min.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/js/scroll.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/js/jquery.immersive-slider.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/js/cityPicker.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/js/cityData.js"></script>
+    <script type="text/javascript">
+            var init = [];
+    </script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/button/css/button.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/buttongroup/js/bootstrap-hover-dropdown.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/gridSystems/css/gridSystems.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstraptable/css/bootstrap-table.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstraptable/js/colResizable-1.5.source.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstraptable/js/bootstrap-table.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstraptable/js/extensions/export/bootstrap-table-export.min.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstraptable/js/extensions/reorder-columns/bootstrap-table-reorder-columns.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstraptable/js/extensions/resizable/bootstrap-table-resizable.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstraptable/js/extensions/mobile/bootstrap-table-mobile.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstraptable/js/extensions/reorder-columns/jquery.dragtable.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/bootstraptable/js/locale/bootstrap-table-zh-CN.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/widget/css/widgets.css" rel="stylesheet">
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/widget/js/jarvis.widget.min.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/widget/js/widget.init.js"></script>
+    <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/toTop/js/toTop.tiny.min.js"></script>
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/toTop/css/toTop.tiny.min.css" rel="stylesheet">
+    <link href="${TINY_CONTEXT_PATH}/static/org/tinygroup/navigation/css/navigation.css" rel="stylesheet">
+    <!--[if IE 8 ]>
+        <script src="${TINY_CONTEXT_PATH}/static/org/tinygroup/base/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<script>var init = [];</script>
+#if((tinyRequestRequestURI.indexOf("buildapp") ==-1) && (firstFlag == null || firstFlag == false))
+	<header class="content" style='background: rgba(0, 0, 0, 0) url(#link('/common/img/content.png')) no-repeat scroll center top;'>
+		#topMenu()
+		<style type="text/css">  
+	        .nav > li:hover .dropdown-menu {  
+	            display: block;  
+	        }
+	    </style>
+	    <nav class="navbar navbar-inverse container-fluid nav-main" style="border-radius: 0;">
+		    <div>
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand" title="engati" href="#link('/buildapp/home')" style="color: #0646fe;">
+		            	<img src="#link('/common/img/logo.png')" class="header-engt-img" title="laimi" alt="laimi" style="margin-top: -5px;">
+			            <div style="margin-top:-50px;margin-left:60px;text-align:center;">
+						  	<p style="font-size: 18px;margin-top: 5px;">莱米一站式服务中心</p>
+						  	<p style="font-size: 14px;margin-top: 5px;">开启您建筑企业一站式服务</p>
+						</div>
+		            </a>
+		        </div>
+		        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+		            <ul class="nav navbar-nav navbar-right" style="margin-right: 0;">
+		                <li><a class="sliding-middle-out collapse-section" href="#link('/buildapp/home')">首页</a></li>
+		                #for(buildService:buildServiceList)
+		                	#if("".equals(buildService?.parentService) || buildService?.parentService == null)
+		                		<li class="dropdown">
+		                			#if("jzzz".equals(buildService?.serviceCode))
+		                				<a class="sliding-middle-out" href="#link('/look-for/gsjzInformation?serviceCode='+buildService?.serviceCode+'&serviceName='+buildService?.serviceName)">
+		                					${buildService?.serviceName}
+		                				</a>
+		                			#else
+		                				<a class="sliding-middle-out" href="javascript:void(0);">
+		                					${buildService?.serviceName}
+		                					<span class="glyphicon glyphicon-chevron-down integration-down-arrow"></span>
+		                				</a>
+		                				<ul class="dropdown-menu integration-dropdown dropdown-content">
+		                					#for(subbuildService:buildServiceList)
+		    									#if(subbuildService?.parentService == buildService?.serviceCode)
+		    										<li> <a href="#link('/look-for/Information?serviceCode='+
+															subbuildService?.serviceCode)">${subbuildService?.serviceName}</a></li>
+		    										
+		    									#end
+		    								#end
+		                				</ul>
+		                			#end
+								</li>
+		                	#end
+		                #end
+		            </ul>
+		        </div>
+		    </div>
+		</nav>
+	</header>
+#else
+	<header class="header" >
+		#topMenu()
+		<style type="text/css">  
+	        .nav > li:hover .dropdown-menu {  
+	            display: block;  
+	        }
+	    </style>
+	    <nav class="navbar navbar-inverse container-fluid nav-main" style="border-radius: 0;">
+		    <div>
+		        <div class="navbar-header">
+		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		                <span class="sr-only">Toggle navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		            </button>
+		            <a class="navbar-brand" title="engati" href="#link('/buildapp/home')" style="color: #0646fe;">
+		            	<img src="#link('/common/img/logo.png')" class="header-engt-img" title="laimi" alt="laimi" style="margin-top: -5px;">
+			            <div style="margin-top:-50px;margin-left:60px;text-align:center;">
+						  	<p style="font-size: 18px;margin-top: 5px;">莱米一站式服务中心</p>
+						  	<p style="font-size: 14px;margin-top: 5px;">开启您建筑企业一站式服务</p>
+						</div>
+		            </a>
+		        </div>
+		        <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+		            <ul class="nav navbar-nav navbar-right" style="margin-right: 0;">
+		                <li><a class="sliding-middle-out collapse-section" href="#link('/buildapp/home')">首页</a></li>
+		                #for(buildService:buildServiceList)
+		                	#if("".equals(buildService?.parentService) || buildService?.parentService == null)
+		                		<li class="dropdown">
+		                			#if("jzzz".equals(buildService?.serviceCode))
+		                				<a class="sliding-middle-out" href="#link('/look-for/gsjzInformation?serviceCode='+buildService?.serviceCode+'&serviceName='+buildService?.serviceName)">
+		                					${buildService?.serviceName}
+		                				</a>
+		                			#else
+		                				<a class="sliding-middle-out" href="javascript:void(0);">
+		                					${buildService?.serviceName}
+		                					<span class="glyphicon glyphicon-chevron-down integration-down-arrow"></span>
+		                				</a>
+		                				<ul class="dropdown-menu integration-dropdown dropdown-content">
+		                					#for(subbuildService:buildServiceList)
+		    									#if(subbuildService?.parentService == buildService?.serviceCode)
+		    										<li> <a href="#link('/look-for/Information?serviceCode='+
+															subbuildService?.serviceCode)">${subbuildService?.serviceName}</a></li>
+		    										
+		    									#end
+		    								#end
+		                				</ul>
+		                			#end
+								</li>
+		                	#end
+		                #end
+		            </ul>
+		        </div>
+		    </div>
+		</nav>
+	</header>
+<div class="main" style="margin-top: -575px;">
+  <div class="page_container">
+    <div id="immersive_slider">
+      <div class="slide" data-blurred="#link('/common/img/nav1.png')" style="margin-top: -300px;">
+        <div class="image">
+			<img src="" alt="Slider 1">
+        </div>
+      </div>
+      <div class="slide" data-blurred="#link('/common/img/nav2.png')" style="margin-top: -300px;">
+        <div class="image"><img src="" alt="Slider 1">
+        </div>
+      </div>
+      <div class="slide" data-blurred="#link('/common/img/nav3.png')" style="margin-top: -300px;">
+        <div class="image">
+          <img src="" alt="Slider 1">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  	 $(document).ready( function() {
+  	 $("#immersive_slider").immersive_slider({
+  	   container: ".main"
+  	 });
+  });
+</script>
+#end
+
+#if((tinyRequestRequestURI.indexOf("buildapp") ==-1) && (firstFlag == null || firstFlag == false))
+	<div class="toppic">
+		<div class="am-container-1">
+		 <div class="toppic-title left">
+				<i class="${navIcon} toppic-title-i"></i>
+				<span class="toppic-title-span">${navTilte}</span>
+				<p>${navsUSName}</p>
+			</div>
+			<div class="right toppic-progress">
+				<span><a href="#link(upLink)" class="w-white">${upTitle}</a></span>
+				<i class=" am-icon-arrow-circle-right w-white"></i>
+				<span><a href="#" class="w-white">
+					${navTilte}
+				</a></span>
+			</div>
+		</div>
+	</div>
+#end
+${pageContent}
+
+<footer class="footer ">
+<ul>
+	<li class="am-u-lg-4 am-u-md-4 am-u-sm-12 part-5-li2">
+		<div class="part-5-title">联系我们</div>
+		<div class="part-5-words2">
+			<span>地址:安徽省合肥市瑶海区万达广场4号写字楼</span>
+			<span>电话:18019950335</span>
+			<span>传真:0551-63736797</span>
+			<span>邮箱:4251265@qq.com</span>
+			<span><i class="am-icon-phone"></i><em>0551-63736797</em></span>
+		</div>
+	</li>
+	<li class="am-u-lg-4 am-u-md-4 am-u-sm-12 ">
+		<div class="part-5-title">相关链接</div>
+		<div class="part-5-words2">
+			<ul class="part-5-words2-ul">
+				<li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="#link('/service/index')">服务中心</a></li>
+				<li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="#link('/customer-case/index')">客户案例</a></li>
+				<li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="#link('/news/index')">新闻中心</a></li>
+				<li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="#link('/about-us/index')">关于我们</a></li>
+				<li class="am-u-lg-4 am-u-md-6 am-u-sm-4"><a href="#link('/recruit/index')">招贤纳士</a></li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</li>
+    <div class="clear"></div>
+    </ul>
+</footer>
+<!--左侧悬浮菜单-->
+<ins id="newBridge">
+    <ins class="nb-nodeboard-base nb-nodeboard-position-base nb-nodeboard-left-bottom nb-show" id="nb_nodeboard">
+        <ins class="nb-nodeboard-contain-base nb-nodeboard-contain">
+            <ins class="nb-nodeboard-top nb-nodeboard-top-9">
+                <ins class="nb-head-title">请您留言</ins>
+                <ins class="nb-nodeboard-close" id="nb_nodeboard_close" data-type="min"></ins>
+            </ins>
+            <ins id="nb_nodeboard_text" class="nb-nodeboard-text">
+                <p class="nb-nodeboard-company">莱米网-建筑企业一站式服务平台 </p>
+                <p class="nb-nodeboard-link">0551-63736621</p>
+            </ins>
+            <form id="nb_nodeboard_form" name="slidePlannForm" autocomplete="off" class="nb-board-form" action="#link('/pubdemand/pubdemand')" method="post" accept-charset="utf-8">
+                <ins id="nb_nodeboard_set" class="nb-nodeboard-set">
+                    <ins class="nb-nodeboard-content" id="nb-nodeboard-content">
+						<textarea id="nb-nodeboard-set-content-js" name="demandDesc" data-ph="请在此输入留言内容，我们会尽快与您联系。（必填）" placeholder="请在此输入留言内容，我们会尽快与您联系。（必填）" class="nb-nodeboard-set-content"></textarea>
+						<ins class="nb-nodeboard-tips" id="nb-nodeboard-tips-js" style="top: 81px;display:none;">留言内容不可为空</ins>
+                    </ins>
+                    <ins class="nb-nodeboard-name" style="z-index:4;margin-top: 17px;">
+                        <ins class="nb-nodeboard-icon nodeName"></ins>
+                        <input id="nb_nodeboard_set_name" data-write="0" name="name" maxlength="30" class="nb-nodeboard-input" data-ph="姓名" placeholder="姓名" type="text">
+                    </ins>
+                    <ins class="nb-nodeboard-name" id="nb_nodeboard_phone" style="z-index:3;">
+                        <ins class="nb-nodeboard-icon nodePhone"></ins>
+                        <input id="nb_nodeboard_set_phone" name="phone" maxlength="30" class="nb-nodeboard-input" data-write="1" data-ph="电话（必填）" placeholder="电话（必填）" type="text">
+                   		<ins class="nb-nodeboard-tips" id="nb-nodeboard-tips-js" style="top: 30px;display:none;">电话不能为空!</ins>
+                    </ins>
+                </ins>
+            </form>
+            <ins class="nb-nodeboard-success" id="nb_nodeboard_success">
+                <ins class="nb-success-box">
+                    <ins class="nb-success-icon"></ins>
+                    <ins class="nb-success-title" id="nb_node_messagetitle">感谢留言</ins>
+                    <ins class="nb-success-content" id="nb_node_messagecontent">我们会尽快与您联系</ins>
+                    <ins id="sucess_close" class="nb-sucess-close">关闭</ins>
+                </ins>
+            </ins>
+            <ins class="nb-nodeboard-send" id="nb_node_contain">
+                <ins id="nb_nodeboard_send" class="nb-nodeboard-send-btn nb-nodeboard-send-btn-9">发送</ins>
+            </ins>
+        </ins>
+    </ins>
+    <ins class="nb-icon-wrap nb-icon-base icon-left-center nb-icon-skin-xc-2 nb-icon-icon" id="nb_icon_wrap" style="margin-top:-76px;width:190px;">
+        <ins class="nb-icon-inner-wrap" style="height:151px;width:190px;;">
+            <ins class="nb-icon-bridge0 nb-icon-bridge-base" data-type="iconInvite"></ins>
+        </ins>
+    </ins>
+</ins>
+<script type="text/javascript">
+$(function(){
+    function getCity(){
+    	$.ajax({
+		  url: "http://api.map.baidu.com/location/ip?ak=c07P53a5vZFsrIna8QmqDuZ4R0byARxV&coor=bd09ll",
+		  type: 'get',
+		  dataType: 'JSONP',
+		  timeout: 5000,
+		  success: function (data, status) {
+		  	if(status == 'success'){
+		  		$(".with-padding").html(data.content.address_detail.city);
+		  	}else{
+		  		$(".with-padding").html('合肥市');
+		  	}
+		    console.log(data)
+		  },
+		  fail: function (err, status) {
+		  	$(".with-padding").html('合肥市');
+		    console.log(err)
+		  }
+		});
+    }
+	
+	$(window).load(function(){
+		var sessionStorSupported = (typeof(window.sessionStorage)!=="undefined");
+		var expand;
+		var city_name;
+		if(sessionStorSupported){
+			expand = window.sessionStorage.getItem("isexpand");
+			city_name = window.sessionStorage.getItem("city_name");
+		}else{
+			expand = Cookie.read("isexpand");
+			city_name = Cookie.read("city_name");
+		}
+		if(expand == "yes" || expand == null){
+			$("#plannslide").css("display","");
+			$("#btn").addClass("index_cy");
+		}else{
+			$("#plannslide").css("display","none");
+			$("#btn").addClass("index_cy2");
+		}
+		
+		if(city_name != null && city_name !=''){
+			$(".with-padding").html(city_name);
+		}else{
+			getCity();
+		}
+	});
+	
+	$('#btn').click(function(){
+		var sessionStorSupported = (typeof(window.sessionStorage)!=="undefined");
+		$('#plannslide').toggle();
+		if($(this).hasClass('index_cy')){
+			$(this).removeClass('index_cy');
+			$(this).addClass('index_cy2');
+			if(sessionStorSupported){
+				window.sessionStorage.setItem("isexpand","no");
+			}else{
+				Cookie.write("isexpand", "no");
+			}
+		}else{
+			$(this).removeClass('index_cy2');
+			$(this).addClass('index_cy');
+			if(sessionStorSupported){
+				window.sessionStorage.setItem("isexpand","yes");
+			}else{
+				Cookie.write("isexpand", "yes");
+			}
+		}
+	});
+	
+	$('#sucess_close').click(function(){
+		$('#nb_nodeboard_text').css("display","none");
+		$('#nb_nodeboard_set').css("display","none");
+		$('#nb_node_contain').css("display","none");
+		$('#nb_nodeboard_success').css("display","none");
+		$('#nb_nodeboard_close').addClass('nb-nodeboard-max');
+		$('#nb_nodeboard').css({"left":"1px","right":"auto","top":"auto","bottom":"1px","margin-left":"0px","margin-top":"0px","height":"auto"});
+	});
+	
+	$('#nb_nodeboard_close').click(function(){
+		if($('#nb_nodeboard_close').hasClass('nb-nodeboard-max')){
+			$('#nb_nodeboard_text').css("display","block");
+			$('#nb_nodeboard_set').css("display","block");
+			$('#nb_node_contain').css("display","block");
+			$('#nb_nodeboard_close').removeClass('nb-nodeboard-max');
+		}else{
+			$('#nb_nodeboard_text').css("display","none");
+			$('#nb_nodeboard_set').css("display","none");
+			$('#nb_node_contain').css("display","none");
+			$('#nb_nodeboard_success').css("display","none");
+			$('#nb_nodeboard_close').addClass('nb-nodeboard-max');
+			$('#nb_nodeboard').css({"left":"1px","right":"auto","top":"auto","bottom":"1px","margin-left":"0px","margin-top":"0px","height":"auto"});
+		}
+	});
+	
+	$('.nb-icon-inner-wrap').click(function(){
+		if($('#nb_nodeboard_close').hasClass('nb-nodeboard-max')){
+			$('#nb_nodeboard_text').css("display","block");
+			$('#nb_nodeboard_set').css("display","block");
+			$('#nb_node_contain').css("display","block");
+			$('#nb_nodeboard_close').removeClass('nb-nodeboard-max');
+			$('#nb_nodeboard').css({"left":"50%","right":"auto","top":"50%","bottom":"1px","margin-left":"-120px","margin-top":"-166px","height":"332px"});
+		}else{
+			$('#nb_nodeboard').css({"left":"50%","right":"auto","top":"50%","bottom":"1px","margin-left":"-120px","margin-top":"-166px","height":"332px"});
+		}
+	});
+	
+	$('#nb-nodeboard-set-content-js').focus(function(){
+		$('#nb-nodeboard-content > #nb-nodeboard-tips-js').css('display',"none");
+		$('#nb-nodeboard-set-content-js').css('border','1px solid #d5d5d5');
+	});
+	
+	$('#nb_nodeboard_set_phone').focus(function(){
+		$('#nb_nodeboard_phone > #nb-nodeboard-tips-js').css('display',"none");
+			$('#nb_nodeboard_phone').css('border','1px solid #d5d5d5');
+	});
+	
+	$('#nb_nodeboard_send').click(function(){
+		var content = $('#nb-nodeboard-set-content-js').val();
+		var phone = $('#nb_nodeboard_set_phone').val();
+		if(content == null || content == ''){
+			$('#nb-nodeboard-content > #nb-nodeboard-tips-js').css('display',"block");
+			$('#nb-nodeboard-set-content-js').css('border','1px solid red');
+			return;
+		}
+		if(phone == null || phone == ''){
+			$('#nb_nodeboard_phone > #nb-nodeboard-tips-js').css('display',"block");
+			$('#nb_nodeboard_phone').css('border','1px solid red');
+			return;
+		}
+		$.ajax({
+			url:'#link('/pubdemand/pubdemand')',
+			type:'post',
+			data:$('#nb_nodeboard_form').serialize(),
+			dataType: "json",
+			success: function (data) {
+                if (data.status == "y") {
+                	$('#nb_nodeboard_success').css("display","block");
+                    $('#nb_nodeboard_set').css("display","none");
+					$('#nb_node_contain').css("display","none");
+					resetDes();
+                } else {
+                	resetDes();
+                    layer.msg(data.info, {time:4000,icon: 2});
+                }
+                
+            },
+            error: function () {
+            	resetDes();
+                layer.msg(data.info, {time:4000,icon: 2});
+            }
+		})
+	});
+	
+	function resetDes(){
+		$('#nb-nodeboard-set-content-js').val("");
+		$('#nb_nodeboard_set_name').val("");
+		$('#nb_nodeboard_set_phone').val("");
+	}
+	$("form[name=plannForm]").Validform({
+        tiptype: 1,
+        beforeSubmit: function (curform) {
+            $(curform).ajaxSubmit({
+                dataType: "json",
+                success: function (data) {
+                    if (data.status == "y") {
+                        layer.msg(data.info,{time:4000});
+                    } else {
+                        layer.msg(data.info, {time:4000,icon: 2});
+                    }
+                    resetForm();
+                },
+                error: function () {
+                    layer.msg(data.info, {time:4000,icon: 2});
+                }
+                
+            });
+            return false;
+        }
+    });
+    
+	function resetForm(){
+		$(".input-sm").val("");
+		$(".pubDemandDesc").val("");
+	}	
+});
+</script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c1ae6a525cceca8e8abb8440e9a19334";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>

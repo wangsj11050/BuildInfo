@@ -1,0 +1,137 @@
+#set(userCateList = getDictItem("BIZ_USER_CATE")?["list"])
+#set(userStatusList = getDictItem("BIZ_USER_STATUS")?["list"])
+#set(userLockList = getDictItem("BIZ_LOCK_STATUS")?["list"])
+#set(userGroupList = getDictItem("BIZ_USER_GROUP")?["list"])
+
+#@tForm("thisform" sysUserDto?"/sysuser/update?userId="+sysUserDto?.userId:"/sysuser/save" "post" {"class":""})
+<div class="form-infos clearfix">
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("用户号：","sm",[4,8])
+                #if(sysUserDto)
+                    #tInput("userId" sysUserDto?.userId {"placeholder":"请输入用户编号","datatype":"/^[0-9a-zA-Z]{1,32}$/","nullmsg":"不能为空！","id":"userId","disabled":"disabled"})
+                #else
+                    #tInput("userId" sysUserDto?.userId {"placeholder":"请输入用户编号","datatype":"/^[0-9a-zA-Z]{1,32}$/","nullmsg":"不能为空！","id":"userId"})
+                #end
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax(" 用户昵称：","sm",[4,8])
+                    #tInput("userName" sysUserDto?.userName {"placeholder":"请输入用户昵称","datatype":"*1-32","nullmsg":"不能为空！","id":"nic"})
+                #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("直属机构编码：","sm",[4,8])
+
+                   #treeSelectFix("branchCode" sysUserDto?.branchCode {"placeholder":"请输入直属机构编码","class":"input-text","readonly":"readonly","data-URL":"/sysbranch/getTreeData","style":"width:100%","id":"linkage1"})
+                #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("直属部门编号：","sm",[4,8])
+
+                    #treeSelectFix("depCode" sysUserDto?.depCode {"placeholder":"请输入直属部门编号","class":"input-text","readonly":"readonly","data-URL":"/sysdep/getTreeData","style":"width:100%","id":"linkage2"})
+                #end
+        </div>
+    </div>
+
+<div class="clearfix">
+<div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("用户组别：","sm",[4,8])
+
+        #@tSelect("userLevel" sysUserDto?.userLevel {"class":"select2","style":"width:100%"})
+            #for(userCate:userCateList)
+            <option value="${userCate?.value}" #if(userCate?.value==sysUserDto?.userLevel)selected#end>${userCate?.text}</option>
+        #end
+    #end
+#end
+</div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("用户分类：","sm",[4,8])
+
+            #@tSelect("userType" sysUserrDto?.userType {"class":"select2","style":"width:100%"})
+                #for(userGroup:userGroupList)
+                <option value="${userGroup?.value}" #if(userGroup?.value==sysUserDto?.userType)selected#end>${userGroup?.text}</option>
+            #end
+        #end
+    #end
+    </div>
+</div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("用户状态：","sm",[4,8])
+
+                #@tSelect("userStatus" sysUserrDto?.userStatus {"class":"select2","style":"width:100%","datatype":"*1-8","nullmsg":"用户状态不能为空！"})
+                    <option value=""></option>
+                    #for(userStatus:userStatusList)
+                    <option value="${userStatus?.value}" #if(userStatus?.value==sysUserDto?.userStatus)selected#end>${userStatus?.text}</option>
+                #end
+            #end
+        #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("锁定状态：","sm",[4,8])
+                #@tSelect("lockStatus" sysUserrDto?.lockStatus {"class":"select2","style":"width:100%","datatype":"*1-8","nullmsg":"锁定状态不能为空！"})
+                    <option value=""></option>
+                    #for(userLockStatus:userLockList)
+                    <option value="${userLockStatus?.value}" #if(userLockStatus?.value==sysUserDto?.lockStatus)selected#end>${userLockStatus?.text}</option>
+                #end
+            #end
+        #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("备注：","sm",[4,8])
+
+                #@tTextarea("remark" {"placeholder":"请输入备注信息","row":"10","datatype":"*1-256","ignore":"ignore"})${sysUserDto?.remark}#end
+            #end
+        </div>
+    </div>
+</div>
+#end
+<script type="text/javascript">
+    $(function () {
+        $('#linkage1').on('setValue',function () {
+            $('#linkage2,#linkage3').val('');
+            var getId = $(this).next('input').val();
+            $('#linkage2').attr('data-url','/sysdep/getTreeByBranch?pId='+getId);
+            console.log($('#linkage2').attr('data-url'));
+            $('#linkage2').trigger("refresh");
+        });
+
+        $('#linkage2').on('setValue',function () {
+            $('#linkage3').val('');
+            var getId = $(this).next('input').val();
+            $('#linkage3').attr('data-url','/sysoffice/getOfficeTreeByDep?pId='+getId);
+            console.log($('#linkage3').attr('data-url'));
+            $('#linkage3').trigger("refresh");
+        });
+
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info,{icon:2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#user-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info,{icon:2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

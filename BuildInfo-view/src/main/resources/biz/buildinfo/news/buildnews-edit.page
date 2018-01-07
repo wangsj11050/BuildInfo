@@ -1,0 +1,89 @@
+#set(newsTypeList = getDictItem("NEWS_TYPE")?["list"])
+#set(newsIsHotList = getDictItem("NEWS_IS_HOT")?["list"])
+#@tForm("thisform"   buildNewsDto?"/workbuildnews/update?id="+buildNewsDto?.id:"/workbuildnews/save" "post" {"class":""})
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("新闻名称：")
+        	#tInput("newsName" buildNewsDto?.newsName {"placeholder":"请输入新闻名称","datatype":"*1-16","nullmsg":"新闻名称不能为空！","id":"newsName"})
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("发布日期：")
+        	#dateInput("pubDate" buildNewsDto?.pubDate "yyyy-MM-dd")
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("新闻类别：")
+        	#@tSelect("newsType" buildNewsDto?.newsType {"class":"select2","style":"width:100%"})
+	            #for(newsType:newsTypeList)
+	            <option value="${newsType?.value}" #if(newsType?.value==buildNewsDto?.newsType)selected#end>${newsType?.text}
+	            </option>
+	        	#end
+	        #end
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("是否热点：")
+        	#@tSelect("isHot" buildNewsDto?.isHot {"class":"select2","style":"width:100%"})
+	            #for(isHot:newsIsHotList)
+	            <option value="${isHot?.value}" #if(isHot?.value==buildNewsDto?.isHot)selected#end>${isHot?.text}
+	            </option>
+	        	#end
+	        #end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("新闻简介：")
+            #@tTextarea("newsDesc" {"row":"256","placeholder":"说点什么..","datatype":"*1-256","ignore":"ignore"})${buildNewsDto?.newsDesc}#end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("新闻详情：")
+            #@tTbditor("newsContent" {"row":"500","placeholder":"说点什么..","ignore":"ignore","nullmsg":"请填写新闻详情！","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${buildNewsDto?.newsContent} #end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("新闻图片：")
+            #tUploadInputMini("newsImg", buildNewsDto?.newsImg)
+        #end
+    </div>
+
+</div>
+#end
+<script type="text/javascript">
+
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info, {icon: 2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#news-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info, {icon: 2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

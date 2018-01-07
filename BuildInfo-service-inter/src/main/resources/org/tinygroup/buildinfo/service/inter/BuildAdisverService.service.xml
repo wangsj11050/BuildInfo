@@ -1,0 +1,47 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.BuildAdisverService" bean="buildAdisverServiceImpl">
+    <service-method local-name="deleteAdisver" service-id="deleteAdisver" method-name="deleteAdisver" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteAdisverResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getAdisverList" service-id="getAdisverList" method-name="getAdisverList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildAdisverDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildAdisverDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getAdisverListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildAdisverDto"/>
+    </service-method>
+    <service-method local-name="getAdisverByName" service-id="getAdisverByName" method-name="getAdisverByName" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="name" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getAdisverByNameResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildAdisverDto"/>
+    </service-method>
+    <service-method local-name="getAdisverById" service-id="getAdisverById" method-name="getAdisverById" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getAdisverByIdResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildAdisverDto"/>
+    </service-method>
+    <service-method local-name="getAdisverPager" service-id="getAdisverPager" method-name="getAdisverPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="buildAdisverDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildAdisverDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getAdisverPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="updateAdisver" service-id="updateAdisver" method-name="updateAdisver" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildAdisverDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildAdisverDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateAdisverResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="addAdisver" service-id="addAdisver" method-name="addAdisver" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildAdisverDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildAdisverDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addAdisverResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildAdisverDto"/>
+    </service-method>
+  </service-component>
+</service-components>

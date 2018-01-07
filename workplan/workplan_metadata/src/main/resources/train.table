@@ -1,0 +1,53 @@
+<tables>
+  <table id="de0f3a078a1a4bfa82b2d4e67b5c9d15" name="t_train_record" title="平台培训记录表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="2959a74e0fed4a88af28e874679f1bad" primary="false" unique="false" not-null="true" id="train_theme" auto-increase="false"/>
+    <table-field standard-field-id="f4629902451e4434bc9bc09b81a69bd3" primary="false" unique="false" not-null="true" id="speeker" auto-increase="false"/>
+    <table-field standard-field-id="dcfcd33d447c42078f8ec28a11913d86" primary="false" unique="false" not-null="false" id="meeting_recorder" auto-increase="false"/>
+    <table-field standard-field-id="aefdda6546eb4b45a820c0d8d8b6934c" primary="false" unique="false" not-null="true" id="create_user" auto-increase="false"/>
+    <table-field standard-field-id="bdef279e9e434afc9032d8852e281ded" primary="false" unique="false" not-null="false" id="knowledge_type" auto-increase="false"/>
+    <table-field standard-field-id="f6e8cff7165249a69f9194d9a2c6458d" primary="false" unique="false" not-null="false" id="train_content" auto-increase="false"/>
+    <table-field standard-field-id="de030c6b92fa42a1add3aa1897492633" primary="false" unique="false" not-null="false" id="train_time" auto-increase="false"/>
+    <table-field standard-field-id="6a045bcaf11f41e3b96881c47e67ab93" primary="false" unique="false" not-null="false" id="join_meeting_user" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="0ecee65597e945459c6ae189df893c2b" name="t_train_problems" title="培训相关习题集" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="3540c58f3d5742a999d9d1d824266b8f" primary="false" unique="false" not-null="true" id="train_id" auto-increase="false"/>
+    <table-field standard-field-id="e66e787ecc154e439fe1e47c27d5dd6b" primary="false" unique="false" not-null="false" id="create_time" auto-increase="false"/>
+    <table-field standard-field-id="aefdda6546eb4b45a820c0d8d8b6934c" primary="false" unique="false" not-null="false" id="create_user" auto-increase="false"/>
+    <table-field standard-field-id="7f95d4f16b9d453eb2a1f075bd1f7120" primary="false" unique="false" not-null="false" id="problem_title" auto-increase="false"/>
+    <table-field standard-field-id="abdf417841224459abebb054fd95095a" primary="false" unique="false" not-null="false" id="problem_describe" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="518556e3194d43b18f199a1ff064bb5a" name="t_train_user_problem" title="培训人员答题明细表" schema="">
+    <extend-properties/>
+    <description>ext_field_1习题解答状态:0-未解答   1-已解答</description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="780e8c9947d24dacb39dd1ba00b3294f" primary="false" unique="false" not-null="true" id="example_id" auto-increase="false"/>
+    <table-field standard-field-id="541b6ae1dda348ed94cbb760de3b5efe" primary="false" unique="false" not-null="true" id="train_user" auto-increase="false"/>
+    <table-field standard-field-id="e66e787ecc154e439fe1e47c27d5dd6b" primary="false" unique="false" not-null="false" id="create_time" auto-increase="false"/>
+    <table-field standard-field-id="c8f72780ec9c4175864cc258e5819d41" primary="false" unique="false" not-null="false" id="problem_answer" auto-increase="false"/>
+    <table-field standard-field-id="8aad2044324b499ba55e9f72bad538f0" primary="false" unique="false" not-null="false" id="answer_time" auto-increase="false"/>
+    <table-field standard-field-id="271d65a372bb4355a014beb1c78ba953" primary="false" unique="false" not-null="false" id="reply_evealuate" auto-increase="false"/>
+    <table-field standard-field-id="6adaa51033c3416da5d0c8eca9222730" primary="false" unique="false" not-null="false" id="reply_time" auto-increase="false"/>
+    <table-field standard-field-id="82e44692d37d400c8abff1551d0bb586" primary="false" unique="false" not-null="false" id="reply_user" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+</tables>

@@ -1,0 +1,91 @@
+#macro flowprocessMsg()
+<div class="alert alert-danger alert-dismissible mb-0" role="alert" style="position:fixed;right:0;bottom:0;width:200px;min-height:200px;z-index: 2">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    #bodyContent
+</div>
+#end
+
+#macro flowprocessStep(fid,fpid,fname,fstatus)#set(statusColorArr={"0":"gray","1":"primary","2":"warning","3":"success","4":"danger","5":"default","6":"info"})
+##不浮动显示 ###if(fstatus=="0") disabled="disabled"#end>
+##<div id="process-step-${fid}" process_id="${fid}" process_pid="${fpid}" class="process-step btn btn-${statusColorArr.get(fstatus)}" data-container="body" data-placement="right" data-content="#bodyContent"#if(fstatus=="0") disabled="disabled"#end><span class="process-flag"></span>${fname}</div>
+<div id="process-step-${fid}" process_id="${fid}" process_pid="${fpid}" class="process-step btn btn-${statusColorArr.get(fstatus)}" data-container="body"> <span class="process-flag"></span>${fname}</div>
+#end
+
+
+#macro flowprocess(dataUrl,flowid,refreshTime)#set(fid=flowid?:fmt("fid%d",rand()))
+<div id="${fid}" class="flowprocess" style="position:relative" data-url="#link(dataUrl)">
+    <input type="hidden" class="tiny_flow_active_id" value="0">
+    <div style="overflow: auto">
+        <div class="tiny_flow_process_info" style="position:relative;z-index: 1">
+            #loadAnimit()
+        </div>
+    </div>
+    <div class="alert alert-success alert-dismissible" role="alert" style="position:absolute;right:0;top:0;width:180px;background:#fff;z-index: 2">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <div>
+            <div>
+                <button class="btn btn-inverse"></button>
+                未激活
+            </div>
+            <div>
+                <button class="btn btn-primary"></button>
+                已激活
+            </div>
+            <div>
+                <button class="btn btn-warning"></button>
+                作业暂停
+            </div>
+            <div>
+                <button class="btn btn-success"></button>
+                作业完成
+            </div>
+            <div>
+                <button class="btn btn-danger"></button>
+                作业失败
+            </div>
+            <div>
+                <button class="btn btn-default"></button>
+                作业中断
+            </div>
+            <div>
+                <button class="btn btn-info"></button>
+                正在处理
+            </div>
+        </div>
+    </div>
+    #bodyContent
+</div>
+<script type="text/javascript">
+    (function() {
+        var _flow_canvas=$("#${fid}");
+        var _flow;
+        _flow_canvas.off("refresh").on("refresh",function(){
+            $.ajax({
+                url: _flow_canvas.data("url"),
+                cache: false,
+                success: function (html) {
+                    try {
+                        _flow.clear();
+                    }catch(e){}
+                    _flow_canvas.find(".tiny_flow_process_info:first").html(html);
+                    _flow=_flow_canvas.flowprocess({
+                        itemSize:{
+                            width:150,
+                            height:120
+                        }
+                    });
+                }
+            })
+        }).trigger("refresh");
+        #if(refreshTime)
+            function refreshData(){
+                setTimeout(function(){
+                    refreshData();
+                    _flow_canvas.trigger("refresh");
+                },${refreshTime});
+            }
+            refreshData();
+        #end
+    })();
+</script>
+#end

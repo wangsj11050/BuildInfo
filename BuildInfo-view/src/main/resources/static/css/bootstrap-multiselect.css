@@ -1,0 +1,9 @@
+.multiselect-native-select .btn-group,.multiselect-native-select .multiselect,.multiselect-native-select .open > .multiselect-container{width:100%;}
+.multiselect-container .multiselect-filter .input-group{width:100%;}
+.multiselect .multiselect-selected-text{float:left;}
+.multiselect-native-select .btn .caret{float:right;margin-top:8px;}
+.multiselect-native-select .multiselect-container label{display:block}
+.multiselect-native-select .multiselect-container li{margin:1px 5px 1px;}
+.multiselect-container .multiselect-filter .input-group-addon{padding:6px;}
+.multiselect-container .multiselect-filter .input-group .input-group-btn{text-align:right;}
+.multiselect-container .multiselect-filter .input-group .multiselect-search{width:109%;height:34px;}

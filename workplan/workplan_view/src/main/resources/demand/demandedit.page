@@ -1,0 +1,141 @@
+#set(CQStateList = getDictItem("WO_CQ_STATE")?["list"])
+#set(ModelList = getDictItem("WO_MODEl_TYPE")?["list"])
+#@tForm("demandform" demandPlannDto?"/workdemandplann/update?id="+demandPlannDto?.id:"/workdemandplann/save" "post" {"class":""})
+<div class="form-infos clearfix">
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("需求编号：","sm",[4,8])
+                #if(demandPlannDto)
+                    #tInput("plannNumber" demandPlannDto?.plannNumber {"placeholder":"请输入需求编号","datatype":"/^[0-9a-zA-Z]{1,32}$/","nullmsg":"不能为空！","id":"plannNumber","disabled":"disabled"})
+                #else
+                    #tInput("plannNumber" demandPlannDto?.plannNumber {"placeholder":"请输入需求编号","datatype":"/^[0-9a-zA-Z]{1,32}$/","nullmsg":"不能为空！","id":"plannNumber"})
+                #end
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("需求名称：","sm",[4,8])
+                    #tInput("plannName" demandPlannDto?.plannName {"placeholder":"请输入需求名称","datatype":"*1-32","nullmsg":"不能为空！","id":"plannName"})
+            #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("平台类别：","sm",[4,8])
+		          #tInput("platformType" demandPlannDto?.platformType {"placeholder":"请输入平台类别","id":"platformType"})
+		    #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("实施模型：","sm",[4,8])
+		        #@tSelect("implementModel" demandPlannDto?.implementModel {"class":"select2","style":"width:100%"})
+		            #for(model:ModelList)
+		            	<option value="${model?.value}" #if(model?.value==demandPlannDto?.implementModel)selected#end>${model?.text}</option>
+		        	#end
+		    	#end
+			#end
+        </div>
+    </div>
+
+	<div class="clearfix">
+		<div class="col-xs-12 col-sm-6 col-md-6">
+		    #@elementItemAjax("技术经理：","sm",[4,8])
+		          #tInput("technicalManager" demandPlannDto?.technicalManager {"placeholder":"请输入技术经理","id":"technicalManager"})
+		    #end
+		</div>
+	    <div class="col-xs-12 col-sm-6 col-md-6">
+	        #@elementItemAjax("CQ状态：","sm",[4,8])
+				#@tSelect("cq_state" "" {"class":"select2","style":"width:100%"})
+	                <option value="">全部</option>
+	                #for(CQGroup:CQStateList)
+	                    <option value="${CQGroup?.value}">${CQGroup?.text}</option>
+	                #end
+	            #end
+	       #end
+	    </div>
+	</div>
+	<div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("计划上线日：","sm",[4,8])
+                #dateInput("plannDate" demandPlannDto?.plannDate "yyyy-MM-dd" {"placeholder":"请输入计划上线日","id":"plannDate"})
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("实际上线日：","sm",[4,8])
+                #dateInput("actualDate" demandPlannDto?.actualDate "yyyy-MM-dd" {"placeholder":"请输入实际上线日","id":"actualDate"})
+            #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-12">
+	        #@elementItemAjax("开发人员：","sm",[2,10])
+	        	#tSelect2Ajax("developers" demandPlannDto?.developers TINY_CONTEXT_PATH+adminPath+"/org/user/ajax/userInCondition"
+                {"id":"developers","dataId":"UserId","dataText":"UserId","placeholder":"搜索查询开发人员"})
+                #@tSelect2Fix()
+                    #if(m)
+                        <a href="${TINY_CONTEXT_PATH+adminPath}${m.href}">全部</a>
+                    #end
+                #end
+	        #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-12">
+	        #@elementItemAjax("关联系统：","sm",[2,10])
+	        	#tInput("relevanceSystem" demandPlannDto?.relevanceSystem {"placeholder":"关联系统","id":"relevanceSystem"})
+	        #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-12">
+            #@elementItemAjax("功能点描述：","sm",[2,10])
+                #@tTbditorMini("plannPoint" {"placeholder":"请输入功能点描述信息","row":"10","ignore":"ignore"})
+                	${demandPlannDto?.plannPoint}
+                #end
+            #end
+        </div>
+    </div>
+</div>
+#end
+<script type="text/javascript">
+    $(function () {
+        $('#linkage1').on('setValue',function () {
+            $('#linkage2,#linkage3').val('');
+            var getId = $(this).next('input').val();
+            $('#linkage2').attr('data-url','/sysdep/getTreeByBranch?pId='+getId);
+            console.log($('#linkage2').attr('data-url'));
+            $('#linkage2').trigger("refresh");
+        });
+
+        $('#linkage2').on('setValue',function () {
+            $('#linkage3').val('');
+            var getId = $(this).next('input').val();
+            $('#linkage3').attr('data-url','/sysoffice/getOfficeTreeByDep?pId='+getId);
+            console.log($('#linkage3').attr('data-url'));
+            $('#linkage3').trigger("refresh");
+        });
+
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info,{icon:2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#user-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info,{icon:2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

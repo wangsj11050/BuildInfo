@@ -1,0 +1,63 @@
+#@btForm()
+	<div class="well well-sm form-inline search-form clearfix">
+	    <div class="search-boxitems col-md-4">
+	        <label class="col-md-4 pl-0 pr-0">服务类别：</label>
+	        <div  class="col-md-8">
+	            #@tSelect("userType" "" {"class":"select2","style":"width:100%"})
+	                <option value="">全部</option>
+	                #for(userGroup:userGroupList)
+	                    <option value="${userGroup?.value}">${userGroup?.text}</option>
+	                #end
+	            #end
+	        </div>
+	    </div>
+	    <div class="search-boxitems col-md-4">
+	        <label class="col-md-4 pl-0 pr-0">服务内容：</label>
+	        <div  class="col-md-8">
+	            #@tSelect("userType" "" {"class":"select2","style":"width:100%"})
+	                <option value="">全部</option>
+	                #for(userGroup:userGroupList)
+	                    <option value="${userGroup?.value}">${userGroup?.text}</option>
+	                #end
+	            #end
+	        </div>
+	    </div>
+	    <div class="search-boxitems col-md-4">
+	        <label class="col-md-4 pl-0 pr-0">具体服务：</label>
+	        <div  class="col-md-8">
+	            #@tSelect("userType" "" {"class":"select2","style":"width:100%"})
+	                <option value="">全部</option>
+	                #for(userGroup:userGroupList)
+	                    <option value="${userGroup?.value}">${userGroup?.text}</option>
+	                #end
+	            #end
+	        </div>
+	    </div>
+	    <div class="search-boxitems col-md-4">
+	        <label class="col-md-4 pl-0 pr-0">顾问星级：</label>
+	        <div  class="col-md-8">
+	            #@tSelect("userType" "" {"class":"select2","style":"width:100%"})
+	                <option value="">全部</option>
+	                #for(userGroup:userGroupList)
+	                    <option value="${userGroup?.value}">${userGroup?.text}</option>
+	                #end
+	            #end
+	        </div>
+	    </div>
+	    <div class="search-boxitems col-md-4">
+	        <label class="col-md-4 pl-0 pr-0">工作年限：</label>
+	        <div  class="col-md-8">
+	            #@tSelect("userType" "" {"class":"select2","style":"width:100%"})
+	                <option value="">全部</option>
+	                #for(userGroup:userGroupList)
+	                    <option value="${userGroup?.value}">${userGroup?.text}</option>
+	                #end
+	            #end
+	        </div>
+	    </div>
+	    <div class="search-boxitems btn-boxs col-md-4">
+	        #@tButton("btn-primary btn-sm")#faIcon("search")&nbsp;搜索#end
+	        <input type="reset" class="btn btn-default btn-sm" value="重置" />
+	    </div>
+	</div>
+#end

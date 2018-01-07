@@ -1,0 +1,437 @@
+#*
+#macro subTreeMenu(menuid,dataUrl,MenuMap)#set(mid=menuid ?:fmt("mid%d",rand()) )##fmt("mid%d",rand())
+<style>
+    #left-tree-menu{position:fixed;top:48px;left:0;width:${MenuMap?.width?:0}px;bottom:0;}
+    .side_menu_collapsed.side_menu_active #left-tree-menu{left:41px;}
+    .side_menu_expanded.side_menu_active #left-tree-menu{left:240px}
+    #left-tree-menu .sub-main-nav{width:100%;height:100%;overflow-y:auto}
+    .viewFramework-product-navbar-collapse{left:auto;right:0;border-right:2px solid #f1f1f1;cursor: e-resize;top:0;height:100%;margin-top:0}
+    .viewFramework-product-navbar-collapse .product-navbar-collapse-inner{top:50%;}
+    .hide-nav{left:auto;right:-20px;border-right:0;}
+</style>
+<div id="left-tree-menu">
+    <div class="sub-main-nav">
+        <div id="${mid}" class="product-nav-list" data-url="#link(dataUrl)"></div>
+    </div>
+    <div id="${mid}-navigation" state="open" class="viewFramework-product-navbar-collapse">
+        <div class="product-navbar-collapse-inner">
+            <div class="product-navbar-collapse-bg"></div>
+            <div class="product-navbar-collapse">
+                <span class="fa fa-outdent"></span>
+                <span class="fa fa-indent"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            function init() {
+                $("#${mid}").empty();
+                $.ajax({
+                    url: $("#${mid}").data("url"),
+                    success: function (data) {
+                        $.menuNav({
+                            id: "${mid}",
+                            menu: data,
+                            linkUrl: '#link(MenuMap?.get("linkUrl"))',
+                            currentId: '${MenuMap?.get("currentId")}'
+                        });
+                    }
+                });
+            }
+            init();
+            $("#${mid}").off("refresh").on("refresh", function () {
+                init();
+            });
+
+            var dragging  = false;
+            var _label_btn=$('#${mid}-navigation');
+            var leftOffset = _label_btn.parent().offset().left;
+            var targetNode=$('#${MenuMap?.get("rightNode")?:"tiny-tiny-menu"}');
+            _label_btn.off().click(function () {
+                var _thismenu=$(this).prev();
+                var w=$(this).parent().width();
+                var state = $(this).attr('state');
+                if (state == 'open') {
+                    $(this).attr('state', 'closed').addClass('hide-nav');;
+                    _thismenu.css({"margin-left": "-"+w+"px"});
+                    targetNode.css({"margin-left": "0"});
+                } else if (state == 'closed') {
+                    $(this).attr('state', 'open').removeClass('hide-nav');
+                    _thismenu.css({"margin-left": "0"});
+                    targetNode.css({"margin-left": w+"px"});
+                }
+            }).on("mousedown",function(){
+                dragging   = true;
+
+            });
+
+            document.onmousemove = function(e){
+                if (dragging) {
+                    var clickX = e.pageX;
+                    if(clickX - leftOffset>50&&clickX - leftOffset<500) {
+                        _label_btn.parent().width( clickX-leftOffset + 'px');
+                        targetNode.css("margin-left",clickX-leftOffset + 'px');
+                    }
+                }
+            };
+            $(document).mouseup(function(e) {
+                dragging = false;
+            })
+        });
+    </script>
+</div>
+#end*#
+#macro subTreeMenu(menuid,dataUrl,MenuMap)#set(mid=menuid ?:fmt("mid%d",rand()) )##fmt("mid%d",rand())
+<style>
+    #left-tree-menu{position:fixed;top:83px;margin-left:-18px;width:${MenuMap?.width?:0}px;bottom:0;z-index:2}
+
+    #left-tree-menu .sub-search-nav{margin:10px 6px 8px;}
+    #left-tree-menu .sub-main-nav{width:100%;height:100%;overflow-y:auto}
+    .viewFramework-product-navbar-collapse{left:auto;right:0;border-right:2px solid #f1f1f1;cursor: e-resize;top:0;height:100%;margin-top:0}
+    .viewFramework-product-navbar-collapse .product-navbar-collapse-inner{top:50%;}
+    .hide-nav{left:auto;right:-20px;border-right:0;}
+    #content-wrapper #tinypagecontent{padding-top:21px;}
+</style>
+<div id="left-tree-menu">
+    <div class="sub-main-nav">
+        <div class="sub-search-nav">
+            <input type="text" class="form-control" value="" placeholder="查找..." id="${mid}-tree-search">
+            <span style="right:15px;top:16px; position:absolute;height:20px;width:10px;cursor:pointer"><i class="fa fa-search"></i></span>
+        </div>
+        <div id="${mid}" class="product-nav-list pt-0 pl-5" data-url="#link(dataUrl)"></div>
+    </div>
+    <div id="${mid}-navigation" state="open" class="viewFramework-product-navbar-collapse">
+        <div class="product-navbar-collapse-inner">
+            <div class="product-navbar-collapse-bg"></div>
+            <div class="product-navbar-collapse">
+                <span class="fa fa-outdent"></span>
+                <span class="fa fa-indent"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            function init() {
+                $("#${mid}").empty();
+                $.ajax({
+                    url: $("#${mid}").data("url"),
+                    cache:false,
+                    dataType:"json",
+                    success: function (data) {
+                        $.menuNav({
+                            id: "${mid}",
+                            menu: data,
+                            linkUrl: '#link(MenuMap?.get("linkUrl"))',
+                            currentId: '${MenuMap?.get("currentId")}'
+                        });
+                    }
+                });
+            }
+            init();
+            $("#${mid}").off("refresh").on("refresh", function () {
+                init();
+            });
+
+            var dragging  = false;
+            var _label_btn=$('#${mid}-navigation');
+            var leftOffset = _label_btn.parent().offset().left;
+            var targetNode=$('#${MenuMap?.get("rightNode")?:"tiny-tiny-menu"}');
+            _label_btn.off().click(function () {
+                var _thismenu=$(this).prev();
+                var w=$(this).parent().width();
+                var state = $(this).attr('state');
+                if (state == 'open') {
+                    $(this).attr('state', 'closed').addClass('hide-nav');;
+                    _thismenu.css({"margin-left": "-"+w+"px"});
+                    targetNode.css({"margin-left": "0"});
+                } else if (state == 'closed') {
+                    $(this).attr('state', 'open').removeClass('hide-nav');
+                    _thismenu.css({"margin-left": "0"});
+                    targetNode.css({"margin-left": w+"px"});
+                }
+            }).on("mousedown",function(){
+                dragging   = true;
+
+            });
+
+            document.onmousemove = function(e){
+                if (dragging) {
+                    var clickX = e.pageX;
+                    if(clickX - leftOffset>50&&clickX - leftOffset<500) {
+                        _label_btn.parent().width( clickX-leftOffset + 'px');
+                        targetNode.css("margin-left",clickX-leftOffset + 'px');
+                    }
+                }
+            };
+            $(document).mouseup(function(e) {
+                dragging = false;
+            })
+            $("#${mid}-tree-search").on("input",function(e){
+            #*            	if(e.which==13){
+                                searchNode();
+                            }*#
+                searchNode();
+            }).next().on("click",function(){
+                searchNode();
+            });
+
+            function searchNode(){
+                var menuNodes=$("#${mid} .menu-title");
+                var currentV=$("#${mid}-tree-search").val();
+                if(!currentV){
+                    menuNodes.closest("li").show();
+                }else{
+                    menuNodes.closest("li").hide();
+                }
+                var currentNodes=$("#${mid} .menu-title:contains("+currentV+")");
+                currentNodes.each(function(){
+                    $(this).parentsUntil("#${mid}").show();
+                    $(this).closest("li").find("ul,li").show();
+                });
+                $("#${mid} .nav-icon>span").attr("class","glyphicon glyphicon-triangle-bottom");
+            }
+        });
+    </script>
+</div>
+#end
+#macro sReset()
+	<script >
+		$(function(){
+			$("input[type=reset]").click(function(){
+				$("div[class='well well-sm form-inline search-form clearfix'] input:hidden").val('');
+			});
+		});
+	</script>
+#end
+
+#macro btTableContents(dataUrl,btMap)#set(
+defaultMap={
+    "data-side-pagination":"server",
+    "data-pagination":"true",
+    "data-page-size":"10",
+    "data-page-list":"[10, 20, 50, 100, 200,all]",
+    "data-click-to-select":"true",
+    "data-show-columns":"true",
+    "data-search":"true",
+    "data-toolbar":"#"+tableId+"-toolbar",
+    "data-show-refresh":"false",
+    "data-show-toggle":"false",
+    "data-show-columns":"true",
+    "data-show-export":"true","data-cache":"false",
+    "data-show-pagination-switch":"false",
+    "data-id-field":"id",
+    "data-show-footer":"false"
+},btMap=defaultMap.extend(btMap,true),tableRowId=btMap.get("data-id-field"))
+<table id="${tableId}-table"  data-url="#link(dataUrl)" #mapToHtml(btMap)>
+    <thead>
+    <tr>
+        #bodyContent
+    #*<th data-field="bt_table_opera" class="operate" data-align="center" data-click-to-select="false" data-class="text-nowrap">操作</th>*#
+    </tr>
+    </thead>
+</table>
+#end
+
+
+#macro treeSelectFix(name value mapInfo)#set(sid=mapInfo?.id?:fmt("sid%d",rand()),tempid=fmt("sid%d",rand()))
+<script>
+    var zNodes${tempid} =[];
+</script>
+
+<div class="has-feedback">
+    <input name="${tempid}" id="${sid}" class="form-control" data-type="tree-input" type="text" value="" #mapToHtml(mapInfo)/>
+    <input name="${name}" data-type="tree-input" type="hidden" value="${value}"/>
+    <span class="fa fa-tree form-control-feedback" aria-hidden="true" style="cursor:pointer"></span>
+
+</div>
+
+<div class="hide" id="${sid}-rap">
+    <div id="${sid}-content" class="tree-sel-content t-menu-content hide">
+        <ul id="ztree${sid}" class="fa-ztree" style="overflow:auto;max-height:200px">
+        </ul>
+        <div class="hide" id="${sid}-msg">暂无信息</div>
+        <div class="fix-part" style="padding:0 5px">#bodyContent</div>
+    ##<span style="position:absolute;right:10px;bottom:5px;z-index:2;cursor:pointer" id="close${sid}"><i class="fa fa-remove"></i></span>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function(){
+        var setting = {
+            view: {
+                dblClickExpand: false
+            },
+            data: {
+                simpleData: {
+                    enable: true
+                }
+            },
+            callback: {
+                beforeClick: beforeClick,
+                onClick: onClick
+            }
+        };
+        var zTree;
+        var zNodes =zNodes${tempid};
+        var $treeContent=$("#ztree${sid}");
+        var $treeRap=$("#${sid}-content");
+        var $input=$("#${sid}");
+        var $inputV=$("#${sid}").next("input");
+        #set(dataurl=mapInfo?.get("data-URL"))
+        #if(dataurl)
+            function refreshdata(callback){
+                $.ajax({
+                    type: "GET",
+                    url: contextPath+$input.attr("data-url"),
+                    cache:false,
+                    dataType: "json",
+                    success: function(data) {
+                        zNodes=data;
+                        try{zTree.destroy();}catch (e){}
+                        zTree=$.fn.zTree.init($treeContent, setting, zNodes);
+                        initInputVale();
+                        callback&&callback();
+                    ##initzTree();
+                    }
+                });
+            }
+            refreshdata();
+            $input.off("refresh").on("refresh",function(e,callback){
+                refreshdata(callback);
+            })
+        #else
+            initzTree();
+        #end
+        function initzTree(){
+            zTree=$.fn.zTree.init($treeContent, setting, zNodes);
+            initInputVale();
+        }
+        function initInputVale(){
+            var $val=$inputV.val();
+            if(!$val) return false;
+            for(var i=0;i<zNodes.length;i++){
+                if($val==zNodes[i].id){
+                        $input.val(zNodes[i].name);
+                        $inputV.val($val);
+                        $input.trigger("setValue",zNodes[i]).trigger("change").trigger("init");
+                    break;
+                }
+            }
+        }
+        function beforeClick(treeId, treeNode) {
+            var check = (treeNode && !treeNode.disableClick);
+            if (!check) {
+            ##zTree.expandNode(treeNode);
+                layer.msg("当前结点不能被选中",{icon:2});
+                return false;
+            }
+            var node=treeNode;
+            while (node=node.getParentNode()) {
+                if(node.disableSub){
+                    layer.msg("当前结点不能被选中",{icon:2});
+                    return false;
+                    break;
+                }
+            }
+
+        }
+        function onClick(e, treeId, treeNode) {
+                $input.val(treeNode.name);
+                $inputV.val(treeNode.id);
+                $input.trigger("setValue",treeNode).trigger("change");
+            hideMenu();
+        }
+        function hideMenu() {
+                $treeRap.fadeOut("fast");
+            $("#${sid}-rap").append($treeRap);
+        }
+            $input.off("click.tree").on("click.tree",function(){
+            $("body").append($treeRap);
+        var thisOffset = $(this).offset();
+            $treeRap.css({width:$(this).css("width"),left:thisOffset.left + "px", top:thisOffset.top + $(this).outerHeight() + "px"}).slideDown("fast");
+        }).on("add",function(e,newNode){
+        zTree.addNodes(null, newNode);
+        });
+        $("body").off("click.tree${sid}").on("click.tree${sid}",function(e){
+            if($(e.target).attr("id")!=$input.attr("id")&&$(e.target).parents("#"+$treeRap.attr("id")).size()==0){
+                hideMenu();
+            }
+        }).on("click.tree${sid}",".fix-part",function(e){
+            hideMenu();
+        });
+        function bfxs(zTree, nodes, tt) {
+            tt=tt.toLowerCase();
+            var keyName=nodes[zTree.setting.data.key.name].toLowerCase()
+            if (nodes.children == null) {//无子节点
+                if (!tt||keyName.indexOf(tt) >= 0) {//无子节点，但是包含tt
+                    fjdxs(zTree, nodes);
+                }
+            }else {//有子节点
+                if (!tt||keyName.indexOf(tt) >= 0){//有而且包含
+                    fjdxs(zTree, nodes);
+                    xsall(zTree, nodes);
+                }else {//有但不包含
+                    $.each(nodes.children, function (aa, bb) {
+                        bfxs(zTree, bb, tt);
+                    })
+                }
+            }
+        }
+        ///显示所有父节点
+        function fjdxs(zTree, nodes) {
+            if (nodes.getParentNode() == null) {
+                zTree.showNode(nodes);
+            }
+            else {
+                zTree.showNode(nodes);
+                fjdxs(zTree, nodes.getParentNode());
+            }
+        }
+        ///全显
+        function xsall(ztree, nodes) {
+            ztree.showNode(nodes);
+            if (nodes.children != null) {
+                $.each(nodes.children, function (x, y) {
+                    xsall(ztree, y);
+                })
+            }
+        }
+        ///么有子节点的直接隐藏
+        function ycall(ztree, nodes) {
+            ztree.hideNode(nodes);
+            if (nodes.children != null) {
+                $.each(nodes.children, function (x, y) {
+                    ycall(ztree, y);
+                })
+            }
+        }
+        $("#${sid}").off("propertychange input").on("propertychange input",function(){
+            if(!zTree) return;
+            var key = $(this).val();
+            if(!key){$inputV.val('');}
+            var nodes = zTree.getNodes();
+            zTree.showNodes(nodes);
+            if(!key){
+                $("#${sid}-msg").hide();
+            ##return;
+            }
+            var zts = zTree.getNodesByParamFuzzy("name", key);
+            if (zts.length==0){
+                $("#${sid}-msg").show();
+            }else{
+                $("#${sid}-msg").hide();
+            }
+
+            $.each(nodes, function (x, y) {
+                ycall(zTree, y);
+            });
+
+            $.each(nodes, function (index, node) {
+                bfxs(zTree, node, key);
+            });
+            zTree.expandAll(true);
+        }).off("close").on("close",function(){
+            hideMenu();
+        });
+    });
+</script>
+#end

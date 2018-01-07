@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo.iml" filepath="$PROJECT_DIR$/BuildInfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-app/BuildInfo-app.iml" filepath="$PROJECT_DIR$/BuildInfo-app/BuildInfo-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-app/BuildInfo-appcontroller/BuildInfo-appcontroller.iml" filepath="$PROJECT_DIR$/BuildInfo-app/BuildInfo-appcontroller/BuildInfo-appcontroller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-app/BuildInfo-appview/BuildInfo-appview.iml" filepath="$PROJECT_DIR$/BuildInfo-app/BuildInfo-appview/BuildInfo-appview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-app/BuildInfo-appweb/BuildInfo-appweb.iml" filepath="$PROJECT_DIR$/BuildInfo-app/BuildInfo-appweb/BuildInfo-appweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-base-dao/BuildInfo-base-dao.iml" filepath="$PROJECT_DIR$/BuildInfo-base-dao/BuildInfo-base-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-business-impl/BuildInfo-business-impl.iml" filepath="$PROJECT_DIR$/BuildInfo-business-impl/BuildInfo-business-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-business-inter/BuildInfo-business-inter.iml" filepath="$PROJECT_DIR$/BuildInfo-business-inter/BuildInfo-business-inter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-common/BuildInfo-common.iml" filepath="$PROJECT_DIR$/BuildInfo-common/BuildInfo-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-controller/BuildInfo-controller.iml" filepath="$PROJECT_DIR$/BuildInfo-controller/BuildInfo-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-dao-impl/BuildInfo-dao-impl.iml" filepath="$PROJECT_DIR$/BuildInfo-dao-impl/BuildInfo-dao-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-dao-inter/BuildInfo-dao-inter.iml" filepath="$PROJECT_DIR$/BuildInfo-dao-inter/BuildInfo-dao-inter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-metadata/BuildInfo-metadata.iml" filepath="$PROJECT_DIR$/BuildInfo-metadata/BuildInfo-metadata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-service-impl/BuildInfo-service-impl.iml" filepath="$PROJECT_DIR$/BuildInfo-service-impl/BuildInfo-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-service-inter/BuildInfo-service-inter.iml" filepath="$PROJECT_DIR$/BuildInfo-service-inter/BuildInfo-service-inter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-template-function/BuildInfo-template-function.iml" filepath="$PROJECT_DIR$/BuildInfo-template-function/BuildInfo-template-function.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-view/BuildInfo-view.iml" filepath="$PROJECT_DIR$/BuildInfo-view/BuildInfo-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-view-uicomponent/BuildInfo-view-uicomponent.iml" filepath="$PROJECT_DIR$/BuildInfo-view-uicomponent/BuildInfo-view-uicomponent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BuildInfo-web/BuildInfo-web.iml" filepath="$PROJECT_DIR$/BuildInfo-web/BuildInfo-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan.iml" filepath="$PROJECT_DIR$/workplan/workplan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_business-impl/workplan_business-impl.iml" filepath="$PROJECT_DIR$/workplan/workplan_business-impl/workplan_business-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_business-inter/workplan_business-inter.iml" filepath="$PROJECT_DIR$/workplan/workplan_business-inter/workplan_business-inter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_controller/workplan_controller.iml" filepath="$PROJECT_DIR$/workplan/workplan_controller/workplan_controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_dao-impl/workplan_dao-impl.iml" filepath="$PROJECT_DIR$/workplan/workplan_dao-impl/workplan_dao-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_dao-inter/workplan_dao-inter.iml" filepath="$PROJECT_DIR$/workplan/workplan_dao-inter/workplan_dao-inter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_dto/workplan_dto.iml" filepath="$PROJECT_DIR$/workplan/workplan_dto/workplan_dto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_metadata/workplan_metadata.iml" filepath="$PROJECT_DIR$/workplan/workplan_metadata/workplan_metadata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_service-impl/workplan_service-impl.iml" filepath="$PROJECT_DIR$/workplan/workplan_service-impl/workplan_service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_service-inter/workplan_service-inter.iml" filepath="$PROJECT_DIR$/workplan/workplan_service-inter/workplan_service-inter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/workplan/workplan_view/workplan_view.iml" filepath="$PROJECT_DIR$/workplan/workplan_view/workplan_view.iml" />
+    </modules>
+  </component>
+</project>

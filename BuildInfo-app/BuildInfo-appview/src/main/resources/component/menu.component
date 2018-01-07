@@ -1,0 +1,194 @@
+#macro buildmenusInfo(menusInfoName menusInfoHref menuType)
+<li><a href="javascript:void(0)" data-href="#link(menusInfoHref)" data-value="${menusInfoValue}" data-type="${menuType?:"form"}">${menusInfoName}</a></li>
+#end
+
+#macro buildmulSearchBox(searchCurrentName searchCurrentAction)
+<form action="${searchCurrentAction}" method="get" id="msb-box" style="margin-bottom: -90px;">
+    <div class="input-groups">
+        <div class="input-group-btns" >
+            <button type="button" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <span id="msb-currentName">${searchCurrentName}</span>
+                <span class="carets"></span>
+            </button>
+            <ul class="dropdown-menu msb-item-list" style="margin-top:-1px;min-width: 50px">
+                #bodyContent
+            </ul>
+        </div>
+        <input type="text" name="key" id="msb-box-input" value="" style="font-size:14px;height: 35px;" class="form-controls " datatype:"*1-32" nullmsg="请输入内容">
+        <div id="objectSwitcher" class="input-group-btns ">
+            <button class="searchBtn"><i class="fa fa-search"></i></button>
+        </div>
+    </div>
+</form>
+<script type="text/javascript">
+    $(function(){
+        $("#msb-box .msb-item-list a").each(function(){
+            var $this = $(this);
+            $this.click(function() {
+        if($this.attr("data-type")=="form"){
+            $("#msb-box li.active").removeClass("active");
+            $this.closest("li").addClass("active");
+            $("#msb-box").attr("action",$this.attr("data-href"));
+            $("#msb-currentName").text($this.text());
+            $("#msb-box .dropdown-toggle").dropdown('toggle');
+            }
+            });
+            if($this.text()=="${searchCurrentName}"){
+                    $this.closest("li").addClass("active");
+                $("#msb-box").attr("action",$this.attr("data-href"));
+            }
+        });
+        $("#msb-box").Validform({
+            beforeSubmit:function(curform){
+                var Id=$("#msb-box-input").val();
+                if(!Id) return false;
+                window.location.href=$(curform).attr("action")+Id;
+                return false;
+            }
+        })
+    });
+</script>
+#end
+
+##数据表格批量操作处理
+#macro initBatchAction()
+<script>
+    $(function () {
+        $("#${tableId} .secondMenu").on("click", function () {
+            var inputvalue = $(this).html().trim();
+            var ids = [];
+            var href = $(this).attr("href");
+            $("#${tableId} input[type='checkbox']").each(function () {
+                if (this.checked == true && this.id != "checkboxall") {
+                    var clientId = $(this).val();
+                    ids.push(clientId);
+                }
+            });
+            if (ids.length > 0) {
+                $.ajax({
+                    url: href,
+                    type: "post",
+                    traditional: true,
+                    data: {ids: ids, name: inputvalue},
+                    dataType: "json",
+                    success: function (data) {
+                        if(data.status=="y") {
+                            layer.msg(data.info, 2, 1);
+                            $("#${tableId}").trigger("refresh");
+                        }else{
+                            layer.msg(data.info)
+                        }
+                    },
+                    error: function (res) {
+                        layer.msg("失败")
+                    }
+                });
+            }
+            return false;
+        });
+    });
+</script>
+#end
+
+
+#macro accordion(accorClass accorMap)
+	<div class="${accorClass}" id="accordion" #mapToHtml(accorMap)>
+    	#bodyContent
+	</div>
+#end
+
+#macro panelDefault(panelMap)
+	<div class="panel panel-default" #mapToHtml(panelMap)>
+       #bodyContent
+    </div>
+#end
+
+#macro panelHeading(titleMap headMap)
+	<div class="panel-heading" role="tab" #mapToHtml(headMap)>
+        <h4 class="panel-title" #mapToHtml(titleMap)>
+            #bodyContent
+        </h4>
+    </div>
+#end
+
+#macro panelCollapse(collapse bodyMap)
+	<div id="collapse${collapse}" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" style="height: 0px;">
+        <div class="panel-body" #mapToHtml(bodyMap)>
+            #bodyContent
+        </div>
+    </div>
+#end
+
+#macro topMenu()
+	<div class="header-bar static-hook-real static-hook-id-1" mon="area=navigation" id="header-bar" style="background-color: rgba(255,255,255,0.75);">
+		<div class="header-inner clearfix flexible ">
+			<ul style="padding-top: 5px;" class="left-city first-level">
+				<li class="with-padding am-topbar-font">合肥市</li>
+				<li style="margin-left: 50px;" class="am-topbar-font">
+					<a href="javascript:void(0);" style="border-left: 1px solid #cecfd1;padding-left: 10px;" id="sildeCity" class="am-topbar-font">
+					切换城市<span class="arrow-down-logo"></span>
+					<input type="hidden" id="province" value="">
+					<input type="hidden" id="city" value=""></a>
+				</li>
+			</ul>
+			<script>
+			    var cityPicker = new IIInsomniaCityPicker({
+			        data: cityData,
+			        target: '#sildeCity',
+			        valType: 'k-v',
+			        hideCityInput: '#city',
+			        hideProvinceInput: '#province',
+			        callback: function(city_name){
+			            var sessionStorSupported = (typeof(window.sessionStorage)!=="undefined");
+			            if(sessionStorSupported){
+							window.sessionStorage.setItem("city_name",city_name);
+						}else{
+							Cookie.write("city_name", city_name);
+						}
+			            $(".with-padding").html(city_name);
+			        }
+			    });
+			    cityPicker.init();
+			</script>
+			<ul class="right-util first-level" id="j-ucLoginList" style="z-index:100">
+				<li id="searchIcon" style="position: absolute;height: 24px;margin-left: 145px;padding-top: 4px;width: 30px;" class="dropdown am-topbar-font">
+	                <a href="#" data-toggle="dropdown" aria-expanded="false" style="position: unset;/*! background-color: white; *//*! text-align: center; */"><i class="fa fa-search" style="/*! -moz-transform: rotate(-90deg); *//*! -webkit-transform: rotate(-180deg); */padding-left: 10px;"></i></a>
+	                <div class="dropdown-menu dropdown-menu-right search_section" style="margin-top: -1px;border-top-right-radius: 0;border-top-left-radius: 0;margin-right: -1px;padding: 0;">
+	                    <form action="#link('/look-for/likeServiceName?serviceName=')" id="msb-box" mothed="get">
+	                        <input id="msb-box-input" class="form-control search-popover-input" name="key" value="" placeholder="查找服务..." autocomplete="off" disableautocomplete="" style="box-shadow: inset 0 0 0 rgba(0, 0, 0, 0.075);width: 100%;border-radius: 0px;height: 35px;outline: none;/*! border: #ccd 1px solid; */border-top-width: 1px;border-top-style: solid;border-top-color: rgb(204, 204, 221);border-top: none;padding-left: 7px;" type="text">
+	                        <button class="btn-sm search-btn" type="button" style="right: 8px;top: 0;position: absolute;color: #666;font-size: 16px;background: none;border: none;"><i class="fa fa-level-down" style="-moz-transform: rotate(-270deg);-webkit-transform: rotate(-270deg);filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);"></i></button>
+	                    </form>
+	                <div id="search-input-box" class="search-input-box" style="display: block; left: 885.567px; top: 85px; width: 300px;"></div></div>
+	            	<script type="text/javascript">
+					    $(function(){
+					        $("#msb-box").Validform({
+					            beforeSubmit:function(curform){
+					                var Id=$("#msb-box-input").val();
+					                if(!Id) return false;
+					                window.location.href=$(curform).attr("action")+Id;
+					                return false;
+					            }
+					        })
+					    });
+					</script>
+	            </li>
+				<li style="position:  absolute;padding-top: 5px;margin-left: -180px;padding-right: 5px;" class="am-topbar-font">
+					<a href="#link('/customer-case/index')" class="am-topbar-font">客户案例</a>
+					<span class="sep-lines"></span>
+				</li>
+				<li class="am-topbar-font" style="position: absolute;padding-top: 5px;margin-left: -120px;padding-right: 5px;">
+					<a href="#link('/news/index')" class="am-topbar-font">新闻中心</a>
+					<span class="sep-lines"></span>
+				</li>
+				<li class="am-topbar-font" style="position: absolute;padding-top: 5px;margin-left: -60px;padding-right: 5px;">
+					<a href="#link('/about-us/index')" class="am-topbar-font">关于我们</a>
+					<span class="sep-lines"></span>
+				</li>
+				<li class="am-topbar-font" style="position: relative;padding-top: 5px;padding-right: 5px">
+					咨询热线:0551-63736621
+					<span class="sep-lines"></span>
+				</li>
+			</ul>
+		</div>
+	</div>
+#end

@@ -1,0 +1,35 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysUserLoginService" bean="sysUserLoginServiceImpl">
+    <service-method local-name="getSysUserLoginPager" service-id="getSysUserLoginPager" method-name="getSysUserLoginPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysUserLoginDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserLoginDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysUserLoginPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="deleteSysUserLogin" service-id="deleteSysUserLogin" method-name="deleteSysUserLogin" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="depCode" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="deleteSysUserLoginResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="updateSysLogin" service-id="updateSysLogin" method-name="updateSysLogin" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysUserLoginDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserLoginDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateSysLoginResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getSysUserLoginByUser" service-id="getSysUserLoginByUser" method-name="getSysUserLoginByUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysUserDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysUserLoginByUserResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysUserLoginDto"/>
+    </service-method>
+    <service-method local-name="addSysUserLogin" service-id="addSysUserLogin" method-name="addSysUserLogin" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysUserLoginDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserLoginDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addSysUserLoginResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysUserLoginDto"/>
+    </service-method>
+  </service-component>
+</service-components>

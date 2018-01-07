@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
+    <orderEntry type="module" module-name="BuildInfo-view-uicomponent" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.tpl.clean:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.framecommon:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.switcher:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.fontico:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.webupload:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.base:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.moment:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.bootstrap:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.layer:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.jqueryui:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.animation:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.tpl.diy01:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.tpl.greenyellow:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.tpl.purple:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.minproject:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.buttongroup:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.button:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.pagenav:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.tinytable:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.modal:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.ueditor:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.form:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.bootstrapdate:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.ztree:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.select2:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.bootstrapvalidator:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.pjax:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.bootstraptable:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.tableexport:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.clipboard:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.widget:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.highcharts:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.fullcalendar:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.trumbowyg:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.submainmenu:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.tab:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.contextmenu:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.root:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.jquery:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.plumb:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.typography:3.0.0" level="project" />
+    <orderEntry type="library" name="Maven: org.tinygroup:org.tinygroup.ui.gridsystems:3.0.0" level="project" />
+  </component>
+</module>

@@ -1,0 +1,65 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysDepService" bean="sysDepServiceImpl">
+    <service-method local-name="getSysDep" service-id="getSysDep" method-name="getSysDep" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="depCode" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysDepResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysDepDto"/>
+    </service-method>
+    <service-method local-name="deleteSysDep" service-id="deleteSysDep" method-name="deleteSysDep" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="depCode" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteSysDepResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getDepTreeByBranch" service-id="getDepTreeByBranch" method-name="getDepTreeByBranch" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="treeDto" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getDepTreeByBranchResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="getSysDepPager" service-id="getSysDepPager" method-name="getSysDepPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysDepDto" type="org.tinygroup.buildinfo.service.inter.dto.SysDepDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysDepPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="addSysDep" service-id="addSysDep" method-name="addSysDep" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysDepDto" type="org.tinygroup.buildinfo.service.inter.dto.SysDepDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addSysDepResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysDepDto"/>
+    </service-method>
+    <service-method local-name="getDepTreeData" service-id="getDepTreeData" method-name="getDepTreeData" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="treeDto" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getDepTreeDataResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="getSysDepList" service-id="getSysDepList" method-name="getSysDepList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysDepDto" type="org.tinygroup.buildinfo.service.inter.dto.SysDepDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysDepListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="checkSysDepExists" service-id="checkSysDepExists" method-name="checkSysDepExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysDepDto" type="org.tinygroup.buildinfo.service.inter.dto.SysDepDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkSysDepExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="updateSysDep" service-id="updateSysDep" method-name="updateSysDep" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysDepDto" type="org.tinygroup.buildinfo.service.inter.dto.SysDepDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateSysDepResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getParentDepTreeByBranch" service-id="getParentDepTreeByBranch" method-name="getParentDepTreeByBranch" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="treeDto" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getParentDepTreeByBranchResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+  </service-component>
+</service-components>

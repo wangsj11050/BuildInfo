@@ -1,0 +1,47 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.TransService" bean="transServiceImpl">
+    <service-method local-name="getTransList" service-id="getTransList" method-name="getTransList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="transDto" type="org.tinygroup.buildinfo.service.inter.dto.TransDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getTransListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="deleteTrans" service-id="deleteTrans" method-name="deleteTrans" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteTransResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getTrans" service-id="getTrans" method-name="getTrans" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getTransResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.TransDto"/>
+    </service-method>
+    <service-method local-name="checkTransExists" service-id="checkTransExists" method-name="checkTransExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="transDto" type="org.tinygroup.buildinfo.service.inter.dto.TransDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkTransExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="getTransPager" service-id="getTransPager" method-name="getTransPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="transDto" type="org.tinygroup.buildinfo.service.inter.dto.TransDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getTransPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="addTrans" service-id="addTrans" method-name="addTrans" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="transDto" type="org.tinygroup.buildinfo.service.inter.dto.TransDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addTransResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.TransDto"/>
+    </service-method>
+    <service-method local-name="updateTrans" service-id="updateTrans" method-name="updateTrans" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="transDto" type="org.tinygroup.buildinfo.service.inter.dto.TransDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateTransResult" required="false" is-array="false" type="int"/>
+    </service-method>
+  </service-component>
+</service-components>

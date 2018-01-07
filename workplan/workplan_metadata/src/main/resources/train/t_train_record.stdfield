@@ -1,0 +1,18 @@
+<standard-fields>
+  <standard-field id="f4629902451e4434bc9bc09b81a69bd3" name="speeker" title="主讲人" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="bdef279e9e434afc9032d8852e281ded" name="knowledge_type" title="知识类别" business-type-id="1729b021bcc24a7aa06a93ed018480d0">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="f6e8cff7165249a69f9194d9a2c6458d" name="train_content" title="培训内容" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="de030c6b92fa42a1add3aa1897492633" name="train_time" title="培训时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

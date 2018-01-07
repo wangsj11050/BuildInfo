@@ -1,0 +1,64 @@
+#@tForm("thisform"   buildServicecenterDto?"/workbuildservicecenter/update":"/workbuildservicecenter/save" "post" {"class":""})
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("服务中心编号：")
+        	#if(buildServicecenterDto)
+            #tInput("disservicecenterCode" buildServicecenterDto?.servicecenterCode {"placeholder":"请输入服务中心编号","datatype":"*1-16","nullmsg":"服务中心编号不能为空！","id":"servicecenterCode","disabled":"disabled"})
+        	#tHiddenInput("servicecenterCode",buildServicecenterDto?.servicecenterCode)
+        #else
+            #tInput("servicecenterCode" "" {"placeholder":"请输入服务中心编号","datatype":"*1-16","nullmsg":"服务中心编号不能为空！","id":"servicecenterCode"})
+        #end
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("服务中心名称：")
+            #tInput("servicecenterName" buildServicecenterDto?.servicecenterName {"placeholder":"请输入服务中心名称","datatype":"*1-16","nullmsg":"服务中心名称不能为空！","id":"servicecenterName"})
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("服务中心描述：")
+            #@tTbditor("servicecenterDesc" {"row":"500","placeholder":"说点什么..","ignore":"ignore","nullmsg":"请填写业务描述！","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${buildServicecenterDto?.servicecenterDesc} #end
+        #end
+    </div>
+
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("服务中心图片：")
+            #tUploadInputMini("extField_1", buildServicecenterDto?.extField_1)
+        #end
+    </div>
+
+</div>
+#end
+<script type="text/javascript">
+
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info, {icon: 2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#buildservicecenter-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info, {icon: 2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

@@ -1,0 +1,66 @@
+<standard-fields>
+  <standard-field id="c9d18eb1bce947be899ffd88f1901349" name="menu_code" title="菜单编号" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="05f751c6f9384382adfc91cf00e4cdb3" name="kind_code" title="分类编号" business-type-id="1edc75df187a4ff0809d9b0cc628ea17">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="e1267571e7384f0fa104a11ccca6ff4d" name="menu_name" title="菜单名称" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="0dbeddd89607420799a3e8131f364ee5" name="menu_arg" title="菜单参数" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="cf69541044d044b69b6ef496ea4cabf3" name="menu_icon" title="菜单图标" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="32f874e9e0a04d5cb20aececd5add66f" name="window_type" title="窗口类型" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="7ee07abeac034edc877ccb2bc887b103" name="tip" title="提示信息" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="9aeb153c31f24bd397bbff8c67d64bf8" name="hot_key" title="快捷键" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="c98eb436226a47ad966aea8f14f9a152" name="order_no" title="序号" business-type-id="a60be11b684b456e925ea623df639928">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="7dcfff58f5d74aa09c5edec050ea9c8f" name="open_flag" title="展开标志" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="021fbaa616ae4853b998d5cd22610294" name="tree_idx" title="树索引码" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="537a26221d7e4beb86299c7089f23c60" name="window_model" title="窗口模式" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="c5a9b390736d42c7bbead8adc5688206" name="menu_url" title="菜单URL" business-type-id="5ddc64f758264c9794a396c9514f1fa3">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="cc60f5cafb1b4f1dbd75e9b6ad287178" name="kind_type" title="分类类型" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="2f3954ab73dd47e7ada490b6771b91c4" name="kind_name" title="分类名称" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="f87e6d7606854ba68a0e937155c977e7" name="mnemonic" title="助记符" business-type-id="1edc75df187a4ff0809d9b0cc628ea17">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

@@ -1,0 +1,26 @@
+<standard-fields>
+  <standard-field id="5c20549c6f594341b6158284e98bdaf7" name="recruit_name" title="职位名称" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="516a3334fa45456ea69fb58dbc3efbfe" name="recruit_state" title="招聘状态" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="570d72c2071144e38ac4f37e44f21bde" name="pub_user" title="发布人" business-type-id="769a81a4e3ee4fcb86d8e672b526cd1c">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="a52547a4b7654530b9e4d02626236eaf" name="update_user" title="更新人" business-type-id="769a81a4e3ee4fcb86d8e672b526cd1c">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="3091352db6d44f81a05be976643a1e24" name="recruit_desc" title="职位描述" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="0b586546fd884b29b6ea9c8b322b0ac5" name="recruit_seniority" title="任职职责" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

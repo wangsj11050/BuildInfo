@@ -1,0 +1,22 @@
+<standard-fields>
+  <standard-field id="465f4582fd4a4d0b81f7933c8c31c239" name="problem_content" title="问题描述" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="02dec998d5664f9aa1df90ae30751bc3" name="duty_user" title="责任人" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="57dafcf8abfa44268288c7aee6c91a0c" name="solve_date" title="解决日期" business-type-id="925699076cb343bb9979f1a7387e691c">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="6a91a11e718d4076a8d58c79bce42852" name="track_user" title="跟踪人" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="0983fdb5286e45f09f62bb6b327b54fb" name="status" title="状态" business-type-id="54f823ca921b40c7b6fdb07b09360e81">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

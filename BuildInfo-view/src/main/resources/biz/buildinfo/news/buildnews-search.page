@@ -1,0 +1,43 @@
+
+#set(newsIsHotList = getDictItem("NEWS_IS_HOT")?["list"])
+#@btForm()
+<div class="well well-sm form-inline search-form clearfix">
+	<div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">新闻名称:</label>
+        <div  class="col-md-9 pl-0">#tInput("caseName" "" {"size":"10","class":"input-sm w-percent","datatype":"*1-64","ignore":"ignore"})</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">发布日期:</label>
+        <div  class="col-md-9 pl-0">#dateInput("pubDate" "" "yyyy-MM-dd")</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">新闻类别:</label>
+        <div  class="col-md-9 pl-0">
+        	#@tSelect("newsType" "" {"class":"select2","style":"width:100%"})
+	            <option value=""></option>
+	            #for(newsType:newsTypeList)
+	            <option value="${newsType?.value}">${newsType?.text}
+	            </option>
+	        	#end
+	        #end
+        </div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">是否热点:</label>
+        <div  class="col-md-9 pl-0">
+        	#@tSelect("isHot" "" {"class":"select2","style":"width:100%"})
+	            <option value=""></option>
+	            #for(isHot:newsIsHotList)
+	            <option value="${isHot?.value}">${isHot?.text}
+	            </option>
+	        	#end
+	        #end
+        </div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        #@tButton("btn-primary btn-sm")#faIcon("search")&nbsp;搜索#end
+        <input type="reset" class="btn btn-default btn-sm" value="重置" />
+    </div>
+</div>
+#end
+#sReset()

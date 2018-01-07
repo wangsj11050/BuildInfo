@@ -1,0 +1,122 @@
+#include("/biz/deal/deal-dict.page")
+#@tForm("thisform" transDto?"/sysbiztrans/update?id="+transDto?.id:"/sysbiztrans/save" "post" {"class":""})
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("交易代码：","sm")
+        #tInput("transCode" transDto?.transCode {"placeholder":"请输入交易代码","datatype":"*1-6","nullmsg":"交易代码不能为空！","id":"trans_code"})
+    #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("交易名称：","sm")
+        #tInput("transName" transDto?.transName {"placeholder":"请输入交易名称","datatype":"*1-250","nullmsg":"交易名称不能为空！","id":"trans_name"})
+    #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("后台联机：")
+    	#@tSelect("hostOnline" transDto?.hostOnline {"class":"select2","datatype":"*","nullmsg":"后台联机不能为空！"})
+             #tOption("","")
+            #for(key:listKey)
+                <option value="${key}" #if(key==transDto?.hostOnline)selected#end>${listValue[keyFor.index-1]}</option>
+            #end
+        #end
+    #end
+	</div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("交易允许：")
+       #@tSelect("enableFlag" transDto?.enableFlag {"class":"select2","datatype":"*","nullmsg":"交易允许不能为空！"})
+            #tOption("","")
+            #for(key:listKey)
+                <option value="${key}" #if(key==transDto?.enableFlag)selected#end>${listValue[keyFor.index-1]}</option>
+            #end
+        #end
+    #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("交易类别：")
+        #@tSelect("transType" transDto?.transType {"class":"select2","datatype":"*","nullmsg":"交易类别不能为空！"})
+            #tOption("","")
+            #for(transType:transTypeList)
+                <option value="${transType?.value}" #if(transType?.value==transDto?.transType)selected#end>${transType?.text}</option>
+            #end
+        #end
+    #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("监控标志：")
+        #@tSelect("monitorStatus" transDto?.monitorStatus {"class":"select2","datatype":"*","nullmsg":"监控标志不能为空！"})
+           #tOption("","")
+            #for(key:listKey)
+                <option value="${key}" #if(key==transDto?.monitorStatus)selected#end>${listValue[keyFor.index-1]}</option>
+            #end
+        #end
+    #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("日志级别：")
+        #@tSelect("logLevel" transDto?.logLevel {"class":"select2","datatype":"*","nullmsg":"日志级别不能为空！"})
+            #tOption("","")
+            #for(logLevel:logLevelList)
+                <option value="${logLevel?.value}" #if(logLevel?.value==transDto?.logLevel)selected#end>${logLevel?.text}</option>
+            #end
+        #end
+    #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("监控交易类别：")
+        #@tSelect("monTransType" transDto?.monTransType {"class":"select2","datatype":"*","nullmsg":"监控交易类别不能为空！"})
+            #tOption("","")
+            #for(monTransType:transTypeList)
+                <option value="${monTransType?.value}" #if(monTransType?.value==transDto?.monTransType)selected#end>${monTransType?.text}</option>
+            #end
+        #end
+    #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("允许渠道组：")
+        #@tSelect("channels" transDto?.channels {"class":"select2","datatype":"*","nullmsg":"允许渠道不能为空！"})
+           	#tOption("","")
+            #for(channels:channelsList)
+                <option value="${channels?.value}" #if(channels?.value==transDto?.channels)selected#end>${channels?.text}</option>
+            #end
+        #end
+    #end
+    </div>
+</div>   
+
+#end
+<script type="text/javascript">
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info,{icon:2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#deal-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info,{icon:2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

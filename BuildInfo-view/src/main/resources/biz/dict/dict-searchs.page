@@ -1,0 +1,16 @@
+#@btForm()
+<div class="well well-sm form-inline search-form clearfix">
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">字典项编号:</label>
+        <div class="col-md-9 pl-0">#tInput("dictItemCode" "" {"size":"10","class":"input-sm w-percent"})</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">字典项名称:</label>
+        <div class="col-md-9 pl-0">#tInput("dictItemName" "" {"size":"10","class":"input-sm w-percent"})</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        #@tButton("btn-primary btn-sm")#faIcon("search")&nbsp;搜索#end
+        <input type="reset" class="btn btn-default btn-sm" value="重置" />
+    </div>
+</div>
+#end

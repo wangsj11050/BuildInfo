@@ -1,0 +1,26 @@
+<standard-fields>
+  <standard-field id="c94a1efded494350bef0816e1dfd51fc" name="happen_date" title="发生时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="58395e1411ac4a0ab2c69ca3e42af136" name="problem_phenomenon" title="问题现象" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="abdf417841224459abebb054fd95095a" name="problem_describe" title="问题描述" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="efaed7147f334685b4dab8494e7ae546" name="problem_solution" title="解决方案" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="03540f65af5c46cfbc4affbbdbbc9ed2" name="update_date" title="维护时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="d8a5bed809964b42a4308ff3f0e88a12" name="update_user" title="维护人员" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

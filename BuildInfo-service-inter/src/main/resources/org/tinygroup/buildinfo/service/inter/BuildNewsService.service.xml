@@ -1,0 +1,41 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.BuildNewsService" bean="buildNewsServiceImpl">
+    <service-method local-name="getNewsPager" service-id="getNewsPager" method-name="getNewsPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="buildNewsDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildNewsDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getNewsPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="getNewsList" service-id="getNewsList" method-name="getNewsList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildNewsDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildNewsDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getNewsListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildNewsDto"/>
+    </service-method>
+    <service-method local-name="deleteNews" service-id="deleteNews" method-name="deleteNews" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteNewsResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="updateNews" service-id="updateNews" method-name="updateNews" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildNewsDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildNewsDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateNewsResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="addNews" service-id="addNews" method-name="addNews" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildNewsDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildNewsDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addNewsResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildNewsDto"/>
+    </service-method>
+    <service-method local-name="getNewsById" service-id="getNewsById" method-name="getNewsById" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getNewsByIdResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildNewsDto"/>
+    </service-method>
+  </service-component>
+</service-components>

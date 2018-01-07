@@ -1,0 +1,214 @@
+#macro dictTrans(dictItemList,jsDictFunctionName)
+#if(jsDictFunctionName)
+<script>
+    var dictMap_${jsDictFunctionName} = {};
+    #for(dictItem:dictItemList)
+         dictMap_${jsDictFunctionName}['${dictItem?.value}'] = '${dictItem?.text}';
+    #end
+
+    function ${jsDictFunctionName}(value){
+        return dictMap_${jsDictFunctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro radioformat(radioListKey,radioListValue,formatFounctionName)
+#if(formatFounctionName)
+<script>
+    var dictMap_${formatFounctionName} = {};
+    #for(radio:radioListKey)
+         dictMap_${formatFounctionName}['${radio}'] = '${radioListValue?[radioFor.index-1]}';
+    #end
+
+    function ${formatFounctionName}(value){
+        return dictMap_${formatFounctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro tasksformat(tasksList,formatFounctionName)
+#if(formatFounctionName)
+<script>
+    var dictMap_${formatFounctionName} = {};
+    #for(tasks:tasksList)
+         dictMap_${formatFounctionName}['${tasks?.taskCode}'] = '${tasks?.taskName}';
+    #end
+
+    function ${formatFounctionName}(value){
+        return dictMap_${formatFounctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro transformat(transList,formatFounctionName)
+#if(formatFounctionName)
+<script>
+    var dictMap_${formatFounctionName} = {};
+    #for(trans:transList)
+         dictMap_${formatFounctionName}['${trans?.transCode}'] = '${trans?.transName}';
+    #end
+
+    function ${formatFounctionName}(value){
+        return dictMap_${formatFounctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro subTransformat(subTransList,formatFounctionName)
+#if(formatFounctionName)
+<script>
+    var dictMap_${formatFounctionName} = {};
+    #for(subTrans:subTransList)
+         dictMap_${formatFounctionName}['${subTrans?.id}'] = '${subTrans?.subTransName}';
+    #end
+
+    function ${formatFounctionName}(value){
+        return dictMap_${formatFounctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro kindformat(kindList,formatFounctionName)
+#if(formatFounctionName)
+<script>
+    var dictMap_${formatFounctionName} = {};
+    #for(kind:kindList)
+         dictMap_${formatFounctionName}['${kind?.kindCode}'] = '${kind?.kindName}';
+    #end
+
+    function ${formatFounctionName}(value){
+        return dictMap_${formatFounctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro menuformat(menuList,formatFounctionName)
+#if(formatFounctionName)
+<script>
+    var dictMap_${formatFounctionName} = {};
+    #for(menu:menuList)
+         dictMap_${formatFounctionName}['${menu?.menuId}'] = '${menu?.menuName}';
+    #end
+
+    function ${formatFounctionName}(value){
+        return dictMap_${formatFounctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro depformat(depList,formatFounctionName)
+#if(formatFounctionName)
+<script>
+    var dictMap_${formatFounctionName} = {};
+    #for(dep:depList)
+         dictMap_${formatFounctionName}['${dep?.depCode}'] = '${dep?.depName}';
+    #end
+
+    function ${formatFounctionName}(value){
+        return dictMap_${formatFounctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro buildServiceformat(buildServiceList,formatFounctionName)
+	#if(formatFounctionName)
+	<script>
+	    var dictMap_${formatFounctionName} = {};
+	    #for(buildService:buildServiceList)
+	         dictMap_${formatFounctionName}['${buildService?.serviceCode}'] = '${buildService?.serviceName}';
+	    #end
+	
+	    function ${formatFounctionName}(value){
+	        return dictMap_${formatFounctionName}[value];
+	    }
+	 </script>
+	#end
+#end
+#macro buildNewsTypeformat(buildNewsTypeList,formatFounctionName)
+	#if(formatFounctionName)
+	<script>
+	    var dictMap_${formatFounctionName} = {};
+	    #for(newsType:buildNewsTypeList)
+	         dictMap_${formatFounctionName}['${newsType?.value}'] = '${newsType?.text}';
+	    #end
+	
+	    function ${formatFounctionName}(value){
+	        return dictMap_${formatFounctionName}[value];
+	    }
+	 </script>
+	#end
+#end
+
+#macro buildDemandStateformat(demandStateList,formatFounctionName)
+	#if(formatFounctionName)
+	<script>
+	    var dictMap_${formatFounctionName} = {};
+	    #for(demandState:demandStateList)
+	         dictMap_${formatFounctionName}['${demandState?.value}'] = '${demandState?.text}';
+	    #end
+	
+	    function ${formatFounctionName}(value){
+	        return dictMap_${formatFounctionName}[value];
+	    }
+	 </script>
+	#end
+#end
+
+#macro buildDemandformat(demandList,formatFounctionName)
+	#if(formatFounctionName)
+	<script>
+	    var dictMap_${formatFounctionName} = {};
+	    #for(demand:demandList)
+	         dictMap_${formatFounctionName}['${demand?.value}'] = '${demand?.text}';
+	    #end
+	
+	    function ${formatFounctionName}(value){
+	        return dictMap_${formatFounctionName}[value];
+	    }
+	 </script>
+	#end
+#end
+
+#macro recruitStateformat(recruitList,formatFounctionName)
+	#if(formatFounctionName)
+	<script>
+	    var dictMap_${formatFounctionName} = {};
+	    #for(recruit:recruitList)
+	         dictMap_${formatFounctionName}['${recruit?.value}'] = '${recruit?.text}';
+	    #end
+	
+	    function ${formatFounctionName}(value){
+	        return dictMap_${formatFounctionName}[value];
+	    }
+	 </script>
+	#end
+#end
+
+#macro branchformat(branchList,formatFounctionName)
+#if(formatFounctionName)
+<script>
+    var dictMap_${formatFounctionName} = {};
+    #for(branch:branchList)
+         dictMap_${formatFounctionName}['${branch?.branchCode}'] = '${branch?.branchName}';
+    #end
+
+    function ${formatFounctionName}(value){
+        return dictMap_${formatFounctionName}[value];
+    }
+ </script>
+#end
+#end
+#macro officeformat(officeList,formatFounctionName)
+#if(formatFounctionName)
+<script>
+    var dictMap_${formatFounctionName} = {};
+    #for(office:officeList)
+         dictMap_${formatFounctionName}['${office?.officeCode}'] = '${office?.officeName}';
+    #end
+
+    function ${formatFounctionName}(value){
+        return dictMap_${formatFounctionName}[value];
+    }
+ </script>
+#end
+#end

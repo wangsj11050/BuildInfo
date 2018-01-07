@@ -1,0 +1,20 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.BuildAboutAsService" bean="buildAboutAsServiceImpl">
+    <service-method local-name="getAboutAs" service-id="getAboutAs" method-name="getAboutAs" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters/>
+      <service-result name="getAboutAsResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildAboutasDto"/>
+    </service-method>
+    <service-method local-name="addAboutAs" service-id="addAboutAs" method-name="addAboutAs" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildAboutasDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildAboutasDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addAboutAsResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildAboutasDto"/>
+    </service-method>
+    <service-method local-name="updateAboutAs" service-id="updateAboutAs" method-name="updateAboutAs" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildAboutasDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildAboutasDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateAboutAsResult" required="false" is-array="false" type="int"/>
+    </service-method>
+  </service-component>
+</service-components>

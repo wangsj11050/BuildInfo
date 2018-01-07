@@ -1,0 +1,143 @@
+#*#macro subTreeMenu(menuid,dataUrl,MenuMap)#set(mid=menuid ?:fmt("mid%d",rand()) )##fmt("mid%d",rand())
+<style>
+    #left-tree-menu{position:fixed;top:83px;margin-left:-18px;width:${MenuMap?.width?:0}px;bottom:0;z-index:2}
+
+    #left-tree-menu .sub-search-nav{margin:10px 6px 8px;}
+    #left-tree-menu .sub-main-nav{width:100%;height:100%;overflow-y:auto}
+    .viewFramework-product-navbar-collapse{left:auto;right:0;border-right:2px solid #f1f1f1;cursor: e-resize;top:0;height:100%;margin-top:0}
+    .viewFramework-product-navbar-collapse .product-navbar-collapse-inner{top:50%;}
+    .hide-nav{left:auto;right:-20px;border-right:0;}
+    #content-wrapper #tinypagecontent{padding-top:21px;}
+</style>
+<div id="left-tree-menu">
+    <div class="sub-main-nav">
+        <div class="sub-search-nav">
+            <input type="text" class="form-control" value="" placeholder="查找..." id="${mid}-tree-search">
+            <span style="right:15px;top:16px; position:absolute;height:20px;width:10px;cursor:pointer"><i class="fa fa-search"></i></span>
+        </div>
+        <div id="${mid}" class="product-nav-list pt-0 pl-5" data-url="#link(dataUrl)"></div>
+    </div>
+    <div id="${mid}-navigation" state="open" class="viewFramework-product-navbar-collapse">
+        <div class="product-navbar-collapse-inner">
+            <div class="product-navbar-collapse-bg"></div>
+            <div class="product-navbar-collapse">
+                <span class="fa fa-outdent"></span>
+                <span class="fa fa-indent"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            function init() {
+                $("#${mid}").empty();
+                $.ajax({
+                    url: $("#${mid}").data("url"),
+                    dataType:"json",
+                    success: function (data) {
+                        $.menuNav({
+                            id: "${mid}",
+                            menu: data,
+                            linkUrl: '#link(MenuMap?.get("linkUrl"))',
+                            currentId: '${MenuMap?.get("currentId")}'
+                        });
+                    }
+                });
+            }
+            init();
+            $("#${mid}").off("refresh").on("refresh", function () {
+                init();
+            });
+
+            var dragging  = false;
+            var _label_btn=$('#${mid}-navigation');
+            var leftOffset = _label_btn.parent().offset().left;
+            var targetNode=$('#${MenuMap?.get("rightNode")?:"tiny-tiny-menu"}');
+            _label_btn.off().click(function () {
+                var _thismenu=$(this).prev();
+                var w=$(this).parent().width();
+                var state = $(this).attr('state');
+                if (state == 'open') {
+                    $(this).attr('state', 'closed').addClass('hide-nav');;
+                    _thismenu.css({"margin-left": "-"+w+"px"});
+                    targetNode.css({"margin-left": "0"});
+                } else if (state == 'closed') {
+                    $(this).attr('state', 'open').removeClass('hide-nav');
+                    _thismenu.css({"margin-left": "0"});
+                    targetNode.css({"margin-left": w+"px"});
+                }
+            }).on("mousedown",function(){
+                dragging   = true;
+
+            });
+
+            document.onmousemove = function(e){
+                if (dragging) {
+                    var clickX = e.pageX;
+                    if(clickX - leftOffset>50&&clickX - leftOffset<500) {
+                        _label_btn.parent().width( clickX-leftOffset + 'px');
+                        targetNode.css("margin-left",clickX-leftOffset + 'px');
+                    }
+                }
+            };
+            $(document).mouseup(function(e) {
+                dragging = false;
+            })
+            $("#${mid}-tree-search").on("input",function(e){
+            *##*            	if(e.which==13){
+                                searchNode();
+                            }*##*
+                searchNode();
+            }).next().on("click",function(){
+                searchNode();
+            });
+
+            function searchNode(){
+                var menuNodes=$("#${mid} .menu-title");
+                var currentV=$("#${mid}-tree-search").val();
+                if(!currentV){
+                    menuNodes.closest("li").show();
+                }else{
+                    menuNodes.closest("li").hide();
+                }
+                var currentNodes=$("#${mid} .menu-title:contains("+currentV+")");
+                currentNodes.each(function(){
+                    $(this).parentsUntil("#${mid}").show();
+                    $(this).closest("li").find("ul,li").show();
+                });
+                $("#${mid} .nav-icon>span").attr("class","glyphicon glyphicon-triangle-bottom");
+            }
+        });
+    </script>
+</div>
+#end*#
+
+#set(topMenuId="product",currentMold="product-line",menuWidth=203)
+#subTreeMenu("menu_sub_main_menu","/sysmenu/getTreeData",{"linkUrl":"/sysmenu/manage?menuId=","currentId":menuId?:"","rightNode":"product-body-content","width":menuWidth})
+<div id="product-body-content" style="padding:0 2px;margin-left:${menuWidth}px">
+    #pageContent
+</div>
+
+<script>
+    $(function(){
+        $("#menu_sub_main_menu").off("click").on("click","a",function(e){
+            var _this=$(this);
+            var url=_this.attr("href");
+            if(url.indexOf("?")!=-1){
+                url=url.replace(/\.page/, "").replace("?",".pagelet?");
+            }else{
+                url=url.replace(/\.page/, "") + ".pagelet";
+            }
+            $.pjax({
+                url: url,
+                container: '#product-body-content',
+                replaceStr: ""
+            });
+            $("#product-body-content").off("pjax:end").on("pjax:end", function () {
+                $(document).attr("title", _this.text() + " - ${TINY_WEB_TITLE}");
+            });
+            $(this).closest(".product-nav-list").find("a").removeClass("active");
+            $(this).addClass("active");
+            return false;
+        });
+    })
+</script>

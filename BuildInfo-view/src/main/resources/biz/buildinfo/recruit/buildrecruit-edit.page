@@ -1,0 +1,70 @@
+#set(recruitList = getDictItem("RECRUIT_STATE")?["list"])
+#@tForm("thisform"   buildRecruitDto?"/workbuildrecruit/update?id="+buildRecruitDto?.id:"/workbuildrecruit/save" "post" {"class":""})
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("职位名称：")
+        	#tInput("recruitName" buildRecruitDto?.recruitName {"placeholder":"请输入职位名称","datatype":"*1-100","nullmsg":"职位名称不能为空！","id":"recruitName"})
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("招聘状态：")
+        	#@tSelect("recruitState" buildRecruitDto?.recruitState {"class":"select2","style":"width:100%"})
+	            #for(recruit:recruitList)
+	            <option value="${recruit?.value}" #if(recruit?.value==buildRecruitDto?.recruitState)selected#end>${recruit?.text}
+	            </option>
+	        	#end
+	        #end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("薪资待遇：")
+        	#tInput("extField" buildRecruitDto?.extField {"placeholder":"请输入薪资待遇","id":"extField"})
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+    	#@elementItemAjax("职位描述：")
+        	#@tTextarea("recruitDesc" {"row":"256","placeholder":"说点什么..","datatype":"*1-500","ignore":"ignore"})${buildRecruitDto?.recruitDesc}#end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+    	#@elementItemAjax("任职职责：")
+        	#@tTextarea("recruitSeniority" {"row":"256","placeholder":"说点什么..","datatype":"*1-500","ignore":"ignore"})${buildRecruitDto?.recruitSeniority}#end
+        #end
+    </div>
+</div>
+#end
+<script type="text/javascript">
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info, {icon: 2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#recruit-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info, {icon: 2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

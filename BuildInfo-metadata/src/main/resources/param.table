@@ -1,0 +1,14 @@
+<tables>
+  <table id="7bd362e547954def8efdd9c138d74003" name="tbparam" title="参数配置表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="ed5873a4ae1c46478215d71d149e1293" primary="false" unique="false" not-null="true" id="param_id" auto-increase="false"/>
+    <table-field standard-field-id="ce34e976c9be42c1a4cefad403eb9a59" primary="false" unique="false" not-null="true" id="param_name" auto-increase="false"/>
+    <table-field standard-field-id="9ff248eb183348caa1c4ce3cc074bde9" primary="false" unique="false" not-null="true" id="param_value" auto-increase="false"/>
+    <table-field standard-field-id="b2ae535feda74416810fdd14c75f4012" primary="false" unique="false" not-null="true" id="value_name" auto-increase="false"/>
+    <table-field standard-field-id="b411e19ef7934184ac4da8c8ad90593d" primary="false" unique="false" not-null="true" id="belong_type" auto-increase="false"/>
+    <table-field standard-field-id="36811c66bcbd46a1a535f0781b84ecb9" primary="false" unique="false" not-null="true" id="modi_flag" auto-increase="false"/>
+    <table-field standard-field-id="763c43d0c77743bc82dfb2301b90ca1a" primary="false" unique="false" not-null="false" id="reserve1" auto-increase="false"/>
+  </table>
+</tables>

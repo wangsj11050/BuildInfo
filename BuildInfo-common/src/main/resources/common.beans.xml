@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+    <bean id="encryption" class="org.tinygroup.buildinfo.common.security.EncryptionMD5">
+	</bean>
+	<bean id="encryptionProcessor"
+		class="org.tinygroup.buildinfo.common.security.processor.EncryptionProcessor">
+		<property name="encryption" ref="encryption"></property>
+	</bean>
+	<bean id="dictUtil" class="org.tinygroup.buildinfo.common.dict.DictUtil">
+		<property name="dictManager" ref="dictManager"></property>
+	</bean>
+</beans>

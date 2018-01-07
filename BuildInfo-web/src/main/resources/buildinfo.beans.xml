@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="menuTreeManager" class="org.tinygroup.menuframe.manager.impl.MenuTreeManagerImpl">
+    </bean>
+    <!--文件上传重命名-->
+    <bean id="umRename" class="org.tinygroup.buildinfo.common.web.FileUploadRename"/>
+    <!--文件上传tiny服务-->
+    <bean id="buildUploadService" class="org.tinygroup.weblayer.webcontext.parser.impl.UploadServiceImpl">
+        <property name="rename" ref="umRename"></property>
+    </bean>
+</beans>

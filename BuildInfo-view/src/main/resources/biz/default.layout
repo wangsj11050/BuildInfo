@@ -1,0 +1,289 @@
+#set(userSession=userInfo)
+#macro TnavItem(isActive navTitle navItemHref navItemIcon navItemWarning navItemWarningCls)
+<li#if(isActive==true) class="active" #if(!"首页".equals(navTitle))#set(pagePostionTitle=pagePostionTitle+"<li>"+navTitle+"</li>")#end#end>
+    <a href="#link(navItemHref)" class="navitem" title="${navTitle}"
+       data-treeid="${navItemId}"#if(navItemHref.endsWith(".page"))
+       data-view-layer="1"#end>#if(navItemIcon)<i class="menu-icon fa ${navItemIcon}"></i>#{end}<span
+            class="mm-text">${navTitle}</span>
+        #@navWarning(navItemWarningCls)${navItemWarning}#end
+    </a>
+</li>
+#end
+#macro getNavNodeId(fixUrl)#for(var:menuList)#set(varUrl=var?.url,varUrl=varUrl?.substring(0,varUrl?.lastIndexOf(".")!=-1?varUrl?.lastIndexOf("."):varUrl?.length()))#if(varUrl && tinyRequestRequestURI.startsWith(fixUrl+varUrl))${var?.id}#break#{end}#{end}#end
+#macro getTopNodeId()#if(activeMenuId&&activeMenuId.indexOf(".")>-1)${activeMenuId?.substring(0,activeMenuId.indexOf("."))}#end#end
+
+#macro doMenuInfo()#!set(pagePostionTitle='
+<li>首页</li>',activeMenuId=call("getNavNodeId",TINY_CONTEXT_PATH),activeMenuId=currentMenuId?:activeMenuId,topMenuId=call("getTopNodeId"))#end
+#macro ExpandTnavItems(isActive title mapInfo)
+<li class="mm-dropdown ${mapInfo?.get(" class")}#if(isActive==true) open#set(pagePostionTitle=pagePostionTitle+'<li>'+title+'</li>')#end">
+<a href="javascript:void(0);" data-treeid="${menuId}">#if(mapInfo?.ico)<i class="menu-icon fa ${mapInfo?.ico}"></i>#end<span class="mm-text">${title}</span>
+    #@navWarning(mapInfo?.warningCls)${mapInfo?.warning}#end
+</a>
+<ul>
+    #bodyContent
+</ul>
+</li>
+#end
+#macro menuWithAuth(nodes)
+    #for(node : nodes)
+    #if(node && node.subNode && node.subNode.size()>0)
+        #@ExpandTnavItems(menuPaths.contains(node.info.id) , node?.info?.menuName , {"ico":node?.info?.menuIcon})
+            #menuWithAuth(node?.subNode)
+        #end
+    #else
+        #TnavItem(menuPaths.contains(node.info.id), node.info.menuName , node.info?.url , node.info?.menuIcon)
+    #end
+#end
+#end
+    #doMenuInfo()<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="ie8">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="zh-cmn-Hans-CN"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>#if(activeTitle)${activeTitle} #{end} ${TINY_WEB_TITLE}</title>
+    <meta name="keywords" content="${TINY_WEB_TITLE}">
+    <meta name="description" content="${TINY_WEB_TITLE}">
+    <link rel="shortcut icon" href="#link('/img/favicon.ico')" type="image/x-icon" />
+    #getResource(DEBUG_MODE)
+    <script>
+        $(function () {
+            $(document).off("click.formreset").on("click.formreset", "button[type='reset'],input[type='reset']", function (event) {
+                //event.preventDefault();
+                var myForm = $(this).closest('form').get(0);
+                myForm.reset();
+                $("select.select2", myForm).each(function () {
+                    $(this).select2('val', $(this).val())
+                });
+            });
+        })
+    </script>
+</head>
+<body class=" main-menu-animated theme-diy01">
+<script>var init = [];</script>
+<script src="${TINY_CONTEXT_PATH}/js/setting.js"></script>
+    #set(topNodes = authMenus)
+<div id="main-wrapper">
+    #set(activeTopId = 0)
+    #@mainNavbarAll(TINY_WEB_TITLE)
+        #@mainNavbarLeft()
+            #for(topNode : topNodes)
+            #if(menuPaths.contains(topNode.id))
+                #set(activeTopId = topNode.id)
+            #end
+            <li ${menuPaths.contains(topNode.id)?
+            ' class="active"':''}>
+            <a href="#link(topNode.info?.url)" title="${topNode.info.menuName}"> #faIcon(topNode.info?.menuIcon) ${topNode.info.menuName}</a>
+            </li>
+        #end
+
+    #end
+    #@mainNavbarRight()
+        <li>
+            #if(authMenus)
+                <form class="navbar-form">
+                    <input type="text" class="form-control" value="" placeholder="查找更多...">
+                    <span class="search-icon">#faIco("search")</span>
+                </form>
+            #end
+        </li>
+        <li>
+            <a modal-title="修改密码" data-target="#myModalModal" data-toggle="modal" data-height="268" data-width="680" href="#link("/sysuser/pwd/edit.pagelet")">#faIcon("key") 修改密码</a>
+
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0);" class="dropdown-toggle user-menu" data-toggle="dropdown">
+                <span>#faIcon("user") ${userSession.userName}</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#link('/login/logout')">#faIco("power-off")&nbsp;&nbsp;退出</a></li>
+            </ul>
+        </li>
+    #*        <li>
+                <a href="#" title="帮助">帮助</a>
+            </li>*#
+        <li class="fullscreen">
+            <a href="javascript:void(0);" onclick="launchFullScreen(document.documentElement);" title="全屏">#faIcon(
+                "arrows-alt")</a>
+        </li>
+    #end
+#end
+    #@mainMenu()
+    <ul class="navigation">
+        #set(hasActive=false)
+        #for(topNode : topNodes)
+        #if(menuPaths.contains(topNode.id))
+            #set(hasActive = true)
+            #menuWithAuth(topNode?.subNode)
+            #break
+        #end
+    #end
+##如果找不到激活菜单,选择第1个展开
+    #if(hasActive==false && topNodes)
+        #menuWithAuth(topNodes[0]?.subNode)
+    #end
+</ul>
+#end
+
+    <div class="content-wrapper-bg"></div>
+    <div id="content-wrapper">
+        <div class="postion-nav" style="height:38px">
+            <ul class="breadcrumb">
+                <li>所在位置：</li>
+                ${pagePostionTitle}
+            </ul>
+        </div>
+        <div id="tinypagecontent" class="row" style="min-height:490px;margin:0">
+            ${pageContent}
+        </div>
+    </div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+    var isMenuPjax = (function () {
+        "use strict";
+        return !this;
+    }());
+    $.ajaxSetup({   
+      	 contentType:"application/x-www-form-urlencoded;charset=utf-8",   
+       	 error:function(XMLHttpRequest,textStatus){ 
+         var sessionstatus=XMLHttpRequest.getResponseHeader("sessionstatus"); //通过XMLHttpRequest取得响应头，sessionstatus，  
+	         if(sessionstatus=="timeout"){ 
+	          	 //如果超时就处理 ，指定要跳转的页面
+	          	 layer.msg("超时，请重新登录！",{icon:2});
+	          	 window.location.replace('#link("/login")');  
+	         }else{
+	         	layer.msg("error",{icon:2});
+	         }  
+          }   
+     });
+    $(function () {
+        var _navItems = $("a.navitem");
+
+        function initPageOtherInfo(e) {
+            var href = $(e).attr("href");
+            var setNavPos = false, currenttxt = "";
+            $("#main-menu li.active").removeClass("active open");
+            _navItems.each(function () {
+                var this_href = $(this).attr("href");
+                if (!setNavPos && this_href == href) {
+                    $('.postion-nav>.breadcrumb').html('<li>所在位置： </li><li>首页</li>');
+                    $(this).parents("li").find("span:first").each(function () {
+                        $('.postion-nav>.breadcrumb').append("<li>" + $(this).html() + "</li>");
+                        currenttxt = $(this).html() + "-" + currenttxt;
+                    });
+                    $(this).parents("li").addClass("active open");
+                    setNavPos = true;
+                }
+            })
+            $(document).attr("title", currenttxt + " ${TINY_WEB_TITLE}");
+        }
+
+        $("#tinypagecontent").on("pjax:end", function () {
+            var hash = location.pathname;
+            var fixPart = hash.lastIndexOf(".");
+            if (fixPart !== -1) {
+                hash = hash.substr(0, hash.lastIndexOf("."));
+            }
+            _navItems.each(function () {
+                var href = $(this).attr("href");
+                fixPart = href.lastIndexOf(".");
+                if (fixPart !== -1) {
+                    href = href.substr(0, href.lastIndexOf("."));
+                }
+                if (hash == href) {
+                    initPageOtherInfo(this);
+                    return false;
+                }
+            });
+        });
+        if (isMenuPjax) {
+            _navItems.each(function () {
+                $(this).attr("org-href", $(this).attr("href"));
+            }).off("click.pjax").on("click.pjax", function () {
+                isMenuPjax = true;
+                var _this = $(this);
+                var url = _this.attr("org-href");
+                var url_let;
+                var fixStr = ".pagelet?";
+                if (_this.attr("data-view-layer")) {
+                    fixStr = "?viewLayer=" + _this.attr("data-view-layer");
+                }
+                if (url.indexOf("?") != -1) {
+                    url_let = url.replace(/\.page/, "").replace("?", fixStr + "&");
+                } else {
+                    url_let = url.replace(/\.page/, "") + fixStr;
+                }
+
+                _this.attr("href", url);
+                $.pjax({
+                    url: url_let,
+                    container: '#tinypagecontent',
+                    replaceStr: ""
+                });
+                return false;
+            });
+
+            $(document).off("click.pjax").on("click.pjax", "[pjax-target]", function () {
+                var jq_currentLink = $(this);
+                var _p_target_sel = $(this).attr("pjax-target");
+                var _p_target = $(_p_target_sel);
+                var url = jq_currentLink.attr("href");
+
+                if (_p_target.size() > 0) {
+                    if (url.indexOf("?") != -1) {
+                        url = url.replace(/\.pagelet/, "").replace(/\.page/, "").replace("?", ".pagelet?");
+                    } else {
+                        url = url.replace(/\.pagelet/, "").replace(/\.page/, "") + ".pagelet";
+                    }
+
+                    $.pjax({
+                        url: url,
+                        container: _p_target_sel,
+                        replaceStr: ""
+                    });
+                    _p_target.on("pjax:end", function () {
+                        $(document).attr("title", jq_currentLink.text() + " - ${TINY_WEB_TITLE}");
+                    });
+                    return false;
+                }
+            })
+        }
+        $(document).on("click", "a.btn-go-back", function () {
+            window.history.go(-1);
+            return false;
+        });
+        window.onpopstate = function () {
+            var url = location.pathname;
+            if (url.indexOf("?") != -1) {
+                url = url.replace(/\.pagelet/, "").replace(/\.page/, "").replace("?", ".pagelet?");
+            } else {
+                url = url.replace(/\.pagelet/, "").replace(/\.page/, "") + ".pagelet";
+            }
+            $.ajax({
+                url: url,
+                cache: false,
+                success: function (html) {
+                    var _dom = $("<div/>").html(html);
+                    var firstIdNode = _dom.children("div[id]:first");
+                    var firstId = "tinypagecontent";
+                    if (firstIdNode.length > 0) {
+                        firstId = firstIdNode.attr("id");
+                    }
+                    $("#" + firstId).parent().html(html);
+                    _dom.remove();
+                }
+            });
+        };
+    });
+</script>
+
+    #dialog("myModalModal")
+    #dialogNoForm("myModals")
+</body>
+</html>

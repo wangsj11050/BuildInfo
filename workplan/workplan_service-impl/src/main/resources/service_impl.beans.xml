@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+		default-autowire="byName">
+
+  <bean id="stikynoServiceImpl" scope="prototype"
+		class="org.tinygroup.workplan.service.impl.StikynoServiceImpl">
+  </bean>
+  <bean id="userTaskServiceImpl" scope="prototype"
+		class="org.tinygroup.workplan.service.impl.UserTaskServiceImpl">
+  </bean>
+  <bean id="userDemandPlannServiceImpl" scope="prototype"
+		class="org.tinygroup.workplan.service.impl.UserDemandPlannServiceImpl">
+  </bean>
+  <bean id="routeForwardServiceImpl" scope="prototype"
+		class="org.tinygroup.workplan.service.impl.RouteForwardServiceImpl">
+  </bean>
+  <bean id="demandDefectServiceImpl" scope="prototype"
+		class="org.tinygroup.workplan.service.impl.DemandDefectServiceImpl">
+  </bean>
+  <bean id="meetingProblemServiceImpl" scope="prototype"
+		class="org.tinygroup.workplan.service.impl.MeetingProblemServiceImpl">
+  </bean>
+  <bean id="trainUserProblemServiceImpl" scope="prototype"
+		class="org.tinygroup.workplan.service.impl.TrainUserProblemServiceImpl">
+  </bean>
+  <bean id="demandPlannServiceImpl" scope="prototype"
+		class="org.tinygroup.workplan.service.impl.DemandPlannServiceImpl">
+  </bean>
+</beans>

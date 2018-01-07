@@ -1,0 +1,14 @@
+<standard-fields>
+  <standard-field id="62f580a4ace842fdbe92b867e8fb07a3" name="servicecenter_code" title="服务中心编码" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="0cdfefe3a16b4feb8bb7e6740a5f0ae5" name="servicecenter_name" title="服务中心名称" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="6d4c3ca5c16b44faae55c232083b7b88" name="servicecenter_desc" title="服务中心描述" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

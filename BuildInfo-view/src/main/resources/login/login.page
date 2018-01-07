@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="#link('/img/favicon.ico')" type="image/x-icon" />
+    <title>登陆-${TINY_WEB_TITLE}</title>
+    <style type="text/css">
+        html,body{padding: 0;margin: 0;height: 100%;width: 100%;}
+        body{background: url(#link("/static/login/img/login_nbg.jpg")) no-repeat;background-size: cover;}
+        .login-part{position: absolute;left: 50%;top: 50%;margin-left: 84px;margin-top: -128px;width: 423px;height: 256px;background: #f2f2f2;border-radius: 4px;}
+        .login-part .user-pic{height: 60px;line-height: 60px;background: url(#link("/static/login/img/login_hd_bg.png")) no-repeat 0 0;}
+        .login-part .user-pic .logo{float: left;margin-left: 13px;margin-top: 13px;}
+        .login-part .user-pic .name{margin-left: 20px;font-size: 24px;color: #fff;font-style: normal;font-weight: bold;}
+        .login-part .form-wrap{display: block;padding: 18px 40px 0 36px;}
+        .login-part .form-group{margin-bottom:14px}
+        .login-part .form-btn-group{padding-top: 7px;}
+        .login-part .input-group-addon{background:#fff}
+        .login-part .form-control{height:40px}
+        .login-part .btn-primary{background-color:#0099cc;border: 0 none;}
+        .login-part .btn-primary:hover{background-color:#006699}
+        input:-webkit-autofill{background-color: #fff;background-image: none; color: #000;-webkit-box-shadow: 0 0 0px 1000px #ffffff inset !important;}
+    </style>
+    #getResource(true)
+</head>
+<body>
+<div class="login-part">
+    <div class="user-pic">
+        <img class="logo" src="#link("/img/logo.png")"><em class="name">${TINY_WEB_TITLE}</em>
+    </div>
+    <div class="form-wrap">
+        <form action="#link("/login/check")" method="post" id="signin-form_id" autocomplete="off" disableautocomplete>
+        <div class="form-group">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" datatype="*" value="" name="userId" placeholder="用户名" tabindex="1" autocomplete="off">
+            </div>
+        </div>
+        <div class="form-group  has-feedback">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <input type="password" class="form-control" name="userPwd" value="" datatype="*" placeholder="密码" tabindex="1" autocomplete="off">
+            </div>
+            <span class="fa fa-keyboard-o form-control-feedback" aria-hidden="true"></span>
+        </div>
+        <div class="form-btn-group"><input type="submit" value="登 陆" id="btn-submit" class="btn btn-primary form-control"></div>
+        </form>
+    </div>
+</div>
+
+<script>
+    $(function(){
+        $("#signin-form_id").Validform({
+            tiptype:1,
+            beforeSubmit : function(form) {
+                var options = {
+                    url:form.action,
+                    type:"post",
+                    dataType:'json',
+                    success:function(data){
+                        if(data.status==0){
+                            layer.msg(data.info,{icon:2});
+                        }else if(data.status==2){
+                            location.href="#link("/sys/index")";
+                        }else{
+                            location.href="#link("/sysuser/pwd/index")"
+                        }
+                    },
+                    error:function(e){
+                        layer.msg("发生异常",{icon:2});
+                    }
+                };
+                $(form).ajaxSubmit(options);
+                return false;
+            }
+        });
+    })
+</script>
+</body>
+</html>

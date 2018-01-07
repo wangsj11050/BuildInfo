@@ -1,0 +1,90 @@
+#@tForm("thisform"   serviceContentDto.serviceCode?"/workserviceContent/update":"/workserviceContent/save" "post" {"class":""})
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("服务编号：")
+        	#if(buildServicetypeDto)
+            #tInput("disserviceCode" buildServicetypeDto?.serviceCode {"placeholder":"请输入服务编号","datatype":"*1-16","nullmsg":"服务编号不能为空！","id":"serviceCode","disabled":"disabled"})
+        	#tHiddenInput("serviceCode",buildServicetypeDto?.serviceCode)
+        #else
+            #tInput("serviceCode" "" {"placeholder":"请输入服务编号","datatype":"*1-16","nullmsg":"服务编号不能为空！","id":"serviceCode"})
+        #end
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("服务名称：")
+        	#if(buildServicetypeDto)
+            #tInput("disserviceName" buildServicetypeDto?.serviceName {"placeholder":"请输入服务名称","datatype":"*1-16","nullmsg":"服务名称不能为空！","id":"serviceName","disabled":"disabled"})
+        	#tHiddenInput("serviceName",buildServicetypeDto?.serviceName)
+        #else
+            #tInput("serviceName" "" {"placeholder":"请输入服务名称","datatype":"*1-16","nullmsg":"服务名称不能为空！","id":"serviceName"})
+        #end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+	<div class="col-xs-12 col-sm-12 col-md-12">
+		#@navTabs()
+			#@tabsInfo("serviceDes","active")
+				业务简介
+			#end
+			#if(buildServicetypeDto.parentService != null && !"".equals(buildServicetypeDto.parentService))
+				#@tabsInfo("serviceFlow")
+				业务流程
+				#end
+				#@tabsInfo("serviceData")
+					所需材料
+				#end
+				#@tabsInfo("serviceTerm")
+					申请条件
+				#end
+			#end
+		#end
+		#@tabPanes({"style":"margin-top: 5px;"})
+			#@tabContent("serviceDes","active")
+		        #@tTbditor("serviceDes" {"row":"500","placeholder":"说点什么..","ignore":"ignore","nullmsg":"请填写业务简介！","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${serviceContentDto?.serviceDes} #end
+			#end
+			#if(buildServicetypeDto.parentService != null && !"".equals(buildServicetypeDto.parentService))
+				#@tabContent("serviceFlow")
+			        #@tTbditor("serviceFlow" {"row":"500","placeholder":"说点什么..","ignore":"ignore","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${serviceContentDto?.serviceFlow} #end
+				#end
+				#@tabContent("serviceData")
+			        #@tTbditor("serviceData" {"row":"500","placeholder":"说点什么..","ignore":"ignore","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${serviceContentDto?.serviceData} #end
+				#end
+				#@tabContent("serviceTerm")
+			        #@tTbditor("serviceTerm" {"row":"500","placeholder":"说点什么..","ignore":"ignore","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${serviceContentDto?.serviceTerm} #end
+				#end
+			#end
+		#end
+	</div>
+</div>
+#end
+<script type="text/javascript">
+
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info, {icon: 2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#buildserive_menu").trigger("refresh");//刷新树
+                        $("#buildservice-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info, {icon: 2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

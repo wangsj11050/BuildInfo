@@ -1,0 +1,43 @@
+
+#@btForm()
+<div class="well well-sm form-inline search-form clearfix">
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">交易代码:</label>
+        <div class="col-md-9 pl-0">
+        	#@tSelect("transCode" "" {"class":"select2"})
+            	#tOption("","")
+            	#for(trans:transList)
+                	<option value="${trans.transCode}" >${trans.transName}</option>
+            	#end
+        	 #end
+        	
+        </div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">交易类别:</label>
+        <div class="col-md-9 pl-0">
+             #@tSelect("transType" "" {"class":"select2"})
+            	#tOption("","")
+            	#for(transType:transTypeList)
+                	<option value="${transType?.value}" #if(transType?.value==transDto?.transType)selected#end>${transType?.text}</option>
+            	#end
+        	 #end
+        </div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-4 pl-0 pr-0">监控交易类别:</label>
+        <div class="col-md-8 pl-0">
+            #@tSelect("monTransType" "" {"class":"select2"})
+            	#tOption("","")
+            	#for(monTransType:transTypeList)
+                	<option value="${monTransType?.value}" #if(monTransType?.value==transDto?.monTransType)selected#end>${monTransType?.text}</option>
+            	#end
+        	 #end
+        </div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        #@tButton("btn-primary btn-sm")#faIcon("search")&nbsp;搜索#end
+        <input type="reset" class="btn btn-default btn-sm" value="重置" />
+    </div>
+</div>
+#end

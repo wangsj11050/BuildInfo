@@ -1,0 +1,48 @@
+#@tForm("thisform")
+<div class="form-infos clearfix">
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("代码：","sm",[4,8])
+                <span class="show-infos">获取信息</span>
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("参数标识：","sm",[4,8])
+                <span class="show-infos">获取信息</span>
+            #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("参数标识名称：","sm",[4,8])
+                <span class="show-infos">获取信息</span>
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("参数值：","sm",[4,8])
+                <span class="show-infos">获取信息</span>
+            #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("参数名称：","sm",[4,8])
+                <span class="show-infos">获取信息</span>
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("归属系统：","sm",[4,8])
+                <span class="show-infos">获取信息</span>
+            #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("允许修改标志：","sm",[4,8])
+                <span class="show-infos">获取信息</span>
+            #end
+        </div>
+    </div>
+    
+</div>
+#end

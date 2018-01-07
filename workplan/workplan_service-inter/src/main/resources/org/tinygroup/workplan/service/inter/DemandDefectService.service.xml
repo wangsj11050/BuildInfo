@@ -1,0 +1,34 @@
+<service-components>
+  <service-component type="org.tinygroup.workplan.service.inter.DemandDefectService" bean="demandDefectServiceImpl">
+    <service-method local-name="getDemandDefectByKey" service-id="getDemandDefectByKey" method-name="getDemandDefectByKey" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getDemandDefectByKeyResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.DemandDefectDto"/>
+    </service-method>
+    <service-method local-name="getUserDemandDefectCount" service-id="getUserDemandDefectCount" method-name="getUserDemandDefectCount" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="demandDefectDto" type="org.tinygroup.workplan.dto.DemandDefectDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getUserDemandDefectCountResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getFinishUserDemandDefectCount" service-id="getFinishUserDemandDefectCount" method-name="getFinishUserDemandDefectCount" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="demandDefectDto" type="org.tinygroup.workplan.dto.DemandDefectDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getFinishUserDemandDefectCountResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="addDemandDefect" service-id="addDemandDefect" method-name="addDemandDefect" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="demandDefectDto" type="org.tinygroup.workplan.dto.DemandDefectDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addDemandDefectResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.DemandDefectDto"/>
+    </service-method>
+    <service-method local-name="updateDemandDefect" service-id="updateDemandDefect" method-name="updateDemandDefect" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="demandDefectDto" type="org.tinygroup.workplan.dto.DemandDefectDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateDemandDefectResult" required="false" is-array="false" type="int"/>
+    </service-method>
+  </service-component>
+</service-components>

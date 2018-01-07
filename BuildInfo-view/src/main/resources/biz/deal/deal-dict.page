@@ -1,0 +1,11 @@
+##日志级别
+#set(logLevelList = getDictItem("K_RZJB")?["list"])
+##允许渠道组
+#set(channelsList = getDictItem("K_JYQD")?["list"])
+##交易类别 
+#set(transTypeList = getDictItem("K_JYLB")?["list"])
+##监控交易类别
+#set(monTransTypeList = getDictItem("K_JYLB")?["list"])
+##交易允许
+#set(listKey = [1,0])
+#set(listValue = ['是','否'])

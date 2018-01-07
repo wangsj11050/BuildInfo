@@ -1,0 +1,26 @@
+<standard-fields>
+  <standard-field id="541b6ae1dda348ed94cbb760de3b5efe" name="train_user" title="培训人员" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="c8f72780ec9c4175864cc258e5819d41" name="problem_answer" title="问题答案详解" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="8aad2044324b499ba55e9f72bad538f0" name="answer_time" title="答题时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="271d65a372bb4355a014beb1c78ba953" name="reply_evealuate" title="答复评价" business-type-id="3a7750eb6ad146f3954684202c13f612">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="6adaa51033c3416da5d0c8eca9222730" name="reply_time" title="答复时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="82e44692d37d400c8abff1551d0bb586" name="reply_user" title="答复人员" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

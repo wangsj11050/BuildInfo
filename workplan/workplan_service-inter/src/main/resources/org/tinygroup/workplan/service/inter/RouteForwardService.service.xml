@@ -1,0 +1,10 @@
+<service-components>
+  <service-component type="org.tinygroup.workplan.service.inter.RouteForwardService" bean="routeForwardServiceImpl">
+    <service-method local-name="userTaskRouteForward" service-id="userTaskRouteForward" method-name="userTaskRouteForward" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="taskType" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="userTaskRouteForwardResult" required="false" is-array="false" type="java.lang.String"/>
+    </service-method>
+  </service-component>
+</service-components>

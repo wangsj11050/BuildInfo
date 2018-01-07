@@ -1,0 +1,38 @@
+#@tForm("thisform" errormsgDto?"/syserrorcode/update?id="+errormsgDto.id:"/syserrorcode/save" "post" {"class":""})
+    #@elementItemAjax("错误代码：")
+        #tInput("errCode" errormsgDto?.errCode {"placeholder":"请输入错误代码","datatype":"*1-7","nullmsg":"不能为空！","id":"errCode"})
+    #end
+
+    #@elementItemAjax("错误信息：")
+        #tInput("errMsg" errormsgDto?.errMsg {"placeholder":"请输入错误信息","datatype":"*1-100","nullmsg":"不能为空！","id":"errMsg"})
+    #end
+
+#end
+<script type="text/javascript">
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info,{icon:2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#errorcode-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info,{icon:2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

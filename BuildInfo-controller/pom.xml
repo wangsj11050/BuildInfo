@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.tinygroup</groupId>
+    <artifactId>BuildInfo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>BuildInfo-controller</artifactId>
+  <name>BuildInfo-controller</name>
+  <url>http://maven.apache.org</url>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <dependencies>
+  	<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson_module_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.tinygroup</groupId>
+            <artifactId>org.tinygroup.springutil</artifactId>
+            <version>${tiny_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.tinygroup</groupId>
+            <artifactId>org.tinygroup.springmvc</artifactId>
+            <version>${tiny_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.tinygroup</groupId>
+            <artifactId>org.tinygroup.serviceprocessor</artifactId>
+            <version>${tiny_version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.tinygroup</groupId>
+            <artifactId>org.tinygroup.cepcoreimpl</artifactId>
+            <version>${tiny_version}</version>
+        </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+    	<groupId>org.tinygroup</groupId>
+    	<artifactId>BuildInfo-common</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.tinygroup</groupId>
+    	<artifactId>BuildInfo-service-inter</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <!--session存储-->
+    <dependency>
+        <groupId>org.tinygroup</groupId>
+        <artifactId>org.tinygroup.sessionstore</artifactId>
+        <version>${tiny_version}</version>
+    </dependency>
+
+    <!-- SECURITY begin -->
+    <!-- SECURITY end -->
+
+    <!-- CACHE begin -->
+        <!-- CACHE end -->
+    <dependency>
+    	<groupId>org.tinygroup</groupId>
+    	<artifactId>org.tinygroup.menuframe</artifactId>
+    	<version>1.0.0</version>
+    </dependency>
+    <dependency>
+    	<groupId>org.tinygroup</groupId>
+    	<artifactId>workplan_service-inter</artifactId>
+    	<version>2.0.0</version>
+    </dependency>
+  </dependencies>
+</project>

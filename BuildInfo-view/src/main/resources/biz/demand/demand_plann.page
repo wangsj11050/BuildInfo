@@ -1,0 +1,226 @@
+#set(CQStateList = getDictItem("WO_CQ_STATE")?["list"])
+#dictTrans(CQStateList,"CQFormat")
+#@btTable("demandplann")
+    #include("/demand/demandplann-search.page")
+    #@btToolBar()
+        <a href="#link("/workdemandplann/demandedit.pagelet")" data-toggle="modal" modal-title="新增" title="新增" data-width="860" data-height="580" data-target="#myModalModal" class="btn btn-default" user="button">#faIcon("plus")</a>
+        <button type="button" class="btn btn-default mul-remove">#faIcon("trash")</button>
+        <a href="javascript:;" title="分配" class="btn btn-default lockBtn">#faIcon("unlock-alt")</a>
+#end
+#@btTableContent("/workdemandplann/getAllInfoPageData",{"data-page-list":"[15, 20, 50, 100, 200,all]","data-page-size":"15","data-id-field":"id","data-show-export":"true","data-cache":"false"})
+<th data-field="state" data-checkbox="true"></th>
+<th data-field="plannNumber" data-sortable="true">需求编号</th>
+<th data-field="plannName" data-sortable="true">需求名称</th>
+<th data-field="implementModel" data-sortable="true">实施模型</th>
+<th data-field="technicalManager" data-sortable="true">技术经理</th>
+<th data-field="developers" data-sortable="true">开发人员</th>
+<th data-field="plannDate" data-sortable="true">计划上线日</th>
+<th data-field="actualDate" data-sortable="true">实际上线日</th>
+<th data-field="createTime" data-sortable="true">创建日期</th>
+<th data-field="lastUpdateTime" data-sortable="true">修改日期</th>
+<th data-field="cqState" data-formatter="CQFormat">CQ状态</th>
+#end
+#@btTableOperate()
+<a title="详情" modal-title="详情"  data-target="#myModals" data-toggle="modal" data-height="" data-width="860" href="#link("/workdemandplann/demanddetails.pagelet?id={id}")" >#faIcon("search")</a>
+<a title="编辑" modal-title="编辑"  data-target="#myModalModal" data-toggle="modal" data-height="430" data-width="860" href="#link("/workdemandplann/demandedit.pagelet?id={id}")" >#faIcon("edit")</a>
+<a href="#"  data-opera-type="remove">#faIcon("remove")</a>
+#end
+
+
+<script>
+
+    $(function () {
+        var _table = $("#${tableId}");
+        var _bttable=$("#${tableId}-table");
+        _table.on("click.remove", "[data-opera-type=remove]", function () {
+            var id = $(this).closest("tr").find("input[type=checkbox]:first").val();
+			var ids = [];
+			ids.push(id);
+            layer.confirm("确定要删除该信息吗?", {title: "删除信息"}, function () {
+                $.ajax({
+                    url: "#link("/demandplann/delete")",
+                    type: "post",
+                    data: {userIds: ids},
+                    dataType: "json",
+                    success: function (data) {
+                        var info = "系统错误";
+                        if (typeof(data.info) != "undefined") {
+                            info = data.info;
+                        }
+                        if (data.status == "y") {
+                            layer.msg(info);
+                        } else {
+                            layer.msg(info, {icon: 2})
+                        }
+                        _bttable.bootstrapTable('refresh');
+                    }
+                })
+            });
+            return false;
+        }).off("click.mulremove").on("click.mulremove",".mul-remove",function(){
+            var sels=_bttable.bootstrapTable('getSelections');
+            if(sels.length===0){
+                layer.msg("请选择",{icon:2})
+                return false;
+            }
+            layer.confirm("确定要批量删除所选信息吗?", {title: "批量删除信息"},function() {
+                var ids = [];
+                for (var i = 0, l = sels.length; i < l; i++) {
+                    ids.push(sels[i].userId);
+                }
+                $.ajax({
+                    url: "#link("/demandplann/delete")",
+                    type: "post",
+                    data: {userIds:ids},
+                    dataType: "json",
+                    success: function (data) {
+                        var info = "系统错误";
+                        if (typeof(data.info) != 'undefined') {
+                            info = data.info;
+                        }
+                        if (data && data.status && data.status == "y") {
+                            layer.msg(info);
+                        } else {
+                            layer.msg(info, {icon: 2})
+                        }
+                        _bttable.bootstrapTable('refresh');
+                    }
+                })
+            });
+            return false;
+        });
+
+        $(".lockBtn").on("click",function(){
+        	var sels=_bttable.bootstrapTable('getSelections');
+            if(sels.length===0){
+                layer.msg("请选择",{icon:2})
+                return false;
+            }
+            layer.confirm("确定要进行用户锁定吗?", {title: "用户锁定信息"},function() {
+                var ids = [];
+                for (var i = 0, l = sels.length; i < l; i++) {
+                    ids.push(sels[i].userId);
+                }
+                $.ajax({
+                    url: "#link("/sysuser/updateLockStatus")",
+                    type: "post",
+                    data: {userIds:ids,lockStatus:'3'},
+                    dataType: "json",
+                    success: function (data) {
+                        var info = "系统错误";
+                        if (typeof(data.info) != 'undefined') {
+                            info = data.info;
+                        }
+                        if (data && data.status && data.status == "y") {
+                            layer.msg(info);
+                        } else {
+                            layer.msg(info, {icon: 2})
+                        }
+                        _bttable.bootstrapTable('refresh');
+                    }
+                })
+            });
+            return false;
+        });
+
+        $(".unlockBtn").on("click",function(){
+        	var sels=_bttable.bootstrapTable('getSelections');
+            if(sels.length===0){
+                layer.msg("请选择",{icon:2})
+                return false;
+            }
+            layer.confirm("确定要进行用户解锁吗?", {title: "用户解锁信息"},function() {
+                var ids = [];
+                for (var i = 0, l = sels.length; i < l; i++) {
+                    ids.push(sels[i].userId);
+                }
+                $.ajax({
+                    url: "#link("/sysuser/updateLockStatus")",
+                    type: "post",
+                    data: {userIds:ids,lockStatus:'1'},
+                    dataType: "json",
+                    success: function (data) {
+                        var info = "系统错误";
+                        if (typeof(data.info) != 'undefined') {
+                            info = data.info;
+                        }
+                        if (data && data.status && data.status == "y") {
+                            layer.msg(info);
+                        } else {
+                            layer.msg(info, {icon: 2})
+                        }
+                        _bttable.bootstrapTable('refresh');
+                    }
+                })
+            });
+            return false;
+        });
+        $(".lockBtn").on("click",function(){
+            var sels=_bttable.bootstrapTable('getSelections');
+            if(sels.length===0){
+                layer.msg("请选择",{icon:2})
+                return false;
+            }
+            layer.confirm("确定要进行用户锁定吗?", {title: "用户锁定信息"},function() {
+                var ids = [];
+                for (var i = 0, l = sels.length; i < l; i++) {
+                    ids.push(sels[i].userId);
+                }
+                $.ajax({
+                    url: "#link("/sysuser/updateLockStatus")",
+                    type: "post",
+                    data: {userIds:ids,lockStatus:'3'},
+                    dataType: "json",
+                    success: function (data) {
+                        var info = "系统错误";
+                        if (typeof(data.info) != 'undefined') {
+                            info = data.info;
+                        }
+                        if (data && data.status && data.status == "y") {
+                            layer.msg(info);
+                        } else {
+                            layer.msg(info, {icon: 2})
+                        }
+                        _bttable.bootstrapTable('refresh');
+                    }
+                })
+            });
+            return false;
+        });
+        $(".pwdResetBtn").on("click",function(){
+            var sels=_bttable.bootstrapTable('getSelections');
+            if(sels.length===0){
+                layer.msg("请选择",{icon:2})
+                return false;
+            }
+            layer.confirm("确定要进行密码重置吗?", {title: "密码重置信息"},function() {
+                var ids = [];
+                for (var i = 0, l = sels.length; i < l; i++) {
+                    ids.push(sels[i].userId);
+                }
+                $.ajax({
+                    url: "#link("/sysuser/resetPwd")",
+                    type: "post",
+                    data: {userIds:ids},
+                    dataType: "json",
+                    success: function (data) {
+                        var info = "系统错误";
+                        if (typeof(data.info) != 'undefined') {
+                            info = data.info;
+                        }
+                        if (data && data.status && data.status == "y") {
+                            layer.msg(info);
+                        } else {
+                            layer.msg(info, {icon: 2})
+                        }
+                        _bttable.bootstrapTable('refresh');
+                    }
+                })
+            });
+            return false;
+        });
+    })
+</script>
+#end
+
+

@@ -1,0 +1,18 @@
+<standard-fields>
+  <standard-field id="b711aece264744b0b46aad296d3838ba" name="notepad_name" title="记事本名称" business-type-id="7b06102433fd4db79df39b45a94f5261">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="4c2db536130045da90a3d3503e79b8e4" name="notepad_content" title="记事本内容" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="93bb255acefd4bf4b892efc3433cdd2b" name="transfer_user" title="移交人员" business-type-id="58c95a5b843d4800a70ba947fdfa086a">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="68c62d0e481e46c29a8dcd47c66bc443" name="transfer_time" title="移交时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

@@ -1,0 +1,15 @@
+#macro ticketDiv(statustxt statusCls title sdtime info)
+	<div class="ticket">
+        <span class="label ticket-label ${statusCls}">${statustxt}</span>
+        <a href="#" title="" class="ticket-title">${title}<span>[${sdtime}]</span></a>
+ 		<span class="ticket-info">
+  			${info} 
+  		</span>
+    </div>
+#end
+
+#macro toolbarA(toolbarClass toolbarHref toolbarIcon)
+<div class="widget-toolbar hidden-mobile ${toolbarClass}">
+	<a class="onoffswitch-title" href="${toolbarHref}">#faIcon("${toolbarIcon}")&nbsp;#bodyContent</a>
+</div>
+#end

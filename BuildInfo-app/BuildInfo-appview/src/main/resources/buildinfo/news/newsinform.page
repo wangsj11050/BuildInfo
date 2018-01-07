@@ -1,0 +1,23 @@
+
+<div class="am-container-1 margin-t30">
+	<div class="words-title ">
+		<span>${buildNews?.newsName}</span>
+		<div>${buildNews?.pubDate}</div>
+	</div>
+</div>
+<div class="solution-inform">
+	<div class=" solution-inform-content-all">
+		<div class="solution-inform-content">
+		    <p class="inform-content-p">
+		    	${buildNews?.newsDesc}
+			</p>
+	      <div class="solution-inform-content-img" style="text-align: center;">
+	      	<img src="#link(buildNews?.newsImg)"/>
+	      	<div class="clear"></div>
+	      </div>
+	      <p class="solution-inform-content-words">
+	      		${buildNews?.newsContent}
+		  </p>
+		</div>
+	</div>
+</div>

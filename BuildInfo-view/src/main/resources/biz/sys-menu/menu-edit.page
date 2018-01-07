@@ -1,0 +1,185 @@
+#set(menuWinCateList = getDictItem("BIZ_WINDOW_CATE")?["list"])
+#set(menuExpandList = getDictItem("BIZ_EXPAND_FLAG")?["list"])
+#@tForm("thisform" sysMenuDto?"/sysmenu/update?menuId="+sysMenuDto?.menuId:"/sysmenu/save" "post" {"class":""})
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("菜单编号：")
+            #if(sysMenuDto)
+                #tInput("menuCode" sysMenuDto?.menuCode {"placeholder":"请输入菜单编号","datatype":"/^[0-9a-zA-Z]{1,16}$/",
+                    "nullmsg":"菜单编号不能为空！","id":"menuCode","disabled":"disabled"})
+            #else
+                #tInput("menuCode" sysMenuDto?.menuCode {"placeholder":"请输入菜单编号","datatype":"/^[0-9a-zA-Z]{1,32}$/",
+                    "nullmsg":"菜单编号不能为空！","id":"menuCode"})
+            #end
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("菜单名称：")
+				#tInput(
+            "menuName" sysMenuDto?.menuName {"placeholder":"请输入菜单名称","datatype":"*1-32","nullmsg":"菜单名称不能为空！","id":
+            "menuName"})
+			#end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("上级菜单：")
+				#if(sysMenuDto)
+            #treeSelectFix(
+                "parentId" sysMenuDto?.parentId {"placeholder":"请选择上级菜单","class":"input-text","readonly":"readonly",
+                "data-URL":"/sysmenu/getTreeData","style":"width:100%","disabled":"disabled"})
+        #else
+            #treeSelectFix(
+                "parentId" sysMenuDto?.parentId?:selectedMenu {"placeholder":"请选择上级菜单","class":"input-text","readonly":
+                "readonly","data-URL":"/sysmenu/getTreeData","style":"width:100%"})
+        #end
+			#end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("系统分类：")
+				#treeSelectFix(
+            "kindCode" sysMenuDto?.kindCode {"placeholder":"请选择系统分类","class":"input-text","readonly":"readonly",
+            "data-URL":"/syskind/getTreeData","style":"width:100%","datatype":"*1-256","nullmsg":"系统分类不能为空！"})
+			#end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("菜单参数：")
+					#tInput(
+            "menuArg" sysMenuDto?.menuArg {"placeholder":"请输入菜单参数","id":"menuArg","datatype":"*1-256","ignore":
+            "ignore"})
+				#end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("菜单图标：")
+					#tInput(
+            "menuIcon" sysMenuDto?.menuIcon {"placeholder":"请输入菜单图标","id":"menuIcon","datatype":"*1-256","ignore":
+            "ignore"})
+				#end
+    </div>
+</div>
+<div class="clearfix">
+<div class="col-xs-12 col-sm-6 col-md-6">
+    #@elementItemAjax("窗口类型：")
+        #@tSelect("windowType" sysMenuDto?.windowType {"class":"select2","style":"width:100%"})
+            <option value=""></option>
+            #for(menuWin:menuWinCateList)
+            <option value="${menuWin?.value}" #if(menuWin?.value==sysMenuDto?.windowType)selected#end>${menuWin?.text}
+            </option>
+        #end
+    #end
+#end
+</div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("提示信息：")
+				#tInput(
+            "tip" sysMenuDto?.tip {"placeholder":"请输入提示信息","id":"tip","datatype":"*1-256","ignore":"ignore"})
+			#end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("快捷键：")
+			#tInput("hotKey" sysMenuDto?.hotKey {"placeholder":"请输入快捷键","id":"quk","datatype":"*1-8","ignore":"ignore"})
+		#end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("展开标志：")
+            #@tSelect("openFlag" sysMenuDto?.openFlag {"class":"select2","style":"width:100%"})
+                <option value=""></option>
+                #for(menuExpand:menuExpandList)
+                <option value="${menuExpand?.value}"
+                        #if(menuExpand?.value==sysMenuDto?.openFlag)selected#end>${menuExpand?.text}
+                </option>
+            #end
+        #end
+    #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("url：")
+			#tInput("menuUrl" sysMenuDto?.menuUrl {"placeholder":"请输入菜单URL","id":"quk","datatype":"*1-256","ignore":"ignore"})
+		#end
+    </div>
+</div>
+<div class="clearfix">
+
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("备注：")
+            #@tTextarea("remark" {"row":"10","datatype":"*1-256","ignore":"ignore"})${sysMenuDto?.remark}#end
+        #end
+    </div>
+</div>
+
+#end
+#macro tGetSubTrans ()
+<script type="text/javascript">
+    function getSubTransData(initValue) {
+        var id = $('#transCodeEditSelect').children('option:selected').val();
+        $.ajax({
+            url: "#link("/syssubtrans/getSubTransByTrans")",
+            type: "post",
+            data: {transCode: id},
+            dataType: "json",
+            success: function (data) {
+                $("#subTransCodeEditSelect").empty();//清空
+                $("#subTransCodeEditSelect").val(null).trigger("change");
+                var secondHtml = "<option value=''></option>";
+                $.each(data, function (key, value) {
+                    secondHtml += "<option value='" + value.id + "'";
+                    if (initValue != 'undefined' && initValue == value.id) {
+                        secondHtml += " selected";
+                    }
+                    secondHtml += ">" + value.subTransName + "</option>";
+                });
+                $("#subTransCodeEditSelect").html(secondHtml).trigger("change");
+
+            }
+        });
+    }
+    $(function () {
+        var initSubValue = $("#subTransCodeEditSelect").val();
+        $("#transCodeEditSelect").on("change", function () {
+            getSubTransData(initSubValue);
+        }).trigger("change");
+        console.log($("#transCodeEditSelect"));
+        $("#subTransCodeEditSelect").trigger("change");
+    ##$("#transCodeEditSelect").trigger("change");
+    ##getSubTransData(initSubValue);
+    ##alert(initSubValue);
+    ##$("#subTransCodeEditSelect").val(initSubValue);
+    })
+</script>
+#end
+#tGetSubTrans()
+<script type="text/javascript">
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info, {icon: 2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#menu_sub_main_menu").trigger("refresh");
+                        $("#menu-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info, {icon: 2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

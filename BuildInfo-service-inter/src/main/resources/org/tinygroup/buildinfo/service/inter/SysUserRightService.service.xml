@@ -1,0 +1,41 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysUserRightService" bean="sysUserRightServiceImpl">
+    <service-method local-name="getSysUserRightPager" service-id="getSysUserRightPager" method-name="getSysUserRightPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysUserRightDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserRightDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysUserRightPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="getSysUserRight" service-id="getSysUserRight" method-name="getSysUserRight" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysUserRightResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysUserRightDto"/>
+    </service-method>
+    <service-method local-name="deleteSysUserRight" service-id="deleteSysUserRight" method-name="deleteSysUserRight" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteSysUserRightResult" required="false" is-array="false" type="void"/>
+    </service-method>
+    <service-method local-name="updateSysUserRight" service-id="updateSysUserRight" method-name="updateSysUserRight" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysUserRightDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserRightDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateSysUserRightResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="checkSysUserRightExists" service-id="checkSysUserRightExists" method-name="checkSysUserRightExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysUserRightDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserRightDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkSysUserRightExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="addSysUserRight" service-id="addSysUserRight" method-name="addSysUserRight" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysUserRightDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserRightDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addSysUserRightResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysUserRightDto"/>
+    </service-method>
+  </service-component>
+</service-components>

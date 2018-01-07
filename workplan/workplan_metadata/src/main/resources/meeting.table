@@ -1,0 +1,37 @@
+<tables>
+  <table id="f6adfbbda353469f96d6b391f2089605" name="t_meeting_record" title="会议记录表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="afca29516e94436a98b6a550fb9b9edc" primary="false" unique="false" not-null="true" id="meeting_subject" auto-increase="false"/>
+    <table-field standard-field-id="a58433b29610423cb930c7a45965a177" primary="false" unique="false" not-null="true" id="meeting_time" auto-increase="false"/>
+    <table-field standard-field-id="1cd6d5e617314459bc34fda70040745f" primary="false" unique="false" not-null="false" id="meeting_address" auto-increase="false"/>
+    <table-field standard-field-id="0994f7c1f95442478204aba316d770b1" primary="false" unique="false" not-null="true" id="meeting_presenter" auto-increase="false"/>
+    <table-field standard-field-id="dcfcd33d447c42078f8ec28a11913d86" primary="false" unique="false" not-null="false" id="meeting_recorder" auto-increase="false"/>
+    <table-field standard-field-id="aefdda6546eb4b45a820c0d8d8b6934c" primary="false" unique="false" not-null="true" id="create_user" auto-increase="false"/>
+    <table-field standard-field-id="bfbc28129a394c29af7d810d6f18baf5" primary="false" unique="false" not-null="false" id="meeting_content" auto-increase="false"/>
+    <table-field standard-field-id="d75bf57f59be419cbbe9ace6b141e686" primary="false" unique="false" not-null="false" id="meeting_result" auto-increase="false"/>
+    <table-field standard-field-id="6a045bcaf11f41e3b96881c47e67ab93" primary="false" unique="false" not-null="false" id="join_meeting_user" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="bd805f6cfa6f4b339c2d9a669b53f586" name="t_meeting_problem" title="会议问题明细表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="d16648fe4ab042d895e8808a6439d836" primary="false" unique="false" not-null="true" id="meetimg_id" auto-increase="false"/>
+    <table-field standard-field-id="465f4582fd4a4d0b81f7933c8c31c239" primary="false" unique="false" not-null="false" id="problem_content" auto-increase="false"/>
+    <table-field standard-field-id="02dec998d5664f9aa1df90ae30751bc3" primary="false" unique="false" not-null="false" id="duty_user" auto-increase="false"/>
+    <table-field standard-field-id="57dafcf8abfa44268288c7aee6c91a0c" primary="false" unique="false" not-null="false" id="solve_date" auto-increase="false"/>
+    <table-field standard-field-id="6a91a11e718d4076a8d58c79bce42852" primary="false" unique="false" not-null="false" id="track_user" auto-increase="false"/>
+    <table-field standard-field-id="0983fdb5286e45f09f62bb6b327b54fb" primary="false" unique="false" not-null="false" id="status" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+</tables>

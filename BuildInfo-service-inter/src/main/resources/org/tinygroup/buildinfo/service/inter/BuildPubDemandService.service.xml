@@ -1,0 +1,43 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.BuildPubDemandService" bean="buildPubDemandServiceImpl">
+    <service-method local-name="getPubdemandList" service-id="getPubdemandList" method-name="getPubdemandList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildPubdemandDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildPubdemandDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getPubdemandListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildPubdemandDto"/>
+    </service-method>
+    <service-method local-name="updatePubdemand" service-id="updatePubdemand" method-name="updatePubdemand" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildPubdemandDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildPubdemandDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updatePubdemandResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="deletePubdemand" service-id="deletePubdemand" method-name="deletePubdemand" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deletePubdemandResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getPubdemandPager" service-id="getPubdemandPager" method-name="getPubdemandPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="buildPubdemandDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildPubdemandDto" required="false" is-array="false"/>
+        <service-parameter name="sortName" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="asc" type="boolean" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getPubdemandPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="getPubdemandById" service-id="getPubdemandById" method-name="getPubdemandById" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getPubdemandByIdResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildPubdemandDto"/>
+    </service-method>
+    <service-method local-name="addPubdemand" service-id="addPubdemand" method-name="addPubdemand" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildPubdemandDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildPubdemandDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addPubdemandResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildPubdemandDto"/>
+    </service-method>
+  </service-component>
+</service-components>

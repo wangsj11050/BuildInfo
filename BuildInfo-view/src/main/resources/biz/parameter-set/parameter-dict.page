@@ -1,0 +1,3 @@
+#set(systemList = getDictItem("K_GSXT")?["list"])
+#set(listKey = [1,0])
+#set(listValue = ['是','否'])

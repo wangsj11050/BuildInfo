@@ -1,0 +1,167 @@
+#set(serviceList = getDictItem("BUILD_SERVICE")?["list"])
+#@gridSysRow({"style":"margin-right:0"})
+  	#@gridSysCol(12 {"class":"col-sm-12 col-md-2"})
+	  	##<div id="left-tree-menu">
+	  		##zTreeList("/look-for/getTreeData",{"id":"serviceTreeMenu"})
+	  	##</div>
+	  	#@tForm("plannForm" "/pubdemand/pubdemand")
+		<div class="infoContent" style="margin:160px -18px 10px 5px;">
+           <p class="titleName" style="font-size: 14px;margin: -15px 0 8px 0;color: cornflowerblue;">发布需求</p>
+           <div class="form-infos clearfix">
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#tInput("name" "" {"class":"input-sm","placeholder":"您的姓名","datatype":"*1-32","nullmsg":"请填写您的姓名!"})
+           	  			</div>
+           	  		</div>
+           	   </div>
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#tInput("phone" "" {"class":"input-sm","placeholder":"您的电话","datatype":"*1-20","nullmsg":"请填写您的电话!",
+                   	  				"onkeyup":"this.value=this.value.replace(/\D/g,'')","onafterpaste":"this.value=this.value.replace(/\D/g,'')"})
+           	  			</div>
+           	  		</div>
+           	   </div>
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#@tSelect("demand" "" {"class":"pubDemand input-sm","style":"width:100%"})
+           	  					<option value="" style="font-size: 14px;">您的需求</option>
+					            #for(service:serviceList)
+					            <option value="${service?.value}" style="font-size: 14px;">${service?.text}</option>
+					        	#end
+					        #end
+           	  			</div>
+           	  		</div>
+           	   </div>
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#commontTextarea("demandDesc" {"class":"pubDemandDesc"} {"placeholder":"需求描述","row":"10","style":"height: 175px;font-size:12px;"})
+           	  			</div>
+           	  		</div>
+           	   </div>
+           	   <div class="clearfix">
+           	  		<div class="col-xs-12 col-sm-12 col-md-12">
+           	  			<div class="form-group normal-form">
+           	  				#tSubmitInput("plannmit" "提交需求" {"class":"btn-info-outline btn-sm"})
+               	  			</div>
+               	  		</div>
+               	   </div>
+           	   </div>
+            </div>
+		#end
+  	#end
+  	#@gridSysCol(12 {"class":"col-sm-12 col-md-10"})
+  	<div data-am-widget="tabs"class="am-tabs am-tabs-d2 ">
+	  <ul class="am-tabs-nav am-cf solutions-tabs-ul ">
+		  #set(num = 0)
+		  #for(buildService:buildServiceList)
+		  	#set(num = num+1)
+		  	#if("".equals(buildService?.parentService) || buildService?.parentService == null)
+		  		#if(serviceCode !=null && !"".equals(serviceCode))
+		  			#if(serviceCode.equals(buildService?.serviceCode))
+		  				<li class="am-active solutions-tabs-ul-li${num}"><a href="[data-tab-panel-${num}]" >#faIcon(buildService?.serviceIcon)<span>${buildService?.serviceName}</span></a></li>
+					#else
+						<li class="solutions-tabs-ul-li${num}"><a href="[data-tab-panel-${num}]">#faIcon(buildService?.serviceIcon)<span>${buildService?.serviceName}</span></a></li>
+		  			#end
+		  		#else
+		  			#if(num == 1)
+		  				<li class="am-active solutions-tabs-ul-li${num}"><a href="[data-tab-panel-${num}]" >#faIcon(buildService?.serviceIcon)<span>${buildService?.serviceName}</span></a></li>
+					#else
+						<li class="solutions-tabs-ul-li${num}"><a href="[data-tab-panel-${num}]">#faIcon(buildService?.serviceIcon)<span>${buildService?.serviceName}</span></a></li>
+				  	#end
+		  		#end
+		  		
+		  	#end
+		  #end
+	  </ul>
+  		<div class="am-tabs-bd solutions-tabs-content ">
+  			#set(count = 0,activeClass="")
+  			#for(buildService:buildServiceList)
+  				#if("".equals(buildService?.parentService) || buildService?.parentService == null)
+  					#set(count = count + 1)
+  					#if(serviceCode !=null && !"".equals(serviceCode))
+  						#if(serviceCode.equals(buildService?.serviceCode))
+  							#set(activeClass="am-active")
+  						#else
+  							#set(activeClass="")
+  						#end
+  					#else
+  						#if(count == 1)
+		  					#set(activeClass="am-active")
+		  				#else
+		  					#set(activeClass="")
+		  				#end
+  					#end
+  					<div data-tab-panel-${count} class="am-tab-panel ${activeClass}">
+	  					<ul class=" solutions-content-ul">
+	  						#for(subbuildService:buildServiceList)
+	  							#set(childFlag = false)
+		  					#if(subbuildService?.parentService == buildService?.serviceCode)
+		  						#for(subsubbuildService:buildServiceList)
+									#if(subsubbuildService?.parentService == subbuildService?.serviceCode)
+										<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+											<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
+						            			<img src="#link(subsubbuildService?.extField_1)" />
+						            		</div>
+						            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
+							            		<a href="#link('/look-for/Information?serviceCode='+subsubbuildService?.serviceCode)">
+							            			<h5>${subsubbuildService?.serviceName}</h5>
+							            		</a>
+							            		#set(endFlag = false)
+							            		<ul class="test-detail-ul">
+													#for(endbuildService:buildServiceList)
+														#if(endbuildService?.parentService == subsubbuildService?.serviceCode)
+															<li class="registration-query-li">
+																<a class="registration-query-a url_area_click" href="#link('/look-for/Information?serviceCode='+endbuildService?.serviceCode)">
+																	${endbuildService?.serviceName}
+																</a>
+															</li>
+															#set(endFlag = true)
+														#end
+													#end
+												</ul>
+												#if(!endFlag)
+													#for(buildServicecontent:buildServicecontentList)
+														#if(buildServicecontent?.serviceCode == subsubbuildService?.serviceCode)
+															<p>${buildServicecontent?.serviceDes}</p>
+															
+														#end
+													#end
+												#end
+							            	</div>
+										</li>
+						            	#set(childFlag = true)
+									#end
+								#end
+								#if(!childFlag)
+									<li class="am-u-sm-12 am-u-md-6 am-u-lg-12">
+					            		<a href="#link('/look-for/Information?serviceCode='+subbuildService?.serviceCode)">
+						            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-3 solution-tabs-img">
+						            			<img src="#link(subbuildService?.extField_1)" />
+						            		</div>
+						            		<div class="am-u-sm-12 am-u-md-12 am-u-lg-9 solution-tabs-words">
+						            			<h5>${subbuildService?.serviceName}</h5>
+						            			#for(buildServicecontent:buildServicecontentList)
+													#if(buildServicecontent?.serviceCode == subbuildService?.serviceCode)
+														<p>${buildServicecontent?.serviceDes}</p>
+														
+													#end
+												#end
+						            		</div>
+					            		</a>
+					            	</li>
+								#end
+		  					#end
+		  				#end
+		  				<div class="clear"></div>
+	  					</ul>
+	  				</div>
+  				#end
+  			#end
+	     </div>
+      </div>
+  	#end
+ #end

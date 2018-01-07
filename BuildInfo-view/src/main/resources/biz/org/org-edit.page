@@ -1,0 +1,80 @@
+#set(orgLevelList = getDictItem("SYS_BRANCH_LEVEL")?["list"])
+#@tForm("thisform" sysBranchDto?"/sysbranch/update?branchCode="+sysBranchDto?.branchCode:"/sysbranch/save" "post" {"class":""})
+    <div class="form-infos clearfix">
+        <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("机构编号：")
+                	#if(sysBranchDto)
+                    	#tInput("branchCode" sysBranchDto?.branchCode {"placeholder":"请输入机构编号","datatype":"*1-16","nullmsg":"不能为空！","id":"branchCode","disabled":"disabled"})
+					#else
+                    	#tInput("branchCode" sysBranchDto?.branchCode {"placeholder":"请输入机构编号","datatype":"*1-16","nullmsg":"机构编号不能为空！","id":"branchCode"})
+                	#end
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("机构名称：")
+                    #tInput("branchName" sysBranchDto?.branchName {"datatype":"*1-64","nullmsg":"机构名称不能为空！","placeholder":"请输入机构名称","id":"branchName"})
+                #end
+            </div>
+
+        </div>
+        <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("机构简称：")
+                    #tInput("shortName" sysBranchDto?.shortName {"datatype":"*1-32","nullmsg":"机构简称不能为空！","placeholder":"请输入机构简称","id":"shortName"})
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("机构级别：")
+                    #@tSelect("branchLevel" sysBranchDto?.branchLevel {"datatype":"*1-32","nullmsg":"机构级别不能为空！","class":"select2","style":"width:100%"})
+                        <option value=""></option>
+                        #for(orgLevel:orgLevelList)
+                        <option value="${orgLevel?.value}" #if(orgLevel?.value==sysBranchDto?.branchLevel)selected#end>${orgLevel?.text}</option>
+                        #end
+                    #end
+                #end
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("上级机构：")
+                    #treeSelectFix("parentCode" sysBranchDto?.parentCode?:selectedBranch {"datatype":"*1-256","nullmsg":"上级级别不能为空！","placeholder":"请选择上级机构","class":"input-text","readonly":"readonly","data-URL":"/sysbranch/getTreeData?id="+sysBranchDto?.branchCode})
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("备注：")
+                   #@tTextarea("remark" {"placeholder":"请输入备注信息","row":"10","datatype":"*1-256","ignore":"ignore"})${sysBranchDto?.remark}#end
+                #end
+            </div>
+        </div>
+    </div>
+#end
+<script type="text/javascript">
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info,{icon:2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#org_sub_main_menu").trigger("refresh");//刷新树
+                        $("#org-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info,{icon:2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

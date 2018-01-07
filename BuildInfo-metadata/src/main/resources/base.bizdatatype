@@ -1,0 +1,329 @@
+<business-types>
+  <business-type id="4b72dc120cee4229ba64eb344dc791dd" name="TINYINT" title="TINYINT" standard-type-id="fb55715f63304829b202fa02e2a5eeaf">
+    <description></description>
+    <placeholder-value-list/>
+  </business-type>
+  <business-type id="a60be11b684b456e925ea623df639928" name="INTEGER" title="INTEGER" standard-type-id="306c4c97efbc4a11b4e9b6c12f1a861f">
+    <placeholder-value-list/>
+  </business-type>
+  <business-type id="f97fc1ace5bc439fbb93b70efcc967b1" name="NUMBER16_2" title="NUMBER16_2" standard-type-id="9abb85a6ef19400299fba28b5bebca60">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="total_len" value="16"/>
+      <placeholder-value name="decimal_len" value="2"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="2dcf2738ba924c568133ec5eadf4b703" name="NUMBER17_2" title="NUMBER17_2" standard-type-id="9abb85a6ef19400299fba28b5bebca60">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="total_len" value="17"/>
+      <placeholder-value name="decimal_len" value="2"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="71db6da5ede64536b67f9e68f0afe882" name="NUMBER20_2" title="NUMBER20_2" standard-type-id="9abb85a6ef19400299fba28b5bebca60">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="total_len" value="20"/>
+      <placeholder-value name="decimal_len" value="2"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="b24ca1a1f9484ac48af8fd0e6fb01695" name="NUMBER27_0" title="NUMBER27_0" standard-type-id="9abb85a6ef19400299fba28b5bebca60">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="total_len" value="27"/>
+      <placeholder-value name="decimal_len" value="0"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="d164a7b908d14b3b8acbc5b716740add" name="NUMBER30_0" title="NUMBER30_0" standard-type-id="9abb85a6ef19400299fba28b5bebca60">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="total_len" value="30"/>
+      <placeholder-value name="decimal_len" value="0"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="c245f692c34d4a32add2a5d4ee10b9af" name="NUMBER38_0" title="NUMBER38_0" standard-type-id="9abb85a6ef19400299fba28b5bebca60">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="total_len" value="38"/>
+      <placeholder-value name="decimal_len" value="0"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="f7af1e7709224fd3a871f33344c920fa" name="VARCHAR6" title="VARCHAR6" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="6"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="5b3c30230a0947969e3bf712d201795b" name="VARCHAR24" title="VARCHAR24" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="24"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="10c79440a3cb4121b0ccf63e3fdcc6bc" name="VARCHAR7" title="VARCHAR7" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="7"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="8ff62692fbfd448d9cb395dae8060623" name="VARCHAR28" title="VARCHAR28" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="28"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="7905d7efd42a48218c42ed2fd35cce62" name="VARCHAR8" title="VARCHAR8" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="8"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="3a168a3c5b4d4a10a4e2f1897d8a26dc" name="VARCHAR9" title="VARCHAR9" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="9"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="83da4e8a96b44fa5bebdecf3bee132ec" name="VARCHAR36" title="VARCHAR36" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="36"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="925699076cb343bb9979f1a7387e691c" name="VARCHAR10" title="VARCHAR10" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="10"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="0bc5329d2570417bad39a41376447f1b" name="VARCHAR15" title="VARCHAR15" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="15"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="8f95ea2e9261437db73dc543928e7036" name="VARCHAR40" title="VARCHAR40" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="40"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="24f152f80d5842abb5098f608f1d50c0" name="VARCHAR3" title="VARCHAR3" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="3"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="6bbd101d409a43bd939f882d369ea47f" name="VARCHAR16" title="VARCHAR16" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="16"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="fada2ad8b06a4844a110fd2d27e3aa4b" name="VARCHAR20" title="VARCHAR20" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <placeholder-value-list>
+      <placeholder-value name="length" value="20"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="8717718de1564a429ccbc93cd386c4db" name="VARCHAR80" title="VARCHAR80" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="80"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="6fc6ce2ff7f84d86b845c8207fc2071b" name="VARCHAR30" title="VARCHAR30" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="30"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="769a81a4e3ee4fcb86d8e672b526cd1c" name="VARCHAR120" title="VARCHAR120" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="120"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="23a94507f80d4ad38bcbdd3696671b65" name="VARCHAR32" title="VARCHAR32" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="32"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="9c2bd029c58349ecb963f19a3f5bd148" name="VARCHAR128" title="VARCHAR128" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="128"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="6a7acfcd83644298be35a2d451296346" name="VARCHAR5" title="VARCHAR5" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="5"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="1729b021bcc24a7aa06a93ed018480d0" name="VARCHAR50" title="VARCHAR50" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="50"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="0f8158e595674bca8818e6a6e95eacc6" name="VARCHAR200" title="VARCHAR200" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="200"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="98a22ee97e3e4d36a7ca90c600e7158f" name="VARCHAR60" title="VARCHAR60" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="60"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="e6cd091e39834fdc9854dc314c2b374f" name="VARCHAR240" title="VARCHAR240" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="240"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="1edc75df187a4ff0809d9b0cc628ea17" name="VARCHAR64" title="VARCHAR64" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="64"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="7b06102433fd4db79df39b45a94f5261" name="VARCHAR100" title="VARCHAR100" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="100"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="0f17508ced8c4bdb8a1dbb96dedf2826" name="VARCHAR400" title="VARCHAR400" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="400"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="3a7750eb6ad146f3954684202c13f612" name="VARCHAR250" title="VARCHAR250" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="250"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="2441a77f99f94bfca7e8d6817546545d" name="VARCHAR1000" title="VARCHAR1000" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="1000"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="d52f136d34d4476b8b86c9a815347914" name="VARCHAR255" title="VARCHAR255" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="255"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="5ddc64f758264c9794a396c9514f1fa3" name="VARCHAR1020" title="VARCHAR1020" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="1020"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="58c95a5b843d4800a70ba947fdfa086a" name="VARCHAR256" title="VARCHAR256" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="256"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="6eaa0631d4744a1795f184fd95a1359f" name="MEDIUMINT" title="MEDIUMINT" standard-type-id="bfac97ce0a8441fe8009cba126114892">
+    <description></description>
+    <placeholder-value-list/>
+  </business-type>
+  <business-type id="04e8a02c494c49ff97e3cf4aa4dfe553" name="TEXT" title="TEXT" standard-type-id="84aa68cc582f4eb89dc8f6848035a4e0">
+    <description></description>
+    <placeholder-value-list/>
+  </business-type>
+  <business-type id="655f43dfdfaf4bf4bdc9c4a7a6e406de" name="BIGINT" title="BIGINT" standard-type-id="e32264e845e642b68ee2fe3437d8c186">
+    <description></description>
+    <placeholder-value-list/>
+  </business-type>
+  <business-type id="f974cf2343f9455e961ac7939611ea13" name="DATE" title="DATE" standard-type-id="eff48dfee764445982b7b738f08fe9ea">
+    <description></description>
+    <placeholder-value-list/>
+  </business-type>
+  <business-type id="05dcdb66e21049909062d8a7de823467" name="DATETIME" title="DATETIME" standard-type-id="d7938bf4550b441d87e8ebf9d389b7ea">
+    <description></description>
+    <placeholder-value-list/>
+  </business-type>
+  <business-type id="54f823ca921b40c7b6fdb07b09360e81" name="CHAR1" title="CHAR1" standard-type-id="5c7c3cb9eb9c4b0198dbf66bb17ab3c4">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="1"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="3888d123a35e46409327a476fe52926f" name="FLOAT0" title="FLOAT0" standard-type-id="44bab1b6b71e4c73a798d6272fdb78de">
+    <description></description>
+    <placeholder-value-list/>
+  </business-type>
+  <business-type id="19529592cbf24e959fc0d67376cd83c6" name="SORT_NUM" title="SORT_NUM" standard-type-id="306c4c97efbc4a11b4e9b6c12f1a861f">
+    <placeholder-value-list/>
+  </business-type>
+  <business-type id="7468cdaf4f104e2b8bf38cc19537b123" name="VARCHAR1" title="VARCHAR1" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <placeholder-value-list>
+      <placeholder-value name="length" value="1"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="83fe5c30c4fe4764a1aab3e8d0a42e3e" name="VARCHAR4" title="VARCHAR4" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="4"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="dc552ad9bd0441ffb53b84ec5d11668f" name="VARCHAR2" title="VARCHAR2" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="2"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="81ff5aba668b4f7fbb63957612fe83bd" name="VARCHAR19" title="VARCHAR19" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="19"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="256f98f582ff45f283f7ccb24003c919" name="VARCHAR76" title="VARCHAR76" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="76"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="d04c844d2a8942bb9c98ca881583c93f" name="VARCHAR12" title="VARCHAR12" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="12"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="c6bc600b14f445ad9fd29e008f7d9d82" name="VARCHAR48" title="VARCHAR48" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="48"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="3e5219bf1a2e4214939ecb1537d24c56" name="VARCHAR1024" title="VARCHAR1024" standard-type-id="237887ec23f54686a78185b0b204f828">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="1024"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="49b5339a8a1b45fb819ca9035390edc4" name="NUMBER4_0" title="NUMBER4_0" standard-type-id="9abb85a6ef19400299fba28b5bebca60">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="total_len" value="4"/>
+      <placeholder-value name="decimal_len" value="0"/>
+    </placeholder-value-list>
+  </business-type>
+  <business-type id="1c51c7a762ce4f2e81dbafe4e8c0b1d1" name="CHAR2" title="CHAR2" standard-type-id="5c7c3cb9eb9c4b0198dbf66bb17ab3c4">
+    <description></description>
+    <placeholder-value-list>
+      <placeholder-value name="length" value="2"/>
+    </placeholder-value-list>
+  </business-type>
+</business-types>

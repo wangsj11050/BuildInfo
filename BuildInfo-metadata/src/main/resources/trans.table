@@ -1,0 +1,23 @@
+<tables>
+  <table id="a9c0b7c3aaf04fe6ac99e4a1735cfd80" name="tbtrans" title="交易配置表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="5b6ffb53f32940d488329ff888c69c00" primary="false" unique="false" not-null="true" id="trans_code" auto-increase="false"/>
+    <table-field standard-field-id="f30e5b580a9742158b56859d7acf4409" primary="false" unique="false" not-null="true" id="trans_name" auto-increase="false"/>
+    <table-field standard-field-id="d1c01e7d11b44cbaa008ad18c3f4e2bb" primary="false" unique="false" not-null="true" id="enable_flag" auto-increase="false"/>
+    <table-field standard-field-id="86c25d6a9e40459e8b14c5c6b08307a4" primary="false" unique="false" not-null="true" id="channels" auto-increase="false"/>
+    <table-field standard-field-id="e41252a6375847f18d4dd0b5ad89646c" primary="false" unique="false" not-null="true" id="host_online" auto-increase="false"/>
+    <table-field standard-field-id="76802d5099e641b787d5a884fb1bd1d3" primary="false" unique="false" not-null="true" id="trans_type" auto-increase="false"/>
+    <table-field standard-field-id="d1ebb2c4677d482fbbc3bfc7dd968f53" primary="false" unique="false" not-null="true" id="monitor_status" auto-increase="false"/>
+    <table-field standard-field-id="260e3c100f6a4efb8d3cde524d3388c5" primary="false" unique="false" not-null="true" id="log_level" auto-increase="false"/>
+    <table-field standard-field-id="38672c07998945999e7b9a244231ea63" primary="false" unique="false" not-null="true" id="mon_trans_type" auto-increase="false"/>
+    <table-field standard-field-id="763c43d0c77743bc82dfb2301b90ca1a" primary="false" unique="false" not-null="false" id="reserve1" auto-increase="false"/>
+    <table-field standard-field-id="3417fa91eef245ff9afeaad421b60a4c" primary="false" unique="false" not-null="false" id="reserve2" auto-increase="false"/>
+    <table-field standard-field-id="abbeb7928fac4426a849f19b09b76fdd" primary="false" unique="false" not-null="false" id="reserve3" auto-increase="false"/>
+    <index name="idx_trans" unique="true">
+      <reverse>false</reverse>
+      <index-field field="trans_code" direction="asc"/>
+    </index>
+  </table>
+</tables>

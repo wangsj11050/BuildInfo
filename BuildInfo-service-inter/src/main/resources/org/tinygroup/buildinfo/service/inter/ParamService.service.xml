@@ -1,0 +1,47 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.ParamService" bean="paramServiceImpl">
+    <service-method local-name="getParam" service-id="getParam" method-name="getParam" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getParamResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.ParamDto"/>
+    </service-method>
+    <service-method local-name="getParamPager" service-id="getParamPager" method-name="getParamPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="paramDto" type="org.tinygroup.buildinfo.service.inter.dto.ParamDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getParamPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="updateParam" service-id="updateParam" method-name="updateParam" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="paramDto" type="org.tinygroup.buildinfo.service.inter.dto.ParamDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateParamResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="checkParamExists" service-id="checkParamExists" method-name="checkParamExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="paramDto" type="org.tinygroup.buildinfo.service.inter.dto.ParamDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkParamExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="deleteParam" service-id="deleteParam" method-name="deleteParam" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteParamResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getParamList" service-id="getParamList" method-name="getParamList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="paramDto" type="org.tinygroup.buildinfo.service.inter.dto.ParamDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getParamListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="addParam" service-id="addParam" method-name="addParam" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="paramDto" type="org.tinygroup.buildinfo.service.inter.dto.ParamDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addParamResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.ParamDto"/>
+    </service-method>
+  </service-component>
+</service-components>

@@ -1,0 +1,88 @@
+#@tForm("thisform" sysDepDto?"/sysdep/update?depCode="+sysDepDto?.depCode:"/sysdep/save" "post" {"class":""})
+    <div class="form-infos clearfix">
+        <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("部门编号：")
+                	#if(sysDepDto)
+                    	#tInput("depCode" sysDepDto?.depCode {"placeholder":"部门编号","datatype":"*1-16","nullmsg":"部门编号不能为空！","id":"depCode","disabled":"disabled"})
+					#else
+                   	 	#tInput("depCode" sysDepDto?.depCode {"placeholder":"部门编号","datatype":"*1-16","nullmsg":"部门编号不能为空！","id":"depCode"})
+                	#end
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("部门名称：")
+                    #tInput("depName" sysDepDto?.depName {"placeholder":"请输入部门名称","datatype":"*1-64","nullmsg":"部门名称不能为空！","id":"depName"})
+                #end
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("部门简称：")
+                	#tInput("shortName" sysDepDto?.shortName {"datatype":"*1-32","nullmsg":"部门简称不能为空！","placeholder":"请输入部门名称","id":"shortName"})
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+            	#if(sysDepDto)
+	                #@elementItemAjax("所属机构：")
+	                    #treeSelectFix("branchCode" sysDepDto?.branchCode?:selectedBranch {"datatype":"*1-256","nullmsg":"所属机构不能为空！","class":"input-text","readonly":"readonly","data-URL":"/sysbranch/getTreeData","id":"linkage1","disabled":"disabled"})
+	                #end
+				#else
+	                #@elementItemAjax("所属机构：")
+	                    #treeSelectFix("branchCode" sysDepDto?.branchCode?:selectedBranch {"datatype":"*1-256","nullmsg":"所属机构不能为空！","class":"input-text","readonly":"readonly","data-URL":"/sysbranch/getTreeData","id":"linkage1"})
+	                #end
+            	#end
+            </div>
+        </div>
+        <div class="clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("上级部门：")
+                    #treeSelectFix("parentCode" sysDepDto?.parentCode?:selectedDep {"datatype":"*1-256","ignore":"ignore","class":"input-text","readonly":"readonly","data-URL":"/sysdep/getParentDepTreeByBranch","id":"linkage2"})
+                #end
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6">
+                #@elementItemAjax("备注：")
+                   #@tTextarea("remark" {"placeholder":"请输入备注信息","row":"10","datatype":"*1-256","ignore":"ignore"})${sysDepDto?.remark}#end
+                #end
+            </div>
+        </div>
+    </div>
+#end
+<script type="text/javascript">
+    $(function () {
+        $('#linkage1').on('setValue',function () {
+            $('#linkage2').val('');
+            var getId = $(this).next('input').val();
+            var depCode = $("#depCode").val();
+            $('#linkage2').attr('data-url','/sysdep/getParentDepTreeByBranch?pId='+getId+'&id='+depCode);
+            console.log($('#linkage2').attr('data-url'));
+            $('#linkage2').trigger("refresh");
+        });
+        
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info,{icon:2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#dep_sub_main_menu").trigger("refresh");//刷新树
+                        $("#department-table").bootstrapTable('refresh');
+						
+                    },
+                    error: function () {
+                        layer.msg(data.info,{icon:2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

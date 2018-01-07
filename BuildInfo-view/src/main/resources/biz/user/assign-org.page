@@ -1,0 +1,237 @@
+<div class="search-trees">
+    <div class="search-boxs">
+        #@tForm("thisform"   sysOfficeDto?"/sysoffice/update":"/sysoffice/save" "post" {"class":""})
+            <div class="clearfix">
+                <div class="col-xs-12 col-sm-6 col-md-6 f-12">
+                    #@elementItemAjax("所属机构：")
+                        #treeSelectFix("branchCode" sysOfficeDto?.branchCode {"class":"input-text","readonly":"readonly","data-URL":"/sysbranch/getTreeData","id":"linkage1"})
+                    #end
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 f-12">
+                    #@elementItemAjax("所属部门：")
+                        #treeSelectFix("depCode" sysofficeDto?.depCode {"class":"input-text","readonly":"readonly","data-URL":"/sysbranch/getTreeData","id":"linkage2"})
+                    #end
+                </div>
+            </div>
+        #end
+        <div class="sub-search-nav mb-10 ml-10 mr-10">
+            <input type="text" class="form-control" value="" placeholder="您想搜什么?" id="authTree_search">
+            <span style="right:22px;top:56px; position:absolute;height:20px;width:10px;cursor:pointer"><i class="fa fa-search"></i></span>
+        </div>
+        <div id="ts" style="position: absolute; left:30px; color:#c30; margin-top:8px;">
+        </div>
+        <ul id="authTree" class="ztree tree-items ml-10 mr-10" style="overflow:auto"></ul>
+    </div>
+
+    <script type="text/javascript">
+        (function () {
+            var setting = {
+
+                check: {enable: true,nocheckInherit: false},
+
+                data: {
+                    view: {
+                        showLine: true,
+                        selectedMulti: false,
+                        dblClickExpand: false
+                    },
+                    key: {
+
+                        name: "branchName"
+
+                    },
+                    simpleData: {
+                        enable: true
+                        ,idKey: "branchCode",pIdKey: "parentCode"
+                        ,rootPId: 0
+                    }
+                },
+                callback: {
+                    onClick: onClick,
+                    onCheck: onCheck
+                }
+            };
+
+            function onClick(e, treeId, treeNode) {
+
+                var zTree = $.fn.zTree.getZTreeObj("authTree");
+                zTree.checkNode(treeNode, !treeNode.checked, null, true);
+
+
+                return false;
+            }
+
+            function onCheck(e, treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("authTree"),
+                        nodes = zTree.getCheckedNodes(true),
+                        v = "";
+                for (var i = 0, l = nodes.length; i < l; i++) {
+                    v += nodes[i].name + ",";
+                }
+                if (v.length > 0) v = v.substring(0, v.length - 1);
+                var cityObj = $("#citySel");
+                cityObj.attr("value", v);
+            }
+
+
+            $("#authTree").on("init",function(){
+                $.ajax({
+                    url: "#link("/sysuser/getBranchInfos")",
+                    headers: {
+                        Accept: "text/plain,text/json,text/html,application/json;charset=utf-8"
+                    },
+                    dataType:"text",
+                    success:function(data){
+                        var jsonData = eval(data);
+
+                        var roleId = "1208";
+                        $.ajax({
+                            url:'#link("/")',
+                            data:{roleId:roleId
+                            },
+                            type:'post',
+                            dataType: 'json',
+                            async:false,
+                            success:function(datas){
+                                if(datas){
+                                    var authidArray = new Array();
+                                    //遍历已有角色权限关系
+                                    $.each(datas,function(i,item){
+                                        authidArray.push(""+item["functionId"]);
+                                    });
+                                    //遍历所有权限并初始化checked
+                                    $.each(jsonData,function(i,item){
+                                        var authId = String(item["functionId"]);
+                                        allAuthIdArray.push(""+authId);//所有authid
+                                        var authindex = $.inArray(authId,authidArray);//权限是否已经被分配到角色
+                                        if(authindex>=0){
+                                            item["checked"]=true;
+                                            initAuthArray.push(""+authId);//存放已经被分配给角色的权限
+                                        }
+                                    });
+
+                                }
+                            },
+
+                        });
+                        var zTree =$.fn.zTree.init($("#authTree"), setting, jsonData);
+
+                        var tnodes = zTree.getNodes();
+                        if(tnodes.length>0 && !zTree.setting.check.enable){
+                            zTree.selectNode(tnodes[0]);
+                            zTree.setting.callback.onClick(null, zTree.setting.treeId, tnodes[0]);//调用事件
+                        }
+
+                        zTree.expandAll(true);//展开所有节点
+                        if($("#authTree").outerWidth()>$("#authTree_search").width()){
+                            $("#authTree_search").css("width",$("#authTree").outerWidth());
+                        }
+                    },
+                    error: function(XMLHttpRequest, textStatus, errorThrown) {
+                        console.log(XMLHttpRequest);
+                        console.log(textStatus);
+                        console.log(errorThrown);
+                    }
+                });
+                $("#authTree_search").keyup(function () {
+                    ///显示需要的
+                    var tt = this.value;
+                    $("#authTree").find("span").attr("style", "");
+                    var dx = $("#authTree").find("span");
+                    var zts = 0;
+                    $.each(dx, function (name, obj) {
+                        if (obj.textContent.trim().indexOf(tt) >= 0 && obj.textContent != "" && tt != "") {
+                            obj.style.backgroundColor = "#f6d7b1";
+                            zts = 1;
+                        }
+                    })
+                    ///显示所有的
+                    var zTree = $.fn.zTree.getZTreeObj("authTree");
+                    var nodes = zTree.getNodes();
+
+                    $.each(nodes, function (m, n) {
+                        xsall(zTree, n);
+
+                    })
+
+                    ///为空清空
+                    if (tt != "" && zts == 0)
+                    { document.getElementById("ts").innerHTML = "没发现有用信息"; }
+                    else {
+                        document.getElementById("ts").innerHTML = "";
+                    }
+                    if (tt == "")
+                        return;
+                    $.each(nodes, function (x, y) {
+                        ycall(zTree, y);
+                    })
+                    //zTree.hideNode(nodes[4].children[1]);
+                    //alert(nodes[4].children[1].name);
+                    //return;
+                    ///显示有的隐藏没有的
+                    $.each(nodes, function (aa, bb) {
+                        bfxs(zTree, bb, tt);
+                    })
+
+                })
+            });
+            ///显示有的
+            $(function(){
+                $("#authTree").trigger("init");
+            })
+            function bfxs(zTree, nodes, tt) {
+                if (nodes.children == null) {//无子节点
+
+                    if (nodes[zTree.setting.data.key.name].indexOf(tt) >= 0) {//无子节点，但是包含tt
+                        fjdxs(zTree, nodes);
+                    }
+                }
+                else {//有子节点
+                    if (nodes[zTree.setting.data.key.name].indexOf(tt) >= 0)//有而且包含
+                    {
+                        fjdxs(zTree, nodes);
+                        xsall(zTree, nodes);
+                    }
+                    else {//有但不包含
+                        $.each(nodes.children, function (aa, bb) {
+
+                            bfxs(zTree, bb, tt);
+                        })
+                    }
+                }
+
+            }
+            ///显示所有父节点
+            function fjdxs(zTree, nodes) {
+                if (nodes.getParentNode() == null) {
+                    zTree.showNode(nodes);
+                }
+                else {
+                    zTree.showNode(nodes);
+                    fjdxs(zTree, nodes.getParentNode());
+                }
+            }
+            ///全显
+            function xsall(ztree, nodes) {
+                ztree.showNode(nodes);
+                if (nodes.children != null) {
+                    $.each(nodes.children, function (x, y) {
+                        xsall(ztree, y);
+                    })
+
+                }
+            }
+            ///么有子节点的直接隐藏
+            function ycall(ztree, nodes) {
+                ztree.hideNode(nodes);
+                if (nodes.children != null) {
+                    $.each(nodes.children, function (x, y) {
+                        ycall(ztree, y);
+                    })
+
+                }
+
+            }
+        })();
+    </script>
+</div>

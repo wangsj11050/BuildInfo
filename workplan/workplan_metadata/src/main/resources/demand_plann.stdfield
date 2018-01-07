@@ -1,0 +1,58 @@
+<standard-fields>
+  <standard-field id="4f21ee4f84bb41beb3a4de0bbf7083fa" name="platform_type" title="平台类别" business-type-id="6fc6ce2ff7f84d86b845c8207fc2071b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="c18ba3111bb5463ea98dcb4f58f50eff" name="plann_number" title="需求编号" business-type-id="1729b021bcc24a7aa06a93ed018480d0">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="8d810d0ed63747f38f85a2b19114d805" name="plann_name" title="需求名称" business-type-id="58c95a5b843d4800a70ba947fdfa086a">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="aeb1d0e5db3949b1a365c17209c8d49e" name="developers" title="开发人员" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="e3995341352b42a6bbc588b3af1bc61a" name="plann_date" title="计划上线日期" business-type-id="925699076cb343bb9979f1a7387e691c">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="84fcb1f464164e19bbc4e1c4797bd562" name="actual_date" title="实际上线日期" business-type-id="925699076cb343bb9979f1a7387e691c">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="aefdda6546eb4b45a820c0d8d8b6934c" name="create_user" title="创建人员" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="e66e787ecc154e439fe1e47c27d5dd6b" name="create_time" title="创建时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="dfc9c7f613bc4df4b72dabffe6866d0a" name="last_update_user" title="最后更新人员" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="d398e82f9f21431891fd89126b833662" name="last_update_time" title="最后更新时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="2ea51c12d0a449219153a13db98672d8" name="sub_plann_id" title="子需求编号" business-type-id="1729b021bcc24a7aa06a93ed018480d0">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="83b19b92de3f448a90c09e8ec73ff2e6" name="sub_plann_name" title="子需求名称" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="1b9e951f20c5437b878e85460a06dbe7" name="plann_state" title="需求状态" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="fdf280b37ccd481492dbcfc2db962919" name="workplan_create_date" title="创建时间" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

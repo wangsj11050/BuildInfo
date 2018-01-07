@@ -1,0 +1,99 @@
+#set(starsList = getDictItem("BUILD_STARS")?["list"])
+#@tForm("thisform"   buildAdisverDto?"/workbuildadisver/update?id="+buildAdisverDto?.id:"/workbuildadisver/save" "post" {"class":""})
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("顾问姓名：")
+        	#tInput("name" buildAdisverDto?.name {"placeholder":"请输入顾问姓名","datatype":"*1-16","nullmsg":"顾问姓名不能为空！","id":"name"})
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("顾问星级：")
+        	#@tSelect("stars" buildAdisverDto?.stars {"class":"select2","style":"width:100%"})
+	            <option value=""></option>
+	            #for(stars:starsList)
+	            <option value="${stars?.value}" #if(stars?.value==buildAdisverDto?.stars)selected#end>${stars?.text}
+	            </option>
+	        	#end
+	        #end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("职业编号：")
+        	#tInput("jobNumber" buildAdisverDto?.jobNumber {"placeholder":"请输入职业编号","datatype":"*1-20","nullmsg":"职业编号不能为空！","id":"jobNumber"})
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("工作年限：")
+        	#tInput("workYears" buildAdisverDto?.workYears {"placeholder":"请输入工作年限","datatype":"*1-16","nullmsg":"工作年限不能为空！","id":"workYears"})
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("顾问电话：")
+        	#tInput("adisverPhone" buildAdisverDto?.adisverPhone {"placeholder":"请输入顾问电话","datatype":"*1-20","nullmsg":"顾问电话不能为空！","id":"adisverPhone"})
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("服务类型：")
+            #tSelect2Ajax("serviceType" buildAdisverDto?.serviceType "/workbuildservicecenter/ajax/serviceInCondition"
+                {"id":"serviceType","dataId":"servicecenterCode","dataText":"servicecenterName","multiple":"multiple","placeholder":"搜索查询服务类型"})
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+    	#@elementItemAjax("个人简介：")
+        	#@tTextarea("adisverResume" {"row":"256","placeholder":"说点什么..","datatype":"*1-256","ignore":"ignore"})${buildAdisverDto?.adisverResume}#end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("服务经验：")
+            #@tTbditor("serviceExperience" {"row":"500","placeholder":"说点什么..","ignore":"ignore","nullmsg":"请填写服务经验！","serverPath":UPLOAD_ACTION_URL,"fileFieldName":"upfile"})${buildAdisverDto?.serviceExperience} #end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        #@elementItemAjax("顾问头像：")
+            #tUploadInputMini("adisverImg", buildAdisverDto?.adisverImg)
+        #end
+    </div>
+
+</div>
+#end
+<script type="text/javascript">
+
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info, {icon: 2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#adisver-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info, {icon: 2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

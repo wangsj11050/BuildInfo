@@ -1,0 +1,36 @@
+#@btForm()
+<div class="well well-sm form-inline search-form clearfix">
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">编号:</label>
+        <div class="col-md-9 pl-0">#tInput("kindCode" "" {"datatype":"/^[0-9a-zA-Z_]{1,16}$/","ignore":"ignore","size":"10","class":"input-sm w-percent"})</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">名称:</label>
+        <div class="col-md-9 pl-0">#tInput("kindName" "" {"datatype":"*1-32","ignore":"ignore","size":"10","class":"input-sm w-percent"})</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">助记符:</label>
+        <div class="col-md-9 pl-0">#tInput("mnemonic" "" {"size":"10","class":"input-sm w-percent"})</div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">上级分类:</label>
+        <div class="col-md-9 pl-0">
+            #@tSelect("searchParentCode" "0" {"class":"select2"})
+                #@tOptionItem()全部#end
+                #for(kind:allKinds)
+                    #@tOptionItem(kind?.kindCode)${kind?.kindName}#end
+                #end
+            #end
+        </div>
+    </div>
+    <div class="search-boxitems col-md-4">
+        <label class="col-md-3 pl-0 pr-0">备注:</label>
+        <div class="col-md-9 pl-0">#tInput("remark" "" {"size":"10","class":"input-sm w-percent"})</div>
+    </div>
+    
+    <div class="search-boxitems col-md-4">
+        #@tButton("btn-primary btn-sm")#faIcon("search")&nbsp;搜索#end
+        <input type="reset" class="btn btn-default btn-sm" value="重置" />
+    </div>
+</div>
+#end

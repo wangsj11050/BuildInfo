@@ -1,0 +1,43 @@
+#@tForm("thisform" "/sysuser/update?userId="+sysUserDto?.userId "post" {"class":""})
+    <div class="form-infos clearfix">
+        #@elementItemAjax("用户编号：")
+        	#if(sysUserDto)
+              #tInput("userIdReadOnly" sysUserDto?.userId {"placeholder":"请输入用户编号","datatype":"*1-24","nullmsg":"不能为空！","id":"userId","disabled":"disabled"})
+			#else
+              #tInput("userIdReadOnly" sysUserDto?.userId {"placeholder":"请输入用户编号","datatype":"*1-24","nullmsg":"不能为空！","id":"userId"})
+        	#end
+        #end
+        #@elementItemAjax("主页地址：")
+            #@tTextarea("homePage" {"datatype":"*1-32","nullmsg":"主页地址不能为空！","placeholder":"请输入主页地址","row":"10"})${sysUserDto?.homePage}#end
+        #end
+
+    </div>
+#end
+<script type="text/javascript">
+    $(function () {
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info,{icon:2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                         $("#home-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info,{icon:2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>

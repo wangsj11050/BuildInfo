@@ -1,0 +1,53 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysBranchService" bean="sysBranchServiceImpl">
+    <service-method local-name="getSysBranchList" service-id="getSysBranchList" method-name="getSysBranchList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysBranchDto" type="org.tinygroup.buildinfo.service.inter.dto.SysBranchDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysBranchListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="getSysBranchPager" service-id="getSysBranchPager" method-name="getSysBranchPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysBranchDto" type="org.tinygroup.buildinfo.service.inter.dto.SysBranchDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysBranchPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="addSysBranch" service-id="addSysBranch" method-name="addSysBranch" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysBranchDto" type="org.tinygroup.buildinfo.service.inter.dto.SysBranchDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addSysBranchResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysBranchDto"/>
+    </service-method>
+    <service-method local-name="updateSysBranch" service-id="updateSysBranch" method-name="updateSysBranch" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysBranchDto" type="org.tinygroup.buildinfo.service.inter.dto.SysBranchDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateSysBranchResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getSysBranch" service-id="getSysBranch" method-name="getSysBranch" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="branchCode" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysBranchResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysBranchDto"/>
+    </service-method>
+    <service-method local-name="deleteSysBranch" service-id="deleteSysBranch" method-name="deleteSysBranch" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="depCode" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteSysBranchResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getBranchTree" service-id="getBranchTree" method-name="getBranchTree" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="treeDto" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getBranchTreeResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="checkSysBranchExists" service-id="checkSysBranchExists" method-name="checkSysBranchExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysBranchDto" type="org.tinygroup.buildinfo.service.inter.dto.SysBranchDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkSysBranchExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+  </service-component>
+</service-components>

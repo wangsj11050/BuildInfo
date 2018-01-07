@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-app/BuildInfo-appcontroller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-app/BuildInfo-appview" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-app/BuildInfo-appweb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-base-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-business-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-business-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-dao-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-dao-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-metadata" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-service-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-service-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-template-function" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-view" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-view-uicomponent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BuildInfo-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_business-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_business-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_controller" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_dao-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_dao-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_dto" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_metadata" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_service-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_service-inter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/workplan/workplan_view" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,23 @@
+#@btTable("home")
+    #include("/biz/homepage/home-search.page")
+    #@btToolBar()
+#end
+#@btTableContent("/sysuser/getAllInfoPageData",{"data-page-list":"[15, 20, 50, 100, 200,all]","data-page-size":"15","data-id-field":"userId","data-show-export":"true","data-cache":"false"})
+<th data-field="state" data-checkbox="true"></th>
+<th data-field="userId" data-sortable="true">用户号</th>
+<th data-field="userName" data-sortable="true">用户昵称</th>
+<th data-field="branchName" data-sortable="true">直属机构</th>
+<th data-field="homePage" data-sortable="true">主页地址</th>
+#end
+#@btTableOperate()
+<a title="编辑" modal-title="编辑"  data-target="#myModalModal" data-toggle="modal" data-height="" data-width="580"
+href="#link("/sysuser/home/edit.pagelet?userId={id}")">#faIcon("edit")</a>
+#end
+
+<script>
+    $(function () {
+
+
+    })
+</script>
+#end

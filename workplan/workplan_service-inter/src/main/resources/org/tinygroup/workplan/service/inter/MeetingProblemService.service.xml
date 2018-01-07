@@ -1,0 +1,34 @@
+<service-components>
+  <service-component type="org.tinygroup.workplan.service.inter.MeetingProblemService" bean="meetingProblemServiceImpl">
+    <service-method local-name="getMeetingProbleByKey" service-id="getMeetingProbleByKey" method-name="getMeetingProbleByKey" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getMeetingProbleByKeyResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.MeetingProblemDto"/>
+    </service-method>
+    <service-method local-name="addMeetingProble" service-id="addMeetingProble" method-name="addMeetingProble" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="meetingProblemDto" type="org.tinygroup.workplan.dto.MeetingProblemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addMeetingProbleResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.MeetingProblemDto"/>
+    </service-method>
+    <service-method local-name="updateMeetingProblem" service-id="updateMeetingProblem" method-name="updateMeetingProblem" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="meetingProblemDto" type="org.tinygroup.workplan.dto.MeetingProblemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateMeetingProblemResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getUserMeetingProblemCount" service-id="getUserMeetingProblemCount" method-name="getUserMeetingProblemCount" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="meetingProblemDto" type="org.tinygroup.workplan.dto.MeetingProblemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getUserMeetingProblemCountResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getFinishUserMeetingProblemCount" service-id="getFinishUserMeetingProblemCount" method-name="getFinishUserMeetingProblemCount" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="meetingProblemDto" type="org.tinygroup.workplan.dto.MeetingProblemDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getFinishUserMeetingProblemCountResult" required="false" is-array="false" type="int"/>
+    </service-method>
+  </service-component>
+</service-components>

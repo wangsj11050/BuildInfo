@@ -1,0 +1,34 @@
+<standard-fields>
+  <standard-field id="828d8bd866dc4f4f93009fa338da94e8" name="role_name" title="角色名称" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="2daecd7f5a1d47aa80c1e03aa1972d9d" name="user_code" title="用户代码" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="f93d07e07db5458f8183af4cb6266eb3" name="right_flag" title="授权标志" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="5ca9c6990a4e47e9b11bfbcc4367af49" name="create_by" title="分配人" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="085decf5b3a74b2b8c97ffdfc7e6a3c4" name="is_flow" title="是否走工作流" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="7694340b01eb43c5ab5ff607dd594d10" name="is_check" title="是否校验权限" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="dcfc90cd39aa4020be408729534ad7b4" name="is_logs" title="是否写入日志" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="a5fe53f57eb243628d45dd5a4babd15b" name="is_public" title="是否校验权限" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

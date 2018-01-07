@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+		default-autowire="byName">
+	<bean id="sysRoleBusiness" class="org.tinygroup.buildinfo.business.impl.SysRoleBusinessImpl"></bean>
+	<!-- 岗位信息 -->
+	<bean id="sysOfficeBusiness" class="org.tinygroup.buildinfo.business.impl.SysOfficeBusinessImpl"></bean>
+	<!-- 系统分类信息 -->
+	<bean id="sysKindBusiness" class="org.tinygroup.buildinfo.business.impl.SysKindBusinessImpl"></bean>
+	<!-- 系统菜单信息 -->
+	<bean id="sysMenuBusiness" class="org.tinygroup.buildinfo.business.impl.SysMenuBusinessImpl"></bean>
+	<!-- 用户权限授权信息 -->
+	<bean id="sysUserRightBusiness" class="org.tinygroup.buildinfo.business.impl.SysUserRightBusinessImpl"></bean>
+	<!-- 角色权限授权信息 -->
+	<bean id="sysRoleRightBusiness" class="org.tinygroup.buildinfo.business.impl.SysRoleRightBusinessImpl"></bean>
+	<!--机构信息-->
+	<bean id="sysBranchBusiness" class="org.tinygroup.buildinfo.business.impl.SysBranchBusinessImpl"></bean>
+	<!--部门信息-->
+	<bean id="sysDepBusiness" class="org.tinygroup.buildinfo.business.impl.SysDepBusinessImpl"></bean>
+	<!--用户信息-->
+	<bean id="sysUserBusiness" class="org.tinygroup.buildinfo.business.impl.SysUserBusinessImpl"></bean>
+	<!--用户登录信息-->
+	<bean id="sysUserLoginBusiness" class="org.tinygroup.buildinfo.business.impl.SysUserLoginBusinessImpl"></bean>
+	<!--数据字典条目信息-->
+	<bean id="sysDictEntryBusiness" class="org.tinygroup.buildinfo.business.impl.SysDictEntryBusinessImpl"></bean>
+	<!--数据字典项信息-->
+	<bean id="sysDictItemBusiness" class="org.tinygroup.buildinfo.business.impl.SysDictItemBusinessImpl"></bean>
+	<!--用户岗位信息-->
+	<bean id="sysOfficeUserBusiness" class="org.tinygroup.buildinfo.business.impl.SysOfficeUserBusinessImpl"></bean>
+	<!--用户角色信息-->
+	<bean id="sysRoleUserBusiness" class="org.tinygroup.buildinfo.business.impl.SysRoleUserBusinessImpl"></bean>
+	<!-- errormsg 配置 -->
+	<bean id="errormsgBusiness" class="org.tinygroup.buildinfo.business.impl.ErrormsgBusinessImpl"></bean>
+	<!-- param 配置 -->
+	<bean id="paramBusiness" class="org.tinygroup.buildinfo.business.impl.ParamBusinessImpl"></bean>
+	<!-- trans 配置 -->
+	<bean id="transBusiness" class="org.tinygroup.buildinfo.business.impl.TransBusinessImpl"></bean>
+	<bean id="buildServiceBusiness" class="org.tinygroup.buildinfo.business.impl.BuildServiceBusinessImpl"></bean>
+	<bean id="serviceContentBusiness" class="org.tinygroup.buildinfo.business.impl.ServiceContentBusinessImpl"></bean>
+	<bean id="buildServiceCenterBusiness" class="org.tinygroup.buildinfo.business.impl.BuildServiceCenterBusinessImpl"></bean>
+	
+	<bean id="buildAdisverBusiness" class="org.tinygroup.buildinfo.business.impl.BuildAdisverBusinessImpl"></bean>
+	<bean id="buildCustomerCaseBusiness" class="org.tinygroup.buildinfo.business.impl.BuildCustomerCaseBusinessImpl"></bean>
+	<bean id="buildNewsBusiness" class="org.tinygroup.buildinfo.business.impl.BuildNewsBusinessImpl"></bean>
+	<bean id="buildPubDemandBusiness" class="org.tinygroup.buildinfo.business.impl.BuildPubDemandBusinessImpl"></bean>
+	<bean id="buildAboutAsBusiness" class="org.tinygroup.buildinfo.business.impl.BuildAboutAsBusinessImpl"></bean>
+	<bean id="buildRecruitBusiness" class="org.tinygroup.buildinfo.business.impl.BuildRecruitBusinessImpl"></bean>
+</beans>

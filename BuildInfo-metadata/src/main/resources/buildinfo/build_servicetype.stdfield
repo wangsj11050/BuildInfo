@@ -1,0 +1,18 @@
+<standard-fields>
+  <standard-field id="4aa08a0669924a76ae98d64b107f820e" name="service_name" title="服务名称" business-type-id="1729b021bcc24a7aa06a93ed018480d0">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="2ffb40dae4e64b59be2bf77327da7f98" name="parent_service" title="服务大类" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="cabc9ffc9d904e5087a2e5a4f6056500" name="service_code" title="服务编号" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="36f9b06158384c0395d6b3ac6f35b50f" name="service_icon" title="服务图标" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

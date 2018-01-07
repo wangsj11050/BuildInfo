@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="BuildInfo-web">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="BuildInfo-view-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-view/BuildInfo-view">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-view-uicomponent-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-view-uicomponent/BuildInfo-view-uicomponent">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-controller-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-controller/BuildInfo-controller">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-common-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-common/BuildInfo-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-service-inter-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-service-inter/BuildInfo-service-inter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_service-inter-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_service-inter/workplan_service-inter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_dto-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_dto/workplan_dto">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-service-impl-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-service-impl/BuildInfo-service-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-business-impl-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-business-impl/BuildInfo-business-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-business-inter-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-business-inter/BuildInfo-business-inter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-dao-inter-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-dao-inter/BuildInfo-dao-inter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-base-dao-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-base-dao/BuildInfo-base-dao">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-metadata-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-metadata/BuildInfo-metadata">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_metadata-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_metadata/workplan_metadata">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-dao-impl-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-dao-impl/BuildInfo-dao-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-template-function-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-template-function/BuildInfo-template-function">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_controller-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_controller/workplan_controller">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_service-impl-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_service-impl/workplan_service-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_business-impl-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_business-impl/workplan_business-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_business-inter-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_business-inter/workplan_business-inter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_dao-inter-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_dao-inter/workplan_dao-inter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_dao-impl-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_dao-impl/workplan_dao-impl">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="workplan_view-2.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/workplan_view/workplan_view">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-appcontroller-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-appcontroller/BuildInfo-appcontroller">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="BuildInfo-appview-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/BuildInfo-appview/BuildInfo-appview">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="BuildInfo-web"/>
+        <property name="java-output-path" value="/BuildInfo-web/target/classes"/>
+    </wb-module>
+</project-modules>

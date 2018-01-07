@@ -1,0 +1,94 @@
+#macro calendar(fcid doAction)
+	#set(wcid=fcid?:fmt("wcid%d",rand()))
+	<div class="workcalendar" style="padding: 15px">
+		<div class='showbody' id="${wcid}"></div>
+		<div id="${wcid}-showtitle" class="wc-showtitle"></div>
+		<script>
+			$(function(){
+				var $calendar=$('#${wcid}');
+				var $modalLink=$("#m${wcid}");
+				var dolink="#link(doAction)";
+				dolink+=dolink.indexOf("?")>-1?"&":"?";
+				dolink+="fcid=${fcid}&"
+				//初始化FullCalendar 
+		        $calendar.fullCalendar({
+		            #bodyContent
+		        });
+			})
+		</script>
+	</div>#hideModal("m"+wcid {"url":doAction,"width":"60%"})
+#end
+
+#*
+* fullCalendar 日期宏
+*
+* @param fcid 对像ID
+* @param defaultDate 默认日期
+* @param dataUrl 事件地址
+* @param doAction 事件处理地址
+*#
+
+#macro fullCalendar(fcid doAction)
+#set(wcid=fcid?:fmt("wcid%d",rand()))
+<div  style="position:relative">
+<div class="workcalendar">
+<div class='showbody' id="${wcid}"></div>
+<div id="${wcid}-showtitle" class="wc-showtitle"></div>
+<script>
+	$(function(){
+		var $modalLink=$("#m${wcid}");
+		var dolink="#link(doAction)";
+		dolink+=dolink.indexOf("?")>-1?"&":"?";
+		dolink+="fcid=${fcid}&"
+		$("#${wcid}-showtitle").on("click",function(){
+			var that=this;
+			WdatePicker({
+				startDate:'%y-%M-01',dateFmt:"yyyy-MM",
+				onpicked:function(){
+					$calendar.fullCalendar('gotoDate',$(that).html());
+				}
+			})
+		});
+		var $calendar=$('#${wcid}');
+		var olddate=moment().format("YYYY-MM-DD");
+		$calendar.fullCalendar({
+			//设置头部信息，如果不想显示，可以设置header为false
+			header: {
+				 //日历头部左边：初始化切换按钮
+				left: 'prev',
+				//日历头部中间：显示当前日期信息
+				center: 'title',
+				//日历头部右边：初始化视图
+				right: 'next'
+			},
+			//日历初始化时显示的日期，月视图显示该月，周视图显示该周，日视图显示该天，和当前日期没有关系
+			defaultDate:new Date(),//moment().format("YYYY-MM-DD"),
+			businessHours: true, // display business hours
+			editable: true,
+			eventLimit: true,
+			//日程数据 
+            events: [
+                {
+                    title: '会签',
+                    start: '2016-12-08'
+                }
+            ],
+			dayClick: function(date, allDay, jsEvent, view) {
+				olddate=date;
+				$modalLink.attr({"href":dolink+"date="+date.format("YYYY-MM-DD")+"&action=add","modal-title":"增加事件"});
+				$modalLink.trigger("click");
+			},
+			eventClick:function( event, jsEvent, view ) {
+				olddate=event.start;
+				$modalLink.attr({"href":dolink+"id="+event.id+"&action=edit","modal-title":"修改事件"});
+				$modalLink.trigger("click");
+			}
+		});
+		$calendar.on("refresh",function(e){
+			$(this).fullCalendar('refetchEvents');//fullCalendar( 'rerenderEvents' );//fullCalendar('refetchResources');
+		})
+	});
+</script>
+</div>
+</div>#hideModal("m"+wcid {"url":doAction,"width":"80%"})
+#end

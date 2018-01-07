@@ -1,0 +1,273 @@
+##非响应式栅格系统
+#macro noRespsGridSystem(gridSystemClass)
+	<div class="row-demo ${gridSystemClass}">#bodyContent</div>
+#end
+
+#macro commonSubMenuItem(subMenuItemImgUrl subMenuItemClass)
+	<div#if(subMenuItemClass) class="${subMenuItemClass}"#end>
+					<img class="img-circle" style="width: 45%;" src="#link(subMenuItemImgUrl)"/>
+					#bodyContent
+	</div>
+#end
+
+#macro setCommonTitle(tinyURI)
+	#if(tinyURI.indexOf("look-for")!=-1 && tinyURI.indexOf("Information")==-1)
+		#set(navTilte="服务详情",navsUSName="Information",navIcon="am-icon-lightbulb-o")
+	#elseif(tinyURI.indexOf("service")!=-1)
+		#set(navTilte="服务中心",navsUSName="Service Center",navIcon="am-icon-hand-paper-o")
+	#elseif(tinyURI.indexOf("customer-case")!=-1 && tinyURI.indexOf("case-infor")==-1)
+		#set(navTilte="客户案例",navsUSName="Customer Case",navIcon="am-icon-briefcase")
+	#elseif(tinyURI.indexOf("news")!=-1)
+		#set(navTilte="新闻动态",navsUSName="Hengwang News",navIcon="am-icon-newspaper-o")
+	#elseif(tinyURI.indexOf("adisver")!=-1)
+		#set(navTilte="金牌顾问",navsUSName="Adisver",navIcon="am-icon-users")
+	#elseif(tinyURI.indexOf("about-us")!=-1)
+		#set(navTilte="关于我们",navsUSName="About Us",navIcon="am-icon-paper-plane")
+	#elseif(tinyURI.indexOf("recruit")!=-1)
+		#set(navTilte="招贤纳士",navsUSName="Recruit",navIcon="am-icon-paper-plane")
+	#elseif(tinyURI.indexOf("look-for")!=-1 && tinyURI.indexOf("Information")!=-1)
+		#set(navTilte="服务详情",navsUSName="Information",navIcon="am-icon-lightbulb-o",upLink="/buildapp/home",upTitle="首页")
+	#elseif(tinyURI.indexOf("customer-case")!=-1 && tinyURI.indexOf("query")!=-1)
+		#set(navTilte="案例详情",navsUSName="Case Information",navIcon="am-icon-paper-plane",upLink="/customer-case/index",upTitle="客户案例")
+	#elseif(tinyURI.indexOf("news")!=-1 && tinyURI.indexOf("query")!=-1)
+		#set(navTilte="新闻详情",navsUSName="News Information",navIcon="toppic-title-span",upLink="/news/index",upTitle="新闻中心")
+	#end
+#end
+
+
+#*
+* fullNavHead 菜单头部
+*
+*#
+#macro commonfullNavHead()
+<div class="navigation-up" style="background: #3fbff0;">
+	<div class="laimi-nav"><span style="color: #6a6a6a;">企业服务导航<span></div>
+    <div class="navigation-inner">
+        #bodyContent
+    </div>
+</div>
+#end
+
+#macro fullNavHeadList()
+	<div class="navigation-v3">
+        <ul style="margin-left: 50px;">
+            #bodyContent
+        </ul>
+    </div>
+#end
+#*
+* fullNavBar 下拉菜单导航
+*
+*#
+#macro commonfullNavBar()#set(fullId=fmt("fid%d",rand()))
+<div style="position: relative;z-index: 100;" id="${fullId}">
+    #bodyContent
+    <script type="text/javascript">
+        $(function(){
+            var showBody;
+            var timer;
+            var speed=500;
+            $('#${fullId} li.${fullId}-head[target-body]').hover(function(){
+                var targetPart=$(this).attr("target-body");
+                $('#'+targetPart).stop(true,true).slideDown(speed);
+            },function(){
+                var targetPart=$(this).attr("target-body");
+                timer = setTimeout(function(){
+                    if(showBody!=targetPart){
+                        $('#'+targetPart).stop(true,true).slideUp(speed);
+                    }
+                },200);
+            });
+            $('#${fullId} .nav-down-menu').hover(function(){
+                showBody=$(this).attr("id");;
+            },function(){
+                showBody=false;
+                clearTimeout(timer);
+                $(this).stop(true,true).slideUp(speed);
+            });
+
+        });
+    </script>
+</div>
+#end
+
+#macro buildticketDiv(buildAdisver)
+	<div class="ticket" style="height: 170px;">
+		<div class="img-box">
+			<a href="#link('/adisver/inform?id='+buildAdisver?.id)">
+				<img class="img-circle" src="#link(buildAdisver?.adisverImg)" style="width: 100%;"/>
+			</a>
+		</div>
+		<div class="txt-box">
+			<strong>
+				<em>${buildAdisver?.name}</em>
+				<span>顾问</span>
+			</strong>
+			<p class="bank1">
+				<span>${buildAdisver?.workYears}年执业经验</span>
+			</p>
+			<p class="bank2">
+				<label>擅长领域：</label>
+				<span>${buildAdisver?.adisverResume}</span>
+				<a href="#link('/adisver/inform?id='+buildAdisver?.id)"> [详情]</a>
+			</p>
+			<div class="link">
+				<a href="#link('/adisver/inform?id='+buildAdisver?.id)">我的介绍</a>
+			</div>
+		</div>
+		
+		<div class="comt-box">
+			<div class="evaluate">
+				<p>服务级别</p>
+				#set(xjlx= getUserTaskCount(buildAdisver?.stars))
+				<div class="xx">
+					<span class="xxp" style="width:${xjlx}%">
+					</span>
+				</div>
+			</div>
+			<div class="clearfix">
+			</div>
+		</div>
+		<div class="link-box">
+			<a href="#link('/adisver/inform?id='+buildAdisver?.id)" class="link">进入顾问主页</a>
+		</div>
+    </div>
+#end
+
+#macro toolbarA(toolbarClass toolbarHref toolbarIcon)
+<div class="widget-toolbar hidden-mobile ${toolbarClass}">
+	<a class="onoffswitch-title" href="${toolbarHref}">#faIcon("${toolbarIcon}")&nbsp;#bodyContent</a>
+</div>
+#end
+
+#macro commonwidgetItem(optMap)#set(widgetGridId=widgetGridId+1)
+<div class="jarviswidget" id="wid-id-k${widgetGridId}" data-widget-editbutton="false" data-widget-deletebutton="false"#widgetMap(optMap)>
+    #bodyContent
+</div>
+#end
+
+#*
+* tTextarea 对应标标签textarea
+*
+* @param name 表单名称
+* @param #bodyContent 表单值
+* @param mapInfo 额外的参数可自动带入input表单
+
+*#
+#macro commontTextarea(name mapInfo tTextareaMapInfo)
+	<textarea class="form-control ${mapInfo?.get("class")}" name="${name}" #mapToHtml(tTextareaMapInfo)>#bodyContent</textarea>
+#end
+
+#macro appsubTreeMenu(menuid,dataUrl,MenuMap)#set(mid=menuid ?:fmt("mid%d",rand()) )##fmt("mid%d",rand())
+<style>
+    #left-tree-menu{position:fixed;top:83px;margin-left:-18px;width:${MenuMap?.width?:0}px;bottom:0;z-index:2}
+
+    #left-tree-menu .sub-search-nav{margin:10px 6px 8px;}
+    #left-tree-menu .sub-main-nav{width:100%;height:100%;overflow-y:auto}
+    .viewFramework-product-navbar-collapse{left:auto;right:0;border-right:2px solid #f1f1f1;cursor: e-resize;top:0;height:100%;margin-top:0}
+    .viewFramework-product-navbar-collapse .product-navbar-collapse-inner{top:50%;}
+    .hide-nav{left:auto;right:-20px;border-right:0;}
+    #content-wrapper #tinypagecontent{padding-top:21px;}
+</style>
+<div id="left-tree-menu">
+    <div class="sub-main-nav">
+        <div class="sub-search-nav">
+            <input type="text" class="form-control" value="" placeholder="查找..." id="${mid}-tree-search">
+            <span style="right:15px;top:16px; position:absolute;height:20px;width:10px;cursor:pointer"><i class="fa fa-search"></i></span>
+        </div>
+        <div id="${mid}" class="product-nav-list pt-0 pl-5" data-url="#link(dataUrl)"></div>
+    </div>
+    <div id="${mid}-navigation" state="open" class="viewFramework-product-navbar-collapse">
+        <div class="product-navbar-collapse-inner">
+            <div class="product-navbar-collapse-bg"></div>
+            <div class="product-navbar-collapse">
+                <span class="fa fa-outdent"></span>
+                <span class="fa fa-indent"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            function init() {
+                $("#${mid}").empty();
+                $.ajax({
+                    url: $("#${mid}").data("url"),
+                    cache:false,
+                    dataType:"json",
+                    success: function (data) {
+                        $.menuNav({
+                            id: "${mid}",
+                            menu: data,
+                            linkUrl: '#link(MenuMap?.get("linkUrl"))',
+                            currentId: '${MenuMap?.get("currentId")}'
+                        });
+                    }
+                });
+            }
+            init();
+            $("#${mid}").off("refresh").on("refresh", function () {
+                init();
+            });
+
+            var dragging  = false;
+            var _label_btn=$('#${mid}-navigation');
+            var leftOffset = _label_btn.parent().offset().left;
+            var targetNode=$('#${MenuMap?.get("rightNode")?:"tiny-tiny-menu"}');
+            _label_btn.off().click(function () {
+                var _thismenu=$(this).prev();
+                var w=$(this).parent().width();
+                var state = $(this).attr('state');
+                if (state == 'open') {
+                    $(this).attr('state', 'closed').addClass('hide-nav');;
+                    _thismenu.css({"margin-left": "-"+w+"px"});
+                    targetNode.css({"margin-left": "0"});
+                } else if (state == 'closed') {
+                    $(this).attr('state', 'open').removeClass('hide-nav');
+                    _thismenu.css({"margin-left": "0"});
+                    targetNode.css({"margin-left": w+"px"});
+                }
+            }).on("mousedown",function(){
+                dragging   = true;
+
+            });
+
+            document.onmousemove = function(e){
+                if (dragging) {
+                    var clickX = e.pageX;
+                    if(clickX - leftOffset>50&&clickX - leftOffset<500) {
+                        _label_btn.parent().width( clickX-leftOffset + 'px');
+                        targetNode.css("margin-left",clickX-leftOffset + 'px');
+                    }
+                }
+            };
+            $(document).mouseup(function(e) {
+                dragging = false;
+            })
+            $("#${mid}-tree-search").on("input",function(e){
+            #*            	if(e.which==13){
+                                searchNode();
+                            }*#
+                searchNode();
+            }).next().on("click",function(){
+                searchNode();
+            });
+
+            function searchNode(){
+                var menuNodes=$("#${mid} .menu-title");
+                var currentV=$("#${mid}-tree-search").val();
+                if(!currentV){
+                    menuNodes.closest("li").show();
+                }else{
+                    menuNodes.closest("li").hide();
+                }
+                var currentNodes=$("#${mid} .menu-title:contains("+currentV+")");
+                currentNodes.each(function(){
+                    $(this).parentsUntil("#${mid}").show();
+                    $(this).closest("li").find("ul,li").show();
+                });
+                $("#${mid} .nav-icon>span").attr("class","glyphicon glyphicon-triangle-bottom");
+            }
+        });
+    </script>
+</div>
+#end

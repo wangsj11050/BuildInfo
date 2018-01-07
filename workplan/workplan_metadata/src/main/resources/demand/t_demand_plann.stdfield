@@ -1,0 +1,22 @@
+<standard-fields>
+  <standard-field id="3010aa9d98bf4f41a450b9bb9bd6fd08" name="relevance_system" title="关联系统" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="1da2e1f7ae70471dab0f865c239cdcdf" name="implement_model" title="实施模型" business-type-id="dc552ad9bd0441ffb53b84ec5d11668f">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="8e985e0f168546039cd6abc07c5d2e24" name="technical_manager" title="项目技术经理" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="0d3a08e2c08e4d0a938982ca8da3d839" name="plann_point" title="功能点描述" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="03992fabf15a4d5f9e30f9daa72b6ea7" name="cq_state" title="CQ状态" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

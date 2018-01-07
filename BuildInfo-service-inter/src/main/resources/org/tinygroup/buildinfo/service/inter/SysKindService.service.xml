@@ -1,0 +1,53 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysKindService" bean="sysKindServiceImpl">
+    <service-method local-name="addSysKind" service-id="addSysKind" method-name="addSysKind" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysKidDto" type="org.tinygroup.buildinfo.service.inter.dto.SysKindDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addSysKindResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysKindDto"/>
+    </service-method>
+    <service-method local-name="getSysKind" service-id="getSysKind" method-name="getSysKind" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="kindCode" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysKindResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysKindDto"/>
+    </service-method>
+    <service-method local-name="getSysKindPager" service-id="getSysKindPager" method-name="getSysKindPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysKindDto" type="org.tinygroup.buildinfo.service.inter.dto.SysKindDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysKindPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="updateSysKind" service-id="updateSysKind" method-name="updateSysKind" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysKindDto" type="org.tinygroup.buildinfo.service.inter.dto.SysKindDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateSysKindResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="deleteSysKinds" service-id="deleteSysKinds" method-name="deleteSysKinds" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteSysKindsResult" required="false" is-array="false" type="void"/>
+    </service-method>
+    <service-method local-name="checkSysKindExists" service-id="checkSysKindExists" method-name="checkSysKindExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysKindDto" type="org.tinygroup.buildinfo.service.inter.dto.SysKindDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkSysKindExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="getKindTree" service-id="getKindTree" method-name="getKindTree" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="treeDto" type="org.tinygroup.buildinfo.service.inter.dto.TreeDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getKindTreeResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="getKindsList" service-id="getKindsList" method-name="getKindsList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysKindDto" type="org.tinygroup.buildinfo.service.inter.dto.SysKindDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getKindsListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+  </service-component>
+</service-components>

@@ -1,0 +1,204 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysUserService" bean="sysUserServiceImpl">
+    <service-method local-name="deleteSysUser" service-id="deleteSysUser" method-name="deleteSysUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="depCode" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteSysUserResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="updateSysUser" service-id="updateSysUser" method-name="updateSysUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysUserDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateSysUserResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="updateLockStatusByKeys" service-id="updateLockStatusByKeys" method-name="updateLockStatusByKeys" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pks" type="java.lang.String" required="false" is-array="true"/>
+        <service-parameter name="lockStatus" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateLockStatusByKeysResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="grantUserOffices" service-id="grantUserOffices" method-name="grantUserOffices" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="preAddOfficeId" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="grantUserOfficesResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="revokeUserSubTrans" service-id="revokeUserSubTrans" method-name="revokeUserSubTrans" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="preAddOfficeId" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="revokeUserSubTransResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="addSysUser" service-id="addSysUser" method-name="addSysUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysUserDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addSysUserResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysUserDto"/>
+    </service-method>
+    <service-method local-name="queryRoleInUser" service-id="queryRoleInUser" method-name="queryRoleInUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="roleUserRefDto" type="org.tinygroup.buildinfo.service.inter.dto.complex.RoleUserRefDto" required="false" is-array="false"/>
+        <service-parameter name="isAssign" type="java.lang.Boolean" required="false" is-array="false"/>
+        <service-parameter name="assignFlag" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="queryRoleInUserResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="validateSysUserExists" service-id="validateSysUserExists" method-name="validateSysUserExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userName" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="password" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="validateSysUserExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="queryOfficeInUser" service-id="queryOfficeInUser" method-name="queryOfficeInUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="sysOfficeDto" type="org.tinygroup.buildinfo.service.inter.dto.SysOfficeDto" required="false" is-array="false"/>
+        <service-parameter name="isAssign" type="java.lang.Boolean" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="queryOfficeInUserResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="querySubTransInUser" service-id="querySubTransInUser" method-name="querySubTransInUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="sysSubtransDto" type="org.tinygroup.buildinfo.service.inter.dto.SysSubtransDto" required="false" is-array="false"/>
+        <service-parameter name="isAssign" type="java.lang.Boolean" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="querySubTransInUserResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="getUserByIds" service-id="getUserByIds" method-name="getUserByIds" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="getUserByIdsResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.SysUserDto"/>
+    </service-method>
+    <service-method local-name="getSysUserPager" service-id="getSysUserPager" method-name="getSysUserPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysUserDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysUserPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="revokeUserOffices" service-id="revokeUserOffices" method-name="revokeUserOffices" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="preRemoveOfficeId" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="revokeUserOfficesResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="grantUserSubTrans" service-id="grantUserSubTrans" method-name="grantUserSubTrans" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="preAddOfficeId" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="grantUserSubTransResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="grantUserRoles" service-id="grantUserRoles" method-name="grantUserRoles" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="preAddRoleId" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="grantUserRolesResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="updateUserOffices" service-id="updateUserOffices" method-name="updateUserOffices" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="officeId" type="java.lang.String" required="false" is-array="true"/>
+        <service-parameter name="removeOfficeId" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="updateUserOfficesResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="getTsysOfficeUserList" service-id="getTsysOfficeUserList" method-name="getTsysOfficeUserList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysOfficeUserDto" type="org.tinygroup.buildinfo.service.inter.dto.SysOfficeUserDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getTsysOfficeUserListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="queryRightsInUser" service-id="queryRightsInUser" method-name="queryRightsInUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="tRightRefDto" type="org.tinygroup.buildinfo.service.inter.dto.complex.TRightRefDto" required="false" is-array="false"/>
+        <service-parameter name="isAssigned" type="boolean" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="queryRightsInUserResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="resetPwd" service-id="resetPwd" method-name="resetPwd" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="defalutPwd" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="userIds" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="resetPwdResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="checkSysUserExists" service-id="checkSysUserExists" method-name="checkSysUserExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysUserDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkSysUserExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="grantRights" service-id="grantRights" method-name="grantRights" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userId" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="menuIds" type="java.lang.Integer" required="false" is-array="true"/>
+        <service-parameter name="createBy" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="grantRightsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="getSysUser" service-id="getSysUser" method-name="getSysUser" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userId" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysUserResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysUserDto"/>
+    </service-method>
+    <service-method local-name="revokeUserRoles" service-id="revokeUserRoles" method-name="revokeUserRoles" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="preAddRoleId" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="revokeUserRolesResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="getUserRoleList" service-id="getUserRoleList" method-name="getUserRoleList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="roleDto" type="org.tinygroup.buildinfo.service.inter.dto.RoleDto" required="false" is-array="false"/>
+        <service-parameter name="isSign" type="java.lang.Boolean" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getUserRoleListResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+    <service-method local-name="revokeRights" service-id="revokeRights" method-name="revokeRights" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="userCode" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="userRightIds" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="revokeRightsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="getAllInfoData" service-id="getAllInfoData" method-name="getAllInfoData" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysUserDto" type="org.tinygroup.buildinfo.service.inter.dto.SysUserDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getAllInfoDataResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="resetOnePwd" service-id="resetOnePwd" method-name="resetOnePwd" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="s" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="userId" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="resetOnePwdResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method>
+    	<service-parameters name="findPermissions" service-id="findPermissions" method-name="findPermissions" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+    		<service-parameter name="userId" type="java.lang.String" required="false" is-array="false"/>
+    	</service-parameters>
+    	<service-result name="findPermissionsResult" required="false" is-array="false" collection-type="java.util.List" type="java.lang.Object"/>
+    </service-method>
+  </service-component>
+</service-components>

@@ -1,0 +1,99 @@
+
+<div >
+	<ul class=" product-show-ul">
+		#set(num = 0)
+		#for(buildRecruit:buildRecruitList)
+			#set(num = num + 1)
+			#if(num%2==0)
+				<li class="gray-li">
+		    		<div class="product-content">
+				    	<div class="left am-u-sm-12 am-u-md-6 am-u-lg-6 recruit-left">
+				    		<div class="product-show-title">			    			
+				    			<span>${buildRecruit.recruitName}</span>
+				    		</div>
+				    	
+				    	<div class="product-show-content">
+				    		<div class="product-add">
+				    			<span>岗位描述：</span>
+				    			<div>${buildRecruit.recruitDesc}</div>
+				    		</div>
+				    		<div class="product-add">
+				    			<span>任职资格：</span>
+				    			<div>${buildRecruit.recruitDesc}</div>
+				    		</div>
+				    	</div>
+				    	</div>
+				    	<div class="right am-u-sm-12 am-u-md-6 am-u-lg-6 recruit-right">
+				    		<img class="product-img" src="#link('/common/img/zhaoping1.png')" />
+				    	</div>	
+				    	<div class="clear"></div>
+		    	</div>
+		    </li>
+			#else 
+				<li >
+			    	<div class="product-content">
+					    	<div class="left am-u-sm-12 am-u-md-6 am-u-lg-6 recruit-left">
+					    		<img class="product-img" src="#link('/common/img/zhaoping2.png')" />
+					    	</div>
+					    	<div class="right am-u-sm-12 am-u-md-6 am-u-lg-6 recruit-right">
+					    		<div class="product-show-title">			    			
+					    			<span>${buildRecruit.recruitName}</span>
+					    		</div>
+						    	<div class="product-show-content">
+						    		<div class="product-add">
+						    			<span>岗位描述：</span>
+						    			<div>${buildRecruit.recruitDesc}</div>
+						    		</div>
+						    		<div class="product-add">
+						    			<span>任职资格：</span>
+						    			<div>${buildRecruit.recruitDesc}</div>
+						    		</div>
+						    	</div>
+					    	</div>	
+					    	<div class="clear"></div>
+			    	</div>
+			    </li>
+			#end
+		#end
+	</ul>
+</div>
+
+  
+   
+<div class=" gray-li">		
+<div class="am-container-1">
+	<div class="part-title part-title-mar">
+			<i class="am-icon-users part-title-i"></i>
+			<span class="part-title-span">优厚待遇</span>
+			<p>Good Treatments</p>
+		</div>
+</div>
+<div data-am-widget="tabs"class="am-tabs am-tabs-d2 ">
+
+      <ul class="am-tabs-nav am-cf daiyu-title-ul ">
+         <li class="am-active "><a href="[data-tab-panel-0]" ><span class="w-white"> 福利待遇</span></a></li>
+          <li class=""><a href="[data-tab-panel-1]"><span class="w-white">薪资待遇</span></a></li>
+          
+      </ul>
+
+      <div class="am-tabs-bd daiyu-content ">
+          <div data-tab-panel-0 class="am-tab-panel am-active">
+          	<div class=" daiyu-content-1">
+                ${buildAboutAs?.extField_1}	
+            </div>
+            
+          </div>
+          <div data-tab-panel-1 class="am-tab-panel ">
+             <div class=" daiyu-content-1">
+             	#set(count = 0)
+				#for(buildRecruit:buildRecruitList)
+					#set(count = count + 1)
+					<p>${count}.${buildRecruit.recruitName}:${buildRecruit.extField}</p>
+				#end
+            </div>
+          </div>
+          
+          
+      </div>
+  </div>
+  </div>

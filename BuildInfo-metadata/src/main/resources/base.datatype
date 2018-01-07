@@ -1,0 +1,146 @@
+<standard-types>
+  <standard-type id="306c4c97efbc4a11b4e9b6c12f1a861f" name="INTEGER" title="INTEGER" data-type="4">
+    <description></description>
+    <placeholder-list/>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="INTEGER"/>
+      <dialect-type language="mysql" base-type="INT" ext-type=""/>
+      <dialect-type language="java" base-type="Integer"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="237887ec23f54686a78185b0b204f828" name="VARCHAR" title="VARCHAR" data-type="12">
+    <description></description>
+    <placeholder-list>
+      <placeholder id="838cf9c32b454b62a8d98182836b65f4" name="length" title="长度"/>
+    </placeholder-list>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="VARCHAR2" ext-type="${length}">
+        <placeholder-value name="length"/>
+      </dialect-type>
+      <dialect-type language="mysql" base-type="VARCHAR" ext-type="${length}">
+        <placeholder-value name="length"/>
+      </dialect-type>
+      <dialect-type language="java" base-type="String"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="5c7c3cb9eb9c4b0198dbf66bb17ab3c4" name="CHAR" title="CHAR" data-type="1">
+    <description></description>
+    <placeholder-list>
+      <placeholder id="2cf3534c7da042b794e0943f9ae7b1ee" name="length" title="长度"/>
+    </placeholder-list>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="CHAR" ext-type="${length}">
+        <placeholder-value name="length"/>
+      </dialect-type>
+      <dialect-type language="mysql" base-type="CHAR" ext-type="${length}">
+        <placeholder-value name="length"/>
+      </dialect-type>
+      <dialect-type language="java" base-type="Character"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="8fe274e7f0ef431e95a7c2a191255fe9" name="FLOAT" title="FLOAT" data-type="6">
+    <description></description>
+    <placeholder-list>
+      <placeholder id="539398ff46414aa7b1f2f615ead6208e" name="total_len" title="长度"/>
+      <placeholder id="8a7ebbe3f2104f47bda5ebdbfd49b348" name="decimal_len" title="小数"/>
+    </placeholder-list>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="FLOAT" ext-type=""/>
+      <dialect-type language="mysql" base-type="FLOAT"/>
+      <dialect-type language="java" base-type="Float" ext-type="${total_len},${decimal_len}">
+        <placeholder-value name="total_len"/>
+        <placeholder-value name="decimal_len"/>
+      </dialect-type>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="84aa68cc582f4eb89dc8f6848035a4e0" name="TEXT" title="TEXT" data-type="-1">
+    <description></description>
+    <placeholder-list/>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="BLOB" ext-type=""/>
+      <dialect-type language="mysql" base-type="TEXT"/>
+      <dialect-type language="java" base-type="String"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="eff48dfee764445982b7b738f08fe9ea" name="DATE" title="DATE" data-type="91">
+    <description></description>
+    <placeholder-list/>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="DATE"/>
+      <dialect-type language="mysql" base-type="DATE" ext-type=""/>
+      <dialect-type language="java" base-type="Date"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="d7938bf4550b441d87e8ebf9d389b7ea" name="DATETIME" title="DATETIME" data-type="91">
+    <description></description>
+    <placeholder-list/>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="DECIMAL"/>
+      <dialect-type language="mysql" base-type="DATETIME"/>
+      <dialect-type language="java" base-type="Date"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="fb55715f63304829b202fa02e2a5eeaf" name="TINYINT" title="TINYINT" data-type="-6">
+    <description></description>
+    <placeholder-list/>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="INTEGER"/>
+      <dialect-type language="mysql" base-type="TINYINT"/>
+      <dialect-type language="java" base-type="Integer"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="6d92c5f6ef6a4867889cd7b2b188e1ba" name="SMALLINT" title="SMALLINT" data-type="5">
+    <description></description>
+    <placeholder-list/>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="INTEGER"/>
+      <dialect-type language="mysql" base-type="SMALLINT"/>
+      <dialect-type language="java" base-type="Integer"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="bfac97ce0a8441fe8009cba126114892" name="MEDIUMINT" title="MEDIUMINT" data-type="5">
+    <description></description>
+    <placeholder-list/>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="DECIMAL"/>
+      <dialect-type language="mysql" base-type="MEDIUMINT"/>
+      <dialect-type language="java" base-type="Integer"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="e32264e845e642b68ee2fe3437d8c186" name="BIGINT" title="BIGINT" data-type="-5">
+    <description></description>
+    <placeholder-list/>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="INTEGER"/>
+      <dialect-type language="mysql" base-type="BIGINT"/>
+      <dialect-type language="java" base-type="Integer"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="44bab1b6b71e4c73a798d6272fdb78de" name="FLOAT0" title="FLOAT0" data-type="6">
+    <description></description>
+    <placeholder-list/>
+    <dialect-type-list>
+      <dialect-type language="oracle" base-type="FLOAT"/>
+      <dialect-type language="mysql" base-type="FLOAT"/>
+      <dialect-type language="java" base-type="Float"/>
+    </dialect-type-list>
+  </standard-type>
+  <standard-type id="9abb85a6ef19400299fba28b5bebca60" name="NUMBER" title="NUMBER" data-type="2">
+    <description></description>
+    <placeholder-list>
+      <placeholder name="total_len" title="长度"/>
+      <placeholder name="decimal_len" title="小数"/>
+    </placeholder-list>
+    <dialect-type-list>
+      <dialect-type language="java" base-type="BigDecimal" ext-type=""/>
+      <dialect-type language="oracle" base-type="NUMBER" ext-type="${total_len},${decimal_len}">
+        <placeholder-value name="total_len"/>
+        <placeholder-value name="decimal_len"/>
+      </dialect-type>
+      <dialect-type language="mysql" base-type="DECIMAL" ext-type="${total_len},${decimal_len}">
+        <placeholder-value name="total_len"/>
+        <placeholder-value name="decimal_len"/>
+      </dialect-type>
+    </dialect-type-list>
+  </standard-type>
+</standard-types>

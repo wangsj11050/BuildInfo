@@ -1,0 +1,9 @@
+<tables>
+  <table id="40473faca3514532946088d1d8619ce3" name="tberrormsg" title="错误代码表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="728b776b06674c93aa4ddd5fe34d22f7" primary="false" unique="false" not-null="true" id="err_code" auto-increase="false"/>
+    <table-field standard-field-id="3733942324c64047b241fe9ad28da2cf" primary="false" unique="false" not-null="true" id="err_msg" auto-increase="false"/>
+  </table>
+</tables>

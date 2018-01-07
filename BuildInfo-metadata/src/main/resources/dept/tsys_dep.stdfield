@@ -1,0 +1,10 @@
+<standard-fields>
+  <standard-field id="862edd8528154df6a22282c87e0c25b1" name="dep_name" title="部门名称" business-type-id="58c95a5b843d4800a70ba947fdfa086a">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="643aa90c4f2147169cf4f8f4d15819de" name="dep_path" title="部门内码" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

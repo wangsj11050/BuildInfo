@@ -1,0 +1,130 @@
+#macro btTableFix(tableId)#set(tableId=tableId?:fmt("t%d",rand()),tableRowId="")
+<div id="${tableId}" class="hidden">#bodyContent</div>
+<script>
+    $(function () {
+        var otherInfoData = {};
+        var _bttable = $("#${tableId}-table");
+        _bttable.on("column-switch.bs.table", function () {
+            var options = _bttable.bootstrapTable('getOptions');
+            var column = options.columns[0];
+            var show_column_index = [];
+            for (var i = 0, l = column.length; i < l; i++) {
+                if (column[i].visible == true) {
+                    show_column_index.push(i);
+                }
+            }
+            localStorage.setItem("${tableId}_show_columns", show_column_index);
+        }).on("load-success.bs.table",function(_bt,data){
+            if(data.rows.length==0){
+                var options=_bttable.bootstrapTable('getOptions');
+                if(data.start>1){
+                    options.pageNumber=data.totalPages;
+                    _bttable.bootstrapTable('refreshOptions',options);
+                    _bttable.bootstrapTable('refresh');
+                }
+            }
+        });
+        var show_columns = localStorage.getItem("${tableId}_show_columns");
+        if (show_columns) {
+            show_columns = show_columns.split(",");
+            _bttable.find("thead th").each(function (index) {
+                $(this).data("visible", $.inArray(index.toString(), show_columns) != -1);
+            });
+        }
+        $("#${tableId}-table>thead>tr>.operate").attr("data-formatter", "${tableId}operate");
+        _bttable.bootstrapTable('destroy').bootstrapTable();
+        $("#${tableId}").removeClass("hidden").off("click.searchtype").on("click.searchtype", "[data-search-type]", function () {
+            $(this).closest(".btn-group").find("span:first").html($(this).html());
+            var thisType = $(this).attr("data-search-type");
+            otherInfoData[thisType] = $(this).data("key");
+            _bttable.bootstrapTable('refreshOptions', $.extend(_bttable.bootstrapTable('getOptions'), {otherParam: otherInfoData}, {pageNumber: 1}));
+            _bttable.bootstrapTable('refresh');
+        });
+    });
+    function ${tableId}operate(value, row) {
+        var _tpl = $("#${tableId}-operate").html();
+        if (!_tpl) {
+            return "";
+        }
+        _tpl = _tpl.replace(/\{id\}/ig, row.${tableRowId});
+        return _tpl;
+    }
+</script>
+#end
+
+
+#macro btFormFix(formMap)#set(formMap=formMap?:{"id":fmt("f%d",rand())},formid=formMap?.id?:fmt("f%d",rand()),formMap=formMap.extend({"id":formid,"method":"get"},true))
+<form style="display:none" #mapToHtml(formMap)>
+    #bodyContent
+</form>
+<script type="text/javascript">
+    !function ($) {
+        'use strict';
+        var isFirst = true;
+        var sprintf = $.fn.bootstrapTable.utils.sprintf;
+        var showAvdSearch = function (that) {
+            $("#${formid}").toggle(50);
+            if (isFirst) {
+                $("#${formid}").Validform({
+                    tiptype: 1,
+                    beforeSubmit: function (curform) {
+                        var data = {};
+                        var _searchV = $(curform).parent().find(".search input[type=text]")
+                        var formData = $("#${formid}").serializeArray();
+                        $.each(formData, function (i, field) {
+                            data[field.name] = field.value;
+                        });
+                        that.options.otherParam = data;
+                        var pageList = that.options.pageList;
+                        pageList = typeof pageList === 'string' ?
+                                pageList.replace('[', '').replace(']', '')
+                                        .replace(/ /g, '').toLowerCase().split(',') : pageList;
+                        if (that.options.pageSize == "all") {
+                            that.options.pageSize = pageList[0];
+                        }
+                        if (_searchV.val() != '') {
+                            _searchV.val('');
+                            that.resetSearch();
+                        } else {
+                            that.refresh();
+                        }
+
+                        return false;
+                    }
+                });
+            }
+            isFirst = false;
+        };
+        var BootstrapTable = $.fn.bootstrapTable.Constructor,
+                _initToolbar = BootstrapTable.prototype.initToolbar;
+        BootstrapTable.prototype.initToolbar = function () {
+            _initToolbar.apply(this, Array.prototype.slice.apply(arguments));
+            var that = this, html = [];
+            if (this.$toolbar.find('button[name="tinySearch"]').size() == 0) {
+                html.push('<button class="btn btn-default" type="button" name="tinySearch" title="高级搜索"><i class="fa fa-search"></i></button>');
+                this.$toolbar.children(".columns-right:first").prepend(html.join(''));
+            }
+            this.$toolbar.find('button[name="tinySearch"]').off('click').on('click', function() {
+            showAvdSearch(that);
+            });
+        };
+        var _form = $("#${formid}");
+        _form.find("select.select2").select2();
+        var _hiddenInput = _form.find("input:hidden");
+        setTimeout(function () {
+            _hiddenInput.each(function () {
+                $(this).attr("data-value", $(this).val())
+            });
+        }, 500);
+        _form.off("reset.hide").on("reset.hide", function () {
+            _hiddenInput.each(function () {
+                var v = $(this).attr("data-value");
+                if (typeof(v) == "undefined") {
+                    v = '';
+                }
+                $(this).val(v);
+            })
+        });
+    }(jQuery);
+</script>
+#end

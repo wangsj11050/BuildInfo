@@ -1,0 +1,41 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.SysRoleRightService" bean="sysRoleRightServiceImpl">
+    <service-method local-name="deleteSysRoleRight" service-id="deleteSysRoleRight" method-name="deleteSysRoleRight" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteSysRoleRightResult" required="false" is-array="false" type="void"/>
+    </service-method>
+    <service-method local-name="addSysRoleRight" service-id="addSysRoleRight" method-name="addSysRoleRight" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysRoleRightDto" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleRightDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addSysRoleRightResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleRightDto"/>
+    </service-method>
+    <service-method local-name="getSysRoleRight" service-id="getSysRoleRight" method-name="getSysRoleRight" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysRoleRightResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleRightDto"/>
+    </service-method>
+    <service-method local-name="getSysRoleRightPager" service-id="getSysRoleRightPager" method-name="getSysRoleRightPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="sysRoleRightDto" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleRightDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getSysRoleRightPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="updateSysRoleRight" service-id="updateSysRoleRight" method-name="updateSysRoleRight" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysRoleRightDto" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleRightDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateSysRoleRightResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="checkSysRoleRightExists" service-id="checkSysRoleRightExists" method-name="checkSysRoleRightExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="sysRoleRightDto" type="org.tinygroup.buildinfo.service.inter.dto.SysRoleRightDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkSysRoleRightExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+  </service-component>
+</service-components>

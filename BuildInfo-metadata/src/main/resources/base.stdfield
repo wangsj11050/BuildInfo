@@ -1,0 +1,104 @@
+<standard-fields>
+  <standard-field id="761ff8fb13904fa78ad5b3c8d1b2f719" name="id" title="ID" business-type-id="a60be11b684b456e925ea623df639928">
+    <description></description>
+    <nick-names>
+      <nick-name name="menu_id" title="菜单id" id="e921a44ce80c4aa8925a9c4b537c9e9c"/>
+      <nick-name name="role_id" title="角色id" id="161acf43b5b9428da5b2d2adf417ea58"/>
+      <nick-name name="meetimg_id" title="会议编号" id="d16648fe4ab042d895e8808a6439d836"/>
+      <nick-name name="train_id" title="培训编号" id="3540c58f3d5742a999d9d1d824266b8f"/>
+      <nick-name name="example_id" title="问题集编号" id="780e8c9947d24dacb39dd1ba00b3294f"/>
+    </nick-names>
+  </standard-field>
+  <standard-field id="7ec2fae1d2934f8aad4082067d6e1565" name="name" title="NAME" business-type-id="769a81a4e3ee4fcb86d8e672b526cd1c">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="80e8d268f75049d6b78fb67268464394" name="type" title="TYPE" business-type-id="4b72dc120cee4229ba64eb344dc791dd">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="576f441435d04178ba6dc014b64b1b75" name="begin_date" title="开始时间" business-type-id="a60be11b684b456e925ea623df639928">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="5aa9666702d84c698e37fad3b32d76b8" name="end_date" title="截止时间" business-type-id="a60be11b684b456e925ea623df639928">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="5b6ffb53f32940d488329ff888c69c00" name="trans_code" title="交易编号" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="3417fa91eef245ff9afeaad421b60a4c" name="reserve2" title="备注2" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="abbeb7928fac4426a849f19b09b76fdd" name="reserve3" title="保留域3" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="6d6035ac654b4b39954c9c501964c974" name="role_code" title="角色编号" business-type-id="1edc75df187a4ff0809d9b0cc628ea17">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="0bc67de22a014705b1fade4a611185a8" name="branch_code" title="机构编号" business-type-id="1edc75df187a4ff0809d9b0cc628ea17">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="d108d8817b454101b29692c5d3651dab" name="dep_code" title="部门编号" business-type-id="1edc75df187a4ff0809d9b0cc628ea17">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="b5ee4b13155f4e5d90b49909ac890dc9" name="remark" title="备注" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="c0d3d0284aa949bbbc4dc22a5c449815" name="creator" title="创建者" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="7ffb1e808b0f48f08d84bf248f5abcef" name="serial_no" title="流水号" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="52a7802a32db431b84fea7a035057229" name="ext_field" title="扩展字段" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="763c43d0c77743bc82dfb2301b90ca1a" name="reserve1" title="备用1" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="c8c8596b09fb49189bdddc9b113de90f" name="ext_field_1" title="扩展字段1" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="83a61e757e4f43bdba218bf8ae583c59" name="ext_field_2" title="扩展字段2" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="b86fdd27ca234f8ba850b8f923542b5c" name="ext_field_3" title="扩展字段3" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="7c261d3fee06438eb6f299cff107a4e8" name="ext_field_4" title="扩展字段4" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="91f61acdd7d5431f989b83767a419f2a" name="ext_field_5" title="扩展字段5" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="d262098caad3445a8e29c02bf0b1f9ce" name="parent_id" title="PARENT_ID" business-type-id="a60be11b684b456e925ea623df639928">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="728b776b06674c93aa4ddd5fe34d22f7" name="err_code" title="错误码" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="3733942324c64047b241fe9ad28da2cf" name="err_msg" title="错误信息" business-type-id="0f17508ced8c4bdb8a1dbb96dedf2826">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

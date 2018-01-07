@@ -1,0 +1,42 @@
+<standard-fields>
+  <standard-field id="a1a0e82729684971918ee3d27f9c5f85" name="dict_id" title="DICT_ID" business-type-id="655f43dfdfaf4bf4bdc9c4a7a6e406de">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="2a14099a820146c18c20d27457f601d0" name="dict_value" title="DICT_VALUE" business-type-id="8f95ea2e9261437db73dc543928e7036">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="27b17c8a8b4846378075981cc9c6bfce" name="dict_name" title="DICT_NAME" business-type-id="0f17508ced8c4bdb8a1dbb96dedf2826">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="5b24dc38b5474648b199fe359ac07622" name="dict_type" title="DICT_TYPE" business-type-id="8f95ea2e9261437db73dc543928e7036">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="80a553b177e14754a40d9dc92fd5790a" name="dict_item_code" title="字典项编号" business-type-id="3e5219bf1a2e4214939ecb1537d24c56">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="848cc19570d94cc4a4fdf452df7b90be" name="dict_entry_code" title="字典条目编号" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="69c9a0d2a36f433899bf89220a357a9d" name="dict_item_name" title="字典项名称" business-type-id="e6cd091e39834fdc9854dc314c2b374f">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="1cf8ad1afd384b069911f3f362d36e2e" name="dict_item_order" title="字典项排序" business-type-id="a60be11b684b456e925ea623df639928">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="7324c49a96b94d568ef982fc5de7fd8f" name="dict_entry_name" title="字典条目名称" business-type-id="9c2bd029c58349ecb963f19a3f5bd148">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="488864856c7e42e4ba72ad0a25b68415" name="dict_entry_id" title="字典条目ID" business-type-id="a60be11b684b456e925ea623df639928">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

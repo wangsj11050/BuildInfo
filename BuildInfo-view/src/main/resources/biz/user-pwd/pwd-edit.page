@@ -1,0 +1,48 @@
+<div class="padding-set mt-5">
+    <div class="card-content password-change">
+        #@tForm("userPwdChangeForm" "/sysuser/pwd/update" "post")
+            #@elementItemAjax("原密码：")
+                #tPassInput(
+                    "oldPassword" ""{"placeholder":"请输入原密码","datatype":"*","nullmsg":"请输入原密码！","autocomplete":"off","id":
+                    "oldpassword"})
+            #end
+            #@elementItemAjax("新密码：")
+                #tPassInput(
+                    "password" ""{"placeholder":"请输入新密码","datatype":"*6-18","nullmsg":"请输入新密码！","autocomplete":"off","id":
+                    "password"})
+            #end
+            #@elementItemAjax("再次输入新密码：")
+                #tPassInput("password2" ""{"placeholder":"请再次输入新密码","datatype":"*6-18","nullmsg":"请再输入新密码！","autocomplete":"off",
+                    "recheck":"password","errormsg":"您两次输入的密码不一致！","id":"password2"})
+            #end
+        #end
+        <script type="text/javascript">
+            $(function () {
+                $("form[name=userPwdChangeForm").Validform({
+                    tiptype: 1,
+                    beforeSubmit: function (curform) {
+                        $(curform).ajaxSubmit({
+                            dataType: "json",
+                            success: function (data) {
+                                if (data.status == "y") {
+                                    layer.msg(data.info, {icon: 1});
+                                    window.location.href="#link("/sys/index")";
+//                                    $(curform).closest(".modal").trigger("close");
+                                } else {
+                                    layer.msg(data.info, {icon: 2});
+                                }
+                                //try {
+//                                $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                            },
+                            error: function () {
+                                layer.msg("error", {icon: 2});
+                            }
+                        });
+                        return false;
+                    }
+
+                });
+            });
+        </script>
+    </div>
+</div>

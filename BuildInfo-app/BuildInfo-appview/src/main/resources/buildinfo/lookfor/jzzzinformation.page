@@ -1,0 +1,114 @@
+#set(serviceList = getDictItem("BUILD_SERVICE")?["list"])
+#@gridSysRow({"style":"margin-right:0"})
+	#@gridSysCol(12 {"class":"col-sm-12 col-md-2","style":"background-color: #f0efef;"})
+		<div class="member-con-l fl" style="margin-top: 15px;margin-left: 10px;"> 
+			<div class="menu"> 
+				<a class="convenience-services-btnbox" href="#link('/look-for/gsjz')">
+					<span class="convenience-services-btn url_click1"> 
+					<span class="convenience-services-mark"></span> 各省市建委官网</span> 
+				</a> 
+				<ul class="accordion"> 
+					<li> 
+						<a class="link1 link1-check"> 
+							<span class="link1-mark link1-mark-f1 "></span>资质标准查询 
+							<span class="link1-arrow fr" style="margin-top: -20px;margin-left: 120px;"></span> 
+						</a> 
+						<ul class="submenu" style="margin-top: -1px;">
+							 #set(num = 0)
+							 #for(buildService:buildServiceList)
+							 	#set(num = num+1)
+							 	#if("jzzz".equals(buildService?.parentService))
+									#if(num == 1)
+										<li>
+											<a class="link2 url_click link-check" href="#link('/look-for/gsjzInformation?serviceCode='+buildService?.serviceCode+'&serviceName='+buildService?.serviceName)">
+												${buildService?.serviceName}
+											</a>
+										</li>
+									#else
+										<li>
+											<a class="link2 url_click" href="#link('/look-for/gsjzInformation?serviceCode='+buildService?.serviceCode+'&serviceName='+buildService?.serviceName)">
+												${buildService?.serviceName}
+											</a>
+										</li>
+									#end
+								#end
+							 #end
+						</ul> 
+					</li> 
+				</ul> 
+			</div> 
+		</div>
+	#end
+	#@gridSysCol(12 {"class":"col-sm-12 col-md-10"})
+		#if("Y".equals(showflag))
+			<div class="member-con-r fr get_right_content">
+			   <div class="member-con-r-s">
+			   	   <div class="article-titlebox article-title-top">
+			   	    <p class="article-title com-title">${serviceName}</p> 
+			   	   </div>
+			   	   <div class="test-desc-cate"> 
+						<div class="test-desc test-space"> 
+							<div class="test-detail"> 
+								<ul class="test-detail-ul"> 
+									#for(showbuild:showbuildServiceList)
+										<li class="registration-query-li"> 
+											<a class="registration-query-a url_area_click" 
+											href="#link('/look-for/gsjzInformation?serviceCode='+showbuild?.serviceCode)">${showbuild?.serviceName}</a> 
+										</li>
+									#end
+									
+					 			</ul> 
+							</div> 
+						</div> 
+					</div>
+			   </div>
+			</div>
+		#else
+			<div class="am-container-1">
+				<div class="part-title part-title-mar">
+					<i class=" am-icon-paper-plane part-title-i"></i>
+					<span class="part-title-span">
+					#for(buildService:buildServiceList)
+						#if(buildService?.serviceCode == buildServicecontentDto?.serviceCode)
+							${buildService?.serviceName}
+						#end
+					#end
+					</span>
+				</div>
+			</div>
+			#if(buildServicecontentDto?.serviceDes != null && !"".equals(buildServicecontentDto?.serviceDes))
+				<div class="infoContent" style="margin-top: 20px;font-size: 14px;padding-left: 25px;">
+					<span class="label label-info" style="font-size: 16px;margin-left: -20px;">业务简介</span>
+					</br>
+					</br>
+					${buildServicecontentDto?.serviceDes}
+				</div>
+			#end
+			#if(buildServicecontentDto?.serviceFlow != null && !"".equals(buildServicecontentDto?.serviceFlow))
+				<div class="infoContent" style="margin-top: 20px;font-size: 14px;padding-left: 25px;">
+					<span class="label label-info" style="font-size: 16px;margin-left: -20px;">业务流程</span>
+					</br>
+					</br>
+					${buildServicecontentDto?.serviceFlow}
+				</div>
+			#end
+			#if(buildServicecontentDto?.serviceData != null && !"".equals(buildServicecontentDto?.serviceData))
+				<div class="infoContent" style="margin-top: 20px;font-size: 14px;padding-left: 25px;">
+				<span class="label label-info" style="font-size: 16px;margin-left: -20px;">所需资料</span>
+				</br>
+				</br>
+				${buildServicecontentDto?.serviceData}
+			</div>
+			#end
+			#if(buildServicecontentDto?.serviceTerm != null && !"".equals(buildServicecontentDto?.serviceTerm))
+				<div class="infoContent" style="margin-top: 20px;font-size: 14px;padding-left: 25px;">
+				<span class="label label-info" style="font-size: 16px;margin-left: -20px;">申请条件</span>
+				</br>
+				</br>
+				${buildServicecontentDto?.serviceTerm}
+			</div>
+			#end
+		#end
+		
+	#end
+#end

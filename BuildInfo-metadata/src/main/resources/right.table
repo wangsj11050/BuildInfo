@@ -1,0 +1,46 @@
+<tables>
+  <table id="be35e68d661d454e9b2eebd064298122" name="tsys_user_right" title="用户权限授权表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="89226af97f6344429fab94e5ed1f958b" primary="false" unique="false" not-null="true" id="user_id" auto-increase="false"/>
+    <table-field standard-field-id="e921a44ce80c4aa8925a9c4b537c9e9c" primary="false" unique="false" not-null="true" id="menu_id" auto-increase="false"/>
+    <table-field standard-field-id="5ca9c6990a4e47e9b11bfbcc4367af49" primary="false" unique="false" not-null="false" id="create_by" auto-increase="false"/>
+    <table-field standard-field-id="3281a34a2b744ed28a1be7deed06cc83" primary="false" unique="false" not-null="false" id="create_date" auto-increase="false"/>
+    <table-field standard-field-id="576f441435d04178ba6dc014b64b1b75" primary="false" unique="false" not-null="false" id="begin_date" auto-increase="false"/>
+    <table-field standard-field-id="5aa9666702d84c698e37fad3b32d76b8" primary="false" unique="false" not-null="false" id="end_date" auto-increase="false"/>
+    <table-field standard-field-id="f93d07e07db5458f8183af4cb6266eb3" primary="false" unique="false" not-null="false" id="right_flag" auto-increase="false"/>
+    <foreign-reference name="fk_u_right_user">
+      <main-table>cb2028c116be46a987e7e5c2a8103670</main-table>
+      <reference-field>user_id</reference-field>
+      <foreign-field>user_id</foreign-field>
+    </foreign-reference>
+    <foreign-reference name="fk_u_right_menu">
+      <main-table>7e896e6d8fbb428492e88ca5bf3f2f24</main-table>
+      <reference-field>menu_id</reference-field>
+      <foreign-field>menu_id</foreign-field>
+    </foreign-reference>
+  </table>
+  <table id="6975f3662c5f4f72a691ed14e1905f2d" name="tsys_role_right" title="角色权限授权表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="161acf43b5b9428da5b2d2adf417ea58" primary="false" unique="false" not-null="true" id="role_id" auto-increase="false"/>
+    <table-field standard-field-id="e921a44ce80c4aa8925a9c4b537c9e9c" primary="false" unique="false" not-null="true" id="menu_id" auto-increase="false"/>
+    <table-field standard-field-id="5ca9c6990a4e47e9b11bfbcc4367af49" primary="false" unique="false" not-null="false" id="create_by" auto-increase="false"/>
+    <table-field standard-field-id="3281a34a2b744ed28a1be7deed06cc83" primary="false" unique="false" not-null="false" id="create_date" auto-increase="false"/>
+    <table-field standard-field-id="576f441435d04178ba6dc014b64b1b75" primary="false" unique="false" not-null="false" id="begin_date" auto-increase="false"/>
+    <table-field standard-field-id="5aa9666702d84c698e37fad3b32d76b8" primary="false" unique="false" not-null="false" id="end_date" auto-increase="false"/>
+    <table-field standard-field-id="f93d07e07db5458f8183af4cb6266eb3" primary="false" unique="false" not-null="false" id="right_flag" auto-increase="false"/>
+    <foreign-reference name="fk_r_right_role">
+      <main-table>a592c069796e457498f7e1cc71cf542e</main-table>
+      <reference-field>role_id</reference-field>
+      <foreign-field>role_id</foreign-field>
+    </foreign-reference>
+    <foreign-reference name="fk_r_right_menu">
+      <main-table>7e896e6d8fbb428492e88ca5bf3f2f24</main-table>
+      <reference-field>menu_id</reference-field>
+      <foreign-field>menu_id</foreign-field>
+    </foreign-reference>
+  </table>
+</tables>

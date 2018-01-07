@@ -1,0 +1,37 @@
+<standard-fields>
+  <standard-field id="f30e5b580a9742158b56859d7acf4409" name="trans_name" title="交易名称" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+  </standard-field>
+  <standard-field id="191fe9c2e92642339a3aed444f5d80bd" name="ctrl_flag" title="控制标志" business-type-id="23a94507f80d4ad38bcbdd3696671b65">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="d1c01e7d11b44cbaa008ad18c3f4e2bb" name="enable_flag" title="交易允许" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="86c25d6a9e40459e8b14c5c6b08307a4" name="channels" title="允许渠道组" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="e41252a6375847f18d4dd0b5ad89646c" name="host_online" title="后台联机" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="76802d5099e641b787d5a884fb1bd1d3" name="trans_type" title="交易类别" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="d1ebb2c4677d482fbbc3bfc7dd968f53" name="monitor_status" title="监控标志" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="260e3c100f6a4efb8d3cde524d3388c5" name="log_level" title="日志级别" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="38672c07998945999e7b9a244231ea63" name="mon_trans_type" title="监控交易类别" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

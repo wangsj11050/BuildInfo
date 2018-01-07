@@ -1,0 +1,7 @@
+#@btTableContents("/sysuser/roles/manage/assignData?isAssigned="+isAssigned+"&userCode="+userId,
+{"data-pagination":"false","data-id-field":"roleCode","data-show-export":"false","data-cache":"false"})
+<th data-field="state" data-checkbox="true"></th>
+<th data-field="roleCode" data-sortable="true">角色编号</th>
+<th data-field="roleName" data-sortable="true">角色名称</th>
+<th data-field="rightFlag">授权标志</th>
+#end

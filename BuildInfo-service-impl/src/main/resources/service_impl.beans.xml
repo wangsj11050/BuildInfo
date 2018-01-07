@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+		default-autowire="byName">
+
+  <bean id="sysRoleServiceImpl" scope="prototype"
+		class="org.tinygroup.buildinfo.service.impl.SysRoleServiceImpl">
+  </bean>
+	<bean id="orgServiceImpl" scope="prototype"
+		  class="org.tinygroup.buildinfo.service.impl.OrgServiceImpl">
+	</bean>
+	<bean id="sysOfficeServiceImpl" scope="prototype"
+		  class="org.tinygroup.buildinfo.service.impl.SysOfficeServiceImpl">
+	</bean>
+	<bean id="sysKindServiceImpl" scope="prototype"
+		  class="org.tinygroup.buildinfo.service.impl.SysKindServiceImpl">
+	</bean>
+	<bean id="sysMenuServiceImpl" scope="prototype"
+		  class="org.tinygroup.buildinfo.service.impl.SysMenuServiceImpl">
+	</bean>
+	<bean id="sysUserRightServiceImpl" scope="prototype"
+		  class="org.tinygroup.buildinfo.service.impl.SysUserRightServiceImpl">
+	</bean>
+	<bean id="sysRoleRightServiceImpl" scope="prototype"
+		  class="org.tinygroup.buildinfo.service.impl.SysRoleRightServiceImpl">
+	</bean>
+	<bean id="sysBranchServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.SysBranchServiceImpl">
+	</bean>
+	<bean id="sysDepServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.SysDepServiceImpl">
+	</bean>
+	<bean id="sysUserServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.SysUserServiceImpl">
+	</bean>
+	<bean id="sysUserLoginServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.SysUserLoginServiceImpl">
+	</bean>
+	<bean id="sysDictEntryServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.SysDictEntryServiceImpl">
+	</bean>
+	<bean id="sysDictItemServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.SysDictItemServiceImpl">
+	</bean>
+	<bean id="errormsgServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.ErrormsgServiceImpl">
+	</bean>
+	<bean id="paramServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.ParamServiceImpl">
+	</bean>
+	<bean id="transServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.TransServiceImpl">
+	</bean>
+	<bean id="buildInfoServiceServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.BuildInfoServiceServiceImpl">
+	</bean>
+	
+	<bean id="serviceContentServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.ServiceContentServiceImpl">
+	</bean>
+	<bean id="buildServiceCenterServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.BuildServiceCenterServiceImpl">
+	</bean>
+	
+	<bean id="buildAdisverServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.BuildAdisverServiceImpl">
+	</bean>
+	
+	<bean id="buildCustomerCaseServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.BuildCustomerCaseServiceImpl">
+	</bean>
+	
+	<bean id="buildNewsServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.BuildNewsServiceImpl">
+	</bean>
+	
+	<bean id="buildPubDemandServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.BuildPubDemandServiceImpl">
+	</bean>
+	<bean id="buildAboutAsServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.BuildAboutAsServiceImpl">
+	</bean>
+	
+	<bean id="buildRecruitServiceImpl"
+		  class="org.tinygroup.buildinfo.service.impl.BuildRecruitServiceImpl">
+	</bean>
+</beans>

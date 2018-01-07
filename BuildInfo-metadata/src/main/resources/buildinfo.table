@@ -1,0 +1,137 @@
+<tables>
+  <table id="294d0d83f85c4cbe94618d0190eb7e78" name="build_servicetype" title="服务种类表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="cabc9ffc9d904e5087a2e5a4f6056500" primary="false" unique="false" not-null="true" id="service_code" auto-increase="false"/>
+    <table-field standard-field-id="4aa08a0669924a76ae98d64b107f820e" primary="false" unique="false" not-null="true" id="service_name" auto-increase="false"/>
+    <table-field standard-field-id="2ffb40dae4e64b59be2bf77327da7f98" primary="false" unique="false" not-null="false" id="parent_service" auto-increase="false"/>
+    <table-field standard-field-id="36f9b06158384c0395d6b3ac6f35b50f" primary="false" unique="false" not-null="false" id="service_icon" auto-increase="false"/>
+    <table-field standard-field-id="b5ee4b13155f4e5d90b49909ac890dc9" primary="false" unique="false" not-null="false" id="remark" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="56cc4bd038bd4de197f7b3c18702aa66" name="build_servicecontent" title="具体服务内容表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="cabc9ffc9d904e5087a2e5a4f6056500" primary="false" unique="false" not-null="true" id="service_code" auto-increase="false"/>
+    <table-field standard-field-id="398f856a2b8f44d68435e6a917f9cef3" primary="false" unique="false" not-null="false" id="service_des" auto-increase="false"/>
+    <table-field standard-field-id="0e01fefbb158435f835cbee09e2b7b9a" primary="false" unique="false" not-null="false" id="service_flow" auto-increase="false"/>
+    <table-field standard-field-id="b8cf015d5b1a4d9597f6b8d530360792" primary="false" unique="false" not-null="false" id="service_data" auto-increase="false"/>
+    <table-field standard-field-id="4ad5f66215e641f2a8f0806da8d32ed9" primary="false" unique="false" not-null="false" id="service_term" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="1b16eed9c79248388a5fa165509c57df" name="build_servicecenter" title="服务中心表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="62f580a4ace842fdbe92b867e8fb07a3" primary="false" unique="false" not-null="true" id="servicecenter_code" auto-increase="false"/>
+    <table-field standard-field-id="0cdfefe3a16b4feb8bb7e6740a5f0ae5" primary="false" unique="false" not-null="true" id="servicecenter_name" auto-increase="false"/>
+    <table-field standard-field-id="6d4c3ca5c16b44faae55c232083b7b88" primary="false" unique="false" not-null="false" id="servicecenter_desc" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="ecb9ac7195b540f6b046c04c6e06511a" name="build_customercase" title="客户案例" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="fd68a8e674f148008697d10d8a82c845" primary="false" unique="false" not-null="true" id="case_name" auto-increase="false"/>
+    <table-field standard-field-id="64162d4b4b954c0dbbf1aaf723accb2b" primary="false" unique="false" not-null="false" id="pub_date" auto-increase="false"/>
+    <table-field standard-field-id="67830c7750ff41ea858fe63c909b19d6" primary="false" unique="false" not-null="false" id="case_information" auto-increase="false"/>
+    <table-field standard-field-id="27717a0627494305ae3087448b9ae9d9" primary="false" unique="false" not-null="false" id="case_img" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="f24194f385a14b4098c8bef1a81858d0" name="build_news" title="新闻动态" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="4fbad197f9cf43ef87b2d81156ed313f" primary="false" unique="false" not-null="true" id="news_name" auto-increase="false"/>
+    <table-field standard-field-id="64162d4b4b954c0dbbf1aaf723accb2b" primary="false" unique="false" not-null="true" id="pub_date" auto-increase="false"/>
+    <table-field standard-field-id="76f75fb861c34ccc8acddc1a3d34c6e0" primary="false" unique="false" not-null="false" id="news_desc" auto-increase="false"/>
+    <table-field standard-field-id="988b21e7ee5e4691b312a35343892f32" primary="false" unique="false" not-null="false" id="news_type" auto-increase="false"/>
+    <table-field standard-field-id="077301585b8d4e7592a388584afc1a28" primary="false" unique="false" not-null="false" id="news_content" auto-increase="false"/>
+    <table-field standard-field-id="bf03e54f7fff4e88898fa0379e15b5d4" primary="false" unique="false" not-null="false" id="is_hot" auto-increase="false"/>
+    <table-field standard-field-id="78523b7719b2434ca978f9ff21e67918" primary="false" unique="false" not-null="false" id="news_img" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="6071ed7b046d4eb28f12cf676e6cd678" name="build_adisver" title="星级顾问" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="7ec2fae1d2934f8aad4082067d6e1565" primary="false" unique="false" not-null="true" id="name" auto-increase="false"/>
+    <table-field standard-field-id="82ff10b80bbb437bab9e82b9f70b63e5" primary="false" unique="false" not-null="false" id="stars" auto-increase="false"/>
+    <table-field standard-field-id="a0e43f2da2f7499b8387a8c683303712" primary="false" unique="false" not-null="false" id="job_number" auto-increase="false"/>
+    <table-field standard-field-id="eb7f59e0934f494f93fffd8c0a2c3374" primary="false" unique="false" not-null="false" id="work_years" auto-increase="false"/>
+    <table-field standard-field-id="83e74fdd75c8436f959c9a986dfe3a62" primary="false" unique="false" not-null="false" id="adisver_phone" auto-increase="false"/>
+    <table-field standard-field-id="9665f02421df4cd69f79a918e7ea1c34" primary="false" unique="false" not-null="false" id="adisver_resume" auto-increase="false"/>
+    <table-field standard-field-id="a077feea3d214e9fa6d2934d00a63194" primary="false" unique="false" not-null="false" id="adisver_img" auto-increase="false"/>
+    <table-field standard-field-id="b23efbf3bb0247e5a2e7d7362b9bd4c6" primary="false" unique="false" not-null="false" id="service_experience" auto-increase="false"/>
+    <table-field standard-field-id="19ffe9f8e9354b3fb869bf49139bc4ef" primary="false" unique="false" not-null="false" id="service_type" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="6135ee8b188449aaa8a5db0f7eeb0ae4" name="build_pubdemand" title="发布需求" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="7ec2fae1d2934f8aad4082067d6e1565" primary="false" unique="false" not-null="true" id="name" auto-increase="false"/>
+    <table-field standard-field-id="ea78f4ed936849adb00ba43d2212d0c7" primary="false" unique="false" not-null="false" id="phone" auto-increase="false"/>
+    <table-field standard-field-id="0cd4ca7ecada48ffab9b8e225fbee42f" primary="false" unique="false" not-null="false" id="demand" auto-increase="false"/>
+    <table-field standard-field-id="c59aa8697b414d7687e4cc7a9febcff8" primary="false" unique="false" not-null="false" id="demand_state" auto-increase="false"/>
+    <table-field standard-field-id="0b49b2ce3b9c4cc382a3a3ca1cefb9fa" primary="false" unique="false" not-null="false" id="demand_desc" auto-increase="false"/>
+    <table-field standard-field-id="2ab1261c161e4fafb8a0ae702ca2a306" primary="false" unique="false" not-null="false" id="adisver_id" auto-increase="false"/>
+    <table-field standard-field-id="ca15dc3b98af42e1a5b0af1a1e6df475" primary="false" unique="false" not-null="false" id="adisver_name" auto-increase="false"/>
+    <table-field standard-field-id="3847a8efb61e4c75b36a8c971b2f9d81" primary="false" unique="false" not-null="false" id="pub_time" auto-increase="false"/>
+    <table-field standard-field-id="4a311dbc22844931821ef5a1d9bd19e6" primary="false" unique="false" not-null="false" id="update_time" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+    <table-field standard-field-id="7c261d3fee06438eb6f299cff107a4e8" primary="false" unique="false" not-null="false" id="ext_field_4" auto-increase="false"/>
+    <table-field standard-field-id="91f61acdd7d5431f989b83767a419f2a" primary="false" unique="false" not-null="false" id="ext_field_5" auto-increase="false"/>
+  </table>
+  <table id="45d1b971f2474109a93fb1322885e55c" name="build_aboutas" title="企业简介表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="4fd8a17019514796888dfc48fc63261c" primary="false" unique="false" not-null="true" id="aboutas_content" auto-increase="false"/>
+    <table-field standard-field-id="c8c8596b09fb49189bdddc9b113de90f" primary="false" unique="false" not-null="false" id="ext_field_1" auto-increase="false"/>
+    <table-field standard-field-id="83a61e757e4f43bdba218bf8ae583c59" primary="false" unique="false" not-null="false" id="ext_field_2" auto-increase="false"/>
+    <table-field standard-field-id="b86fdd27ca234f8ba850b8f923542b5c" primary="false" unique="false" not-null="false" id="ext_field_3" auto-increase="false"/>
+  </table>
+  <table id="1b70cc283d5a459fb64e854f379ace0a" name="build_recruit" title="职位信息表" schema="">
+    <extend-properties/>
+    <description></description>
+    <table-field standard-field-id="761ff8fb13904fa78ad5b3c8d1b2f719" primary="true" unique="true" not-null="true" id="id" auto-increase="true"/>
+    <table-field standard-field-id="5c20549c6f594341b6158284e98bdaf7" primary="false" unique="false" not-null="true" id="recruit_name" auto-increase="false"/>
+    <table-field standard-field-id="516a3334fa45456ea69fb58dbc3efbfe" primary="false" unique="false" not-null="true" id="recruit_state" auto-increase="false"/>
+    <table-field standard-field-id="3847a8efb61e4c75b36a8c971b2f9d81" primary="false" unique="false" not-null="false" id="pub_time" auto-increase="false"/>
+    <table-field standard-field-id="570d72c2071144e38ac4f37e44f21bde" primary="false" unique="false" not-null="false" id="pub_user" auto-increase="false"/>
+    <table-field standard-field-id="4a311dbc22844931821ef5a1d9bd19e6" primary="false" unique="false" not-null="false" id="update_time" auto-increase="false"/>
+    <table-field standard-field-id="a52547a4b7654530b9e4d02626236eaf" primary="false" unique="false" not-null="false" id="update_user" auto-increase="false"/>
+    <table-field standard-field-id="3091352db6d44f81a05be976643a1e24" primary="false" unique="false" not-null="false" id="recruit_desc" auto-increase="false"/>
+    <table-field standard-field-id="0b586546fd884b29b6ea9c8b322b0ac5" primary="false" unique="false" not-null="false" id="recruit_seniority" auto-increase="false"/>
+    <table-field standard-field-id="52a7802a32db431b84fea7a035057229" primary="false" unique="false" not-null="false" id="ext_field" auto-increase="false"/>
+  </table>
+</tables>

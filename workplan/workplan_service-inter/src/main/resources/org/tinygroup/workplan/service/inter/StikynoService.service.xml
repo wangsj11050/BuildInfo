@@ -1,0 +1,36 @@
+<service-components>
+  <service-component type="org.tinygroup.workplan.service.inter.StikynoService" bean="stikynoServiceImpl">
+    <service-method local-name="getStikyno" service-id="getStikyno" method-name="getStikyno" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getStikynoResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.StikynoDto"/>
+    </service-method>
+    <service-method local-name="addStikyno" service-id="addStikyno" method-name="addStikyno" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="stikyno" type="org.tinygroup.workplan.dto.StikynoDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addStikynoResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.StikynoDto"/>
+    </service-method>
+    <service-method local-name="getStikynoList" service-id="getStikynoList" method-name="getStikynoList" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="stikyno" type="org.tinygroup.workplan.dto.StikynoDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getStikynoListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.workplan.dto.EventObjectDto"/>
+    </service-method>
+    <service-method local-name="updateStikyno" service-id="updateStikyno" method-name="updateStikyno" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="stikyno" type="org.tinygroup.workplan.dto.StikynoDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateStikynoResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="getStikynoDtoList" service-id="getStikynoDtoList" method-name="getStikynoDtoList" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="stikyno" type="org.tinygroup.workplan.dto.StikynoDto" required="false" is-array="false"/>
+        <service-parameter name="order" type="java.lang.String" required="false" is-array="false"/>
+        <service-parameter name="orderType" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getStikynoDtoListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.workplan.dto.StikynoDto"/>
+    </service-method>
+  </service-component>
+</service-components>

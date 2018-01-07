@@ -1,0 +1,41 @@
+<service-components>
+  <service-component type="org.tinygroup.workplan.service.inter.DemandPlannService" bean="demandPlannServiceImpl">
+    <service-method local-name="CheckDemandPlannExists" service-id="CheckDemandPlannExists" method-name="CheckDemandPlannExists" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="demandPlannDto" type="org.tinygroup.workplan.dto.DemandPlannDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="CheckDemandPlannExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="addDemandPlann" service-id="addDemandPlann" method-name="addDemandPlann" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="demandPlannDto" type="org.tinygroup.workplan.dto.DemandPlannDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addDemandPlannResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.DemandPlannDto"/>
+    </service-method>
+    <service-method local-name="getDemandPlannPager" service-id="getDemandPlannPager" method-name="getDemandPlannPager" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="demandPlannDto" type="org.tinygroup.workplan.dto.DemandPlannDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getDemandPlannPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="getDemandPlannById" service-id="getDemandPlannById" method-name="getDemandPlannById" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getDemandPlannByIdResult" required="false" is-array="false" type="org.tinygroup.workplan.dto.DemandPlannDto"/>
+    </service-method>
+    <service-method local-name="deleteDemandPlann" service-id="deleteDemandPlann" method-name="deleteDemandPlann" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteDemandPlannResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="updateDemandPlann" service-id="updateDemandPlann" method-name="updateDemandPlann" cacheable="false" category="org.tinygroup.workplan.service.inter">
+      <service-parameters>
+        <service-parameter name="demandPlannDto" type="org.tinygroup.workplan.dto.DemandPlannDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateDemandPlannResult" required="false" is-array="false" type="int"/>
+    </service-method>
+  </service-component>
+</service-components>

@@ -1,0 +1,53 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.BuildServiceCenterService" bean="buildServiceCenterServiceImpl">
+    <service-method local-name="checkServicecneterExists" service-id="checkServicecneterExists" method-name="checkServicecneterExists" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServicecenterDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecenterDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="checkServicecneterExistsResult" required="false" is-array="false" type="boolean"/>
+    </service-method>
+    <service-method local-name="updateServicecenter" service-id="updateServicecenter" method-name="updateServicecenter" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServicecenterDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecenterDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateServicecenterResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="addServicecenter" service-id="addServicecenter" method-name="addServicecenter" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServicecenterDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecenterDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addServicecenterResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecenterDto"/>
+    </service-method>
+    <service-method local-name="getServicecenters" service-id="getServicecenters" method-name="getServicecenters" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="codes" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="getServicecentersResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecenterDto"/>
+    </service-method>
+    <service-method local-name="deleteServicecenter" service-id="deleteServicecenter" method-name="deleteServicecenter" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="serviceCode" type="java.lang.String" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteServicecenterResult" required="false" is-array="true" type="int"/>
+    </service-method>
+    <service-method local-name="getServicecenterByCode" service-id="getServicecenterByCode" method-name="getServicecenterByCode" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="servicecenterCode" type="java.lang.String" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServicecenterByCodeResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecenterDto"/>
+    </service-method>
+    <service-method local-name="getServicecenterPager" service-id="getServicecenterPager" method-name="getServicecenterPager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="buildServicecenterDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecenterDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServicecenterPagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="getServicecenterList" service-id="getServicecenterList" method-name="getServicecenterList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildServicecenterDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecenterDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getServicecenterListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildServicecenterDto"/>
+    </service-method>
+  </service-component>
+</service-components>

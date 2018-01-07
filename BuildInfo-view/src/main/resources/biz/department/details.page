@@ -1,0 +1,47 @@
+#@tForm("thisform")
+<div class="form-infos clearfix">
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("部门编号：","sm",[4,8])
+                <span class="show-infos">${sysDepDto.depCode}</span>
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("部门名称：","sm",[4,8])
+                <span class="show-infos">${sysDepDto.depName}</span>
+            #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("部门简称：","sm",[4,8])
+                <span class="show-infos">${sysDepDto.shortName}</span>
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("上级部门：","sm",[4,8])
+                <span class="show-infos">${sysDepDto.parentCode}</span>
+            #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("所属机构：","sm",[4,8])
+                <span class="show-infos">${sysDepDto.branchCode}</span>
+            #end
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("部门内码：","sm",[4,8])
+                <span class="show-infos">${sysDepDto.depPath}</span>
+            #end
+        </div>
+    </div>
+    <div class="clearfix">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            #@elementItemAjax("备注：","sm",[4,8])
+                <span class="show-infos">${sysDepDto.remark}</span>
+            #end
+        </div>
+    </div>
+</div>
+#end

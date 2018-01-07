@@ -1,0 +1,30 @@
+#set(topMenuId="product",currentMold="product-line",menuWidth=203)
+#subTreeMenu("kind_sub_main_menu","/syskind/getTreeData",{"linkUrl":"/syskind/manage?kindCode=","currentId":kindCode?:"","rightNode":"product-body-content","width":menuWidth})
+<div id="product-body-content" style="padding:0 2px;margin-left:${menuWidth}px">
+    #pageContent
+</div>
+
+<script>
+    $(function(){
+        $("#kind_sub_main_menu").off("click").on("click","a",function(e){
+            var _this=$(this);
+            var url=_this.attr("href");
+            if(url.indexOf("?")!=-1){
+                url=url.replace(/\.page/, "").replace("?",".pagelet?");
+            }else{
+                url=url.replace(/\.page/, "") + ".pagelet";
+            }
+            $.pjax({
+                url: url,
+                container: '#product-body-content',
+                replaceStr: ""
+            });
+            $("#product-body-content").off("pjax:end").on("pjax:end", function () {
+                $(document).attr("title", _this.text() + " - ${TINY_WEB_TITLE}");
+            });
+            $(this).closest(".product-nav-list").find("a").removeClass("active");
+            $(this).addClass("active");
+            return false;
+        });
+    })
+</script>

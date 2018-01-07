@@ -1,0 +1,34 @@
+<standard-fields>
+  <standard-field id="82ff10b80bbb437bab9e82b9f70b63e5" name="stars" title="星级" business-type-id="7468cdaf4f104e2b8bf38cc19537b123">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="a0e43f2da2f7499b8387a8c683303712" name="job_number" title="职业编号" business-type-id="925699076cb343bb9979f1a7387e691c">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="eb7f59e0934f494f93fffd8c0a2c3374" name="work_years" title="工作年限" business-type-id="dc552ad9bd0441ffb53b84ec5d11668f">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="83e74fdd75c8436f959c9a986dfe3a62" name="adisver_phone" title="顾问电话" business-type-id="fada2ad8b06a4844a110fd2d27e3aa4b">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="9665f02421df4cd69f79a918e7ea1c34" name="adisver_resume" title="个人简介" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="a077feea3d214e9fa6d2934d00a63194" name="adisver_img" title="顾问头像" business-type-id="0f8158e595674bca8818e6a6e95eacc6">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="b23efbf3bb0247e5a2e7d7362b9bd4c6" name="service_experience" title="服务经验" business-type-id="04e8a02c494c49ff97e3cf4aa4dfe553">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+  <standard-field id="19ffe9f8e9354b3fb869bf49139bc4ef" name="service_type" title="服务类型" business-type-id="2441a77f99f94bfca7e8d6817546545d">
+    <description></description>
+    <nick-names/>
+  </standard-field>
+</standard-fields>

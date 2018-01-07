@@ -1,0 +1,41 @@
+<service-components>
+  <service-component type="org.tinygroup.buildinfo.service.inter.BuildCustomerCaseService" bean="buildCustomerCaseServiceImpl">
+    <service-method local-name="getCustomerCaseList" service-id="getCustomerCaseList" method-name="getCustomerCaseList" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildCustomercaseDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildCustomercaseDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getCustomerCaseListResult" required="false" is-array="false" collection-type="java.util.List" type="org.tinygroup.buildinfo.service.inter.dto.BuildCustomercaseDto"/>
+    </service-method>
+    <service-method local-name="getCustomerCasePager" service-id="getCustomerCasePager" method-name="getCustomerCasePager" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="pageRequest" type="org.tinygroup.buildinfo.common.dto.PageRequest" required="false" is-array="false"/>
+        <service-parameter name="buildCustomercaseDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildCustomercaseDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getCustomerCasePagerResult" required="false" is-array="false" type="org.tinygroup.buildinfo.common.dto.PageResponse"/>
+    </service-method>
+    <service-method local-name="addCustomerCase" service-id="addCustomerCase" method-name="addCustomerCase" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildCustomercaseDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildCustomercaseDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="addCustomerCaseResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildCustomercaseDto"/>
+    </service-method>
+    <service-method local-name="getCustomerCaseById" service-id="getCustomerCaseById" method-name="getCustomerCaseById" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="id" type="java.lang.Integer" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="getCustomerCaseByIdResult" required="false" is-array="false" type="org.tinygroup.buildinfo.service.inter.dto.BuildCustomercaseDto"/>
+    </service-method>
+    <service-method local-name="updateCustomerCase" service-id="updateCustomerCase" method-name="updateCustomerCase" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="buildCustomercaseDto" type="org.tinygroup.buildinfo.service.inter.dto.BuildCustomercaseDto" required="false" is-array="false"/>
+      </service-parameters>
+      <service-result name="updateCustomerCaseResult" required="false" is-array="false" type="int"/>
+    </service-method>
+    <service-method local-name="deleteCustomerCase" service-id="deleteCustomerCase" method-name="deleteCustomerCase" cacheable="false" category="org.tinygroup.buildinfo.service.inter">
+      <service-parameters>
+        <service-parameter name="ids" type="java.lang.Integer" required="false" is-array="true"/>
+      </service-parameters>
+      <service-result name="deleteCustomerCaseResult" required="false" is-array="false" type="int"/>
+    </service-method>
+  </service-component>
+</service-components>

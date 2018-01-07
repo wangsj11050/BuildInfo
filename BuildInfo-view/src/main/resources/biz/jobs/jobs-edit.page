@@ -1,0 +1,110 @@
+#@tForm("thisform"   sysOfficeDto?"/sysoffice/update?officeCode="+sysOfficeDto?.officeCode:"/sysoffice/save" "post" {"class":""})
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("岗位编号：")
+        	#if(sysOfficeDto)
+            #tInput("officeCode" sysOfficeDto?.officeCode {"placeholder":"请输入岗位编号","datatype":"*1-16","nullmsg":"岗位编号不能为空！","id":"officeCode","disabled":"disabled"})
+        #else
+            #tInput("officeCode" "" {"placeholder":"请输入岗位编号","datatype":"*1-16","nullmsg":"岗位编号不能为空！","id":"officeCode"})
+        #end
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("岗位名称：")
+            #tInput("officeName" sysOfficeDto?.officeName {"placeholder":"请输入岗位名称","id":"officeName","datatype":"*1-64","nullmsg":"岗位名称不能为空！"})
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("岗位简称：")
+            #tInput("shortName" sysOfficeDto?.shortName {"placeholder":"请输入岗位简称","id":"short_name","datatype":"*1-32","nullmsg":"岗位简称不能为空！"})
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #if(sysOfficeDto)
+	        #@elementItemAjax("所属机构：")
+            #treeSelectFix("branchCode" sysOfficeDto?.branchCode {"class":"input-text","readonly":"readonly","datatype":"*1-256","nullmsg":"所属机构不能为空！","data-URL":"/sysbranch/getTreeData","id":"linkage1","disabled":"disabled"})
+        #end
+		#else
+            #@elementItemAjax("所属机构：")
+                #treeSelectFix("branchCode" sysOfficeDto?.branchCode {"class":"input-text","readonly":"readonly","datatype":"*1-256","nullmsg":"所属机构不能为空！","data-URL":"/sysbranch/getTreeData","id":"linkage1"})
+            #end
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #if(sysOfficeDto)
+	        #@elementItemAjax("所属部门：")
+            #treeSelectFix("depCode" sysOfficeDto?.depCode {"class":"input-text","readonly":"readonly","datatype":"*1-256","nullmsg":"所属部门不能为空！","data-URL":"/sysdep/getTreeData","id":"linkage2","disabled":"disabled"})
+        #end
+		#else
+            #@elementItemAjax("所属部门：")
+                #treeSelectFix("depCode" sysOfficeDto?.depCode {"class":"input-text","readonly":"readonly","datatype":"*1-256","nullmsg":"所属部门不能为空！","data-URL":"/sysdep/getTreeData","id":"linkage2"})
+            #end
+        #end
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("上级岗位：")
+            #treeSelectFix("parentCode" sysOfficeDto?.parentCode {"class":"input-text","readonly":"readonly","datatype":"*1-256","ignore":"ignore","data-URL":"/sysoffice/getTreeData","id":"linkage3"})
+        #end
+    </div>
+</div>
+<div class="clearfix">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        #@elementItemAjax("备注：")
+            #@tTextarea("remark" {"row":"256","placeholder":"说点什么..","datatype":"*1-256","ignore":"ignore"})${sysOfficeDto?.remark} #end
+        #end
+    </div>
+</div>
+#end
+<script type="text/javascript">
+
+    $(function () {
+
+            $('#linkage1').on('setValue', function () {
+                $('#linkage2,#linkage3').val('');
+                var getId = $(this).next('input').val();
+                $('#linkage2').attr('data-url', '/sysdep/getTreeByBranch?pId=' + getId);
+
+                $('#linkage2').trigger("refresh");
+            });
+
+
+            $('#linkage2').on('setValue', function () {
+                $('#linkage3').val('');
+                var getId = $(this).next('input').val();
+                var officeCode = $("#officeCode").val();
+                $('#linkage3').attr('data-url', '/sysoffice/getOfficeTreeByDep?pId=' + getId + '&id=' + officeCode);
+                $('#linkage3').trigger("refresh");
+            });
+
+
+        $("form[name=thisform]").Validform({
+            tiptype: 1,
+            beforeSubmit: function (curform) {
+                $(curform).ajaxSubmit({
+                    dataType: "json",
+                    success: function (data) {
+                        if (data.status == "y") {
+                            layer.msg(data.info);
+                            $(curform).closest(".modal").trigger("close");
+                        } else {
+                            layer.msg(data.info, {icon: 2});
+                        }
+
+                        $(curform).closest(".modal").trigger("close");//当弹出框时触发弹出框关闭
+                        $("#jobs_sub_main_menu").trigger("refresh");//刷新树
+                        $("#jobs-table").bootstrapTable('refresh');
+
+                    },
+                    error: function () {
+                        layer.msg(data.info, {icon: 2});
+                    }
+                });
+                return false;
+            }
+        });
+    })
+</script>
